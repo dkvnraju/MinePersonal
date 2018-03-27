@@ -99,6 +99,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(681, 228);
             this.tabControl1.TabIndex = 1;
+            this.tabControl1.Visible = false;
             // 
             // tabPage1
             // 
