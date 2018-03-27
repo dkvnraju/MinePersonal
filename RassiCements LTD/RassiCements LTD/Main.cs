@@ -16,5 +16,11 @@ namespace RassiCements_LTD
         {
             InitializeComponent();
         }
+
+        private void detailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //clciking on the details menu set the pages names
+
+        }
     }
 }
