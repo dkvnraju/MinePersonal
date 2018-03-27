@@ -42,5 +42,10 @@ namespace RassiCements_LTD
             //tabControl1.Visible = true;
             //tabControl1.TabPages.Remove(tabPage4);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
