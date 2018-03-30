@@ -95,6 +95,55 @@
             this.btnPLDClr = new System.Windows.Forms.Button();
             this.btnPLDUpdate = new System.Windows.Forms.Button();
             this.btnPLDDel = new System.Windows.Forms.Button();
+            this.lblLDHead = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lblLDSubHead = new System.Windows.Forms.Label();
+            this.lblLDBtchNo = new System.Windows.Forms.Label();
+            this.lblLDDt = new System.Windows.Forms.Label();
+            this.lblLDShft = new System.Windows.Forms.Label();
+            this.lblLDRTns = new System.Windows.Forms.Label();
+            this.lblLDWgTns = new System.Windows.Forms.Label();
+            this.lblLDDWWagTns = new System.Windows.Forms.Label();
+            this.lblLDHLTns = new System.Windows.Forms.Label();
+            this.lblLDTotTns = new System.Windows.Forms.Label();
+            this.lblLDNoLdrs = new System.Windows.Forms.Label();
+            this.lblNoPkrs = new System.Windows.Forms.Label();
+            this.lblLDLdrAmtRd = new System.Windows.Forms.Label();
+            this.lblLDLdrAmtWG = new System.Windows.Forms.Label();
+            this.lblLDLdrAmtHL = new System.Windows.Forms.Label();
+            this.lblLDLdrAmtOldWg = new System.Windows.Forms.Label();
+            this.lblLDLdrTotAmt = new System.Windows.Forms.Label();
+            this.lblLDPkrAmtRd = new System.Windows.Forms.Label();
+            this.lblLDPkrAmtWg = new System.Windows.Forms.Label();
+            this.lblLDPkrAmtHL = new System.Windows.Forms.Label();
+            this.lblLDPkrAmtOldWg = new System.Windows.Forms.Label();
+            this.lblLDPkrTotAmt = new System.Windows.Forms.Label();
+            this.comboBoxLDBtchNo = new System.Windows.Forms.ComboBox();
+            this.comboBoxLDShft = new System.Windows.Forms.ComboBox();
+            this.textBoxLDRdTns = new System.Windows.Forms.TextBox();
+            this.textBoxLDWgTns = new System.Windows.Forms.TextBox();
+            this.textBoxLDDWWagTns = new System.Windows.Forms.TextBox();
+            this.textBoxLDHLTns = new System.Windows.Forms.TextBox();
+            this.textBoxLDTotTns = new System.Windows.Forms.TextBox();
+            this.textBoxLDNoLdrs = new System.Windows.Forms.TextBox();
+            this.textBoxLDNoPkrs = new System.Windows.Forms.TextBox();
+            this.dateTimePickerLDDt = new System.Windows.Forms.DateTimePicker();
+            this.textBoxLDLDAmtRd = new System.Windows.Forms.TextBox();
+            this.textBoxLDPkrAmtRd = new System.Windows.Forms.TextBox();
+            this.textBoxLDLDAmtWg = new System.Windows.Forms.TextBox();
+            this.textBoxLDPkrAmtWg = new System.Windows.Forms.TextBox();
+            this.textBoxLDLDAmtHL = new System.Windows.Forms.TextBox();
+            this.textBoxLDPkrAmtHL = new System.Windows.Forms.TextBox();
+            this.textBoxLDLDAmtOldWgn = new System.Windows.Forms.TextBox();
+            this.textBoxLDPkrAmtOldWgn = new System.Windows.Forms.TextBox();
+            this.textBoxLDLDTotAmt = new System.Windows.Forms.TextBox();
+            this.textBoxLDPkrTotAmt = new System.Windows.Forms.TextBox();
+            this.btnLDAdd = new System.Windows.Forms.Button();
+            this.btnClr = new System.Windows.Forms.Button();
+            this.btnLDDel = new System.Windows.Forms.Button();
+            this.btnLDUpdate = new System.Windows.Forms.Button();
+            this.btnLDOtrbtch = new System.Windows.Forms.Button();
+            this.btnLDOthrCntrct = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -102,7 +151,9 @@
             this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -115,7 +166,7 @@
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1179, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1240, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -471,6 +522,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.panel4);
+            this.tabPage4.Controls.Add(this.lblLDHead);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1332, 644);
@@ -771,11 +824,482 @@
             this.btnPLDDel.Text = "Delete";
             this.btnPLDDel.UseVisualStyleBackColor = true;
             // 
+            // lblLDHead
+            // 
+            this.lblLDHead.AutoSize = true;
+            this.lblLDHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDHead.Location = new System.Drawing.Point(545, 42);
+            this.lblLDHead.Name = "lblLDHead";
+            this.lblLDHead.Size = new System.Drawing.Size(153, 24);
+            this.lblLDHead.TabIndex = 0;
+            this.lblLDHead.Text = "Loading Details";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnLDOthrCntrct);
+            this.panel4.Controls.Add(this.btnLDOtrbtch);
+            this.panel4.Controls.Add(this.btnLDUpdate);
+            this.panel4.Controls.Add(this.btnLDDel);
+            this.panel4.Controls.Add(this.btnClr);
+            this.panel4.Controls.Add(this.btnLDAdd);
+            this.panel4.Controls.Add(this.textBoxLDPkrTotAmt);
+            this.panel4.Controls.Add(this.textBoxLDLDTotAmt);
+            this.panel4.Controls.Add(this.textBoxLDPkrAmtOldWgn);
+            this.panel4.Controls.Add(this.textBoxLDLDAmtOldWgn);
+            this.panel4.Controls.Add(this.textBoxLDPkrAmtHL);
+            this.panel4.Controls.Add(this.textBoxLDLDAmtHL);
+            this.panel4.Controls.Add(this.textBoxLDPkrAmtWg);
+            this.panel4.Controls.Add(this.textBoxLDLDAmtWg);
+            this.panel4.Controls.Add(this.textBoxLDPkrAmtRd);
+            this.panel4.Controls.Add(this.textBoxLDLDAmtRd);
+            this.panel4.Controls.Add(this.dateTimePickerLDDt);
+            this.panel4.Controls.Add(this.textBoxLDNoPkrs);
+            this.panel4.Controls.Add(this.textBoxLDNoLdrs);
+            this.panel4.Controls.Add(this.textBoxLDTotTns);
+            this.panel4.Controls.Add(this.textBoxLDHLTns);
+            this.panel4.Controls.Add(this.textBoxLDDWWagTns);
+            this.panel4.Controls.Add(this.textBoxLDWgTns);
+            this.panel4.Controls.Add(this.textBoxLDRdTns);
+            this.panel4.Controls.Add(this.comboBoxLDShft);
+            this.panel4.Controls.Add(this.comboBoxLDBtchNo);
+            this.panel4.Controls.Add(this.lblLDPkrTotAmt);
+            this.panel4.Controls.Add(this.lblLDPkrAmtOldWg);
+            this.panel4.Controls.Add(this.lblLDPkrAmtHL);
+            this.panel4.Controls.Add(this.lblLDPkrAmtWg);
+            this.panel4.Controls.Add(this.lblLDPkrAmtRd);
+            this.panel4.Controls.Add(this.lblLDLdrTotAmt);
+            this.panel4.Controls.Add(this.lblLDLdrAmtOldWg);
+            this.panel4.Controls.Add(this.lblLDLdrAmtHL);
+            this.panel4.Controls.Add(this.lblLDLdrAmtWG);
+            this.panel4.Controls.Add(this.lblLDLdrAmtRd);
+            this.panel4.Controls.Add(this.lblNoPkrs);
+            this.panel4.Controls.Add(this.lblLDNoLdrs);
+            this.panel4.Controls.Add(this.lblLDTotTns);
+            this.panel4.Controls.Add(this.lblLDHLTns);
+            this.panel4.Controls.Add(this.lblLDDWWagTns);
+            this.panel4.Controls.Add(this.lblLDWgTns);
+            this.panel4.Controls.Add(this.lblLDRTns);
+            this.panel4.Controls.Add(this.lblLDShft);
+            this.panel4.Controls.Add(this.lblLDDt);
+            this.panel4.Controls.Add(this.lblLDBtchNo);
+            this.panel4.Controls.Add(this.lblLDSubHead);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.Location = new System.Drawing.Point(21, 92);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1191, 475);
+            this.panel4.TabIndex = 1;
+            // 
+            // lblLDSubHead
+            // 
+            this.lblLDSubHead.AutoSize = true;
+            this.lblLDSubHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDSubHead.Location = new System.Drawing.Point(525, 18);
+            this.lblLDSubHead.Name = "lblLDSubHead";
+            this.lblLDSubHead.Size = new System.Drawing.Size(166, 18);
+            this.lblLDSubHead.TabIndex = 0;
+            this.lblLDSubHead.Text = "Daily Loading Details";
+            this.lblLDSubHead.Click += new System.EventHandler(this.lblLDSubHead_Click);
+            // 
+            // lblLDBtchNo
+            // 
+            this.lblLDBtchNo.AutoSize = true;
+            this.lblLDBtchNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDBtchNo.Location = new System.Drawing.Point(65, 67);
+            this.lblLDBtchNo.Name = "lblLDBtchNo";
+            this.lblLDBtchNo.Size = new System.Drawing.Size(73, 15);
+            this.lblLDBtchNo.TabIndex = 1;
+            this.lblLDBtchNo.Text = "Batch No :";
+            // 
+            // lblLDDt
+            // 
+            this.lblLDDt.AutoSize = true;
+            this.lblLDDt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDDt.Location = new System.Drawing.Point(93, 101);
+            this.lblLDDt.Name = "lblLDDt";
+            this.lblLDDt.Size = new System.Drawing.Size(45, 15);
+            this.lblLDDt.TabIndex = 2;
+            this.lblLDDt.Text = "Date :";
+            // 
+            // lblLDShft
+            // 
+            this.lblLDShft.AutoSize = true;
+            this.lblLDShft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDShft.Location = new System.Drawing.Point(93, 132);
+            this.lblLDShft.Name = "lblLDShft";
+            this.lblLDShft.Size = new System.Drawing.Size(44, 15);
+            this.lblLDShft.TabIndex = 3;
+            this.lblLDShft.Text = "Shift :";
+            // 
+            // lblLDRTns
+            // 
+            this.lblLDRTns.AutoSize = true;
+            this.lblLDRTns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDRTns.Location = new System.Drawing.Point(53, 167);
+            this.lblLDRTns.Name = "lblLDRTns";
+            this.lblLDRTns.Size = new System.Drawing.Size(84, 15);
+            this.lblLDRTns.TabIndex = 4;
+            this.lblLDRTns.Text = "Road Tons :";
+            // 
+            // lblLDWgTns
+            // 
+            this.lblLDWgTns.AutoSize = true;
+            this.lblLDWgTns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDWgTns.Location = new System.Drawing.Point(39, 212);
+            this.lblLDWgTns.Name = "lblLDWgTns";
+            this.lblLDWgTns.Size = new System.Drawing.Size(94, 15);
+            this.lblLDWgTns.TabIndex = 5;
+            this.lblLDWgTns.Text = "Wagon Tons :";
+            // 
+            // lblLDDWWagTns
+            // 
+            this.lblLDDWWagTns.AutoSize = true;
+            this.lblLDDWWagTns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDDWWagTns.Location = new System.Drawing.Point(22, 249);
+            this.lblLDDWWagTns.Name = "lblLDDWWagTns";
+            this.lblLDDWWagTns.Size = new System.Drawing.Size(116, 15);
+            this.lblLDDWWagTns.TabIndex = 6;
+            this.lblLDDWWagTns.Text = "D / W Wag Tons :";
+            // 
+            // lblLDHLTns
+            // 
+            this.lblLDHLTns.AutoSize = true;
+            this.lblLDHLTns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDHLTns.Location = new System.Drawing.Point(65, 286);
+            this.lblLDHLTns.Name = "lblLDHLTns";
+            this.lblLDHLTns.Size = new System.Drawing.Size(68, 15);
+            this.lblLDHLTns.TabIndex = 7;
+            this.lblLDHLTns.Text = "HL Tons :";
+            // 
+            // lblLDTotTns
+            // 
+            this.lblLDTotTns.AutoSize = true;
+            this.lblLDTotTns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDTotTns.Location = new System.Drawing.Point(53, 324);
+            this.lblLDTotTns.Name = "lblLDTotTns";
+            this.lblLDTotTns.Size = new System.Drawing.Size(82, 15);
+            this.lblLDTotTns.TabIndex = 8;
+            this.lblLDTotTns.Text = "Total Tons :";
+            // 
+            // lblLDNoLdrs
+            // 
+            this.lblLDNoLdrs.AutoSize = true;
+            this.lblLDNoLdrs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDNoLdrs.Location = new System.Drawing.Point(30, 356);
+            this.lblLDNoLdrs.Name = "lblLDNoLdrs";
+            this.lblLDNoLdrs.Size = new System.Drawing.Size(107, 15);
+            this.lblLDNoLdrs.TabIndex = 9;
+            this.lblLDNoLdrs.Text = "No Of Loaders :";
+            // 
+            // lblNoPkrs
+            // 
+            this.lblNoPkrs.AutoSize = true;
+            this.lblNoPkrs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoPkrs.Location = new System.Drawing.Point(32, 390);
+            this.lblNoPkrs.Name = "lblNoPkrs";
+            this.lblNoPkrs.Size = new System.Drawing.Size(106, 15);
+            this.lblNoPkrs.TabIndex = 10;
+            this.lblNoPkrs.Text = "No Of Packers :";
+            // 
+            // lblLDLdrAmtRd
+            // 
+            this.lblLDLdrAmtRd.AutoSize = true;
+            this.lblLDLdrAmtRd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDLdrAmtRd.Location = new System.Drawing.Point(263, 81);
+            this.lblLDLdrAmtRd.Name = "lblLDLdrAmtRd";
+            this.lblLDLdrAmtRd.Size = new System.Drawing.Size(162, 15);
+            this.lblLDLdrAmtRd.TabIndex = 11;
+            this.lblLDLdrAmtRd.Text = "Loader Amount    Road :";
+            // 
+            // lblLDLdrAmtWG
+            // 
+            this.lblLDLdrAmtWG.AutoSize = true;
+            this.lblLDLdrAmtWG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDLdrAmtWG.Location = new System.Drawing.Point(492, 81);
+            this.lblLDLdrAmtWG.Name = "lblLDLdrAmtWG";
+            this.lblLDLdrAmtWG.Size = new System.Drawing.Size(59, 15);
+            this.lblLDLdrAmtWG.TabIndex = 12;
+            this.lblLDLdrAmtWG.Text = "Wagon :";
+            // 
+            // lblLDLdrAmtHL
+            // 
+            this.lblLDLdrAmtHL.AutoSize = true;
+            this.lblLDLdrAmtHL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDLdrAmtHL.Location = new System.Drawing.Point(618, 84);
+            this.lblLDLdrAmtHL.Name = "lblLDLdrAmtHL";
+            this.lblLDLdrAmtHL.Size = new System.Drawing.Size(33, 15);
+            this.lblLDLdrAmtHL.TabIndex = 13;
+            this.lblLDLdrAmtHL.Text = "HL :";
+            // 
+            // lblLDLdrAmtOldWg
+            // 
+            this.lblLDLdrAmtOldWg.AutoSize = true;
+            this.lblLDLdrAmtOldWg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDLdrAmtOldWg.Location = new System.Drawing.Point(725, 84);
+            this.lblLDLdrAmtOldWg.Name = "lblLDLdrAmtOldWg";
+            this.lblLDLdrAmtOldWg.Size = new System.Drawing.Size(85, 15);
+            this.lblLDLdrAmtOldWg.TabIndex = 14;
+            this.lblLDLdrAmtOldWg.Text = "Old Wagon :";
+            // 
+            // lblLDLdrTotAmt
+            // 
+            this.lblLDLdrTotAmt.AutoSize = true;
+            this.lblLDLdrTotAmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDLdrTotAmt.Location = new System.Drawing.Point(883, 84);
+            this.lblLDLdrTotAmt.Name = "lblLDLdrTotAmt";
+            this.lblLDLdrTotAmt.Size = new System.Drawing.Size(99, 15);
+            this.lblLDLdrTotAmt.TabIndex = 15;
+            this.lblLDLdrTotAmt.Text = "Total Amount :";
+            // 
+            // lblLDPkrAmtRd
+            // 
+            this.lblLDPkrAmtRd.AutoSize = true;
+            this.lblLDPkrAmtRd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDPkrAmtRd.Location = new System.Drawing.Point(264, 132);
+            this.lblLDPkrAmtRd.Name = "lblLDPkrAmtRd";
+            this.lblLDPkrAmtRd.Size = new System.Drawing.Size(161, 15);
+            this.lblLDPkrAmtRd.TabIndex = 16;
+            this.lblLDPkrAmtRd.Text = "Packer Amount    Road :";
+            // 
+            // lblLDPkrAmtWg
+            // 
+            this.lblLDPkrAmtWg.AutoSize = true;
+            this.lblLDPkrAmtWg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDPkrAmtWg.Location = new System.Drawing.Point(492, 132);
+            this.lblLDPkrAmtWg.Name = "lblLDPkrAmtWg";
+            this.lblLDPkrAmtWg.Size = new System.Drawing.Size(59, 15);
+            this.lblLDPkrAmtWg.TabIndex = 17;
+            this.lblLDPkrAmtWg.Text = "Wagon :";
+            // 
+            // lblLDPkrAmtHL
+            // 
+            this.lblLDPkrAmtHL.AutoSize = true;
+            this.lblLDPkrAmtHL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDPkrAmtHL.Location = new System.Drawing.Point(618, 132);
+            this.lblLDPkrAmtHL.Name = "lblLDPkrAmtHL";
+            this.lblLDPkrAmtHL.Size = new System.Drawing.Size(33, 15);
+            this.lblLDPkrAmtHL.TabIndex = 18;
+            this.lblLDPkrAmtHL.Text = "HL :";
+            // 
+            // lblLDPkrAmtOldWg
+            // 
+            this.lblLDPkrAmtOldWg.AutoSize = true;
+            this.lblLDPkrAmtOldWg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDPkrAmtOldWg.Location = new System.Drawing.Point(725, 132);
+            this.lblLDPkrAmtOldWg.Name = "lblLDPkrAmtOldWg";
+            this.lblLDPkrAmtOldWg.Size = new System.Drawing.Size(85, 15);
+            this.lblLDPkrAmtOldWg.TabIndex = 19;
+            this.lblLDPkrAmtOldWg.Text = "Old Wagon :";
+            // 
+            // lblLDPkrTotAmt
+            // 
+            this.lblLDPkrTotAmt.AutoSize = true;
+            this.lblLDPkrTotAmt.Location = new System.Drawing.Point(883, 132);
+            this.lblLDPkrTotAmt.Name = "lblLDPkrTotAmt";
+            this.lblLDPkrTotAmt.Size = new System.Drawing.Size(99, 15);
+            this.lblLDPkrTotAmt.TabIndex = 20;
+            this.lblLDPkrTotAmt.Text = "Total Amount :";
+            // 
+            // comboBoxLDBtchNo
+            // 
+            this.comboBoxLDBtchNo.FormattingEnabled = true;
+            this.comboBoxLDBtchNo.Location = new System.Drawing.Point(144, 64);
+            this.comboBoxLDBtchNo.Name = "comboBoxLDBtchNo";
+            this.comboBoxLDBtchNo.Size = new System.Drawing.Size(82, 23);
+            this.comboBoxLDBtchNo.TabIndex = 21;
+            // 
+            // comboBoxLDShft
+            // 
+            this.comboBoxLDShft.FormattingEnabled = true;
+            this.comboBoxLDShft.Location = new System.Drawing.Point(144, 132);
+            this.comboBoxLDShft.Name = "comboBoxLDShft";
+            this.comboBoxLDShft.Size = new System.Drawing.Size(82, 23);
+            this.comboBoxLDShft.TabIndex = 22;
+            // 
+            // textBoxLDRdTns
+            // 
+            this.textBoxLDRdTns.Location = new System.Drawing.Point(143, 167);
+            this.textBoxLDRdTns.Name = "textBoxLDRdTns";
+            this.textBoxLDRdTns.Size = new System.Drawing.Size(82, 21);
+            this.textBoxLDRdTns.TabIndex = 23;
+            // 
+            // textBoxLDWgTns
+            // 
+            this.textBoxLDWgTns.Location = new System.Drawing.Point(139, 206);
+            this.textBoxLDWgTns.Name = "textBoxLDWgTns";
+            this.textBoxLDWgTns.Size = new System.Drawing.Size(82, 21);
+            this.textBoxLDWgTns.TabIndex = 24;
+            // 
+            // textBoxLDDWWagTns
+            // 
+            this.textBoxLDDWWagTns.Location = new System.Drawing.Point(141, 246);
+            this.textBoxLDDWWagTns.Name = "textBoxLDDWWagTns";
+            this.textBoxLDDWWagTns.Size = new System.Drawing.Size(82, 21);
+            this.textBoxLDDWWagTns.TabIndex = 25;
+            // 
+            // textBoxLDHLTns
+            // 
+            this.textBoxLDHLTns.Location = new System.Drawing.Point(144, 280);
+            this.textBoxLDHLTns.Name = "textBoxLDHLTns";
+            this.textBoxLDHLTns.Size = new System.Drawing.Size(82, 21);
+            this.textBoxLDHLTns.TabIndex = 26;
+            // 
+            // textBoxLDTotTns
+            // 
+            this.textBoxLDTotTns.Location = new System.Drawing.Point(141, 318);
+            this.textBoxLDTotTns.Name = "textBoxLDTotTns";
+            this.textBoxLDTotTns.Size = new System.Drawing.Size(87, 21);
+            this.textBoxLDTotTns.TabIndex = 27;
+            // 
+            // textBoxLDNoLdrs
+            // 
+            this.textBoxLDNoLdrs.Location = new System.Drawing.Point(139, 350);
+            this.textBoxLDNoLdrs.Name = "textBoxLDNoLdrs";
+            this.textBoxLDNoLdrs.Size = new System.Drawing.Size(87, 21);
+            this.textBoxLDNoLdrs.TabIndex = 28;
+            // 
+            // textBoxLDNoPkrs
+            // 
+            this.textBoxLDNoPkrs.Location = new System.Drawing.Point(139, 387);
+            this.textBoxLDNoPkrs.Name = "textBoxLDNoPkrs";
+            this.textBoxLDNoPkrs.Size = new System.Drawing.Size(87, 21);
+            this.textBoxLDNoPkrs.TabIndex = 29;
+            // 
+            // dateTimePickerLDDt
+            // 
+            this.dateTimePickerLDDt.Location = new System.Drawing.Point(144, 101);
+            this.dateTimePickerLDDt.Name = "dateTimePickerLDDt";
+            this.dateTimePickerLDDt.Size = new System.Drawing.Size(82, 21);
+            this.dateTimePickerLDDt.TabIndex = 30;
+            // 
+            // textBoxLDLDAmtRd
+            // 
+            this.textBoxLDLDAmtRd.Location = new System.Drawing.Point(432, 81);
+            this.textBoxLDLDAmtRd.Name = "textBoxLDLDAmtRd";
+            this.textBoxLDLDAmtRd.Size = new System.Drawing.Size(54, 21);
+            this.textBoxLDLDAmtRd.TabIndex = 31;
+            // 
+            // textBoxLDPkrAmtRd
+            // 
+            this.textBoxLDPkrAmtRd.Location = new System.Drawing.Point(432, 132);
+            this.textBoxLDPkrAmtRd.Name = "textBoxLDPkrAmtRd";
+            this.textBoxLDPkrAmtRd.Size = new System.Drawing.Size(54, 21);
+            this.textBoxLDPkrAmtRd.TabIndex = 32;
+            // 
+            // textBoxLDLDAmtWg
+            // 
+            this.textBoxLDLDAmtWg.Location = new System.Drawing.Point(558, 81);
+            this.textBoxLDLDAmtWg.Name = "textBoxLDLDAmtWg";
+            this.textBoxLDLDAmtWg.Size = new System.Drawing.Size(54, 21);
+            this.textBoxLDLDAmtWg.TabIndex = 33;
+            // 
+            // textBoxLDPkrAmtWg
+            // 
+            this.textBoxLDPkrAmtWg.Location = new System.Drawing.Point(558, 132);
+            this.textBoxLDPkrAmtWg.Name = "textBoxLDPkrAmtWg";
+            this.textBoxLDPkrAmtWg.Size = new System.Drawing.Size(54, 21);
+            this.textBoxLDPkrAmtWg.TabIndex = 34;
+            // 
+            // textBoxLDLDAmtHL
+            // 
+            this.textBoxLDLDAmtHL.Location = new System.Drawing.Point(657, 81);
+            this.textBoxLDLDAmtHL.Name = "textBoxLDLDAmtHL";
+            this.textBoxLDLDAmtHL.Size = new System.Drawing.Size(61, 21);
+            this.textBoxLDLDAmtHL.TabIndex = 35;
+            // 
+            // textBoxLDPkrAmtHL
+            // 
+            this.textBoxLDPkrAmtHL.Location = new System.Drawing.Point(658, 132);
+            this.textBoxLDPkrAmtHL.Name = "textBoxLDPkrAmtHL";
+            this.textBoxLDPkrAmtHL.Size = new System.Drawing.Size(60, 21);
+            this.textBoxLDPkrAmtHL.TabIndex = 36;
+            // 
+            // textBoxLDLDAmtOldWgn
+            // 
+            this.textBoxLDLDAmtOldWgn.Location = new System.Drawing.Point(816, 78);
+            this.textBoxLDLDAmtOldWgn.Name = "textBoxLDLDAmtOldWgn";
+            this.textBoxLDLDAmtOldWgn.Size = new System.Drawing.Size(43, 21);
+            this.textBoxLDLDAmtOldWgn.TabIndex = 37;
+            // 
+            // textBoxLDPkrAmtOldWgn
+            // 
+            this.textBoxLDPkrAmtOldWgn.Location = new System.Drawing.Point(817, 132);
+            this.textBoxLDPkrAmtOldWgn.Name = "textBoxLDPkrAmtOldWgn";
+            this.textBoxLDPkrAmtOldWgn.Size = new System.Drawing.Size(42, 21);
+            this.textBoxLDPkrAmtOldWgn.TabIndex = 38;
+            // 
+            // textBoxLDLDTotAmt
+            // 
+            this.textBoxLDLDTotAmt.Location = new System.Drawing.Point(988, 78);
+            this.textBoxLDLDTotAmt.Name = "textBoxLDLDTotAmt";
+            this.textBoxLDLDTotAmt.Size = new System.Drawing.Size(100, 21);
+            this.textBoxLDLDTotAmt.TabIndex = 39;
+            // 
+            // textBoxLDPkrTotAmt
+            // 
+            this.textBoxLDPkrTotAmt.Location = new System.Drawing.Point(988, 126);
+            this.textBoxLDPkrTotAmt.Name = "textBoxLDPkrTotAmt";
+            this.textBoxLDPkrTotAmt.Size = new System.Drawing.Size(100, 21);
+            this.textBoxLDPkrTotAmt.TabIndex = 40;
+            // 
+            // btnLDAdd
+            // 
+            this.btnLDAdd.Location = new System.Drawing.Point(254, 433);
+            this.btnLDAdd.Name = "btnLDAdd";
+            this.btnLDAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnLDAdd.TabIndex = 41;
+            this.btnLDAdd.Text = "Add";
+            this.btnLDAdd.UseVisualStyleBackColor = true;
+            // 
+            // btnClr
+            // 
+            this.btnClr.Location = new System.Drawing.Point(360, 433);
+            this.btnClr.Name = "btnClr";
+            this.btnClr.Size = new System.Drawing.Size(75, 23);
+            this.btnClr.TabIndex = 42;
+            this.btnClr.Text = "Clear";
+            this.btnClr.UseVisualStyleBackColor = true;
+            // 
+            // btnLDDel
+            // 
+            this.btnLDDel.Location = new System.Drawing.Point(455, 433);
+            this.btnLDDel.Name = "btnLDDel";
+            this.btnLDDel.Size = new System.Drawing.Size(75, 23);
+            this.btnLDDel.TabIndex = 43;
+            this.btnLDDel.Text = "Delete";
+            this.btnLDDel.UseVisualStyleBackColor = true;
+            // 
+            // btnLDUpdate
+            // 
+            this.btnLDUpdate.Location = new System.Drawing.Point(558, 433);
+            this.btnLDUpdate.Name = "btnLDUpdate";
+            this.btnLDUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnLDUpdate.TabIndex = 44;
+            this.btnLDUpdate.Text = "Update";
+            this.btnLDUpdate.UseVisualStyleBackColor = true;
+            // 
+            // btnLDOtrbtch
+            // 
+            this.btnLDOtrbtch.Location = new System.Drawing.Point(657, 433);
+            this.btnLDOtrbtch.Name = "btnLDOtrbtch";
+            this.btnLDOtrbtch.Size = new System.Drawing.Size(119, 23);
+            this.btnLDOtrbtch.TabIndex = 45;
+            this.btnLDOtrbtch.Text = "Other Batch";
+            this.btnLDOtrbtch.UseVisualStyleBackColor = true;
+            // 
+            // btnLDOthrCntrct
+            // 
+            this.btnLDOthrCntrct.Location = new System.Drawing.Point(799, 433);
+            this.btnLDOthrCntrct.Name = "btnLDOthrCntrct";
+            this.btnLDOthrCntrct.Size = new System.Drawing.Size(134, 23);
+            this.btnLDOthrCntrct.TabIndex = 46;
+            this.btnLDOthrCntrct.Text = "Other Contractor";
+            this.btnLDOthrCntrct.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1179, 502);
+            this.ClientSize = new System.Drawing.Size(1240, 632);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -795,8 +1319,12 @@
             this.panel2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -871,6 +1399,55 @@
         private System.Windows.Forms.Button btnPLDUpdate;
         private System.Windows.Forms.Button btnPLDClr;
         private System.Windows.Forms.Button btnPLDAdd;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label lblLDHead;
+        private System.Windows.Forms.Label lblLDSubHead;
+        private System.Windows.Forms.Label lblLDPkrTotAmt;
+        private System.Windows.Forms.Label lblLDPkrAmtOldWg;
+        private System.Windows.Forms.Label lblLDPkrAmtHL;
+        private System.Windows.Forms.Label lblLDPkrAmtWg;
+        private System.Windows.Forms.Label lblLDPkrAmtRd;
+        private System.Windows.Forms.Label lblLDLdrTotAmt;
+        private System.Windows.Forms.Label lblLDLdrAmtOldWg;
+        private System.Windows.Forms.Label lblLDLdrAmtHL;
+        private System.Windows.Forms.Label lblLDLdrAmtWG;
+        private System.Windows.Forms.Label lblLDLdrAmtRd;
+        private System.Windows.Forms.Label lblNoPkrs;
+        private System.Windows.Forms.Label lblLDNoLdrs;
+        private System.Windows.Forms.Label lblLDTotTns;
+        private System.Windows.Forms.Label lblLDHLTns;
+        private System.Windows.Forms.Label lblLDDWWagTns;
+        private System.Windows.Forms.Label lblLDWgTns;
+        private System.Windows.Forms.Label lblLDRTns;
+        private System.Windows.Forms.Label lblLDShft;
+        private System.Windows.Forms.Label lblLDDt;
+        private System.Windows.Forms.Label lblLDBtchNo;
+        private System.Windows.Forms.DateTimePicker dateTimePickerLDDt;
+        private System.Windows.Forms.TextBox textBoxLDNoPkrs;
+        private System.Windows.Forms.TextBox textBoxLDNoLdrs;
+        private System.Windows.Forms.TextBox textBoxLDTotTns;
+        private System.Windows.Forms.TextBox textBoxLDHLTns;
+        private System.Windows.Forms.TextBox textBoxLDDWWagTns;
+        private System.Windows.Forms.TextBox textBoxLDWgTns;
+        private System.Windows.Forms.TextBox textBoxLDRdTns;
+        private System.Windows.Forms.ComboBox comboBoxLDShft;
+        private System.Windows.Forms.ComboBox comboBoxLDBtchNo;
+        private System.Windows.Forms.TextBox textBoxLDPkrTotAmt;
+        private System.Windows.Forms.TextBox textBoxLDLDTotAmt;
+        private System.Windows.Forms.TextBox textBoxLDPkrAmtOldWgn;
+        private System.Windows.Forms.TextBox textBoxLDLDAmtOldWgn;
+        private System.Windows.Forms.TextBox textBoxLDPkrAmtHL;
+        private System.Windows.Forms.TextBox textBoxLDLDAmtHL;
+        private System.Windows.Forms.TextBox textBoxLDPkrAmtWg;
+        private System.Windows.Forms.TextBox textBoxLDLDAmtWg;
+        private System.Windows.Forms.TextBox textBoxLDPkrAmtRd;
+        private System.Windows.Forms.TextBox textBoxLDLDAmtRd;
+        private System.Windows.Forms.Button btnLDOthrCntrct;
+        private System.Windows.Forms.Button btnLDOtrbtch;
+        private System.Windows.Forms.Button btnLDUpdate;
+        private System.Windows.Forms.Button btnLDDel;
+        private System.Windows.Forms.Button btnClr;
+        private System.Windows.Forms.Button btnLDAdd;
     }
 }
 

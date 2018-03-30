@@ -52,5 +52,10 @@ namespace RassiCements_LTD
         {
 
         }
+
+        private void lblLDSubHead_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
