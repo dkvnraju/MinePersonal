@@ -300,6 +300,7 @@
             this.btnWDClr.TabIndex = 13;
             this.btnWDClr.Text = "Clear";
             this.btnWDClr.UseVisualStyleBackColor = true;
+            this.btnWDClr.Click += new System.EventHandler(this.btnWDClr_Click);
             // 
             // txtWDWgnAmt
             // 

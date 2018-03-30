@@ -57,5 +57,14 @@ namespace RassiCements_LTD
         {
 
         }
+
+        private void btnWDClr_Click(object sender, EventArgs e)
+        {
+            txtWDTypeID.Text = "";
+            txtWDWgnAmt.Text = "";
+            txtWDRDAmt.Text = "";
+            txtWDHLAmt.Text = "";
+            COBXWDTypeNM.Text = "";
+        }
     }
 }
