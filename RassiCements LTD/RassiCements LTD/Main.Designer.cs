@@ -64,86 +64,86 @@
             this.lblBDBNM = new System.Windows.Forms.Label();
             this.lblBDBNo = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.lblPLDHead = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblPLDTknNo = new System.Windows.Forms.Label();
-            this.lblPLDTypID = new System.Windows.Forms.Label();
-            this.lblPLDBtchNo = new System.Windows.Forms.Label();
-            this.lblPLDJNDT = new System.Windows.Forms.Label();
-            this.lblPLDPF = new System.Windows.Forms.Label();
-            this.lblPLDSubHead = new System.Windows.Forms.Label();
-            this.lblPLDYASDT = new System.Windows.Forms.Label();
-            this.lblPLDYASDtVal = new System.Windows.Forms.Label();
-            this.lblPLDDtofRet = new System.Windows.Forms.Label();
-            this.lblPLDDofRet = new System.Windows.Forms.Label();
-            this.txtboxPLDTknNo = new System.Windows.Forms.TextBox();
-            this.comboBoxPLDTypID = new System.Windows.Forms.ComboBox();
-            this.comboBoxPLDBtchNo = new System.Windows.Forms.ComboBox();
-            this.dateTimePickerJNDt = new System.Windows.Forms.DateTimePicker();
-            this.radioButtonPFYes = new System.Windows.Forms.RadioButton();
-            this.radioButtonPFNo = new System.Windows.Forms.RadioButton();
-            this.lblPLDNM = new System.Windows.Forms.Label();
-            this.lblPLDFNM = new System.Windows.Forms.Label();
-            this.lblPLDDtB = new System.Windows.Forms.Label();
-            this.lblPLDSINo = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.btnPLDAdd = new System.Windows.Forms.Button();
-            this.btnPLDClr = new System.Windows.Forms.Button();
-            this.btnPLDUpdate = new System.Windows.Forms.Button();
             this.btnPLDDel = new System.Windows.Forms.Button();
-            this.lblLDHead = new System.Windows.Forms.Label();
+            this.btnPLDUpdate = new System.Windows.Forms.Button();
+            this.btnPLDClr = new System.Windows.Forms.Button();
+            this.btnPLDAdd = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblPLDSINo = new System.Windows.Forms.Label();
+            this.lblPLDDtB = new System.Windows.Forms.Label();
+            this.lblPLDFNM = new System.Windows.Forms.Label();
+            this.lblPLDNM = new System.Windows.Forms.Label();
+            this.radioButtonPFNo = new System.Windows.Forms.RadioButton();
+            this.radioButtonPFYes = new System.Windows.Forms.RadioButton();
+            this.dateTimePickerJNDt = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxPLDBtchNo = new System.Windows.Forms.ComboBox();
+            this.comboBoxPLDTypID = new System.Windows.Forms.ComboBox();
+            this.txtboxPLDTknNo = new System.Windows.Forms.TextBox();
+            this.lblPLDDofRet = new System.Windows.Forms.Label();
+            this.lblPLDDtofRet = new System.Windows.Forms.Label();
+            this.lblPLDYASDtVal = new System.Windows.Forms.Label();
+            this.lblPLDYASDT = new System.Windows.Forms.Label();
+            this.lblPLDSubHead = new System.Windows.Forms.Label();
+            this.lblPLDPF = new System.Windows.Forms.Label();
+            this.lblPLDJNDT = new System.Windows.Forms.Label();
+            this.lblPLDBtchNo = new System.Windows.Forms.Label();
+            this.lblPLDTypID = new System.Windows.Forms.Label();
+            this.lblPLDTknNo = new System.Windows.Forms.Label();
+            this.lblPLDHead = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lblLDSubHead = new System.Windows.Forms.Label();
-            this.lblLDBtchNo = new System.Windows.Forms.Label();
-            this.lblLDDt = new System.Windows.Forms.Label();
-            this.lblLDShft = new System.Windows.Forms.Label();
-            this.lblLDRTns = new System.Windows.Forms.Label();
-            this.lblLDWgTns = new System.Windows.Forms.Label();
-            this.lblLDDWWagTns = new System.Windows.Forms.Label();
-            this.lblLDHLTns = new System.Windows.Forms.Label();
-            this.lblLDTotTns = new System.Windows.Forms.Label();
-            this.lblLDNoLdrs = new System.Windows.Forms.Label();
-            this.lblNoPkrs = new System.Windows.Forms.Label();
-            this.lblLDLdrAmtRd = new System.Windows.Forms.Label();
-            this.lblLDLdrAmtWG = new System.Windows.Forms.Label();
-            this.lblLDLdrAmtHL = new System.Windows.Forms.Label();
-            this.lblLDLdrAmtOldWg = new System.Windows.Forms.Label();
-            this.lblLDLdrTotAmt = new System.Windows.Forms.Label();
-            this.lblLDPkrAmtRd = new System.Windows.Forms.Label();
-            this.lblLDPkrAmtWg = new System.Windows.Forms.Label();
-            this.lblLDPkrAmtHL = new System.Windows.Forms.Label();
-            this.lblLDPkrAmtOldWg = new System.Windows.Forms.Label();
-            this.lblLDPkrTotAmt = new System.Windows.Forms.Label();
-            this.comboBoxLDBtchNo = new System.Windows.Forms.ComboBox();
-            this.comboBoxLDShft = new System.Windows.Forms.ComboBox();
-            this.textBoxLDRdTns = new System.Windows.Forms.TextBox();
-            this.textBoxLDWgTns = new System.Windows.Forms.TextBox();
-            this.textBoxLDDWWagTns = new System.Windows.Forms.TextBox();
-            this.textBoxLDHLTns = new System.Windows.Forms.TextBox();
-            this.textBoxLDTotTns = new System.Windows.Forms.TextBox();
-            this.textBoxLDNoLdrs = new System.Windows.Forms.TextBox();
-            this.textBoxLDNoPkrs = new System.Windows.Forms.TextBox();
-            this.dateTimePickerLDDt = new System.Windows.Forms.DateTimePicker();
-            this.textBoxLDLDAmtRd = new System.Windows.Forms.TextBox();
-            this.textBoxLDPkrAmtRd = new System.Windows.Forms.TextBox();
-            this.textBoxLDLDAmtWg = new System.Windows.Forms.TextBox();
-            this.textBoxLDPkrAmtWg = new System.Windows.Forms.TextBox();
-            this.textBoxLDLDAmtHL = new System.Windows.Forms.TextBox();
-            this.textBoxLDPkrAmtHL = new System.Windows.Forms.TextBox();
-            this.textBoxLDLDAmtOldWgn = new System.Windows.Forms.TextBox();
-            this.textBoxLDPkrAmtOldWgn = new System.Windows.Forms.TextBox();
-            this.textBoxLDLDTotAmt = new System.Windows.Forms.TextBox();
-            this.textBoxLDPkrTotAmt = new System.Windows.Forms.TextBox();
-            this.btnLDAdd = new System.Windows.Forms.Button();
-            this.btnClr = new System.Windows.Forms.Button();
-            this.btnLDDel = new System.Windows.Forms.Button();
-            this.btnLDUpdate = new System.Windows.Forms.Button();
-            this.btnLDOtrbtch = new System.Windows.Forms.Button();
             this.btnLDOthrCntrct = new System.Windows.Forms.Button();
+            this.btnLDOtrbtch = new System.Windows.Forms.Button();
+            this.btnLDUpdate = new System.Windows.Forms.Button();
+            this.btnLDDel = new System.Windows.Forms.Button();
+            this.btnClr = new System.Windows.Forms.Button();
+            this.btnLDAdd = new System.Windows.Forms.Button();
+            this.textBoxLDPkrTotAmt = new System.Windows.Forms.TextBox();
+            this.textBoxLDLDTotAmt = new System.Windows.Forms.TextBox();
+            this.textBoxLDPkrAmtOldWgn = new System.Windows.Forms.TextBox();
+            this.textBoxLDLDAmtOldWgn = new System.Windows.Forms.TextBox();
+            this.textBoxLDPkrAmtHL = new System.Windows.Forms.TextBox();
+            this.textBoxLDLDAmtHL = new System.Windows.Forms.TextBox();
+            this.textBoxLDPkrAmtWg = new System.Windows.Forms.TextBox();
+            this.textBoxLDLDAmtWg = new System.Windows.Forms.TextBox();
+            this.textBoxLDPkrAmtRd = new System.Windows.Forms.TextBox();
+            this.textBoxLDLDAmtRd = new System.Windows.Forms.TextBox();
+            this.dateTimePickerLDDt = new System.Windows.Forms.DateTimePicker();
+            this.textBoxLDNoPkrs = new System.Windows.Forms.TextBox();
+            this.textBoxLDNoLdrs = new System.Windows.Forms.TextBox();
+            this.textBoxLDTotTns = new System.Windows.Forms.TextBox();
+            this.textBoxLDHLTns = new System.Windows.Forms.TextBox();
+            this.textBoxLDDWWagTns = new System.Windows.Forms.TextBox();
+            this.textBoxLDWgTns = new System.Windows.Forms.TextBox();
+            this.textBoxLDRdTns = new System.Windows.Forms.TextBox();
+            this.comboBoxLDShft = new System.Windows.Forms.ComboBox();
+            this.comboBoxLDBtchNo = new System.Windows.Forms.ComboBox();
+            this.lblLDPkrTotAmt = new System.Windows.Forms.Label();
+            this.lblLDPkrAmtOldWg = new System.Windows.Forms.Label();
+            this.lblLDPkrAmtHL = new System.Windows.Forms.Label();
+            this.lblLDPkrAmtWg = new System.Windows.Forms.Label();
+            this.lblLDPkrAmtRd = new System.Windows.Forms.Label();
+            this.lblLDLdrTotAmt = new System.Windows.Forms.Label();
+            this.lblLDLdrAmtOldWg = new System.Windows.Forms.Label();
+            this.lblLDLdrAmtHL = new System.Windows.Forms.Label();
+            this.lblLDLdrAmtWG = new System.Windows.Forms.Label();
+            this.lblLDLdrAmtRd = new System.Windows.Forms.Label();
+            this.lblNoPkrs = new System.Windows.Forms.Label();
+            this.lblLDNoLdrs = new System.Windows.Forms.Label();
+            this.lblLDTotTns = new System.Windows.Forms.Label();
+            this.lblLDHLTns = new System.Windows.Forms.Label();
+            this.lblLDDWWagTns = new System.Windows.Forms.Label();
+            this.lblLDWgTns = new System.Windows.Forms.Label();
+            this.lblLDRTns = new System.Windows.Forms.Label();
+            this.lblLDShft = new System.Windows.Forms.Label();
+            this.lblLDDt = new System.Windows.Forms.Label();
+            this.lblLDBtchNo = new System.Windows.Forms.Label();
+            this.lblLDSubHead = new System.Windows.Forms.Label();
+            this.lblLDHead = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -151,8 +151,8 @@
             this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -520,26 +520,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.panel4);
-            this.tabPage4.Controls.Add(this.lblLDHead);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1332, 644);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // lblPLDHead
-            // 
-            this.lblPLDHead.AutoSize = true;
-            this.lblPLDHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPLDHead.Location = new System.Drawing.Point(655, 43);
-            this.lblPLDHead.Name = "lblPLDHead";
-            this.lblPLDHead.Size = new System.Drawing.Size(257, 24);
-            this.lblPLDHead.TabIndex = 1;
-            this.lblPLDHead.Text = "Packer And Loader Details";
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.btnPLDDel);
@@ -576,142 +556,105 @@
             this.panel3.Size = new System.Drawing.Size(635, 351);
             this.panel3.TabIndex = 2;
             // 
-            // lblPLDTknNo
+            // btnPLDDel
             // 
-            this.lblPLDTknNo.AutoSize = true;
-            this.lblPLDTknNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPLDTknNo.Location = new System.Drawing.Point(64, 61);
-            this.lblPLDTknNo.Name = "lblPLDTknNo";
-            this.lblPLDTknNo.Size = new System.Drawing.Size(76, 15);
-            this.lblPLDTknNo.TabIndex = 0;
-            this.lblPLDTknNo.Text = "Token No :";
+            this.btnPLDDel.Location = new System.Drawing.Point(429, 280);
+            this.btnPLDDel.Name = "btnPLDDel";
+            this.btnPLDDel.Size = new System.Drawing.Size(75, 23);
+            this.btnPLDDel.TabIndex = 27;
+            this.btnPLDDel.Text = "Delete";
+            this.btnPLDDel.UseVisualStyleBackColor = true;
             // 
-            // lblPLDTypID
+            // btnPLDUpdate
             // 
-            this.lblPLDTypID.AutoSize = true;
-            this.lblPLDTypID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPLDTypID.Location = new System.Drawing.Point(77, 85);
-            this.lblPLDTypID.Name = "lblPLDTypID";
-            this.lblPLDTypID.Size = new System.Drawing.Size(63, 15);
-            this.lblPLDTypID.TabIndex = 1;
-            this.lblPLDTypID.Text = "Type ID :";
+            this.btnPLDUpdate.Location = new System.Drawing.Point(318, 280);
+            this.btnPLDUpdate.Name = "btnPLDUpdate";
+            this.btnPLDUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnPLDUpdate.TabIndex = 26;
+            this.btnPLDUpdate.Text = "Update";
+            this.btnPLDUpdate.UseVisualStyleBackColor = true;
             // 
-            // lblPLDBtchNo
+            // btnPLDClr
             // 
-            this.lblPLDBtchNo.AutoSize = true;
-            this.lblPLDBtchNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPLDBtchNo.Location = new System.Drawing.Point(67, 114);
-            this.lblPLDBtchNo.Name = "lblPLDBtchNo";
-            this.lblPLDBtchNo.Size = new System.Drawing.Size(73, 15);
-            this.lblPLDBtchNo.TabIndex = 2;
-            this.lblPLDBtchNo.Text = "Batch No :";
+            this.btnPLDClr.Location = new System.Drawing.Point(210, 280);
+            this.btnPLDClr.Name = "btnPLDClr";
+            this.btnPLDClr.Size = new System.Drawing.Size(75, 23);
+            this.btnPLDClr.TabIndex = 25;
+            this.btnPLDClr.Text = "Clear";
+            this.btnPLDClr.UseVisualStyleBackColor = true;
             // 
-            // lblPLDJNDT
+            // btnPLDAdd
             // 
-            this.lblPLDJNDT.AutoSize = true;
-            this.lblPLDJNDT.Location = new System.Drawing.Point(44, 145);
-            this.lblPLDJNDT.Name = "lblPLDJNDT";
-            this.lblPLDJNDT.Size = new System.Drawing.Size(96, 15);
-            this.lblPLDJNDT.TabIndex = 3;
-            this.lblPLDJNDT.Text = "Joining Date :";
+            this.btnPLDAdd.Location = new System.Drawing.Point(100, 281);
+            this.btnPLDAdd.Name = "btnPLDAdd";
+            this.btnPLDAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnPLDAdd.TabIndex = 24;
+            this.btnPLDAdd.Text = "Add";
+            this.btnPLDAdd.UseVisualStyleBackColor = true;
             // 
-            // lblPLDPF
+            // dateTimePicker1
             // 
-            this.lblPLDPF.AutoSize = true;
-            this.lblPLDPF.Location = new System.Drawing.Point(108, 178);
-            this.lblPLDPF.Name = "lblPLDPF";
-            this.lblPLDPF.Size = new System.Drawing.Size(32, 15);
-            this.lblPLDPF.TabIndex = 4;
-            this.lblPLDPF.Text = "PF :";
+            this.dateTimePicker1.Location = new System.Drawing.Point(428, 117);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(101, 21);
+            this.dateTimePicker1.TabIndex = 23;
             // 
-            // lblPLDSubHead
+            // textBox3
             // 
-            this.lblPLDSubHead.AutoSize = true;
-            this.lblPLDSubHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPLDSubHead.Location = new System.Drawing.Point(242, 13);
-            this.lblPLDSubHead.Name = "lblPLDSubHead";
-            this.lblPLDSubHead.Size = new System.Drawing.Size(139, 18);
-            this.lblPLDSubHead.TabIndex = 5;
-            this.lblPLDSubHead.Text = "Employee Details";
+            this.textBox3.Location = new System.Drawing.Point(429, 150);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 21);
+            this.textBox3.TabIndex = 22;
             // 
-            // lblPLDYASDT
+            // textBox2
             // 
-            this.lblPLDYASDT.AutoSize = true;
-            this.lblPLDYASDT.Location = new System.Drawing.Point(18, 215);
-            this.lblPLDYASDT.Name = "lblPLDYASDT";
-            this.lblPLDYASDT.Size = new System.Drawing.Size(122, 15);
-            this.lblPLDYASDT.TabIndex = 6;
-            this.lblPLDYASDT.Text = "Years As Of Date :";
+            this.textBox2.Location = new System.Drawing.Point(429, 87);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 21);
+            this.textBox2.TabIndex = 21;
             // 
-            // lblPLDYASDtVal
+            // textBox1
             // 
-            this.lblPLDYASDtVal.AutoSize = true;
-            this.lblPLDYASDtVal.Location = new System.Drawing.Point(146, 215);
-            this.lblPLDYASDtVal.Name = "lblPLDYASDtVal";
-            this.lblPLDYASDtVal.Size = new System.Drawing.Size(154, 15);
-            this.lblPLDYASDtVal.TabIndex = 7;
-            this.lblPLDYASDtVal.Text = "Years As Of Date Value";
-            this.lblPLDYASDtVal.Visible = false;
+            this.textBox1.Location = new System.Drawing.Point(428, 61);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 21);
+            this.textBox1.TabIndex = 20;
             // 
-            // lblPLDDtofRet
+            // lblPLDSINo
             // 
-            this.lblPLDDtofRet.AutoSize = true;
-            this.lblPLDDtofRet.Location = new System.Drawing.Point(306, 215);
-            this.lblPLDDtofRet.Name = "lblPLDDtofRet";
-            this.lblPLDDtofRet.Size = new System.Drawing.Size(138, 15);
-            this.lblPLDDtofRet.TabIndex = 8;
-            this.lblPLDDtofRet.Text = "Date Of Retirement :";
+            this.lblPLDSINo.AutoSize = true;
+            this.lblPLDSINo.Location = new System.Drawing.Point(372, 150);
+            this.lblPLDSINo.Name = "lblPLDSINo";
+            this.lblPLDSINo.Size = new System.Drawing.Size(50, 15);
+            this.lblPLDSINo.TabIndex = 19;
+            this.lblPLDSINo.Text = "SI No :";
             // 
-            // lblPLDDofRet
+            // lblPLDDtB
             // 
-            this.lblPLDDofRet.AutoSize = true;
-            this.lblPLDDofRet.Location = new System.Drawing.Point(450, 215);
-            this.lblPLDDofRet.Name = "lblPLDDofRet";
-            this.lblPLDDofRet.Size = new System.Drawing.Size(105, 15);
-            this.lblPLDDofRet.TabIndex = 9;
-            this.lblPLDDofRet.Text = "Date Of Ret Val";
-            this.lblPLDDofRet.Visible = false;
+            this.lblPLDDtB.AutoSize = true;
+            this.lblPLDDtB.Location = new System.Drawing.Point(325, 122);
+            this.lblPLDDtB.Name = "lblPLDDtB";
+            this.lblPLDDtB.Size = new System.Drawing.Size(97, 15);
+            this.lblPLDDtB.TabIndex = 18;
+            this.lblPLDDtB.Text = "Date Of Birth :";
             // 
-            // txtboxPLDTknNo
+            // lblPLDFNM
             // 
-            this.txtboxPLDTknNo.Location = new System.Drawing.Point(146, 58);
-            this.txtboxPLDTknNo.Name = "txtboxPLDTknNo";
-            this.txtboxPLDTknNo.Size = new System.Drawing.Size(100, 21);
-            this.txtboxPLDTknNo.TabIndex = 10;
+            this.lblPLDFNM.AutoSize = true;
+            this.lblPLDFNM.Location = new System.Drawing.Point(325, 93);
+            this.lblPLDFNM.Name = "lblPLDFNM";
+            this.lblPLDFNM.Size = new System.Drawing.Size(98, 15);
+            this.lblPLDFNM.TabIndex = 17;
+            this.lblPLDFNM.Text = "Father Name :";
             // 
-            // comboBoxPLDTypID
+            // lblPLDNM
             // 
-            this.comboBoxPLDTypID.FormattingEnabled = true;
-            this.comboBoxPLDTypID.Location = new System.Drawing.Point(146, 85);
-            this.comboBoxPLDTypID.Name = "comboBoxPLDTypID";
-            this.comboBoxPLDTypID.Size = new System.Drawing.Size(100, 23);
-            this.comboBoxPLDTypID.TabIndex = 11;
-            // 
-            // comboBoxPLDBtchNo
-            // 
-            this.comboBoxPLDBtchNo.FormattingEnabled = true;
-            this.comboBoxPLDBtchNo.Location = new System.Drawing.Point(146, 114);
-            this.comboBoxPLDBtchNo.Name = "comboBoxPLDBtchNo";
-            this.comboBoxPLDBtchNo.Size = new System.Drawing.Size(100, 23);
-            this.comboBoxPLDBtchNo.TabIndex = 12;
-            // 
-            // dateTimePickerJNDt
-            // 
-            this.dateTimePickerJNDt.Location = new System.Drawing.Point(146, 145);
-            this.dateTimePickerJNDt.Name = "dateTimePickerJNDt";
-            this.dateTimePickerJNDt.Size = new System.Drawing.Size(100, 21);
-            this.dateTimePickerJNDt.TabIndex = 13;
-            // 
-            // radioButtonPFYes
-            // 
-            this.radioButtonPFYes.AutoSize = true;
-            this.radioButtonPFYes.Location = new System.Drawing.Point(146, 178);
-            this.radioButtonPFYes.Name = "radioButtonPFYes";
-            this.radioButtonPFYes.Size = new System.Drawing.Size(48, 19);
-            this.radioButtonPFYes.TabIndex = 14;
-            this.radioButtonPFYes.TabStop = true;
-            this.radioButtonPFYes.Text = "Yes";
-            this.radioButtonPFYes.UseVisualStyleBackColor = true;
+            this.lblPLDNM.AutoSize = true;
+            this.lblPLDNM.Location = new System.Drawing.Point(369, 64);
+            this.lblPLDNM.Name = "lblPLDNM";
+            this.lblPLDNM.Size = new System.Drawing.Size(53, 15);
+            this.lblPLDNM.TabIndex = 16;
+            this.lblPLDNM.Text = "Name :";
             // 
             // radioButtonPFNo
             // 
@@ -724,115 +667,163 @@
             this.radioButtonPFNo.Text = "No";
             this.radioButtonPFNo.UseVisualStyleBackColor = true;
             // 
-            // lblPLDNM
+            // radioButtonPFYes
             // 
-            this.lblPLDNM.AutoSize = true;
-            this.lblPLDNM.Location = new System.Drawing.Point(369, 64);
-            this.lblPLDNM.Name = "lblPLDNM";
-            this.lblPLDNM.Size = new System.Drawing.Size(53, 15);
-            this.lblPLDNM.TabIndex = 16;
-            this.lblPLDNM.Text = "Name :";
+            this.radioButtonPFYes.AutoSize = true;
+            this.radioButtonPFYes.Location = new System.Drawing.Point(146, 178);
+            this.radioButtonPFYes.Name = "radioButtonPFYes";
+            this.radioButtonPFYes.Size = new System.Drawing.Size(48, 19);
+            this.radioButtonPFYes.TabIndex = 14;
+            this.radioButtonPFYes.TabStop = true;
+            this.radioButtonPFYes.Text = "Yes";
+            this.radioButtonPFYes.UseVisualStyleBackColor = true;
             // 
-            // lblPLDFNM
+            // dateTimePickerJNDt
             // 
-            this.lblPLDFNM.AutoSize = true;
-            this.lblPLDFNM.Location = new System.Drawing.Point(325, 93);
-            this.lblPLDFNM.Name = "lblPLDFNM";
-            this.lblPLDFNM.Size = new System.Drawing.Size(98, 15);
-            this.lblPLDFNM.TabIndex = 17;
-            this.lblPLDFNM.Text = "Father Name :";
+            this.dateTimePickerJNDt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerJNDt.Location = new System.Drawing.Point(146, 145);
+            this.dateTimePickerJNDt.Name = "dateTimePickerJNDt";
+            this.dateTimePickerJNDt.Size = new System.Drawing.Size(100, 21);
+            this.dateTimePickerJNDt.TabIndex = 13;
             // 
-            // lblPLDDtB
+            // comboBoxPLDBtchNo
             // 
-            this.lblPLDDtB.AutoSize = true;
-            this.lblPLDDtB.Location = new System.Drawing.Point(325, 122);
-            this.lblPLDDtB.Name = "lblPLDDtB";
-            this.lblPLDDtB.Size = new System.Drawing.Size(97, 15);
-            this.lblPLDDtB.TabIndex = 18;
-            this.lblPLDDtB.Text = "Date Of Birth :";
+            this.comboBoxPLDBtchNo.FormattingEnabled = true;
+            this.comboBoxPLDBtchNo.Location = new System.Drawing.Point(146, 114);
+            this.comboBoxPLDBtchNo.Name = "comboBoxPLDBtchNo";
+            this.comboBoxPLDBtchNo.Size = new System.Drawing.Size(100, 23);
+            this.comboBoxPLDBtchNo.TabIndex = 12;
             // 
-            // lblPLDSINo
+            // comboBoxPLDTypID
             // 
-            this.lblPLDSINo.AutoSize = true;
-            this.lblPLDSINo.Location = new System.Drawing.Point(372, 150);
-            this.lblPLDSINo.Name = "lblPLDSINo";
-            this.lblPLDSINo.Size = new System.Drawing.Size(50, 15);
-            this.lblPLDSINo.TabIndex = 19;
-            this.lblPLDSINo.Text = "SI No :";
+            this.comboBoxPLDTypID.FormattingEnabled = true;
+            this.comboBoxPLDTypID.Location = new System.Drawing.Point(146, 85);
+            this.comboBoxPLDTypID.Name = "comboBoxPLDTypID";
+            this.comboBoxPLDTypID.Size = new System.Drawing.Size(100, 23);
+            this.comboBoxPLDTypID.TabIndex = 11;
             // 
-            // textBox1
+            // txtboxPLDTknNo
             // 
-            this.textBox1.Location = new System.Drawing.Point(428, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
-            this.textBox1.TabIndex = 20;
+            this.txtboxPLDTknNo.Location = new System.Drawing.Point(146, 58);
+            this.txtboxPLDTknNo.Name = "txtboxPLDTknNo";
+            this.txtboxPLDTknNo.Size = new System.Drawing.Size(100, 21);
+            this.txtboxPLDTknNo.TabIndex = 10;
             // 
-            // textBox2
+            // lblPLDDofRet
             // 
-            this.textBox2.Location = new System.Drawing.Point(429, 87);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 21);
-            this.textBox2.TabIndex = 21;
+            this.lblPLDDofRet.AutoSize = true;
+            this.lblPLDDofRet.Location = new System.Drawing.Point(450, 215);
+            this.lblPLDDofRet.Name = "lblPLDDofRet";
+            this.lblPLDDofRet.Size = new System.Drawing.Size(105, 15);
+            this.lblPLDDofRet.TabIndex = 9;
+            this.lblPLDDofRet.Text = "Date Of Ret Val";
+            this.lblPLDDofRet.Visible = false;
             // 
-            // textBox3
+            // lblPLDDtofRet
             // 
-            this.textBox3.Location = new System.Drawing.Point(429, 150);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 21);
-            this.textBox3.TabIndex = 22;
+            this.lblPLDDtofRet.AutoSize = true;
+            this.lblPLDDtofRet.Location = new System.Drawing.Point(306, 215);
+            this.lblPLDDtofRet.Name = "lblPLDDtofRet";
+            this.lblPLDDtofRet.Size = new System.Drawing.Size(138, 15);
+            this.lblPLDDtofRet.TabIndex = 8;
+            this.lblPLDDtofRet.Text = "Date Of Retirement :";
             // 
-            // dateTimePicker1
+            // lblPLDYASDtVal
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(428, 117);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(101, 21);
-            this.dateTimePicker1.TabIndex = 23;
+            this.lblPLDYASDtVal.AutoSize = true;
+            this.lblPLDYASDtVal.Location = new System.Drawing.Point(146, 215);
+            this.lblPLDYASDtVal.Name = "lblPLDYASDtVal";
+            this.lblPLDYASDtVal.Size = new System.Drawing.Size(154, 15);
+            this.lblPLDYASDtVal.TabIndex = 7;
+            this.lblPLDYASDtVal.Text = "Years As Of Date Value";
+            this.lblPLDYASDtVal.Visible = false;
             // 
-            // btnPLDAdd
+            // lblPLDYASDT
             // 
-            this.btnPLDAdd.Location = new System.Drawing.Point(100, 281);
-            this.btnPLDAdd.Name = "btnPLDAdd";
-            this.btnPLDAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnPLDAdd.TabIndex = 24;
-            this.btnPLDAdd.Text = "Add";
-            this.btnPLDAdd.UseVisualStyleBackColor = true;
+            this.lblPLDYASDT.AutoSize = true;
+            this.lblPLDYASDT.Location = new System.Drawing.Point(18, 215);
+            this.lblPLDYASDT.Name = "lblPLDYASDT";
+            this.lblPLDYASDT.Size = new System.Drawing.Size(122, 15);
+            this.lblPLDYASDT.TabIndex = 6;
+            this.lblPLDYASDT.Text = "Years As Of Date :";
             // 
-            // btnPLDClr
+            // lblPLDSubHead
             // 
-            this.btnPLDClr.Location = new System.Drawing.Point(210, 280);
-            this.btnPLDClr.Name = "btnPLDClr";
-            this.btnPLDClr.Size = new System.Drawing.Size(75, 23);
-            this.btnPLDClr.TabIndex = 25;
-            this.btnPLDClr.Text = "Clear";
-            this.btnPLDClr.UseVisualStyleBackColor = true;
+            this.lblPLDSubHead.AutoSize = true;
+            this.lblPLDSubHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPLDSubHead.Location = new System.Drawing.Point(242, 13);
+            this.lblPLDSubHead.Name = "lblPLDSubHead";
+            this.lblPLDSubHead.Size = new System.Drawing.Size(139, 18);
+            this.lblPLDSubHead.TabIndex = 5;
+            this.lblPLDSubHead.Text = "Employee Details";
             // 
-            // btnPLDUpdate
+            // lblPLDPF
             // 
-            this.btnPLDUpdate.Location = new System.Drawing.Point(318, 280);
-            this.btnPLDUpdate.Name = "btnPLDUpdate";
-            this.btnPLDUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnPLDUpdate.TabIndex = 26;
-            this.btnPLDUpdate.Text = "Update";
-            this.btnPLDUpdate.UseVisualStyleBackColor = true;
+            this.lblPLDPF.AutoSize = true;
+            this.lblPLDPF.Location = new System.Drawing.Point(108, 178);
+            this.lblPLDPF.Name = "lblPLDPF";
+            this.lblPLDPF.Size = new System.Drawing.Size(32, 15);
+            this.lblPLDPF.TabIndex = 4;
+            this.lblPLDPF.Text = "PF :";
             // 
-            // btnPLDDel
+            // lblPLDJNDT
             // 
-            this.btnPLDDel.Location = new System.Drawing.Point(429, 280);
-            this.btnPLDDel.Name = "btnPLDDel";
-            this.btnPLDDel.Size = new System.Drawing.Size(75, 23);
-            this.btnPLDDel.TabIndex = 27;
-            this.btnPLDDel.Text = "Delete";
-            this.btnPLDDel.UseVisualStyleBackColor = true;
+            this.lblPLDJNDT.AutoSize = true;
+            this.lblPLDJNDT.Location = new System.Drawing.Point(44, 145);
+            this.lblPLDJNDT.Name = "lblPLDJNDT";
+            this.lblPLDJNDT.Size = new System.Drawing.Size(96, 15);
+            this.lblPLDJNDT.TabIndex = 3;
+            this.lblPLDJNDT.Text = "Joining Date :";
             // 
-            // lblLDHead
+            // lblPLDBtchNo
             // 
-            this.lblLDHead.AutoSize = true;
-            this.lblLDHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDHead.Location = new System.Drawing.Point(545, 42);
-            this.lblLDHead.Name = "lblLDHead";
-            this.lblLDHead.Size = new System.Drawing.Size(153, 24);
-            this.lblLDHead.TabIndex = 0;
-            this.lblLDHead.Text = "Loading Details";
+            this.lblPLDBtchNo.AutoSize = true;
+            this.lblPLDBtchNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPLDBtchNo.Location = new System.Drawing.Point(67, 114);
+            this.lblPLDBtchNo.Name = "lblPLDBtchNo";
+            this.lblPLDBtchNo.Size = new System.Drawing.Size(73, 15);
+            this.lblPLDBtchNo.TabIndex = 2;
+            this.lblPLDBtchNo.Text = "Batch No :";
+            // 
+            // lblPLDTypID
+            // 
+            this.lblPLDTypID.AutoSize = true;
+            this.lblPLDTypID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPLDTypID.Location = new System.Drawing.Point(77, 85);
+            this.lblPLDTypID.Name = "lblPLDTypID";
+            this.lblPLDTypID.Size = new System.Drawing.Size(63, 15);
+            this.lblPLDTypID.TabIndex = 1;
+            this.lblPLDTypID.Text = "Type ID :";
+            // 
+            // lblPLDTknNo
+            // 
+            this.lblPLDTknNo.AutoSize = true;
+            this.lblPLDTknNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPLDTknNo.Location = new System.Drawing.Point(64, 61);
+            this.lblPLDTknNo.Name = "lblPLDTknNo";
+            this.lblPLDTknNo.Size = new System.Drawing.Size(76, 15);
+            this.lblPLDTknNo.TabIndex = 0;
+            this.lblPLDTknNo.Text = "Token No :";
+            // 
+            // lblPLDHead
+            // 
+            this.lblPLDHead.AutoSize = true;
+            this.lblPLDHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPLDHead.Location = new System.Drawing.Point(655, 43);
+            this.lblPLDHead.Name = "lblPLDHead";
+            this.lblPLDHead.Size = new System.Drawing.Size(257, 24);
+            this.lblPLDHead.TabIndex = 1;
+            this.lblPLDHead.Text = "Packer And Loader Details";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.panel4);
+            this.tabPage4.Controls.Add(this.lblLDHead);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1332, 644);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // panel4
             // 
@@ -889,196 +880,211 @@
             this.panel4.Size = new System.Drawing.Size(1191, 475);
             this.panel4.TabIndex = 1;
             // 
-            // lblLDSubHead
+            // btnLDOthrCntrct
             // 
-            this.lblLDSubHead.AutoSize = true;
-            this.lblLDSubHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDSubHead.Location = new System.Drawing.Point(525, 18);
-            this.lblLDSubHead.Name = "lblLDSubHead";
-            this.lblLDSubHead.Size = new System.Drawing.Size(166, 18);
-            this.lblLDSubHead.TabIndex = 0;
-            this.lblLDSubHead.Text = "Daily Loading Details";
-            this.lblLDSubHead.Click += new System.EventHandler(this.lblLDSubHead_Click);
+            this.btnLDOthrCntrct.Location = new System.Drawing.Point(799, 433);
+            this.btnLDOthrCntrct.Name = "btnLDOthrCntrct";
+            this.btnLDOthrCntrct.Size = new System.Drawing.Size(134, 23);
+            this.btnLDOthrCntrct.TabIndex = 46;
+            this.btnLDOthrCntrct.Text = "Other Contractor";
+            this.btnLDOthrCntrct.UseVisualStyleBackColor = true;
             // 
-            // lblLDBtchNo
+            // btnLDOtrbtch
             // 
-            this.lblLDBtchNo.AutoSize = true;
-            this.lblLDBtchNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDBtchNo.Location = new System.Drawing.Point(65, 67);
-            this.lblLDBtchNo.Name = "lblLDBtchNo";
-            this.lblLDBtchNo.Size = new System.Drawing.Size(73, 15);
-            this.lblLDBtchNo.TabIndex = 1;
-            this.lblLDBtchNo.Text = "Batch No :";
+            this.btnLDOtrbtch.Location = new System.Drawing.Point(657, 433);
+            this.btnLDOtrbtch.Name = "btnLDOtrbtch";
+            this.btnLDOtrbtch.Size = new System.Drawing.Size(119, 23);
+            this.btnLDOtrbtch.TabIndex = 45;
+            this.btnLDOtrbtch.Text = "Other Batch";
+            this.btnLDOtrbtch.UseVisualStyleBackColor = true;
             // 
-            // lblLDDt
+            // btnLDUpdate
             // 
-            this.lblLDDt.AutoSize = true;
-            this.lblLDDt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDDt.Location = new System.Drawing.Point(93, 101);
-            this.lblLDDt.Name = "lblLDDt";
-            this.lblLDDt.Size = new System.Drawing.Size(45, 15);
-            this.lblLDDt.TabIndex = 2;
-            this.lblLDDt.Text = "Date :";
+            this.btnLDUpdate.Location = new System.Drawing.Point(558, 433);
+            this.btnLDUpdate.Name = "btnLDUpdate";
+            this.btnLDUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnLDUpdate.TabIndex = 44;
+            this.btnLDUpdate.Text = "Update";
+            this.btnLDUpdate.UseVisualStyleBackColor = true;
             // 
-            // lblLDShft
+            // btnLDDel
             // 
-            this.lblLDShft.AutoSize = true;
-            this.lblLDShft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDShft.Location = new System.Drawing.Point(93, 132);
-            this.lblLDShft.Name = "lblLDShft";
-            this.lblLDShft.Size = new System.Drawing.Size(44, 15);
-            this.lblLDShft.TabIndex = 3;
-            this.lblLDShft.Text = "Shift :";
+            this.btnLDDel.Location = new System.Drawing.Point(455, 433);
+            this.btnLDDel.Name = "btnLDDel";
+            this.btnLDDel.Size = new System.Drawing.Size(75, 23);
+            this.btnLDDel.TabIndex = 43;
+            this.btnLDDel.Text = "Delete";
+            this.btnLDDel.UseVisualStyleBackColor = true;
             // 
-            // lblLDRTns
+            // btnClr
             // 
-            this.lblLDRTns.AutoSize = true;
-            this.lblLDRTns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDRTns.Location = new System.Drawing.Point(53, 167);
-            this.lblLDRTns.Name = "lblLDRTns";
-            this.lblLDRTns.Size = new System.Drawing.Size(84, 15);
-            this.lblLDRTns.TabIndex = 4;
-            this.lblLDRTns.Text = "Road Tons :";
+            this.btnClr.Location = new System.Drawing.Point(360, 433);
+            this.btnClr.Name = "btnClr";
+            this.btnClr.Size = new System.Drawing.Size(75, 23);
+            this.btnClr.TabIndex = 42;
+            this.btnClr.Text = "Clear";
+            this.btnClr.UseVisualStyleBackColor = true;
             // 
-            // lblLDWgTns
+            // btnLDAdd
             // 
-            this.lblLDWgTns.AutoSize = true;
-            this.lblLDWgTns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDWgTns.Location = new System.Drawing.Point(39, 212);
-            this.lblLDWgTns.Name = "lblLDWgTns";
-            this.lblLDWgTns.Size = new System.Drawing.Size(94, 15);
-            this.lblLDWgTns.TabIndex = 5;
-            this.lblLDWgTns.Text = "Wagon Tons :";
+            this.btnLDAdd.Location = new System.Drawing.Point(254, 433);
+            this.btnLDAdd.Name = "btnLDAdd";
+            this.btnLDAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnLDAdd.TabIndex = 41;
+            this.btnLDAdd.Text = "Add";
+            this.btnLDAdd.UseVisualStyleBackColor = true;
             // 
-            // lblLDDWWagTns
+            // textBoxLDPkrTotAmt
             // 
-            this.lblLDDWWagTns.AutoSize = true;
-            this.lblLDDWWagTns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDDWWagTns.Location = new System.Drawing.Point(22, 249);
-            this.lblLDDWWagTns.Name = "lblLDDWWagTns";
-            this.lblLDDWWagTns.Size = new System.Drawing.Size(116, 15);
-            this.lblLDDWWagTns.TabIndex = 6;
-            this.lblLDDWWagTns.Text = "D / W Wag Tons :";
+            this.textBoxLDPkrTotAmt.Location = new System.Drawing.Point(988, 126);
+            this.textBoxLDPkrTotAmt.Name = "textBoxLDPkrTotAmt";
+            this.textBoxLDPkrTotAmt.Size = new System.Drawing.Size(100, 21);
+            this.textBoxLDPkrTotAmt.TabIndex = 40;
             // 
-            // lblLDHLTns
+            // textBoxLDLDTotAmt
             // 
-            this.lblLDHLTns.AutoSize = true;
-            this.lblLDHLTns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDHLTns.Location = new System.Drawing.Point(65, 286);
-            this.lblLDHLTns.Name = "lblLDHLTns";
-            this.lblLDHLTns.Size = new System.Drawing.Size(68, 15);
-            this.lblLDHLTns.TabIndex = 7;
-            this.lblLDHLTns.Text = "HL Tons :";
+            this.textBoxLDLDTotAmt.Location = new System.Drawing.Point(988, 78);
+            this.textBoxLDLDTotAmt.Name = "textBoxLDLDTotAmt";
+            this.textBoxLDLDTotAmt.Size = new System.Drawing.Size(100, 21);
+            this.textBoxLDLDTotAmt.TabIndex = 39;
             // 
-            // lblLDTotTns
+            // textBoxLDPkrAmtOldWgn
             // 
-            this.lblLDTotTns.AutoSize = true;
-            this.lblLDTotTns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDTotTns.Location = new System.Drawing.Point(53, 324);
-            this.lblLDTotTns.Name = "lblLDTotTns";
-            this.lblLDTotTns.Size = new System.Drawing.Size(82, 15);
-            this.lblLDTotTns.TabIndex = 8;
-            this.lblLDTotTns.Text = "Total Tons :";
+            this.textBoxLDPkrAmtOldWgn.Location = new System.Drawing.Point(817, 132);
+            this.textBoxLDPkrAmtOldWgn.Name = "textBoxLDPkrAmtOldWgn";
+            this.textBoxLDPkrAmtOldWgn.Size = new System.Drawing.Size(42, 21);
+            this.textBoxLDPkrAmtOldWgn.TabIndex = 38;
             // 
-            // lblLDNoLdrs
+            // textBoxLDLDAmtOldWgn
             // 
-            this.lblLDNoLdrs.AutoSize = true;
-            this.lblLDNoLdrs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDNoLdrs.Location = new System.Drawing.Point(30, 356);
-            this.lblLDNoLdrs.Name = "lblLDNoLdrs";
-            this.lblLDNoLdrs.Size = new System.Drawing.Size(107, 15);
-            this.lblLDNoLdrs.TabIndex = 9;
-            this.lblLDNoLdrs.Text = "No Of Loaders :";
+            this.textBoxLDLDAmtOldWgn.Location = new System.Drawing.Point(816, 78);
+            this.textBoxLDLDAmtOldWgn.Name = "textBoxLDLDAmtOldWgn";
+            this.textBoxLDLDAmtOldWgn.Size = new System.Drawing.Size(43, 21);
+            this.textBoxLDLDAmtOldWgn.TabIndex = 37;
             // 
-            // lblNoPkrs
+            // textBoxLDPkrAmtHL
             // 
-            this.lblNoPkrs.AutoSize = true;
-            this.lblNoPkrs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoPkrs.Location = new System.Drawing.Point(32, 390);
-            this.lblNoPkrs.Name = "lblNoPkrs";
-            this.lblNoPkrs.Size = new System.Drawing.Size(106, 15);
-            this.lblNoPkrs.TabIndex = 10;
-            this.lblNoPkrs.Text = "No Of Packers :";
+            this.textBoxLDPkrAmtHL.Location = new System.Drawing.Point(658, 132);
+            this.textBoxLDPkrAmtHL.Name = "textBoxLDPkrAmtHL";
+            this.textBoxLDPkrAmtHL.Size = new System.Drawing.Size(60, 21);
+            this.textBoxLDPkrAmtHL.TabIndex = 36;
             // 
-            // lblLDLdrAmtRd
+            // textBoxLDLDAmtHL
             // 
-            this.lblLDLdrAmtRd.AutoSize = true;
-            this.lblLDLdrAmtRd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDLdrAmtRd.Location = new System.Drawing.Point(263, 81);
-            this.lblLDLdrAmtRd.Name = "lblLDLdrAmtRd";
-            this.lblLDLdrAmtRd.Size = new System.Drawing.Size(162, 15);
-            this.lblLDLdrAmtRd.TabIndex = 11;
-            this.lblLDLdrAmtRd.Text = "Loader Amount    Road :";
+            this.textBoxLDLDAmtHL.Location = new System.Drawing.Point(657, 81);
+            this.textBoxLDLDAmtHL.Name = "textBoxLDLDAmtHL";
+            this.textBoxLDLDAmtHL.Size = new System.Drawing.Size(61, 21);
+            this.textBoxLDLDAmtHL.TabIndex = 35;
             // 
-            // lblLDLdrAmtWG
+            // textBoxLDPkrAmtWg
             // 
-            this.lblLDLdrAmtWG.AutoSize = true;
-            this.lblLDLdrAmtWG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDLdrAmtWG.Location = new System.Drawing.Point(492, 81);
-            this.lblLDLdrAmtWG.Name = "lblLDLdrAmtWG";
-            this.lblLDLdrAmtWG.Size = new System.Drawing.Size(59, 15);
-            this.lblLDLdrAmtWG.TabIndex = 12;
-            this.lblLDLdrAmtWG.Text = "Wagon :";
+            this.textBoxLDPkrAmtWg.Location = new System.Drawing.Point(558, 132);
+            this.textBoxLDPkrAmtWg.Name = "textBoxLDPkrAmtWg";
+            this.textBoxLDPkrAmtWg.Size = new System.Drawing.Size(54, 21);
+            this.textBoxLDPkrAmtWg.TabIndex = 34;
             // 
-            // lblLDLdrAmtHL
+            // textBoxLDLDAmtWg
             // 
-            this.lblLDLdrAmtHL.AutoSize = true;
-            this.lblLDLdrAmtHL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDLdrAmtHL.Location = new System.Drawing.Point(618, 84);
-            this.lblLDLdrAmtHL.Name = "lblLDLdrAmtHL";
-            this.lblLDLdrAmtHL.Size = new System.Drawing.Size(33, 15);
-            this.lblLDLdrAmtHL.TabIndex = 13;
-            this.lblLDLdrAmtHL.Text = "HL :";
+            this.textBoxLDLDAmtWg.Location = new System.Drawing.Point(558, 81);
+            this.textBoxLDLDAmtWg.Name = "textBoxLDLDAmtWg";
+            this.textBoxLDLDAmtWg.Size = new System.Drawing.Size(54, 21);
+            this.textBoxLDLDAmtWg.TabIndex = 33;
             // 
-            // lblLDLdrAmtOldWg
+            // textBoxLDPkrAmtRd
             // 
-            this.lblLDLdrAmtOldWg.AutoSize = true;
-            this.lblLDLdrAmtOldWg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDLdrAmtOldWg.Location = new System.Drawing.Point(725, 84);
-            this.lblLDLdrAmtOldWg.Name = "lblLDLdrAmtOldWg";
-            this.lblLDLdrAmtOldWg.Size = new System.Drawing.Size(85, 15);
-            this.lblLDLdrAmtOldWg.TabIndex = 14;
-            this.lblLDLdrAmtOldWg.Text = "Old Wagon :";
+            this.textBoxLDPkrAmtRd.Location = new System.Drawing.Point(432, 132);
+            this.textBoxLDPkrAmtRd.Name = "textBoxLDPkrAmtRd";
+            this.textBoxLDPkrAmtRd.Size = new System.Drawing.Size(54, 21);
+            this.textBoxLDPkrAmtRd.TabIndex = 32;
             // 
-            // lblLDLdrTotAmt
+            // textBoxLDLDAmtRd
             // 
-            this.lblLDLdrTotAmt.AutoSize = true;
-            this.lblLDLdrTotAmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDLdrTotAmt.Location = new System.Drawing.Point(883, 84);
-            this.lblLDLdrTotAmt.Name = "lblLDLdrTotAmt";
-            this.lblLDLdrTotAmt.Size = new System.Drawing.Size(99, 15);
-            this.lblLDLdrTotAmt.TabIndex = 15;
-            this.lblLDLdrTotAmt.Text = "Total Amount :";
+            this.textBoxLDLDAmtRd.Location = new System.Drawing.Point(432, 81);
+            this.textBoxLDLDAmtRd.Name = "textBoxLDLDAmtRd";
+            this.textBoxLDLDAmtRd.Size = new System.Drawing.Size(54, 21);
+            this.textBoxLDLDAmtRd.TabIndex = 31;
             // 
-            // lblLDPkrAmtRd
+            // dateTimePickerLDDt
             // 
-            this.lblLDPkrAmtRd.AutoSize = true;
-            this.lblLDPkrAmtRd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDPkrAmtRd.Location = new System.Drawing.Point(264, 132);
-            this.lblLDPkrAmtRd.Name = "lblLDPkrAmtRd";
-            this.lblLDPkrAmtRd.Size = new System.Drawing.Size(161, 15);
-            this.lblLDPkrAmtRd.TabIndex = 16;
-            this.lblLDPkrAmtRd.Text = "Packer Amount    Road :";
+            this.dateTimePickerLDDt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerLDDt.Location = new System.Drawing.Point(144, 101);
+            this.dateTimePickerLDDt.Name = "dateTimePickerLDDt";
+            this.dateTimePickerLDDt.Size = new System.Drawing.Size(95, 21);
+            this.dateTimePickerLDDt.TabIndex = 30;
             // 
-            // lblLDPkrAmtWg
+            // textBoxLDNoPkrs
             // 
-            this.lblLDPkrAmtWg.AutoSize = true;
-            this.lblLDPkrAmtWg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDPkrAmtWg.Location = new System.Drawing.Point(492, 132);
-            this.lblLDPkrAmtWg.Name = "lblLDPkrAmtWg";
-            this.lblLDPkrAmtWg.Size = new System.Drawing.Size(59, 15);
-            this.lblLDPkrAmtWg.TabIndex = 17;
-            this.lblLDPkrAmtWg.Text = "Wagon :";
+            this.textBoxLDNoPkrs.Location = new System.Drawing.Point(139, 387);
+            this.textBoxLDNoPkrs.Name = "textBoxLDNoPkrs";
+            this.textBoxLDNoPkrs.Size = new System.Drawing.Size(100, 21);
+            this.textBoxLDNoPkrs.TabIndex = 29;
             // 
-            // lblLDPkrAmtHL
+            // textBoxLDNoLdrs
             // 
-            this.lblLDPkrAmtHL.AutoSize = true;
-            this.lblLDPkrAmtHL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDPkrAmtHL.Location = new System.Drawing.Point(618, 132);
-            this.lblLDPkrAmtHL.Name = "lblLDPkrAmtHL";
-            this.lblLDPkrAmtHL.Size = new System.Drawing.Size(33, 15);
-            this.lblLDPkrAmtHL.TabIndex = 18;
-            this.lblLDPkrAmtHL.Text = "HL :";
+            this.textBoxLDNoLdrs.Location = new System.Drawing.Point(139, 350);
+            this.textBoxLDNoLdrs.Name = "textBoxLDNoLdrs";
+            this.textBoxLDNoLdrs.Size = new System.Drawing.Size(100, 21);
+            this.textBoxLDNoLdrs.TabIndex = 28;
+            // 
+            // textBoxLDTotTns
+            // 
+            this.textBoxLDTotTns.Location = new System.Drawing.Point(141, 318);
+            this.textBoxLDTotTns.Name = "textBoxLDTotTns";
+            this.textBoxLDTotTns.Size = new System.Drawing.Size(98, 21);
+            this.textBoxLDTotTns.TabIndex = 27;
+            // 
+            // textBoxLDHLTns
+            // 
+            this.textBoxLDHLTns.Location = new System.Drawing.Point(144, 280);
+            this.textBoxLDHLTns.Name = "textBoxLDHLTns";
+            this.textBoxLDHLTns.Size = new System.Drawing.Size(95, 21);
+            this.textBoxLDHLTns.TabIndex = 26;
+            // 
+            // textBoxLDDWWagTns
+            // 
+            this.textBoxLDDWWagTns.Location = new System.Drawing.Point(141, 246);
+            this.textBoxLDDWWagTns.Name = "textBoxLDDWWagTns";
+            this.textBoxLDDWWagTns.Size = new System.Drawing.Size(98, 21);
+            this.textBoxLDDWWagTns.TabIndex = 25;
+            // 
+            // textBoxLDWgTns
+            // 
+            this.textBoxLDWgTns.Location = new System.Drawing.Point(139, 206);
+            this.textBoxLDWgTns.Name = "textBoxLDWgTns";
+            this.textBoxLDWgTns.Size = new System.Drawing.Size(100, 21);
+            this.textBoxLDWgTns.TabIndex = 24;
+            // 
+            // textBoxLDRdTns
+            // 
+            this.textBoxLDRdTns.Location = new System.Drawing.Point(143, 167);
+            this.textBoxLDRdTns.Name = "textBoxLDRdTns";
+            this.textBoxLDRdTns.Size = new System.Drawing.Size(96, 21);
+            this.textBoxLDRdTns.TabIndex = 23;
+            // 
+            // comboBoxLDShft
+            // 
+            this.comboBoxLDShft.FormattingEnabled = true;
+            this.comboBoxLDShft.Location = new System.Drawing.Point(144, 132);
+            this.comboBoxLDShft.Name = "comboBoxLDShft";
+            this.comboBoxLDShft.Size = new System.Drawing.Size(95, 23);
+            this.comboBoxLDShft.TabIndex = 22;
+            // 
+            // comboBoxLDBtchNo
+            // 
+            this.comboBoxLDBtchNo.FormattingEnabled = true;
+            this.comboBoxLDBtchNo.Location = new System.Drawing.Point(144, 64);
+            this.comboBoxLDBtchNo.Name = "comboBoxLDBtchNo";
+            this.comboBoxLDBtchNo.Size = new System.Drawing.Size(95, 23);
+            this.comboBoxLDBtchNo.TabIndex = 21;
+            // 
+            // lblLDPkrTotAmt
+            // 
+            this.lblLDPkrTotAmt.AutoSize = true;
+            this.lblLDPkrTotAmt.Location = new System.Drawing.Point(883, 132);
+            this.lblLDPkrTotAmt.Name = "lblLDPkrTotAmt";
+            this.lblLDPkrTotAmt.Size = new System.Drawing.Size(99, 15);
+            this.lblLDPkrTotAmt.TabIndex = 20;
+            this.lblLDPkrTotAmt.Text = "Total Amount :";
             // 
             // lblLDPkrAmtOldWg
             // 
@@ -1090,210 +1096,206 @@
             this.lblLDPkrAmtOldWg.TabIndex = 19;
             this.lblLDPkrAmtOldWg.Text = "Old Wagon :";
             // 
-            // lblLDPkrTotAmt
+            // lblLDPkrAmtHL
             // 
-            this.lblLDPkrTotAmt.AutoSize = true;
-            this.lblLDPkrTotAmt.Location = new System.Drawing.Point(883, 132);
-            this.lblLDPkrTotAmt.Name = "lblLDPkrTotAmt";
-            this.lblLDPkrTotAmt.Size = new System.Drawing.Size(99, 15);
-            this.lblLDPkrTotAmt.TabIndex = 20;
-            this.lblLDPkrTotAmt.Text = "Total Amount :";
+            this.lblLDPkrAmtHL.AutoSize = true;
+            this.lblLDPkrAmtHL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDPkrAmtHL.Location = new System.Drawing.Point(618, 132);
+            this.lblLDPkrAmtHL.Name = "lblLDPkrAmtHL";
+            this.lblLDPkrAmtHL.Size = new System.Drawing.Size(33, 15);
+            this.lblLDPkrAmtHL.TabIndex = 18;
+            this.lblLDPkrAmtHL.Text = "HL :";
             // 
-            // comboBoxLDBtchNo
+            // lblLDPkrAmtWg
             // 
-            this.comboBoxLDBtchNo.FormattingEnabled = true;
-            this.comboBoxLDBtchNo.Location = new System.Drawing.Point(144, 64);
-            this.comboBoxLDBtchNo.Name = "comboBoxLDBtchNo";
-            this.comboBoxLDBtchNo.Size = new System.Drawing.Size(82, 23);
-            this.comboBoxLDBtchNo.TabIndex = 21;
+            this.lblLDPkrAmtWg.AutoSize = true;
+            this.lblLDPkrAmtWg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDPkrAmtWg.Location = new System.Drawing.Point(492, 132);
+            this.lblLDPkrAmtWg.Name = "lblLDPkrAmtWg";
+            this.lblLDPkrAmtWg.Size = new System.Drawing.Size(59, 15);
+            this.lblLDPkrAmtWg.TabIndex = 17;
+            this.lblLDPkrAmtWg.Text = "Wagon :";
             // 
-            // comboBoxLDShft
+            // lblLDPkrAmtRd
             // 
-            this.comboBoxLDShft.FormattingEnabled = true;
-            this.comboBoxLDShft.Location = new System.Drawing.Point(144, 132);
-            this.comboBoxLDShft.Name = "comboBoxLDShft";
-            this.comboBoxLDShft.Size = new System.Drawing.Size(82, 23);
-            this.comboBoxLDShft.TabIndex = 22;
+            this.lblLDPkrAmtRd.AutoSize = true;
+            this.lblLDPkrAmtRd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDPkrAmtRd.Location = new System.Drawing.Point(264, 132);
+            this.lblLDPkrAmtRd.Name = "lblLDPkrAmtRd";
+            this.lblLDPkrAmtRd.Size = new System.Drawing.Size(161, 15);
+            this.lblLDPkrAmtRd.TabIndex = 16;
+            this.lblLDPkrAmtRd.Text = "Packer Amount    Road :";
             // 
-            // textBoxLDRdTns
+            // lblLDLdrTotAmt
             // 
-            this.textBoxLDRdTns.Location = new System.Drawing.Point(143, 167);
-            this.textBoxLDRdTns.Name = "textBoxLDRdTns";
-            this.textBoxLDRdTns.Size = new System.Drawing.Size(82, 21);
-            this.textBoxLDRdTns.TabIndex = 23;
+            this.lblLDLdrTotAmt.AutoSize = true;
+            this.lblLDLdrTotAmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDLdrTotAmt.Location = new System.Drawing.Point(883, 84);
+            this.lblLDLdrTotAmt.Name = "lblLDLdrTotAmt";
+            this.lblLDLdrTotAmt.Size = new System.Drawing.Size(99, 15);
+            this.lblLDLdrTotAmt.TabIndex = 15;
+            this.lblLDLdrTotAmt.Text = "Total Amount :";
             // 
-            // textBoxLDWgTns
+            // lblLDLdrAmtOldWg
             // 
-            this.textBoxLDWgTns.Location = new System.Drawing.Point(139, 206);
-            this.textBoxLDWgTns.Name = "textBoxLDWgTns";
-            this.textBoxLDWgTns.Size = new System.Drawing.Size(82, 21);
-            this.textBoxLDWgTns.TabIndex = 24;
+            this.lblLDLdrAmtOldWg.AutoSize = true;
+            this.lblLDLdrAmtOldWg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDLdrAmtOldWg.Location = new System.Drawing.Point(725, 84);
+            this.lblLDLdrAmtOldWg.Name = "lblLDLdrAmtOldWg";
+            this.lblLDLdrAmtOldWg.Size = new System.Drawing.Size(85, 15);
+            this.lblLDLdrAmtOldWg.TabIndex = 14;
+            this.lblLDLdrAmtOldWg.Text = "Old Wagon :";
             // 
-            // textBoxLDDWWagTns
+            // lblLDLdrAmtHL
             // 
-            this.textBoxLDDWWagTns.Location = new System.Drawing.Point(141, 246);
-            this.textBoxLDDWWagTns.Name = "textBoxLDDWWagTns";
-            this.textBoxLDDWWagTns.Size = new System.Drawing.Size(82, 21);
-            this.textBoxLDDWWagTns.TabIndex = 25;
+            this.lblLDLdrAmtHL.AutoSize = true;
+            this.lblLDLdrAmtHL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDLdrAmtHL.Location = new System.Drawing.Point(618, 84);
+            this.lblLDLdrAmtHL.Name = "lblLDLdrAmtHL";
+            this.lblLDLdrAmtHL.Size = new System.Drawing.Size(33, 15);
+            this.lblLDLdrAmtHL.TabIndex = 13;
+            this.lblLDLdrAmtHL.Text = "HL :";
             // 
-            // textBoxLDHLTns
+            // lblLDLdrAmtWG
             // 
-            this.textBoxLDHLTns.Location = new System.Drawing.Point(144, 280);
-            this.textBoxLDHLTns.Name = "textBoxLDHLTns";
-            this.textBoxLDHLTns.Size = new System.Drawing.Size(82, 21);
-            this.textBoxLDHLTns.TabIndex = 26;
+            this.lblLDLdrAmtWG.AutoSize = true;
+            this.lblLDLdrAmtWG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDLdrAmtWG.Location = new System.Drawing.Point(492, 81);
+            this.lblLDLdrAmtWG.Name = "lblLDLdrAmtWG";
+            this.lblLDLdrAmtWG.Size = new System.Drawing.Size(59, 15);
+            this.lblLDLdrAmtWG.TabIndex = 12;
+            this.lblLDLdrAmtWG.Text = "Wagon :";
             // 
-            // textBoxLDTotTns
+            // lblLDLdrAmtRd
             // 
-            this.textBoxLDTotTns.Location = new System.Drawing.Point(141, 318);
-            this.textBoxLDTotTns.Name = "textBoxLDTotTns";
-            this.textBoxLDTotTns.Size = new System.Drawing.Size(87, 21);
-            this.textBoxLDTotTns.TabIndex = 27;
+            this.lblLDLdrAmtRd.AutoSize = true;
+            this.lblLDLdrAmtRd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDLdrAmtRd.Location = new System.Drawing.Point(263, 81);
+            this.lblLDLdrAmtRd.Name = "lblLDLdrAmtRd";
+            this.lblLDLdrAmtRd.Size = new System.Drawing.Size(162, 15);
+            this.lblLDLdrAmtRd.TabIndex = 11;
+            this.lblLDLdrAmtRd.Text = "Loader Amount    Road :";
             // 
-            // textBoxLDNoLdrs
+            // lblNoPkrs
             // 
-            this.textBoxLDNoLdrs.Location = new System.Drawing.Point(139, 350);
-            this.textBoxLDNoLdrs.Name = "textBoxLDNoLdrs";
-            this.textBoxLDNoLdrs.Size = new System.Drawing.Size(87, 21);
-            this.textBoxLDNoLdrs.TabIndex = 28;
+            this.lblNoPkrs.AutoSize = true;
+            this.lblNoPkrs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoPkrs.Location = new System.Drawing.Point(32, 390);
+            this.lblNoPkrs.Name = "lblNoPkrs";
+            this.lblNoPkrs.Size = new System.Drawing.Size(106, 15);
+            this.lblNoPkrs.TabIndex = 10;
+            this.lblNoPkrs.Text = "No Of Packers :";
             // 
-            // textBoxLDNoPkrs
+            // lblLDNoLdrs
             // 
-            this.textBoxLDNoPkrs.Location = new System.Drawing.Point(139, 387);
-            this.textBoxLDNoPkrs.Name = "textBoxLDNoPkrs";
-            this.textBoxLDNoPkrs.Size = new System.Drawing.Size(87, 21);
-            this.textBoxLDNoPkrs.TabIndex = 29;
+            this.lblLDNoLdrs.AutoSize = true;
+            this.lblLDNoLdrs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDNoLdrs.Location = new System.Drawing.Point(30, 356);
+            this.lblLDNoLdrs.Name = "lblLDNoLdrs";
+            this.lblLDNoLdrs.Size = new System.Drawing.Size(107, 15);
+            this.lblLDNoLdrs.TabIndex = 9;
+            this.lblLDNoLdrs.Text = "No Of Loaders :";
             // 
-            // dateTimePickerLDDt
+            // lblLDTotTns
             // 
-            this.dateTimePickerLDDt.Location = new System.Drawing.Point(144, 101);
-            this.dateTimePickerLDDt.Name = "dateTimePickerLDDt";
-            this.dateTimePickerLDDt.Size = new System.Drawing.Size(82, 21);
-            this.dateTimePickerLDDt.TabIndex = 30;
+            this.lblLDTotTns.AutoSize = true;
+            this.lblLDTotTns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDTotTns.Location = new System.Drawing.Point(53, 324);
+            this.lblLDTotTns.Name = "lblLDTotTns";
+            this.lblLDTotTns.Size = new System.Drawing.Size(82, 15);
+            this.lblLDTotTns.TabIndex = 8;
+            this.lblLDTotTns.Text = "Total Tons :";
             // 
-            // textBoxLDLDAmtRd
+            // lblLDHLTns
             // 
-            this.textBoxLDLDAmtRd.Location = new System.Drawing.Point(432, 81);
-            this.textBoxLDLDAmtRd.Name = "textBoxLDLDAmtRd";
-            this.textBoxLDLDAmtRd.Size = new System.Drawing.Size(54, 21);
-            this.textBoxLDLDAmtRd.TabIndex = 31;
+            this.lblLDHLTns.AutoSize = true;
+            this.lblLDHLTns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDHLTns.Location = new System.Drawing.Point(65, 286);
+            this.lblLDHLTns.Name = "lblLDHLTns";
+            this.lblLDHLTns.Size = new System.Drawing.Size(68, 15);
+            this.lblLDHLTns.TabIndex = 7;
+            this.lblLDHLTns.Text = "HL Tons :";
             // 
-            // textBoxLDPkrAmtRd
+            // lblLDDWWagTns
             // 
-            this.textBoxLDPkrAmtRd.Location = new System.Drawing.Point(432, 132);
-            this.textBoxLDPkrAmtRd.Name = "textBoxLDPkrAmtRd";
-            this.textBoxLDPkrAmtRd.Size = new System.Drawing.Size(54, 21);
-            this.textBoxLDPkrAmtRd.TabIndex = 32;
+            this.lblLDDWWagTns.AutoSize = true;
+            this.lblLDDWWagTns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDDWWagTns.Location = new System.Drawing.Point(22, 249);
+            this.lblLDDWWagTns.Name = "lblLDDWWagTns";
+            this.lblLDDWWagTns.Size = new System.Drawing.Size(116, 15);
+            this.lblLDDWWagTns.TabIndex = 6;
+            this.lblLDDWWagTns.Text = "D / W Wag Tons :";
             // 
-            // textBoxLDLDAmtWg
+            // lblLDWgTns
             // 
-            this.textBoxLDLDAmtWg.Location = new System.Drawing.Point(558, 81);
-            this.textBoxLDLDAmtWg.Name = "textBoxLDLDAmtWg";
-            this.textBoxLDLDAmtWg.Size = new System.Drawing.Size(54, 21);
-            this.textBoxLDLDAmtWg.TabIndex = 33;
+            this.lblLDWgTns.AutoSize = true;
+            this.lblLDWgTns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDWgTns.Location = new System.Drawing.Point(39, 212);
+            this.lblLDWgTns.Name = "lblLDWgTns";
+            this.lblLDWgTns.Size = new System.Drawing.Size(94, 15);
+            this.lblLDWgTns.TabIndex = 5;
+            this.lblLDWgTns.Text = "Wagon Tons :";
             // 
-            // textBoxLDPkrAmtWg
+            // lblLDRTns
             // 
-            this.textBoxLDPkrAmtWg.Location = new System.Drawing.Point(558, 132);
-            this.textBoxLDPkrAmtWg.Name = "textBoxLDPkrAmtWg";
-            this.textBoxLDPkrAmtWg.Size = new System.Drawing.Size(54, 21);
-            this.textBoxLDPkrAmtWg.TabIndex = 34;
+            this.lblLDRTns.AutoSize = true;
+            this.lblLDRTns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDRTns.Location = new System.Drawing.Point(53, 167);
+            this.lblLDRTns.Name = "lblLDRTns";
+            this.lblLDRTns.Size = new System.Drawing.Size(84, 15);
+            this.lblLDRTns.TabIndex = 4;
+            this.lblLDRTns.Text = "Road Tons :";
             // 
-            // textBoxLDLDAmtHL
+            // lblLDShft
             // 
-            this.textBoxLDLDAmtHL.Location = new System.Drawing.Point(657, 81);
-            this.textBoxLDLDAmtHL.Name = "textBoxLDLDAmtHL";
-            this.textBoxLDLDAmtHL.Size = new System.Drawing.Size(61, 21);
-            this.textBoxLDLDAmtHL.TabIndex = 35;
+            this.lblLDShft.AutoSize = true;
+            this.lblLDShft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDShft.Location = new System.Drawing.Point(93, 132);
+            this.lblLDShft.Name = "lblLDShft";
+            this.lblLDShft.Size = new System.Drawing.Size(44, 15);
+            this.lblLDShft.TabIndex = 3;
+            this.lblLDShft.Text = "Shift :";
             // 
-            // textBoxLDPkrAmtHL
+            // lblLDDt
             // 
-            this.textBoxLDPkrAmtHL.Location = new System.Drawing.Point(658, 132);
-            this.textBoxLDPkrAmtHL.Name = "textBoxLDPkrAmtHL";
-            this.textBoxLDPkrAmtHL.Size = new System.Drawing.Size(60, 21);
-            this.textBoxLDPkrAmtHL.TabIndex = 36;
+            this.lblLDDt.AutoSize = true;
+            this.lblLDDt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDDt.Location = new System.Drawing.Point(93, 101);
+            this.lblLDDt.Name = "lblLDDt";
+            this.lblLDDt.Size = new System.Drawing.Size(45, 15);
+            this.lblLDDt.TabIndex = 2;
+            this.lblLDDt.Text = "Date :";
             // 
-            // textBoxLDLDAmtOldWgn
+            // lblLDBtchNo
             // 
-            this.textBoxLDLDAmtOldWgn.Location = new System.Drawing.Point(816, 78);
-            this.textBoxLDLDAmtOldWgn.Name = "textBoxLDLDAmtOldWgn";
-            this.textBoxLDLDAmtOldWgn.Size = new System.Drawing.Size(43, 21);
-            this.textBoxLDLDAmtOldWgn.TabIndex = 37;
+            this.lblLDBtchNo.AutoSize = true;
+            this.lblLDBtchNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDBtchNo.Location = new System.Drawing.Point(65, 67);
+            this.lblLDBtchNo.Name = "lblLDBtchNo";
+            this.lblLDBtchNo.Size = new System.Drawing.Size(73, 15);
+            this.lblLDBtchNo.TabIndex = 1;
+            this.lblLDBtchNo.Text = "Batch No :";
             // 
-            // textBoxLDPkrAmtOldWgn
+            // lblLDSubHead
             // 
-            this.textBoxLDPkrAmtOldWgn.Location = new System.Drawing.Point(817, 132);
-            this.textBoxLDPkrAmtOldWgn.Name = "textBoxLDPkrAmtOldWgn";
-            this.textBoxLDPkrAmtOldWgn.Size = new System.Drawing.Size(42, 21);
-            this.textBoxLDPkrAmtOldWgn.TabIndex = 38;
+            this.lblLDSubHead.AutoSize = true;
+            this.lblLDSubHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDSubHead.Location = new System.Drawing.Point(525, 18);
+            this.lblLDSubHead.Name = "lblLDSubHead";
+            this.lblLDSubHead.Size = new System.Drawing.Size(166, 18);
+            this.lblLDSubHead.TabIndex = 0;
+            this.lblLDSubHead.Text = "Daily Loading Details";
+            this.lblLDSubHead.Click += new System.EventHandler(this.lblLDSubHead_Click);
             // 
-            // textBoxLDLDTotAmt
+            // lblLDHead
             // 
-            this.textBoxLDLDTotAmt.Location = new System.Drawing.Point(988, 78);
-            this.textBoxLDLDTotAmt.Name = "textBoxLDLDTotAmt";
-            this.textBoxLDLDTotAmt.Size = new System.Drawing.Size(100, 21);
-            this.textBoxLDLDTotAmt.TabIndex = 39;
-            // 
-            // textBoxLDPkrTotAmt
-            // 
-            this.textBoxLDPkrTotAmt.Location = new System.Drawing.Point(988, 126);
-            this.textBoxLDPkrTotAmt.Name = "textBoxLDPkrTotAmt";
-            this.textBoxLDPkrTotAmt.Size = new System.Drawing.Size(100, 21);
-            this.textBoxLDPkrTotAmt.TabIndex = 40;
-            // 
-            // btnLDAdd
-            // 
-            this.btnLDAdd.Location = new System.Drawing.Point(254, 433);
-            this.btnLDAdd.Name = "btnLDAdd";
-            this.btnLDAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnLDAdd.TabIndex = 41;
-            this.btnLDAdd.Text = "Add";
-            this.btnLDAdd.UseVisualStyleBackColor = true;
-            // 
-            // btnClr
-            // 
-            this.btnClr.Location = new System.Drawing.Point(360, 433);
-            this.btnClr.Name = "btnClr";
-            this.btnClr.Size = new System.Drawing.Size(75, 23);
-            this.btnClr.TabIndex = 42;
-            this.btnClr.Text = "Clear";
-            this.btnClr.UseVisualStyleBackColor = true;
-            // 
-            // btnLDDel
-            // 
-            this.btnLDDel.Location = new System.Drawing.Point(455, 433);
-            this.btnLDDel.Name = "btnLDDel";
-            this.btnLDDel.Size = new System.Drawing.Size(75, 23);
-            this.btnLDDel.TabIndex = 43;
-            this.btnLDDel.Text = "Delete";
-            this.btnLDDel.UseVisualStyleBackColor = true;
-            // 
-            // btnLDUpdate
-            // 
-            this.btnLDUpdate.Location = new System.Drawing.Point(558, 433);
-            this.btnLDUpdate.Name = "btnLDUpdate";
-            this.btnLDUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnLDUpdate.TabIndex = 44;
-            this.btnLDUpdate.Text = "Update";
-            this.btnLDUpdate.UseVisualStyleBackColor = true;
-            // 
-            // btnLDOtrbtch
-            // 
-            this.btnLDOtrbtch.Location = new System.Drawing.Point(657, 433);
-            this.btnLDOtrbtch.Name = "btnLDOtrbtch";
-            this.btnLDOtrbtch.Size = new System.Drawing.Size(119, 23);
-            this.btnLDOtrbtch.TabIndex = 45;
-            this.btnLDOtrbtch.Text = "Other Batch";
-            this.btnLDOtrbtch.UseVisualStyleBackColor = true;
-            // 
-            // btnLDOthrCntrct
-            // 
-            this.btnLDOthrCntrct.Location = new System.Drawing.Point(799, 433);
-            this.btnLDOthrCntrct.Name = "btnLDOthrCntrct";
-            this.btnLDOthrCntrct.Size = new System.Drawing.Size(134, 23);
-            this.btnLDOthrCntrct.TabIndex = 46;
-            this.btnLDOthrCntrct.Text = "Other Contractor";
-            this.btnLDOthrCntrct.UseVisualStyleBackColor = true;
+            this.lblLDHead.AutoSize = true;
+            this.lblLDHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDHead.Location = new System.Drawing.Point(545, 42);
+            this.lblLDHead.Name = "lblLDHead";
+            this.lblLDHead.Size = new System.Drawing.Size(153, 24);
+            this.lblLDHead.TabIndex = 0;
+            this.lblLDHead.Text = "Loading Details";
             // 
             // Main
             // 
@@ -1319,10 +1321,10 @@
             this.panel2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
