@@ -66,5 +66,11 @@ namespace RassiCements_LTD
             txtWDHLAmt.Text = "";
             COBXWDTypeNM.Text = "";
         }
+
+        private void btnBDClr_Click(object sender, EventArgs e)
+        {
+            COBXBDBNO.Text = "";
+            txtBDBNM.Text = "";
+        }
     }
 }
