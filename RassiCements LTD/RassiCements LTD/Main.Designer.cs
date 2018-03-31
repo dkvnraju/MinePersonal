@@ -222,7 +222,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(4213, 1762);
+            this.tabControl1.Size = new System.Drawing.Size(4213, 1956);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 1;
             this.tabControl1.Visible = false;
@@ -890,7 +890,7 @@
             this.tabPage4.Location = new System.Drawing.Point(10, 48);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(4193, 1704);
+            this.tabPage4.Size = new System.Drawing.Size(4193, 1898);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
@@ -944,10 +944,10 @@
             this.panel4.Controls.Add(this.lblLDBtchNo);
             this.panel4.Controls.Add(this.lblLDSubHead);
             this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(56, 219);
+            this.panel4.Location = new System.Drawing.Point(89, 93);
             this.panel4.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(3176, 1133);
+            this.panel4.Size = new System.Drawing.Size(2946, 1121);
             this.panel4.TabIndex = 1;
             // 
             // btnLDOthrCntrct
@@ -1409,7 +1409,7 @@
             // 
             this.lblLDHead.AutoSize = true;
             this.lblLDHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDHead.Location = new System.Drawing.Point(1453, 100);
+            this.lblLDHead.Location = new System.Drawing.Point(1505, 14);
             this.lblLDHead.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblLDHead.Name = "lblLDHead";
             this.lblLDHead.Size = new System.Drawing.Size(359, 54);
@@ -1420,7 +1420,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(3844, 1903);
+            this.ClientSize = new System.Drawing.Size(3844, 2078);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
