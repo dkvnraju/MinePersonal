@@ -194,6 +194,7 @@
             this.personalDetailsToolStripMenuItem.Name = "personalDetailsToolStripMenuItem";
             this.personalDetailsToolStripMenuItem.Size = new System.Drawing.Size(312, 54);
             this.personalDetailsToolStripMenuItem.Text = "Personal Details";
+            this.personalDetailsToolStripMenuItem.Click += new System.EventHandler(this.personalDetailsToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
             // 
@@ -201,6 +202,7 @@
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(169, 54);
             this.reportsToolStripMenuItem.Text = "Reports";
+            this.reportsToolStripMenuItem.Click += new System.EventHandler(this.reportsToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -997,6 +999,7 @@
             this.btnClr.TabIndex = 42;
             this.btnClr.Text = "Clear";
             this.btnClr.UseVisualStyleBackColor = true;
+            this.btnClr.Click += new System.EventHandler(this.btnClr_Click);
             // 
             // btnLDAdd
             // 
@@ -1010,7 +1013,7 @@
             // 
             // textBoxLDPkrTotAmt
             // 
-            this.textBoxLDPkrTotAmt.Location = new System.Drawing.Point(2635, 300);
+            this.textBoxLDPkrTotAmt.Location = new System.Drawing.Point(2642, 310);
             this.textBoxLDPkrTotAmt.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.textBoxLDPkrTotAmt.Name = "textBoxLDPkrTotAmt";
             this.textBoxLDPkrTotAmt.Size = new System.Drawing.Size(260, 41);
@@ -1018,7 +1021,7 @@
             // 
             // textBoxLDLDTotAmt
             // 
-            this.textBoxLDLDTotAmt.Location = new System.Drawing.Point(2635, 186);
+            this.textBoxLDLDTotAmt.Location = new System.Drawing.Point(2642, 197);
             this.textBoxLDLDTotAmt.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.textBoxLDLDTotAmt.Name = "textBoxLDLDTotAmt";
             this.textBoxLDLDTotAmt.Size = new System.Drawing.Size(260, 41);
@@ -1026,23 +1029,23 @@
             // 
             // textBoxLDPkrAmtOldWgn
             // 
-            this.textBoxLDPkrAmtOldWgn.Location = new System.Drawing.Point(2179, 315);
+            this.textBoxLDPkrAmtOldWgn.Location = new System.Drawing.Point(2177, 315);
             this.textBoxLDPkrAmtOldWgn.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.textBoxLDPkrAmtOldWgn.Name = "textBoxLDPkrAmtOldWgn";
-            this.textBoxLDPkrAmtOldWgn.Size = new System.Drawing.Size(105, 41);
+            this.textBoxLDPkrAmtOldWgn.Size = new System.Drawing.Size(162, 41);
             this.textBoxLDPkrAmtOldWgn.TabIndex = 38;
             // 
             // textBoxLDLDAmtOldWgn
             // 
-            this.textBoxLDLDAmtOldWgn.Location = new System.Drawing.Point(2176, 186);
+            this.textBoxLDLDAmtOldWgn.Location = new System.Drawing.Point(2177, 200);
             this.textBoxLDLDAmtOldWgn.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.textBoxLDLDAmtOldWgn.Name = "textBoxLDLDAmtOldWgn";
-            this.textBoxLDLDAmtOldWgn.Size = new System.Drawing.Size(108, 41);
+            this.textBoxLDLDAmtOldWgn.Size = new System.Drawing.Size(162, 41);
             this.textBoxLDLDAmtOldWgn.TabIndex = 37;
             // 
             // textBoxLDPkrAmtHL
             // 
-            this.textBoxLDPkrAmtHL.Location = new System.Drawing.Point(1755, 315);
+            this.textBoxLDPkrAmtHL.Location = new System.Drawing.Point(1761, 315);
             this.textBoxLDPkrAmtHL.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.textBoxLDPkrAmtHL.Name = "textBoxLDPkrAmtHL";
             this.textBoxLDPkrAmtHL.Size = new System.Drawing.Size(153, 41);
@@ -1050,7 +1053,7 @@
             // 
             // textBoxLDLDAmtHL
             // 
-            this.textBoxLDLDAmtHL.Location = new System.Drawing.Point(1752, 193);
+            this.textBoxLDLDAmtHL.Location = new System.Drawing.Point(1761, 197);
             this.textBoxLDLDAmtHL.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.textBoxLDLDAmtHL.Name = "textBoxLDLDAmtHL";
             this.textBoxLDLDAmtHL.Size = new System.Drawing.Size(156, 41);
@@ -1066,7 +1069,7 @@
             // 
             // textBoxLDLDAmtWg
             // 
-            this.textBoxLDLDAmtWg.Location = new System.Drawing.Point(1488, 193);
+            this.textBoxLDLDAmtWg.Location = new System.Drawing.Point(1488, 200);
             this.textBoxLDLDAmtWg.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.textBoxLDLDAmtWg.Name = "textBoxLDLDAmtWg";
             this.textBoxLDLDAmtWg.Size = new System.Drawing.Size(137, 41);
@@ -1074,7 +1077,7 @@
             // 
             // textBoxLDPkrAmtRd
             // 
-            this.textBoxLDPkrAmtRd.Location = new System.Drawing.Point(1152, 315);
+            this.textBoxLDPkrAmtRd.Location = new System.Drawing.Point(1159, 312);
             this.textBoxLDPkrAmtRd.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.textBoxLDPkrAmtRd.Name = "textBoxLDPkrAmtRd";
             this.textBoxLDPkrAmtRd.Size = new System.Drawing.Size(137, 41);
@@ -1082,7 +1085,7 @@
             // 
             // textBoxLDLDAmtRd
             // 
-            this.textBoxLDLDAmtRd.Location = new System.Drawing.Point(1152, 193);
+            this.textBoxLDLDAmtRd.Location = new System.Drawing.Point(1159, 188);
             this.textBoxLDLDAmtRd.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.textBoxLDLDAmtRd.Name = "textBoxLDLDAmtRd";
             this.textBoxLDLDAmtRd.Size = new System.Drawing.Size(137, 41);

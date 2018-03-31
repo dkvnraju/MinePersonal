@@ -39,7 +39,7 @@ namespace RassiCements_LTD
 
         private void allowancesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //tabControl1.Visible = true;
+            tabControl1.Visible = false;
             //tabControl1.TabPages.Remove(tabPage4);
         }
 
@@ -89,6 +89,40 @@ namespace RassiCements_LTD
             { radioButtonPFNo.Checked = false; }
             comboBoxPLDTypID.Text = "";
             comboBoxPLDBtchNo.Text = "";
+        }
+
+        private void btnClr_Click(object sender, EventArgs e)
+        {
+            comboBoxLDBtchNo.Text = "";
+            dateTimePickerLDDt.Text = "";
+            comboBoxLDShft.Text = "";
+            textBoxLDRdTns.Text = "";
+            textBoxLDWgTns.Text = "";
+            textBoxLDDWWagTns.Text = "";
+            textBoxLDHLTns.Text = "";
+            textBoxLDTotTns.Text = "";
+            textBoxLDNoLdrs.Text = "";
+            textBoxLDNoPkrs.Text = "";
+            textBoxLDLDAmtRd.Text = "";
+            textBoxLDPkrAmtRd.Text = "";
+            textBoxLDLDAmtWg.Text = "";
+            textBoxLDPkrAmtWg.Text = "";
+            textBoxLDLDAmtHL.Text = "";
+            textBoxLDPkrAmtHL.Text = "";
+            textBoxLDLDAmtOldWgn.Text = "";
+            textBoxLDPkrAmtOldWgn.Text = "";
+            textBoxLDLDTotAmt.Text = "";
+            textBoxLDPkrTotAmt.Text = "";
+        }
+
+        private void personalDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabControl1.Visible = false;
+        }
+
+        private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabControl1.Visible = false;
         }
     }
 }
