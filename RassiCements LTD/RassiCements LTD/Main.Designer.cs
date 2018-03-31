@@ -79,7 +79,7 @@
             this.lblPLDNM = new System.Windows.Forms.Label();
             this.radioButtonPFNo = new System.Windows.Forms.RadioButton();
             this.radioButtonPFYes = new System.Windows.Forms.RadioButton();
-            this.dateTimePickerJNDt = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerPLDJNDt = new System.Windows.Forms.DateTimePicker();
             this.comboBoxPLDBtchNo = new System.Windows.Forms.ComboBox();
             this.comboBoxPLDTypID = new System.Windows.Forms.ComboBox();
             this.txtboxPLDTknNo = new System.Windows.Forms.TextBox();
@@ -570,7 +570,7 @@
             this.panel3.Controls.Add(this.lblPLDNM);
             this.panel3.Controls.Add(this.radioButtonPFNo);
             this.panel3.Controls.Add(this.radioButtonPFYes);
-            this.panel3.Controls.Add(this.dateTimePickerJNDt);
+            this.panel3.Controls.Add(this.dateTimePickerPLDJNDt);
             this.panel3.Controls.Add(this.comboBoxPLDBtchNo);
             this.panel3.Controls.Add(this.comboBoxPLDTypID);
             this.panel3.Controls.Add(this.txtboxPLDTknNo);
@@ -620,6 +620,7 @@
             this.btnPLDClr.TabIndex = 25;
             this.btnPLDClr.Text = "Clear";
             this.btnPLDClr.UseVisualStyleBackColor = true;
+            this.btnPLDClr.Click += new System.EventHandler(this.btnPLDClr_Click);
             // 
             // btnPLDAdd
             // 
@@ -728,14 +729,14 @@
             this.radioButtonPFYes.Text = "Yes";
             this.radioButtonPFYes.UseVisualStyleBackColor = true;
             // 
-            // dateTimePickerJNDt
+            // dateTimePickerPLDJNDt
             // 
-            this.dateTimePickerJNDt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerJNDt.Location = new System.Drawing.Point(389, 346);
-            this.dateTimePickerJNDt.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.dateTimePickerJNDt.Name = "dateTimePickerJNDt";
-            this.dateTimePickerJNDt.Size = new System.Drawing.Size(260, 41);
-            this.dateTimePickerJNDt.TabIndex = 13;
+            this.dateTimePickerPLDJNDt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerPLDJNDt.Location = new System.Drawing.Point(389, 346);
+            this.dateTimePickerPLDJNDt.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.dateTimePickerPLDJNDt.Name = "dateTimePickerPLDJNDt";
+            this.dateTimePickerPLDJNDt.Size = new System.Drawing.Size(260, 41);
+            this.dateTimePickerPLDJNDt.TabIndex = 13;
             // 
             // comboBoxPLDBtchNo
             // 
@@ -1509,7 +1510,7 @@
         private System.Windows.Forms.Label lblPLDNM;
         private System.Windows.Forms.RadioButton radioButtonPFNo;
         private System.Windows.Forms.RadioButton radioButtonPFYes;
-        private System.Windows.Forms.DateTimePicker dateTimePickerJNDt;
+        private System.Windows.Forms.DateTimePicker dateTimePickerPLDJNDt;
         private System.Windows.Forms.ComboBox comboBoxPLDBtchNo;
         private System.Windows.Forms.ComboBox comboBoxPLDTypID;
         private System.Windows.Forms.TextBox txtboxPLDTknNo;

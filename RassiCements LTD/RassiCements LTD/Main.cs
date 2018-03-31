@@ -72,5 +72,23 @@ namespace RassiCements_LTD
             COBXBDBNO.Text = "";
             txtBDBNM.Text = "";
         }
+
+        private void btnPLDClr_Click(object sender, EventArgs e)
+        {
+            txtboxPLDTknNo.Text = "";
+            txtboxPLDNM.Text = "";
+            txtboxPLDFNM.Text = "";
+            txtboxPLDSINo.Text = "";
+            dateTimePickerPLDDOB.Text = "";
+            dateTimePickerPLDJNDt.Text = "";
+            lblPLDYASDtVal.Text = "";
+            lblPLDDofRet.Text = "";
+            if( radioButtonPFYes.Checked)
+            { radioButtonPFYes.Checked = false; }
+            if(radioButtonPFNo.Checked)
+            { radioButtonPFNo.Checked = false; }
+            comboBoxPLDTypID.Text = "";
+            comboBoxPLDBtchNo.Text = "";
+        }
     }
 }
