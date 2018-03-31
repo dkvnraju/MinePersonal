@@ -124,5 +124,20 @@ namespace RassiCements_LTD
         {
             tabControl1.Visible = false;
         }
+
+        private void btnLDOtrbtch_Click(object sender, EventArgs e)
+        {
+            if(panOtherContractor.Visible==true)
+            { panOtherContractor.Visible = false; }
+            panOtherBatch.Visible = true;
+
+        }
+
+        private void btnLDOthrCntrct_Click(object sender, EventArgs e)
+        {
+            if (panOtherBatch.Visible == true)
+            { panOtherBatch.Visible = false; }
+            panOtherContractor.Visible = true;
+        }
     }
 }

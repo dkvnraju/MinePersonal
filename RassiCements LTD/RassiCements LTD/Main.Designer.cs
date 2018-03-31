@@ -144,6 +144,28 @@
             this.lblLDBtchNo = new System.Windows.Forms.Label();
             this.lblLDSubHead = new System.Windows.Forms.Label();
             this.lblLDHead = new System.Windows.Forms.Label();
+            this.panOtherContractor = new System.Windows.Forms.Panel();
+            this.panOtherBatch = new System.Windows.Forms.Panel();
+            this.lblOCBtchNo = new System.Windows.Forms.Label();
+            this.lblOtherID = new System.Windows.Forms.Label();
+            this.lblOCTyp = new System.Windows.Forms.Label();
+            this.lblLDNM = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxLDOCBtchNo = new System.Windows.Forms.TextBox();
+            this.textBoxLDOthrID = new System.Windows.Forms.TextBox();
+            this.textBoxOCNM = new System.Windows.Forms.TextBox();
+            this.textBoxOCCNM = new System.Windows.Forms.TextBox();
+            this.comboBoxLDOCTyp = new System.Windows.Forms.ComboBox();
+            this.lblOBTknNo = new System.Windows.Forms.Label();
+            this.lblOBBNo = new System.Windows.Forms.Label();
+            this.lblOBNm = new System.Windows.Forms.Label();
+            this.textBoxOBTknNo = new System.Windows.Forms.TextBox();
+            this.textBoxOBBtchNo = new System.Windows.Forms.TextBox();
+            this.textBoxOBNM = new System.Windows.Forms.TextBox();
+            this.BtnOBOK = new System.Windows.Forms.Button();
+            this.btnOBEXT = new System.Windows.Forms.Button();
+            this.btnOCOK = new System.Windows.Forms.Button();
+            this.btnOCEXT = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -154,6 +176,8 @@
             this.panel3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panOtherContractor.SuspendLayout();
+            this.panOtherBatch.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -896,7 +920,9 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.panOtherContractor);
             this.panel4.Controls.Add(this.btnLDOthrCntrct);
+            this.panel4.Controls.Add(this.panOtherBatch);
             this.panel4.Controls.Add(this.btnLDOtrbtch);
             this.panel4.Controls.Add(this.btnLDUpdate);
             this.panel4.Controls.Add(this.btnLDDel);
@@ -947,7 +973,7 @@
             this.panel4.Location = new System.Drawing.Point(89, 93);
             this.panel4.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(2946, 1121);
+            this.panel4.Size = new System.Drawing.Size(3048, 1121);
             this.panel4.TabIndex = 1;
             // 
             // btnLDOthrCntrct
@@ -959,6 +985,7 @@
             this.btnLDOthrCntrct.TabIndex = 46;
             this.btnLDOthrCntrct.Text = "Other Contractor";
             this.btnLDOthrCntrct.UseVisualStyleBackColor = true;
+            this.btnLDOthrCntrct.Click += new System.EventHandler(this.btnLDOthrCntrct_Click);
             // 
             // btnLDOtrbtch
             // 
@@ -969,6 +996,7 @@
             this.btnLDOtrbtch.TabIndex = 45;
             this.btnLDOtrbtch.Text = "Other Batch";
             this.btnLDOtrbtch.UseVisualStyleBackColor = true;
+            this.btnLDOtrbtch.Click += new System.EventHandler(this.btnLDOtrbtch_Click);
             // 
             // btnLDUpdate
             // 
@@ -1416,6 +1444,207 @@
             this.lblLDHead.TabIndex = 0;
             this.lblLDHead.Text = "Loading Details";
             // 
+            // panOtherContractor
+            // 
+            this.panOtherContractor.Controls.Add(this.btnOCEXT);
+            this.panOtherContractor.Controls.Add(this.btnOCOK);
+            this.panOtherContractor.Controls.Add(this.comboBoxLDOCTyp);
+            this.panOtherContractor.Controls.Add(this.textBoxOCCNM);
+            this.panOtherContractor.Controls.Add(this.textBoxOCNM);
+            this.panOtherContractor.Controls.Add(this.textBoxLDOthrID);
+            this.panOtherContractor.Controls.Add(this.textBoxLDOCBtchNo);
+            this.panOtherContractor.Controls.Add(this.label1);
+            this.panOtherContractor.Controls.Add(this.lblLDNM);
+            this.panOtherContractor.Controls.Add(this.lblOCTyp);
+            this.panOtherContractor.Controls.Add(this.lblOtherID);
+            this.panOtherContractor.Controls.Add(this.lblOCBtchNo);
+            this.panOtherContractor.Location = new System.Drawing.Point(1017, 398);
+            this.panOtherContractor.Name = "panOtherContractor";
+            this.panOtherContractor.Size = new System.Drawing.Size(1345, 367);
+            this.panOtherContractor.TabIndex = 47;
+            this.panOtherContractor.Visible = false;
+            // 
+            // panOtherBatch
+            // 
+            this.panOtherBatch.Controls.Add(this.btnOBEXT);
+            this.panOtherBatch.Controls.Add(this.BtnOBOK);
+            this.panOtherBatch.Controls.Add(this.textBoxOBNM);
+            this.panOtherBatch.Controls.Add(this.textBoxOBBtchNo);
+            this.panOtherBatch.Controls.Add(this.textBoxOBTknNo);
+            this.panOtherBatch.Controls.Add(this.lblOBNm);
+            this.panOtherBatch.Controls.Add(this.lblOBBNo);
+            this.panOtherBatch.Controls.Add(this.lblOBTknNo);
+            this.panOtherBatch.Location = new System.Drawing.Point(1139, 788);
+            this.panOtherBatch.Name = "panOtherBatch";
+            this.panOtherBatch.Size = new System.Drawing.Size(981, 346);
+            this.panOtherBatch.TabIndex = 0;
+            this.panOtherBatch.Visible = false;
+            // 
+            // lblOCBtchNo
+            // 
+            this.lblOCBtchNo.AutoSize = true;
+            this.lblOCBtchNo.Location = new System.Drawing.Point(88, 43);
+            this.lblOCBtchNo.Name = "lblOCBtchNo";
+            this.lblOCBtchNo.Size = new System.Drawing.Size(164, 36);
+            this.lblOCBtchNo.TabIndex = 0;
+            this.lblOCBtchNo.Text = "Batch No :";
+            // 
+            // lblOtherID
+            // 
+            this.lblOtherID.AutoSize = true;
+            this.lblOtherID.Location = new System.Drawing.Point(502, 43);
+            this.lblOtherID.Name = "lblOtherID";
+            this.lblOtherID.Size = new System.Drawing.Size(151, 36);
+            this.lblOtherID.TabIndex = 1;
+            this.lblOtherID.Text = "Other ID :";
+            // 
+            // lblOCTyp
+            // 
+            this.lblOCTyp.AutoSize = true;
+            this.lblOCTyp.Location = new System.Drawing.Point(937, 38);
+            this.lblOCTyp.Name = "lblOCTyp";
+            this.lblOCTyp.Size = new System.Drawing.Size(103, 36);
+            this.lblOCTyp.TabIndex = 2;
+            this.lblOCTyp.Text = "Type :";
+            // 
+            // lblLDNM
+            // 
+            this.lblLDNM.AutoSize = true;
+            this.lblLDNM.Location = new System.Drawing.Point(148, 113);
+            this.lblLDNM.Name = "lblLDNM";
+            this.lblLDNM.Size = new System.Drawing.Size(114, 36);
+            this.lblLDNM.TabIndex = 3;
+            this.lblLDNM.Text = "Name :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(37, 198);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(272, 36);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Contractor Name :";
+            // 
+            // textBoxLDOCBtchNo
+            // 
+            this.textBoxLDOCBtchNo.Location = new System.Drawing.Point(278, 38);
+            this.textBoxLDOCBtchNo.Name = "textBoxLDOCBtchNo";
+            this.textBoxLDOCBtchNo.Size = new System.Drawing.Size(180, 41);
+            this.textBoxLDOCBtchNo.TabIndex = 5;
+            // 
+            // textBoxLDOthrID
+            // 
+            this.textBoxLDOthrID.Location = new System.Drawing.Point(674, 38);
+            this.textBoxLDOthrID.Name = "textBoxLDOthrID";
+            this.textBoxLDOthrID.Size = new System.Drawing.Size(173, 41);
+            this.textBoxLDOthrID.TabIndex = 6;
+            // 
+            // textBoxOCNM
+            // 
+            this.textBoxOCNM.Location = new System.Drawing.Point(334, 108);
+            this.textBoxOCNM.Name = "textBoxOCNM";
+            this.textBoxOCNM.Size = new System.Drawing.Size(622, 41);
+            this.textBoxOCNM.TabIndex = 7;
+            // 
+            // textBoxOCCNM
+            // 
+            this.textBoxOCCNM.Location = new System.Drawing.Point(334, 189);
+            this.textBoxOCCNM.Name = "textBoxOCCNM";
+            this.textBoxOCCNM.Size = new System.Drawing.Size(622, 41);
+            this.textBoxOCCNM.TabIndex = 8;
+            // 
+            // comboBoxLDOCTyp
+            // 
+            this.comboBoxLDOCTyp.FormattingEnabled = true;
+            this.comboBoxLDOCTyp.Location = new System.Drawing.Point(1056, 30);
+            this.comboBoxLDOCTyp.Name = "comboBoxLDOCTyp";
+            this.comboBoxLDOCTyp.Size = new System.Drawing.Size(199, 44);
+            this.comboBoxLDOCTyp.TabIndex = 9;
+            // 
+            // lblOBTknNo
+            // 
+            this.lblOBTknNo.AutoSize = true;
+            this.lblOBTknNo.Location = new System.Drawing.Point(105, 73);
+            this.lblOBTknNo.Name = "lblOBTknNo";
+            this.lblOBTknNo.Size = new System.Drawing.Size(171, 36);
+            this.lblOBTknNo.TabIndex = 0;
+            this.lblOBTknNo.Text = "Token No :";
+            // 
+            // lblOBBNo
+            // 
+            this.lblOBBNo.AutoSize = true;
+            this.lblOBBNo.Location = new System.Drawing.Point(540, 82);
+            this.lblOBBNo.Name = "lblOBBNo";
+            this.lblOBBNo.Size = new System.Drawing.Size(164, 36);
+            this.lblOBBNo.TabIndex = 1;
+            this.lblOBBNo.Text = "Batch No :";
+            // 
+            // lblOBNm
+            // 
+            this.lblOBNm.AutoSize = true;
+            this.lblOBNm.Location = new System.Drawing.Point(116, 177);
+            this.lblOBNm.Name = "lblOBNm";
+            this.lblOBNm.Size = new System.Drawing.Size(114, 36);
+            this.lblOBNm.TabIndex = 2;
+            this.lblOBNm.Text = "Name :";
+            // 
+            // textBoxOBTknNo
+            // 
+            this.textBoxOBTknNo.Location = new System.Drawing.Point(296, 68);
+            this.textBoxOBTknNo.Name = "textBoxOBTknNo";
+            this.textBoxOBTknNo.Size = new System.Drawing.Size(165, 41);
+            this.textBoxOBTknNo.TabIndex = 3;
+            // 
+            // textBoxOBBtchNo
+            // 
+            this.textBoxOBBtchNo.Location = new System.Drawing.Point(735, 77);
+            this.textBoxOBBtchNo.Name = "textBoxOBBtchNo";
+            this.textBoxOBBtchNo.Size = new System.Drawing.Size(177, 41);
+            this.textBoxOBBtchNo.TabIndex = 4;
+            // 
+            // textBoxOBNM
+            // 
+            this.textBoxOBNM.Location = new System.Drawing.Point(258, 172);
+            this.textBoxOBNM.Name = "textBoxOBNM";
+            this.textBoxOBNM.Size = new System.Drawing.Size(613, 41);
+            this.textBoxOBNM.TabIndex = 5;
+            // 
+            // BtnOBOK
+            // 
+            this.BtnOBOK.Location = new System.Drawing.Point(284, 267);
+            this.BtnOBOK.Name = "BtnOBOK";
+            this.BtnOBOK.Size = new System.Drawing.Size(145, 51);
+            this.BtnOBOK.TabIndex = 6;
+            this.BtnOBOK.Text = "OK";
+            this.BtnOBOK.UseVisualStyleBackColor = true;
+            // 
+            // btnOBEXT
+            // 
+            this.btnOBEXT.Location = new System.Drawing.Point(480, 265);
+            this.btnOBEXT.Name = "btnOBEXT";
+            this.btnOBEXT.Size = new System.Drawing.Size(159, 55);
+            this.btnOBEXT.TabIndex = 7;
+            this.btnOBEXT.Text = "EXIT";
+            this.btnOBEXT.UseVisualStyleBackColor = true;
+            // 
+            // btnOCOK
+            // 
+            this.btnOCOK.Location = new System.Drawing.Point(301, 280);
+            this.btnOCOK.Name = "btnOCOK";
+            this.btnOCOK.Size = new System.Drawing.Size(154, 58);
+            this.btnOCOK.TabIndex = 10;
+            this.btnOCOK.Text = "OK";
+            this.btnOCOK.UseVisualStyleBackColor = true;
+            // 
+            // btnOCEXT
+            // 
+            this.btnOCEXT.Location = new System.Drawing.Point(544, 273);
+            this.btnOCEXT.Name = "btnOCEXT";
+            this.btnOCEXT.Size = new System.Drawing.Size(178, 58);
+            this.btnOCEXT.TabIndex = 11;
+            this.btnOCEXT.Text = "EXIT";
+            this.btnOCEXT.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -1447,6 +1676,10 @@
             this.tabPage4.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panOtherContractor.ResumeLayout(false);
+            this.panOtherContractor.PerformLayout();
+            this.panOtherBatch.ResumeLayout(false);
+            this.panOtherBatch.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1570,6 +1803,28 @@
         private System.Windows.Forms.Button btnLDDel;
         private System.Windows.Forms.Button btnClr;
         private System.Windows.Forms.Button btnLDAdd;
+        private System.Windows.Forms.Panel panOtherContractor;
+        private System.Windows.Forms.Button btnOCEXT;
+        private System.Windows.Forms.Button btnOCOK;
+        private System.Windows.Forms.Panel panOtherBatch;
+        private System.Windows.Forms.Button btnOBEXT;
+        private System.Windows.Forms.Button BtnOBOK;
+        private System.Windows.Forms.TextBox textBoxOBNM;
+        private System.Windows.Forms.TextBox textBoxOBBtchNo;
+        private System.Windows.Forms.TextBox textBoxOBTknNo;
+        private System.Windows.Forms.Label lblOBNm;
+        private System.Windows.Forms.Label lblOBBNo;
+        private System.Windows.Forms.Label lblOBTknNo;
+        private System.Windows.Forms.ComboBox comboBoxLDOCTyp;
+        private System.Windows.Forms.TextBox textBoxOCCNM;
+        private System.Windows.Forms.TextBox textBoxOCNM;
+        private System.Windows.Forms.TextBox textBoxLDOthrID;
+        private System.Windows.Forms.TextBox textBoxLDOCBtchNo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblLDNM;
+        private System.Windows.Forms.Label lblOCTyp;
+        private System.Windows.Forms.Label lblOtherID;
+        private System.Windows.Forms.Label lblOCBtchNo;
     }
 }
 
