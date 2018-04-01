@@ -288,11 +288,6 @@
             // COBXWDTypeNM
             // 
             this.COBXWDTypeNM.FormattingEnabled = true;
-            this.COBXWDTypeNM.Items.AddRange(new object[] {
-            "",
-            "Wagon",
-            "Road",
-            "HL"});
             this.COBXWDTypeNM.Location = new System.Drawing.Point(573, 107);
             this.COBXWDTypeNM.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.COBXWDTypeNM.Name = "COBXWDTypeNM";
@@ -380,7 +375,7 @@
             // 
             this.lblWDHLAmt.AutoSize = true;
             this.lblWDHLAmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWDHLAmt.Location = new System.Drawing.Point(259, 382);
+            this.lblWDHLAmt.Location = new System.Drawing.Point(285, 370);
             this.lblWDHLAmt.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblWDHLAmt.Name = "lblWDHLAmt";
             this.lblWDHLAmt.Size = new System.Drawing.Size(182, 36);
