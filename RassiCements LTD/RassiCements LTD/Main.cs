@@ -146,5 +146,20 @@ namespace RassiCements_LTD
             if(radioButtonPFNo.Checked)
             { textBoxPLDPF.Visible = false; }
         }
+
+        private void txtWDWgnAmt_MouseHover(object sender, EventArgs e)
+        {
+            //txtWDWgnAmt.Text = "BCN Wagon";
+        }
+
+        private void txtWDWgnAmt_MouseLeave(object sender, EventArgs e)
+        {
+            //txtWDWgnAmt.Text = "";
+        }
+
+        private void btnWDUpdate_Click(object sender, EventArgs e)
+        {
+            btnWDUpdate.Text = "Update";
+        }
     }
 }

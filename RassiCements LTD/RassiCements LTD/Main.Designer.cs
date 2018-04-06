@@ -167,6 +167,8 @@
             this.lblLDSubHead = new System.Windows.Forms.Label();
             this.lblLDHead = new System.Windows.Forms.Label();
             this.textBoxPLDPF = new System.Windows.Forms.TextBox();
+            this.lblWDOpnWg = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -266,6 +268,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.lblWDOpnWg);
             this.panel1.Controls.Add(this.COBXWDTypeNM);
             this.panel1.Controls.Add(this.btnWDDel);
             this.panel1.Controls.Add(this.txtWDHLAmt);
@@ -298,7 +302,7 @@
             // btnWDDel
             // 
             this.btnWDDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWDDel.Location = new System.Drawing.Point(1037, 556);
+            this.btnWDDel.Location = new System.Drawing.Point(951, 611);
             this.btnWDDel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnWDDel.Name = "btnWDDel";
             this.btnWDDel.Size = new System.Drawing.Size(200, 55);
@@ -325,7 +329,7 @@
             // btnWDClr
             // 
             this.btnWDClr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWDClr.Location = new System.Drawing.Point(723, 556);
+            this.btnWDClr.Location = new System.Drawing.Point(674, 611);
             this.btnWDClr.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnWDClr.Name = "btnWDClr";
             this.btnWDClr.Size = new System.Drawing.Size(200, 55);
@@ -336,27 +340,30 @@
             // 
             // txtWDWgnAmt
             // 
-            this.txtWDWgnAmt.Location = new System.Drawing.Point(573, 196);
+            this.txtWDWgnAmt.Location = new System.Drawing.Point(573, 205);
             this.txtWDWgnAmt.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtWDWgnAmt.Name = "txtWDWgnAmt";
             this.txtWDWgnAmt.Size = new System.Drawing.Size(260, 38);
             this.txtWDWgnAmt.TabIndex = 8;
+            this.txtWDWgnAmt.MouseLeave += new System.EventHandler(this.txtWDWgnAmt_MouseLeave);
+            this.txtWDWgnAmt.MouseHover += new System.EventHandler(this.txtWDWgnAmt_MouseHover);
             // 
             // btnWDUpdate
             // 
             this.btnWDUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWDUpdate.Location = new System.Drawing.Point(421, 558);
+            this.btnWDUpdate.Location = new System.Drawing.Point(399, 611);
             this.btnWDUpdate.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnWDUpdate.Name = "btnWDUpdate";
             this.btnWDUpdate.Size = new System.Drawing.Size(200, 55);
             this.btnWDUpdate.TabIndex = 12;
-            this.btnWDUpdate.Text = "Update";
+            this.btnWDUpdate.Text = "Modify";
             this.btnWDUpdate.UseVisualStyleBackColor = true;
+            this.btnWDUpdate.Click += new System.EventHandler(this.btnWDUpdate_Click);
             // 
             // btnWDSave
             // 
             this.btnWDSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWDSave.Location = new System.Drawing.Point(107, 558);
+            this.btnWDSave.Location = new System.Drawing.Point(109, 611);
             this.btnWDSave.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnWDSave.Name = "btnWDSave";
             this.btnWDSave.Size = new System.Drawing.Size(200, 55);
@@ -1654,6 +1661,23 @@
             this.textBoxPLDPF.Size = new System.Drawing.Size(185, 41);
             this.textBoxPLDPF.TabIndex = 28;
             // 
+            // lblWDOpnWg
+            // 
+            this.lblWDOpnWg.AutoSize = true;
+            this.lblWDOpnWg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWDOpnWg.Location = new System.Drawing.Point(165, 450);
+            this.lblWDOpnWg.Name = "lblWDOpnWg";
+            this.lblWDOpnWg.Size = new System.Drawing.Size(337, 36);
+            this.lblWDOpnWg.TabIndex = 16;
+            this.lblWDOpnWg.Text = "Open Wagon Amount :";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(573, 448);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(260, 38);
+            this.textBox1.TabIndex = 17;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -1835,6 +1859,8 @@
         private System.Windows.Forms.Label lblOtherID;
         private System.Windows.Forms.Label lblOCBtchNo;
         private System.Windows.Forms.TextBox textBoxPLDPF;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblWDOpnWg;
     }
 }
 
