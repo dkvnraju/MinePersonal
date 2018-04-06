@@ -312,6 +312,14 @@
             // COBXWDTypeNM
             // 
             this.COBXWDTypeNM.FormattingEnabled = true;
+            this.COBXWDTypeNM.Items.AddRange(new object[] {
+            "Loader",
+            "Packer",
+            "Jaggery",
+            "CoConut Oil",
+            "PF",
+            "HL",
+            "Dummy"});
             this.COBXWDTypeNM.Location = new System.Drawing.Point(573, 108);
             this.COBXWDTypeNM.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.COBXWDTypeNM.Name = "COBXWDTypeNM";
@@ -563,6 +571,13 @@
             // COBXBDBNO
             // 
             this.COBXBDBNO.FormattingEnabled = true;
+            this.COBXBDBNO.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "Dummy"});
             this.COBXBDBNO.Location = new System.Drawing.Point(427, 69);
             this.COBXBDBNO.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.COBXBDBNO.Name = "COBXBDBNO";
@@ -646,6 +661,7 @@
             this.textBoxPLDPF.Name = "textBoxPLDPF";
             this.textBoxPLDPF.Size = new System.Drawing.Size(185, 41);
             this.textBoxPLDPF.TabIndex = 28;
+            this.textBoxPLDPF.Visible = false;
             // 
             // btnPLDDel
             // 
@@ -710,7 +726,7 @@
             this.txtboxPLDFNM.Location = new System.Drawing.Point(1144, 207);
             this.txtboxPLDFNM.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtboxPLDFNM.Name = "txtboxPLDFNM";
-            this.txtboxPLDFNM.Size = new System.Drawing.Size(260, 41);
+            this.txtboxPLDFNM.Size = new System.Drawing.Size(435, 41);
             this.txtboxPLDFNM.TabIndex = 21;
             // 
             // txtboxPLDNM
@@ -718,7 +734,7 @@
             this.txtboxPLDNM.Location = new System.Drawing.Point(1141, 145);
             this.txtboxPLDNM.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtboxPLDNM.Name = "txtboxPLDNM";
-            this.txtboxPLDNM.Size = new System.Drawing.Size(260, 41);
+            this.txtboxPLDNM.Size = new System.Drawing.Size(438, 41);
             this.txtboxPLDNM.TabIndex = 20;
             // 
             // lblPLDSINo
@@ -734,7 +750,7 @@
             // lblPLDDtB
             // 
             this.lblPLDDtB.AutoSize = true;
-            this.lblPLDDtB.Location = new System.Drawing.Point(867, 291);
+            this.lblPLDDtB.Location = new System.Drawing.Point(883, 284);
             this.lblPLDDtB.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblPLDDtB.Name = "lblPLDDtB";
             this.lblPLDDtB.Size = new System.Drawing.Size(215, 36);
@@ -744,7 +760,7 @@
             // lblPLDFNM
             // 
             this.lblPLDFNM.AutoSize = true;
-            this.lblPLDFNM.Location = new System.Drawing.Point(867, 222);
+            this.lblPLDFNM.Location = new System.Drawing.Point(884, 212);
             this.lblPLDFNM.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblPLDFNM.Name = "lblPLDFNM";
             this.lblPLDFNM.Size = new System.Drawing.Size(214, 36);
@@ -798,6 +814,13 @@
             // comboBoxPLDBtchNo
             // 
             this.comboBoxPLDBtchNo.FormattingEnabled = true;
+            this.comboBoxPLDBtchNo.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "Dummy"});
             this.comboBoxPLDBtchNo.Location = new System.Drawing.Point(389, 272);
             this.comboBoxPLDBtchNo.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.comboBoxPLDBtchNo.Name = "comboBoxPLDBtchNo";
@@ -1432,6 +1455,13 @@
             // comboBoxLDBtchNo
             // 
             this.comboBoxLDBtchNo.FormattingEnabled = true;
+            this.comboBoxLDBtchNo.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "Dummy"});
             this.comboBoxLDBtchNo.Location = new System.Drawing.Point(384, 153);
             this.comboBoxLDBtchNo.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.comboBoxLDBtchNo.Name = "comboBoxLDBtchNo";
