@@ -1630,9 +1630,9 @@
             this.lblLDDWWagTns.Location = new System.Drawing.Point(69, 590);
             this.lblLDDWWagTns.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblLDDWWagTns.Name = "lblLDDWWagTns";
-            this.lblLDDWWagTns.Size = new System.Drawing.Size(266, 36);
+            this.lblLDDWWagTns.Size = new System.Drawing.Size(299, 36);
             this.lblLDDWWagTns.TabIndex = 6;
-            this.lblLDDWWagTns.Text = "D / W Wag Tons :";
+            this.lblLDDWWagTns.Text = "Open Wagon Tons :";
             // 
             // lblLDWgTns
             // 
