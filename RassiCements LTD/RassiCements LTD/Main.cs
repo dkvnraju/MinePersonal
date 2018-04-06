@@ -76,6 +76,7 @@ namespace RassiCements_LTD
         private void btnPLDClr_Click(object sender, EventArgs e)
         {
             txtboxPLDTknNo.Text = "";
+            textBoxPLDPF.Text = "";
             txtboxPLDNM.Text = "";
             txtboxPLDFNM.Text = "";
             txtboxPLDSINo.Text = "";
@@ -138,6 +139,12 @@ namespace RassiCements_LTD
             if (panOtherBatch.Visible == true)
             { panOtherBatch.Visible = false; }
             panOtherContractor.Visible = true;
+        }
+
+        private void radioButtonPFNo_CheckedChanged(object sender, EventArgs e)
+        {
+            if(radioButtonPFNo.Checked)
+            { textBoxPLDPF.Visible = false; }
         }
     }
 }

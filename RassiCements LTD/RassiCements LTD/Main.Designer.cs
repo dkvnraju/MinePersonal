@@ -166,6 +166,7 @@
             this.lblLDBtchNo = new System.Windows.Forms.Label();
             this.lblLDSubHead = new System.Windows.Forms.Label();
             this.lblLDHead = new System.Windows.Forms.Label();
+            this.textBoxPLDPF = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -577,6 +578,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.textBoxPLDPF);
             this.panel3.Controls.Add(this.btnPLDDel);
             this.panel3.Controls.Add(this.btnPLDUpdate);
             this.panel3.Controls.Add(this.btnPLDClr);
@@ -737,6 +739,7 @@
             this.radioButtonPFNo.TabStop = true;
             this.radioButtonPFNo.Text = "No";
             this.radioButtonPFNo.UseVisualStyleBackColor = true;
+            this.radioButtonPFNo.CheckedChanged += new System.EventHandler(this.radioButtonPFNo_CheckedChanged);
             // 
             // radioButtonPFYes
             // 
@@ -1644,6 +1647,13 @@
             this.lblLDHead.TabIndex = 0;
             this.lblLDHead.Text = "Loading Details";
             // 
+            // textBoxPLDPF
+            // 
+            this.textBoxPLDPF.Location = new System.Drawing.Point(637, 419);
+            this.textBoxPLDPF.Name = "textBoxPLDPF";
+            this.textBoxPLDPF.Size = new System.Drawing.Size(185, 41);
+            this.textBoxPLDPF.TabIndex = 28;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -1824,6 +1834,7 @@
         private System.Windows.Forms.Label lblOCTyp;
         private System.Windows.Forms.Label lblOtherID;
         private System.Windows.Forms.Label lblOCBtchNo;
+        private System.Windows.Forms.TextBox textBoxPLDPF;
     }
 }
 
