@@ -411,7 +411,7 @@
             // 
             this.lblWDHLAmt.AutoSize = true;
             this.lblWDHLAmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWDHLAmt.Location = new System.Drawing.Point(285, 370);
+            this.lblWDHLAmt.Location = new System.Drawing.Point(316, 370);
             this.lblWDHLAmt.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblWDHLAmt.Name = "lblWDHLAmt";
             this.lblWDHLAmt.Size = new System.Drawing.Size(182, 36);
@@ -422,7 +422,7 @@
             // 
             this.lblWDRdAmt.AutoSize = true;
             this.lblWDRdAmt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWDRdAmt.Location = new System.Drawing.Point(259, 286);
+            this.lblWDRdAmt.Location = new System.Drawing.Point(282, 284);
             this.lblWDRdAmt.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblWDRdAmt.Name = "lblWDRdAmt";
             this.lblWDRdAmt.Size = new System.Drawing.Size(218, 36);
@@ -444,7 +444,7 @@
             // 
             this.lblWDTypeID.AutoSize = true;
             this.lblWDTypeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWDTypeID.Location = new System.Drawing.Point(259, 45);
+            this.lblWDTypeID.Location = new System.Drawing.Point(366, 35);
             this.lblWDTypeID.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblWDTypeID.Name = "lblWDTypeID";
             this.lblWDTypeID.Size = new System.Drawing.Size(134, 36);
@@ -455,7 +455,7 @@
             // 
             this.lblWDTypeNM.AutoSize = true;
             this.lblWDTypeNM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWDTypeNM.Location = new System.Drawing.Point(259, 122);
+            this.lblWDTypeNM.Location = new System.Drawing.Point(316, 111);
             this.lblWDTypeNM.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblWDTypeNM.Name = "lblWDTypeNM";
             this.lblWDTypeNM.Size = new System.Drawing.Size(184, 36);
@@ -589,7 +589,7 @@
             // 
             this.lblBDBNM.AutoSize = true;
             this.lblBDBNM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBDBNM.Location = new System.Drawing.Point(139, 198);
+            this.lblBDBNM.Location = new System.Drawing.Point(139, 189);
             this.lblBDBNM.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblBDBNM.Name = "lblBDBNM";
             this.lblBDBNM.Size = new System.Drawing.Size(195, 36);
@@ -600,7 +600,7 @@
             // 
             this.lblBDBNo.AutoSize = true;
             this.lblBDBNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBDBNo.Location = new System.Drawing.Point(139, 72);
+            this.lblBDBNo.Location = new System.Drawing.Point(179, 72);
             this.lblBDBNo.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblBDBNo.Name = "lblBDBNo";
             this.lblBDBNo.Size = new System.Drawing.Size(155, 36);
@@ -902,7 +902,7 @@
             // lblPLDPF
             // 
             this.lblPLDPF.AutoSize = true;
-            this.lblPLDPF.Location = new System.Drawing.Point(288, 424);
+            this.lblPLDPF.Location = new System.Drawing.Point(261, 423);
             this.lblPLDPF.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblPLDPF.Name = "lblPLDPF";
             this.lblPLDPF.Size = new System.Drawing.Size(73, 36);
@@ -912,7 +912,7 @@
             // lblPLDJNDT
             // 
             this.lblPLDJNDT.AutoSize = true;
-            this.lblPLDJNDT.Location = new System.Drawing.Point(117, 346);
+            this.lblPLDJNDT.Location = new System.Drawing.Point(123, 346);
             this.lblPLDJNDT.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblPLDJNDT.Name = "lblPLDJNDT";
             this.lblPLDJNDT.Size = new System.Drawing.Size(211, 36);
