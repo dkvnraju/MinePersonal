@@ -37,6 +37,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblWDOpnWg = new System.Windows.Forms.Label();
             this.COBXWDTypeNM = new System.Windows.Forms.ComboBox();
             this.btnWDDel = new System.Windows.Forms.Button();
             this.txtWDHLAmt = new System.Windows.Forms.TextBox();
@@ -65,6 +67,7 @@
             this.lblBDBNo = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBoxPLDPF = new System.Windows.Forms.TextBox();
             this.btnPLDDel = new System.Windows.Forms.Button();
             this.btnPLDUpdate = new System.Windows.Forms.Button();
             this.btnPLDClr = new System.Windows.Forms.Button();
@@ -166,9 +169,7 @@
             this.lblLDBtchNo = new System.Windows.Forms.Label();
             this.lblLDSubHead = new System.Windows.Forms.Label();
             this.lblLDHead = new System.Windows.Forms.Label();
-            this.textBoxPLDPF = new System.Windows.Forms.TextBox();
-            this.lblWDOpnWg = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtWDJCAmt = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -268,6 +269,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtWDJCAmt);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.lblWDOpnWg);
             this.panel1.Controls.Add(this.COBXWDTypeNM);
@@ -290,10 +292,27 @@
             this.panel1.Size = new System.Drawing.Size(1373, 715);
             this.panel1.TabIndex = 3;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(573, 448);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(260, 38);
+            this.textBox1.TabIndex = 17;
+            // 
+            // lblWDOpnWg
+            // 
+            this.lblWDOpnWg.AutoSize = true;
+            this.lblWDOpnWg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWDOpnWg.Location = new System.Drawing.Point(165, 450);
+            this.lblWDOpnWg.Name = "lblWDOpnWg";
+            this.lblWDOpnWg.Size = new System.Drawing.Size(337, 36);
+            this.lblWDOpnWg.TabIndex = 16;
+            this.lblWDOpnWg.Text = "Open Wagon Amount :";
+            // 
             // COBXWDTypeNM
             // 
             this.COBXWDTypeNM.FormattingEnabled = true;
-            this.COBXWDTypeNM.Location = new System.Drawing.Point(573, 107);
+            this.COBXWDTypeNM.Location = new System.Drawing.Point(573, 108);
             this.COBXWDTypeNM.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.COBXWDTypeNM.Name = "COBXWDTypeNM";
             this.COBXWDTypeNM.Size = new System.Drawing.Size(260, 39);
@@ -620,6 +639,13 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1693, 837);
             this.panel3.TabIndex = 2;
+            // 
+            // textBoxPLDPF
+            // 
+            this.textBoxPLDPF.Location = new System.Drawing.Point(637, 419);
+            this.textBoxPLDPF.Name = "textBoxPLDPF";
+            this.textBoxPLDPF.Size = new System.Drawing.Size(185, 41);
+            this.textBoxPLDPF.TabIndex = 28;
             // 
             // btnPLDDel
             // 
@@ -1654,29 +1680,13 @@
             this.lblLDHead.TabIndex = 0;
             this.lblLDHead.Text = "Loading Details";
             // 
-            // textBoxPLDPF
+            // txtWDJCAmt
             // 
-            this.textBoxPLDPF.Location = new System.Drawing.Point(637, 419);
-            this.textBoxPLDPF.Name = "textBoxPLDPF";
-            this.textBoxPLDPF.Size = new System.Drawing.Size(185, 41);
-            this.textBoxPLDPF.TabIndex = 28;
-            // 
-            // lblWDOpnWg
-            // 
-            this.lblWDOpnWg.AutoSize = true;
-            this.lblWDOpnWg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWDOpnWg.Location = new System.Drawing.Point(165, 450);
-            this.lblWDOpnWg.Name = "lblWDOpnWg";
-            this.lblWDOpnWg.Size = new System.Drawing.Size(337, 36);
-            this.lblWDOpnWg.TabIndex = 16;
-            this.lblWDOpnWg.Text = "Open Wagon Amount :";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(573, 448);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(260, 38);
-            this.textBox1.TabIndex = 17;
+            this.txtWDJCAmt.Location = new System.Drawing.Point(904, 109);
+            this.txtWDJCAmt.Name = "txtWDJCAmt";
+            this.txtWDJCAmt.Size = new System.Drawing.Size(197, 38);
+            this.txtWDJCAmt.TabIndex = 18;
+            this.txtWDJCAmt.Visible = false;
             // 
             // Main
             // 
@@ -1861,6 +1871,7 @@
         private System.Windows.Forms.TextBox textBoxPLDPF;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblWDOpnWg;
+        private System.Windows.Forms.TextBox txtWDJCAmt;
     }
 }
 
