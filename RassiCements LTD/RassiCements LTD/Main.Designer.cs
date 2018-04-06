@@ -170,6 +170,7 @@
             this.lblLDSubHead = new System.Windows.Forms.Label();
             this.lblLDHead = new System.Windows.Forms.Label();
             this.txtWDJCAmt = new System.Windows.Forms.TextBox();
+            this.LblPLDPFNo = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -619,6 +620,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.LblPLDPFNo);
             this.panel3.Controls.Add(this.textBoxPLDPF);
             this.panel3.Controls.Add(this.btnPLDDel);
             this.panel3.Controls.Add(this.btnPLDUpdate);
@@ -657,7 +659,7 @@
             // 
             // textBoxPLDPF
             // 
-            this.textBoxPLDPF.Location = new System.Drawing.Point(637, 419);
+            this.textBoxPLDPF.Location = new System.Drawing.Point(1144, 423);
             this.textBoxPLDPF.Name = "textBoxPLDPF";
             this.textBoxPLDPF.Size = new System.Drawing.Size(185, 41);
             this.textBoxPLDPF.TabIndex = 28;
@@ -1718,6 +1720,15 @@
             this.txtWDJCAmt.TabIndex = 18;
             this.txtWDJCAmt.Visible = false;
             // 
+            // LblPLDPFNo
+            // 
+            this.LblPLDPFNo.AutoSize = true;
+            this.LblPLDPFNo.Location = new System.Drawing.Point(975, 423);
+            this.LblPLDPFNo.Name = "LblPLDPFNo";
+            this.LblPLDPFNo.Size = new System.Drawing.Size(123, 36);
+            this.LblPLDPFNo.TabIndex = 29;
+            this.LblPLDPFNo.Text = "PF No :";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -1902,6 +1913,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblWDOpnWg;
         private System.Windows.Forms.TextBox txtWDJCAmt;
+        private System.Windows.Forms.Label LblPLDPFNo;
     }
 }
 
