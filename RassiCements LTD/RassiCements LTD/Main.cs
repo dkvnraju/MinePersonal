@@ -161,5 +161,19 @@ namespace RassiCements_LTD
         {
             btnWDUpdate.Text = "Update";
         }
+
+        private void textBoxLDRdTns_TextChanged(object sender, EventArgs e)
+        {
+            //textBoxLDTotTns.Text = Convert.ToString(Convert.ToInt32(textBoxLDRdTns.Text) + Convert.ToInt32(textBoxLDWgTns.Text) + Convert.ToInt32(textBoxLDDWWagTns.Text) + Convert.ToInt32(textBoxLDHLTns.Text));
+
+        }
+
+        private void textBoxLDRdTns_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //e.Handled = char.IsDigit(e.KeyChar);
+            //if(!e.Handled)
+            //{ MessageBox.Show("You can enter Number only"); }
+
+        }
     }
 }

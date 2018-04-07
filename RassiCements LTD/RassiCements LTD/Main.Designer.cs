@@ -37,6 +37,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtWDJCAmt = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblWDOpnWg = new System.Windows.Forms.Label();
             this.COBXWDTypeNM = new System.Windows.Forms.ComboBox();
@@ -67,6 +68,7 @@
             this.lblBDBNo = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.LblPLDPFNo = new System.Windows.Forms.Label();
             this.textBoxPLDPF = new System.Windows.Forms.TextBox();
             this.btnPLDDel = new System.Windows.Forms.Button();
             this.btnPLDUpdate = new System.Windows.Forms.Button();
@@ -169,8 +171,6 @@
             this.lblLDBtchNo = new System.Windows.Forms.Label();
             this.lblLDSubHead = new System.Windows.Forms.Label();
             this.lblLDHead = new System.Windows.Forms.Label();
-            this.txtWDJCAmt = new System.Windows.Forms.TextBox();
-            this.LblPLDPFNo = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -292,6 +292,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1373, 715);
             this.panel1.TabIndex = 3;
+            // 
+            // txtWDJCAmt
+            // 
+            this.txtWDJCAmt.Location = new System.Drawing.Point(904, 109);
+            this.txtWDJCAmt.Name = "txtWDJCAmt";
+            this.txtWDJCAmt.Size = new System.Drawing.Size(197, 38);
+            this.txtWDJCAmt.TabIndex = 18;
+            this.txtWDJCAmt.Visible = false;
             // 
             // textBox1
             // 
@@ -656,6 +664,15 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1693, 837);
             this.panel3.TabIndex = 2;
+            // 
+            // LblPLDPFNo
+            // 
+            this.LblPLDPFNo.AutoSize = true;
+            this.LblPLDPFNo.Location = new System.Drawing.Point(975, 423);
+            this.LblPLDPFNo.Name = "LblPLDPFNo";
+            this.LblPLDPFNo.Size = new System.Drawing.Size(123, 36);
+            this.LblPLDPFNo.TabIndex = 29;
+            this.LblPLDPFNo.Text = "PF No :";
             // 
             // textBoxPLDPF
             // 
@@ -1440,6 +1457,8 @@
             this.textBoxLDRdTns.Name = "textBoxLDRdTns";
             this.textBoxLDRdTns.Size = new System.Drawing.Size(249, 41);
             this.textBoxLDRdTns.TabIndex = 23;
+            this.textBoxLDRdTns.TextChanged += new System.EventHandler(this.textBoxLDRdTns_TextChanged);
+            this.textBoxLDRdTns.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLDRdTns_KeyPress);
             // 
             // comboBoxLDShft
             // 
@@ -1711,23 +1730,6 @@
             this.lblLDHead.Size = new System.Drawing.Size(359, 54);
             this.lblLDHead.TabIndex = 0;
             this.lblLDHead.Text = "Loading Details";
-            // 
-            // txtWDJCAmt
-            // 
-            this.txtWDJCAmt.Location = new System.Drawing.Point(904, 109);
-            this.txtWDJCAmt.Name = "txtWDJCAmt";
-            this.txtWDJCAmt.Size = new System.Drawing.Size(197, 38);
-            this.txtWDJCAmt.TabIndex = 18;
-            this.txtWDJCAmt.Visible = false;
-            // 
-            // LblPLDPFNo
-            // 
-            this.LblPLDPFNo.AutoSize = true;
-            this.LblPLDPFNo.Location = new System.Drawing.Point(975, 423);
-            this.LblPLDPFNo.Name = "LblPLDPFNo";
-            this.LblPLDPFNo.Size = new System.Drawing.Size(123, 36);
-            this.LblPLDPFNo.TabIndex = 29;
-            this.LblPLDPFNo.Text = "PF No :";
             // 
             // Main
             // 
