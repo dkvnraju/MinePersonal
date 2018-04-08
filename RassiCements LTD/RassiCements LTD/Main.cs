@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using System.Data.OleDb;
 
 namespace RassiCements_LTD
 {
@@ -174,6 +176,11 @@ namespace RassiCements_LTD
             //if(!e.Handled)
             //{ MessageBox.Show("You can enter Number only"); }
 
+        }
+
+        private void txtWDTypeID_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

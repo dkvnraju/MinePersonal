@@ -101,6 +101,11 @@
             this.lblPLDTknNo = new System.Windows.Forms.Label();
             this.lblPLDHead = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.rassiCementLTDDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rassiCementLTDDataSet = new RassiCements_LTD.RassiCementLTDDataSet();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panOtherContractor = new System.Windows.Forms.Panel();
             this.btnOCEXT = new System.Windows.Forms.Button();
@@ -172,11 +177,6 @@
             this.lblLDBtchNo = new System.Windows.Forms.Label();
             this.lblLDSubHead = new System.Windows.Forms.Label();
             this.lblLDHead = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.rassiCementLTDDataSet = new RassiCements_LTD.RassiCementLTDDataSet();
-            this.rassiCementLTDDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -186,14 +186,14 @@
             this.tabPage3.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSet)).BeginInit();
             this.panel4.SuspendLayout();
             this.panOtherContractor.SuspendLayout();
             this.panOtherBatch.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -425,6 +425,7 @@
             this.txtWDTypeID.Name = "txtWDTypeID";
             this.txtWDTypeID.Size = new System.Drawing.Size(260, 38);
             this.txtWDTypeID.TabIndex = 6;
+            this.txtWDTypeID.TextChanged += new System.EventHandler(this.txtWDTypeID_TextChanged);
             // 
             // lblWDHLAmt
             // 
@@ -1002,6 +1003,45 @@
             this.tabPage4.Size = new System.Drawing.Size(4193, 1898);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.dataGridView2);
+            this.panel5.Controls.Add(this.dataGridView1);
+            this.panel5.Location = new System.Drawing.Point(89, 1224);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(3048, 731);
+            this.panel5.TabIndex = 2;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(1601, 20);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 40;
+            this.dataGridView2.Size = new System.Drawing.Size(1386, 651);
+            this.dataGridView2.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.DataSource = this.rassiCementLTDDataSetBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(17, 20);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 40;
+            this.dataGridView1.Size = new System.Drawing.Size(1372, 654);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // rassiCementLTDDataSetBindingSource
+            // 
+            this.rassiCementLTDDataSetBindingSource.DataSource = this.rassiCementLTDDataSet;
+            this.rassiCementLTDDataSetBindingSource.Position = 0;
+            // 
+            // rassiCementLTDDataSet
+            // 
+            this.rassiCementLTDDataSet.DataSetName = "RassiCementLTDDataSet";
+            this.rassiCementLTDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel4
             // 
@@ -1743,45 +1783,6 @@
             this.lblLDHead.TabIndex = 0;
             this.lblLDHead.Text = "Loading Details";
             // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.dataGridView2);
-            this.panel5.Controls.Add(this.dataGridView1);
-            this.panel5.Location = new System.Drawing.Point(89, 1224);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(3048, 731);
-            this.panel5.TabIndex = 2;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.rassiCementLTDDataSetBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 20);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 40;
-            this.dataGridView1.Size = new System.Drawing.Size(1372, 654);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(1601, 20);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 40;
-            this.dataGridView2.Size = new System.Drawing.Size(1386, 651);
-            this.dataGridView2.TabIndex = 1;
-            // 
-            // rassiCementLTDDataSet
-            // 
-            this.rassiCementLTDDataSet.DataSetName = "RassiCementLTDDataSet";
-            this.rassiCementLTDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // rassiCementLTDDataSetBindingSource
-            // 
-            this.rassiCementLTDDataSetBindingSource.DataSource = this.rassiCementLTDDataSet;
-            this.rassiCementLTDDataSetBindingSource.Position = 0;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -1811,17 +1812,17 @@
             this.panel3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSet)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panOtherContractor.ResumeLayout(false);
             this.panOtherContractor.PerformLayout();
             this.panOtherBatch.ResumeLayout(false);
             this.panOtherBatch.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
