@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.detailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.allowancesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -171,6 +172,11 @@
             this.lblLDBtchNo = new System.Windows.Forms.Label();
             this.lblLDSubHead = new System.Windows.Forms.Label();
             this.lblLDHead = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.rassiCementLTDDataSet = new RassiCements_LTD.RassiCementLTDDataSet();
+            this.rassiCementLTDDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -183,6 +189,11 @@
             this.panel4.SuspendLayout();
             this.panOtherContractor.SuspendLayout();
             this.panOtherBatch.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -982,6 +993,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.panel5);
             this.tabPage4.Controls.Add(this.panel4);
             this.tabPage4.Controls.Add(this.lblLDHead);
             this.tabPage4.Location = new System.Drawing.Point(10, 48);
@@ -1731,6 +1743,45 @@
             this.lblLDHead.TabIndex = 0;
             this.lblLDHead.Text = "Loading Details";
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.dataGridView2);
+            this.panel5.Controls.Add(this.dataGridView1);
+            this.panel5.Location = new System.Drawing.Point(89, 1224);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(3048, 731);
+            this.panel5.TabIndex = 2;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.DataSource = this.rassiCementLTDDataSetBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(17, 20);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 40;
+            this.dataGridView1.Size = new System.Drawing.Size(1372, 654);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(1601, 20);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 40;
+            this.dataGridView2.Size = new System.Drawing.Size(1386, 651);
+            this.dataGridView2.TabIndex = 1;
+            // 
+            // rassiCementLTDDataSet
+            // 
+            this.rassiCementLTDDataSet.DataSetName = "RassiCementLTDDataSet";
+            this.rassiCementLTDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // rassiCementLTDDataSetBindingSource
+            // 
+            this.rassiCementLTDDataSetBindingSource.DataSource = this.rassiCementLTDDataSet;
+            this.rassiCementLTDDataSetBindingSource.Position = 0;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -1766,6 +1817,11 @@
             this.panOtherContractor.PerformLayout();
             this.panOtherBatch.ResumeLayout(false);
             this.panOtherBatch.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1916,6 +1972,11 @@
         private System.Windows.Forms.Label lblWDOpnWg;
         private System.Windows.Forms.TextBox txtWDJCAmt;
         private System.Windows.Forms.Label LblPLDPFNo;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource rassiCementLTDDataSetBindingSource;
+        private RassiCementLTDDataSet rassiCementLTDDataSet;
     }
 }
 
