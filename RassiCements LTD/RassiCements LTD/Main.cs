@@ -20,6 +20,8 @@ namespace RassiCements_LTD
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         }
 
+     
+
         private void detailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //clciking on the details menu set the pages names
@@ -62,6 +64,8 @@ namespace RassiCements_LTD
 
         private void btnWDClr_Click(object sender, EventArgs e)
         {
+            if(txtWDJCAmt.Visible)
+            { txtWDJCAmt.Visible = false; }
             txtWDTypeID.Text = "";
             txtWDWgnAmt.Text = "";
             txtWDRDAmt.Text = "";
@@ -163,7 +167,22 @@ namespace RassiCements_LTD
 
         private void btnWDUpdate_Click(object sender, EventArgs e)
         {
-            btnWDUpdate.Text = "Update";
+            if(btnWDUpdate.Text=="Modify")
+            {
+                btnWDUpdate.Text = "Update";
+                if(txtWDWgnAmt.Text !="")
+                { txtWDWgnAmt.Enabled = true; }
+                if (txtWDRDAmt.Text != "")
+                { txtWDRDAmt.Enabled = true; }
+                if(txtWDHLAmt.Text !="")
+                { txtWDHLAmt.Enabled = true; }
+               if (textBoxOWAMT.Text !="")
+                { textBoxOWAMT.Enabled = true; }
+               if(txtWDJCAmt.Visible=true && txtWDJCAmt.Text !="")
+                { txtWDJCAmt.Enabled = true; }
+              
+            }
+            
         }
 
         private void textBoxLDRdTns_TextChanged(object sender, EventArgs e)
@@ -185,11 +204,13 @@ namespace RassiCements_LTD
 
             if (txtWDTypeID.Text=="")
             {
-                //do nothing
+              //donothing
             }
             else if(txtWDTypeID.Text == "1" || txtWDTypeID.Text == "2")
-            { 
-            string connstring = "SELECT type,wagonamt,roadamt,hlamt,openwagonamt FROM  WageDetails WHERE id = " + txtWDTypeID.Text;
+            {
+               
+             
+            string connstring = "SELECT id,type,wagonamt,roadamt,hlamt,openwagonamt FROM  WageDetails WHERE id = " + txtWDTypeID.Text;
             OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
             OleDbCommand cmd = new OleDbCommand(connstring, conn);
 
@@ -201,11 +222,12 @@ namespace RassiCements_LTD
                 if (dr.HasRows)
                 {
                     dr.Read();
-                    COBXWDTypeNM.Text = Convert.ToString(dr.GetValue(0));
-                    txtWDWgnAmt.Text = Convert.ToString(dr.GetValue(1));
-                    txtWDRDAmt.Text = Convert.ToString(dr.GetValue(2));
-                    txtWDHLAmt.Text = Convert.ToString(dr.GetValue(3));
-                    textBoxOWAMT.Text = Convert.ToString(dr.GetValue(4));
+                    txtWDTypeID.Text = Convert.ToString(dr.GetValue(0));
+                    COBXWDTypeNM.Text = Convert.ToString(dr.GetValue(1));
+                    txtWDWgnAmt.Text = Convert.ToString(dr.GetValue(2));
+                    txtWDRDAmt.Text = Convert.ToString(dr.GetValue(3));
+                    txtWDHLAmt.Text = Convert.ToString(dr.GetValue(4));
+                    textBoxOWAMT.Text = Convert.ToString(dr.GetValue(5));
                 }
                 else
                 {
@@ -225,8 +247,13 @@ namespace RassiCements_LTD
             }//Ends else if for id 1 or 2
           else if(txtWDTypeID.Text == "3" || txtWDTypeID.Text == "4")
             {
+
+                txtWDWgnAmt.Text = "";
+                txtWDRDAmt.Text = "";
+                txtWDHLAmt.Text = "";
+                textBoxOWAMT.Text = "";
                 txtWDJCAmt.Visible = true;
-                string connstring = "SELECT type,JaggeryAmt,CoconutOilAmt FROM  WageDetails WHERE id = " + txtWDTypeID.Text;
+                string connstring = "SELECT id,type,JaggeryAmt,CoconutOilAmt FROM  WageDetails WHERE id = " + txtWDTypeID.Text;
                 OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
                 OleDbCommand cmd = new OleDbCommand(connstring, conn);
 
@@ -238,14 +265,15 @@ namespace RassiCements_LTD
                     if (dr.HasRows)
                     {
                         dr.Read();
-                        COBXWDTypeNM.Text = Convert.ToString(dr.GetValue(0));
+                        txtWDTypeID.Text = Convert.ToString(dr.GetValue(0));
+                        COBXWDTypeNM.Text = Convert.ToString(dr.GetValue(1));
                         if (txtWDTypeID.Text == "3")
                         { 
-                        txtWDJCAmt.Text = Convert.ToString(dr.GetValue(1));
+                        txtWDJCAmt.Text = Convert.ToString(dr.GetValue(2));
                         }
                         if (txtWDTypeID.Text == "4")
                         {
-                            txtWDJCAmt.Text = Convert.ToString(dr.GetValue(2));
+                            txtWDJCAmt.Text = Convert.ToString(dr.GetValue(3));
                         }
                     }
                     else
@@ -264,7 +292,10 @@ namespace RassiCements_LTD
                 }
 
             }
-
+            else
+            {
+                MessageBox.Show("Please check the TypeID you have entered");
+            }
 
 
 

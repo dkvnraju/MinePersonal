@@ -302,6 +302,7 @@
             // 
             // txtWDJCAmt
             // 
+            this.txtWDJCAmt.Enabled = false;
             this.txtWDJCAmt.Location = new System.Drawing.Point(339, 46);
             this.txtWDJCAmt.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.txtWDJCAmt.Name = "txtWDJCAmt";
@@ -311,6 +312,7 @@
             // 
             // textBoxOWAMT
             // 
+            this.textBoxOWAMT.Enabled = false;
             this.textBoxOWAMT.Location = new System.Drawing.Point(215, 188);
             this.textBoxOWAMT.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.textBoxOWAMT.Name = "textBoxOWAMT";
@@ -356,6 +358,7 @@
             // 
             // txtWDHLAmt
             // 
+            this.txtWDHLAmt.Enabled = false;
             this.txtWDHLAmt.Location = new System.Drawing.Point(215, 155);
             this.txtWDHLAmt.Name = "txtWDHLAmt";
             this.txtWDHLAmt.Size = new System.Drawing.Size(100, 20);
@@ -363,6 +366,7 @@
             // 
             // txtWDRDAmt
             // 
+            this.txtWDRDAmt.Enabled = false;
             this.txtWDRDAmt.Location = new System.Drawing.Point(215, 119);
             this.txtWDRDAmt.Name = "txtWDRDAmt";
             this.txtWDRDAmt.Size = new System.Drawing.Size(100, 20);
@@ -381,6 +385,7 @@
             // 
             // txtWDWgnAmt
             // 
+            this.txtWDWgnAmt.Enabled = false;
             this.txtWDWgnAmt.Location = new System.Drawing.Point(215, 86);
             this.txtWDWgnAmt.Name = "txtWDWgnAmt";
             this.txtWDWgnAmt.Size = new System.Drawing.Size(100, 20);
