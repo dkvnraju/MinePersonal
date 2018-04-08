@@ -180,7 +180,40 @@ namespace RassiCements_LTD
 
         private void txtWDTypeID_TextChanged(object sender, EventArgs e)
         {
+
+            string connstring = "SELECT type,wagonamt,roadamt,hlamt,openwagonamt FROM  WageDetails WHERE id = " +  txtWDTypeID.Text ;
+            OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+       
+
+            OleDbCommand cmd = new OleDbCommand(connstring, conn);
+              
             
+            MessageBox.Show(conn.ConnectionString);
+            conn.Open();
+
+            OleDbDataReader dr = cmd.ExecuteReader();
+            
+            if (dr.HasRows)
+            {
+               dr.Read();
+
+                COBXWDTypeNM.Text= Convert.ToString(dr.GetValue(0));
+                
+                txtWDWgnAmt.Text =Convert.ToString(dr.GetValue(1));
+                txtWDRDAmt.Text = Convert.ToString(dr.GetValue(2));
+                txtWDHLAmt.Text = Convert.ToString(dr.GetValue(3));
+                textBoxOWAMT.Text = Convert.ToString(dr.GetValue(4));
+            }
+            else {
+
+                MessageBox.Show("Invalid TypeID. TypeID you have entered doesn't exist. Please enter a valid TypeID ");
+            }
+
+            conn.Close();
+
+
+            
+
         }
     }
 }

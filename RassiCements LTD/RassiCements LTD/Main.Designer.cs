@@ -39,7 +39,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtWDJCAmt = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxOWAMT = new System.Windows.Forms.TextBox();
             this.lblWDOpnWg = new System.Windows.Forms.Label();
             this.COBXWDTypeNM = new System.Windows.Forms.ComboBox();
             this.btnWDDel = new System.Windows.Forms.Button();
@@ -282,7 +282,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.txtWDJCAmt);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBoxOWAMT);
             this.panel1.Controls.Add(this.lblWDOpnWg);
             this.panel1.Controls.Add(this.COBXWDTypeNM);
             this.panel1.Controls.Add(this.btnWDDel);
@@ -312,12 +312,12 @@
             this.txtWDJCAmt.TabIndex = 18;
             this.txtWDJCAmt.Visible = false;
             // 
-            // textBox1
+            // textBoxOWAMT
             // 
-            this.textBox1.Location = new System.Drawing.Point(573, 448);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(260, 38);
-            this.textBox1.TabIndex = 17;
+            this.textBoxOWAMT.Location = new System.Drawing.Point(573, 448);
+            this.textBoxOWAMT.Name = "textBoxOWAMT";
+            this.textBoxOWAMT.Size = new System.Drawing.Size(260, 38);
+            this.textBoxOWAMT.TabIndex = 17;
             // 
             // lblWDOpnWg
             // 
@@ -1969,7 +1969,7 @@
         private System.Windows.Forms.Label lblOtherID;
         private System.Windows.Forms.Label lblOCBtchNo;
         private System.Windows.Forms.TextBox textBoxPLDPF;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxOWAMT;
         private System.Windows.Forms.Label lblWDOpnWg;
         private System.Windows.Forms.TextBox txtWDJCAmt;
         private System.Windows.Forms.Label LblPLDPFNo;
