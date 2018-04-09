@@ -303,7 +303,83 @@ namespace RassiCements_LTD
 
         private void COBXWDTypeNM_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MessageBox.Show( Convert.ToString( COBXWDTypeNM.SelectedIndex));
+            
+            if(COBXWDTypeNM.SelectedIndex == 1 || COBXWDTypeNM.SelectedIndex==2)
+            {
+                string connstring = "SELECT id,type,wagonamt,roadamt,hlamt,openwagonamt FROM  WageDetails WHERE type = " +"'"+ COBXWDTypeNM.Text+"';";
+                OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+                OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+                try
+                {
+                    conn.Open();
+                    OleDbDataReader dr = cmd.ExecuteReader();
+
+                    if (dr.HasRows)
+                    {
+                        dr.Read();
+                        txtWDTypeID.Text = Convert.ToString(dr.GetValue(0));
+                        COBXWDTypeNM.Text = Convert.ToString(dr.GetValue(1));
+                        txtWDWgnAmt.Text = Convert.ToString(dr.GetValue(2));
+                        txtWDRDAmt.Text = Convert.ToString(dr.GetValue(3));
+                        txtWDHLAmt.Text = Convert.ToString(dr.GetValue(4));
+                        textBoxOWAMT.Text = Convert.ToString(dr.GetValue(5));
+                    }
+                   
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Exception occured" + ex);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+
+            }
+            else if(COBXWDTypeNM.SelectedIndex == 3 || COBXWDTypeNM.SelectedIndex == 4)
+            {
+                txtWDWgnAmt.Text = "";
+                txtWDRDAmt.Text = "";
+                txtWDHLAmt.Text = "";
+                textBoxOWAMT.Text = "";
+                txtWDJCAmt.Visible = true;
+                string connstring = "SELECT id,type,JaggeryAmt,CoconutOilAmt FROM  WageDetails WHERE type = " + "'"+ COBXWDTypeNM.Text+"';";
+                OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+                OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+                try
+                {
+                    conn.Open();
+                    OleDbDataReader dr = cmd.ExecuteReader();
+
+                    if (dr.HasRows)
+                    {
+                        dr.Read();
+                        txtWDTypeID.Text = Convert.ToString(dr.GetValue(0));
+                        COBXWDTypeNM.Text = Convert.ToString(dr.GetValue(1));
+                        if (txtWDTypeID.Text == "3")
+                        {
+                            txtWDJCAmt.Text = Convert.ToString(dr.GetValue(2));
+                        }
+                        if (txtWDTypeID.Text == "4")
+                        {
+                            txtWDJCAmt.Text = Convert.ToString(dr.GetValue(3));
+                        }
+                    }
+                    
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Exception occured" + ex);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+            else { }
         }
     }
 }
