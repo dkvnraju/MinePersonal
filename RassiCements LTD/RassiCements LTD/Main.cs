@@ -170,6 +170,11 @@ namespace RassiCements_LTD
             if(btnWDUpdate.Text=="Modify")
             {
                 btnWDUpdate.Text = "Update";
+
+                if(txtWDTypeID.Enabled==true)
+                { txtWDTypeID.Enabled = false; }
+                if(COBXWDTypeNM.Enabled==true)
+                { COBXWDTypeNM.Enabled = false; }
                 if(txtWDWgnAmt.Text !="")
                 { txtWDWgnAmt.Enabled = true; }
                 if (txtWDRDAmt.Text != "")
@@ -181,6 +186,25 @@ namespace RassiCements_LTD
                if(txtWDJCAmt.Visible=true && txtWDJCAmt.Text !="")
                 { txtWDJCAmt.Enabled = true; }
               
+            }else if(btnWDUpdate.Text == "Update")
+            {
+                //update logic
+
+                if (txtWDTypeID.Text=="1" || txtWDTypeID.Text=="2")
+                {
+
+                } else if (txtWDTypeID.Text == "3" || txtWDTypeID.Text == "4")
+                { }
+
+
+
+                //getback to previous state
+                btnWDUpdate.Text = "Modify";
+                if (txtWDTypeID.Enabled == false)
+                { txtWDTypeID.Enabled = true; }
+                if (COBXWDTypeNM.Enabled == false)
+                { COBXWDTypeNM.Enabled = true; }
+
             }
             
         }
