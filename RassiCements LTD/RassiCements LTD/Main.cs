@@ -300,5 +300,10 @@ namespace RassiCements_LTD
 
 
         }
+
+        private void COBXWDTypeNM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show( Convert.ToString( COBXWDTypeNM.SelectedIndex));
+        }
     }
 }

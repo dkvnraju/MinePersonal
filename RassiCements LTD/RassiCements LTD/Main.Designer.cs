@@ -335,6 +335,7 @@
             this.COBXWDTypeNM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.COBXWDTypeNM.FormattingEnabled = true;
             this.COBXWDTypeNM.Items.AddRange(new object[] {
+            "",
             "Loader",
             "Packer",
             "Jaggery",
@@ -346,6 +347,7 @@
             this.COBXWDTypeNM.Name = "COBXWDTypeNM";
             this.COBXWDTypeNM.Size = new System.Drawing.Size(100, 21);
             this.COBXWDTypeNM.TabIndex = 15;
+            this.COBXWDTypeNM.SelectedIndexChanged += new System.EventHandler(this.COBXWDTypeNM_SelectedIndexChanged);
             // 
             // btnWDDel
             // 
