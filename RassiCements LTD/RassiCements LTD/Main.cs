@@ -192,9 +192,61 @@ namespace RassiCements_LTD
 
                 if (txtWDTypeID.Text=="1" || txtWDTypeID.Text=="2")
                 {
+                    string connstring = "UPDATE WAGEDETAILS SET WAGONAMT=" + "'" + txtWDWgnAmt.Text + "'" + " ,ROADAMT=" + "'" + txtWDRDAmt.Text + "'" + " ,HLAMT=" + "'" + txtWDHLAmt.Text + "'" + " ,OPENWAGONAMT=" + "'" + textBoxOWAMT.Text + "'" + " WHERE ID=" + txtWDTypeID.Text + " AND TYPE=" + "'" + COBXWDTypeNM.Text + "'" + ";";
+                    OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+                    OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+                    try
+                    {
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Data Updated Successfully");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Exception occured.Data not saved Please try updating it again" + ex);
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
 
                 } else if (txtWDTypeID.Text == "3" || txtWDTypeID.Text == "4")
-                { }
+                {
+                    txtWDWgnAmt.Text = "";
+                    txtWDRDAmt.Text = "";
+                    txtWDHLAmt.Text = "";
+                    textBoxOWAMT.Text = "";
+                    txtWDJCAmt.Visible = true;
+                    string connstring = "";
+                    if (txtWDTypeID.Text == "3")
+                    {
+                        connstring = "UPDATE WageDetails SET JAGGERYAMT=" + "'" + txtWDJCAmt.Text + "'" + " WHERE id = " + txtWDTypeID.Text + "AND TYPE=" + "'" + COBXWDTypeNM.Text + "'" + ";";
+                    }
+                    else if (txtWDTypeID.Text == "4")
+                    {
+                        connstring = "UPDATE WageDetails SET COCONUTOILAMT=" + "'" + txtWDJCAmt.Text + "'" + " WHERE id = " + txtWDTypeID.Text + "AND TYPE=" + "'" + COBXWDTypeNM.Text + "'" + ";";
+                    }
+
+                    OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+                    OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+                    try
+                    {
+                        conn.Open();
+                        cmd.ExecuteReader();
+                        MessageBox.Show("Data Updated Successfully");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Exception occured.Data not saved Please try updating it again" + ex);
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
+
+                }
 
 
 
@@ -204,6 +256,16 @@ namespace RassiCements_LTD
                 { txtWDTypeID.Enabled = true; }
                 if (COBXWDTypeNM.Enabled == false)
                 { COBXWDTypeNM.Enabled = true; }
+                if(txtWDJCAmt.Visible)
+                { txtWDJCAmt.Enabled = false; }
+                if(txtWDWgnAmt.Enabled==true)
+                { txtWDWgnAmt.Enabled = false; }
+                if(txtWDHLAmt.Enabled==true)
+                { txtWDHLAmt.Enabled = false; }
+                if(txtWDRDAmt.Enabled==true)
+                { txtWDRDAmt.Enabled = false; }
+                if(textBoxOWAMT.Enabled==true)
+                { textBoxOWAMT.Enabled = false; }
 
             }
             
