@@ -963,7 +963,7 @@
             this.panel5.Location = new System.Drawing.Point(33, 513);
             this.panel5.Margin = new System.Windows.Forms.Padding(1);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1143, 307);
+            this.panel5.Size = new System.Drawing.Size(1143, 265);
             this.panel5.TabIndex = 2;
             // 
             // dataGridView2
@@ -973,7 +973,7 @@
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(1);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 40;
-            this.dataGridView2.Size = new System.Drawing.Size(520, 273);
+            this.dataGridView2.Size = new System.Drawing.Size(520, 246);
             this.dataGridView2.TabIndex = 1;
             // 
             // dataGridView1
@@ -985,7 +985,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(1);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 40;
-            this.dataGridView1.Size = new System.Drawing.Size(514, 274);
+            this.dataGridView1.Size = new System.Drawing.Size(514, 246);
             this.dataGridView1.TabIndex = 0;
             // 
             // rassiCementLTDDataSetBindingSource
