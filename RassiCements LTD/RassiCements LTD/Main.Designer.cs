@@ -358,6 +358,7 @@
             this.btnWDDel.TabIndex = 14;
             this.btnWDDel.Text = "Delete";
             this.btnWDDel.UseVisualStyleBackColor = true;
+            this.btnWDDel.Click += new System.EventHandler(this.btnWDDel_Click);
             // 
             // txtWDHLAmt
             // 

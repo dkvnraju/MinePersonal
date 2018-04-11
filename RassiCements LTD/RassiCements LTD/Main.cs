@@ -467,5 +467,28 @@ namespace RassiCements_LTD
             }
             else { }
         }
+
+        private void btnWDDel_Click(object sender, EventArgs e)
+        {
+            // WD delete Button.
+            string connstring = "DELETE FROM WAGEDETAILS  WHERE ID=" + txtWDTypeID.Text + " AND TYPE=" + "'" + COBXWDTypeNM.Text + "'" + ";";
+            OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+            OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data Deleted Successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception occured.Data not Deleted Please try Deleting it again" + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }
