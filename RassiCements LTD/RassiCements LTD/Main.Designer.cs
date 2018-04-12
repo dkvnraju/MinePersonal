@@ -534,6 +534,7 @@
             this.btnBDDel.TabIndex = 7;
             this.btnBDDel.Text = "Delete";
             this.btnBDDel.UseVisualStyleBackColor = true;
+            this.btnBDDel.Click += new System.EventHandler(this.btnBDDel_Click);
             // 
             // btnBDClr
             // 
@@ -1715,7 +1716,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1304, 881);
+            this.ClientSize = new System.Drawing.Size(1304, 750);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;

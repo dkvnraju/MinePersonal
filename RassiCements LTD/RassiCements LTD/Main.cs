@@ -470,6 +470,13 @@ namespace RassiCements_LTD
 
         private void btnWDDel_Click(object sender, EventArgs e)
         {
+            
+            if (txtWDTypeID.Text!="" && COBXWDTypeNM.Text!="")
+            {
+                MessageBox.Show("Type ID or TypeName cannot be empty. Please chack and try deleting again");
+            }
+            else
+            { 
             // WD delete Button.
             string connstring = "DELETE FROM WAGEDETAILS  WHERE ID=" + txtWDTypeID.Text + " AND TYPE=" + "'" + COBXWDTypeNM.Text + "'" + ";";
             OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
@@ -488,6 +495,36 @@ namespace RassiCements_LTD
             finally
             {
                 conn.Close();
+            }
+            }
+        }
+
+        private void btnBDDel_Click(object sender, EventArgs e)
+            {
+            if(COBXBDBNO.Text!="" && txtBDBNM.Text!="")
+            {
+                MessageBox.Show("Batch Name or batch Number cannot be empty. Please chack and try deleting again");
+            }
+            else
+            { 
+            string connstring = "DELETE FROM BATCHDETAILS  WHERE BatchNum=" + COBXBDBNO.Text + " AND Name=" + "'" + txtBDBNM.Text + "'" + ";";
+            OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+            OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data Deleted Successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception occured.Data not Deleted Please try Deleting it again" + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
             }
         }
     }
