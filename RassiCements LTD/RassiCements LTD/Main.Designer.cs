@@ -564,8 +564,9 @@
             this.btnBDSave.Name = "btnBDSave";
             this.btnBDSave.Size = new System.Drawing.Size(75, 23);
             this.btnBDSave.TabIndex = 4;
-            this.btnBDSave.Text = "Save";
+            this.btnBDSave.Text = "Add";
             this.btnBDSave.UseVisualStyleBackColor = true;
+            this.btnBDSave.Click += new System.EventHandler(this.btnBDSave_Click);
             // 
             // txtBDBNM
             // 

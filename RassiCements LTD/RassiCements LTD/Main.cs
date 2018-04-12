@@ -527,5 +527,35 @@ namespace RassiCements_LTD
             }
             }
         }
+
+        private void btnBDSave_Click(object sender, EventArgs e)
+        {
+            if (COBXBDBNO.Text != "" && txtBDBNM.Text != "")
+            {
+                MessageBox.Show("Batch Name or batch Number cannot be empty. Please chack and try deleting again");
+            }
+            else
+            {
+                string connstring = "INSERT INTO BATCHDETAILS (BATCHNUM,NAME) VALUES (" + COBXBDBNO.Text + "," + "'" + txtBDBNM.Text + "'" + ");";
+                OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+                OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Data Inserted Successfully");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Exception occured.Data not Inserted Please try Inserting it again" + ex);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+
+            }
     }
 }
