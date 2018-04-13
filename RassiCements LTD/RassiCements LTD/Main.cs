@@ -574,5 +574,15 @@ namespace RassiCements_LTD
         {
 
         }
+
+        private void txtWDTypeID_TabIndexChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("tab index chnaged");
+        }
+
+        private void txtWDTypeID_Leave(object sender, EventArgs e)
+        {
+            MessageBox.Show("tab leave");
+        }
     }
 }
