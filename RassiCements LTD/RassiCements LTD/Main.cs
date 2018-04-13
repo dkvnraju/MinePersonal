@@ -557,5 +557,22 @@ namespace RassiCements_LTD
             }
 
             }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+           // MessageBox.Show("You clicked on the tab page");
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+            if(tabControl1.SelectedTab.Text=="BatchDetails")
+            { }
+        }
+
+        private void btnWDSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -264,6 +264,7 @@
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 1;
             this.tabControl1.Visible = false;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -302,7 +303,6 @@
             // 
             // txtWDJCAmt
             // 
-            this.txtWDJCAmt.Enabled = false;
             this.txtWDJCAmt.Location = new System.Drawing.Point(339, 46);
             this.txtWDJCAmt.Margin = new System.Windows.Forms.Padding(1);
             this.txtWDJCAmt.Name = "txtWDJCAmt";
@@ -312,7 +312,6 @@
             // 
             // textBoxOWAMT
             // 
-            this.textBoxOWAMT.Enabled = false;
             this.textBoxOWAMT.Location = new System.Drawing.Point(215, 188);
             this.textBoxOWAMT.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxOWAMT.Name = "textBoxOWAMT";
@@ -332,7 +331,6 @@
             // 
             // COBXWDTypeNM
             // 
-            this.COBXWDTypeNM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.COBXWDTypeNM.FormattingEnabled = true;
             this.COBXWDTypeNM.Items.AddRange(new object[] {
             "",
@@ -362,7 +360,6 @@
             // 
             // txtWDHLAmt
             // 
-            this.txtWDHLAmt.Enabled = false;
             this.txtWDHLAmt.Location = new System.Drawing.Point(215, 155);
             this.txtWDHLAmt.Name = "txtWDHLAmt";
             this.txtWDHLAmt.Size = new System.Drawing.Size(100, 20);
@@ -370,7 +367,6 @@
             // 
             // txtWDRDAmt
             // 
-            this.txtWDRDAmt.Enabled = false;
             this.txtWDRDAmt.Location = new System.Drawing.Point(215, 119);
             this.txtWDRDAmt.Name = "txtWDRDAmt";
             this.txtWDRDAmt.Size = new System.Drawing.Size(100, 20);
@@ -389,7 +385,6 @@
             // 
             // txtWDWgnAmt
             // 
-            this.txtWDWgnAmt.Enabled = false;
             this.txtWDWgnAmt.Location = new System.Drawing.Point(215, 86);
             this.txtWDWgnAmt.Name = "txtWDWgnAmt";
             this.txtWDWgnAmt.Size = new System.Drawing.Size(100, 20);
@@ -415,8 +410,9 @@
             this.btnWDSave.Name = "btnWDSave";
             this.btnWDSave.Size = new System.Drawing.Size(75, 23);
             this.btnWDSave.TabIndex = 11;
-            this.btnWDSave.Text = "Save";
+            this.btnWDSave.Text = "Add";
             this.btnWDSave.UseVisualStyleBackColor = true;
+            this.btnWDSave.Click += new System.EventHandler(this.btnWDSave_Click);
             // 
             // txtWDTypeID
             // 
@@ -497,6 +493,7 @@
             this.tabPage2.Size = new System.Drawing.Size(1572, 794);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // lblBDHead
             // 
@@ -580,12 +577,13 @@
             // 
             this.COBXBDBNO.FormattingEnabled = true;
             this.COBXBDBNO.Items.AddRange(new object[] {
+            "",
             "1",
             "2",
             "3",
             "4",
             "5",
-            "Dummy"});
+            "6"});
             this.COBXBDBNO.Location = new System.Drawing.Point(160, 29);
             this.COBXBDBNO.Name = "COBXBDBNO";
             this.COBXBDBNO.Size = new System.Drawing.Size(100, 21);
