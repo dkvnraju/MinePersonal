@@ -287,104 +287,7 @@ namespace RassiCements_LTD
 
         private void txtWDTypeID_TextChanged(object sender, EventArgs e)
         {
-
-            if (txtWDTypeID.Text=="")
-            {
-              //donothing
-            }
-            else if(txtWDTypeID.Text == "1" || txtWDTypeID.Text == "2")
-            {
-               
-             
-            string connstring = "SELECT id,type,wagonamt,roadamt,hlamt,openwagonamt FROM  WageDetails WHERE id = " + txtWDTypeID.Text;
-            OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
-            OleDbCommand cmd = new OleDbCommand(connstring, conn);
-
-            try
-            {                
-                conn.Open();
-                OleDbDataReader dr = cmd.ExecuteReader();
-
-                if (dr.HasRows)
-                {
-                    dr.Read();
-                    txtWDTypeID.Text = Convert.ToString(dr.GetValue(0));
-                    COBXWDTypeNM.Text = Convert.ToString(dr.GetValue(1));
-                    txtWDWgnAmt.Text = Convert.ToString(dr.GetValue(2));
-                    txtWDRDAmt.Text = Convert.ToString(dr.GetValue(3));
-                    txtWDHLAmt.Text = Convert.ToString(dr.GetValue(4));
-                    textBoxOWAMT.Text = Convert.ToString(dr.GetValue(5));
-                }
-                else
-                {
-                    MessageBox.Show("Invalid TypeID. TypeID you have entered doesn't exist. Please enter a valid TypeID ");
-                }
-
-                }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Exception occured"+ ex);
-            }
-            finally
-            {
-                conn.Close();
-            }
-
-            }//Ends else if for id 1 or 2
-          else if(txtWDTypeID.Text == "3" || txtWDTypeID.Text == "4")
-            {
-
-                txtWDWgnAmt.Text = "";
-                txtWDRDAmt.Text = "";
-                txtWDHLAmt.Text = "";
-                textBoxOWAMT.Text = "";
-                txtWDJCAmt.Visible = true;
-                string connstring = "SELECT id,type,JaggeryAmt,CoconutOilAmt FROM  WageDetails WHERE id = " + txtWDTypeID.Text;
-                OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
-                OleDbCommand cmd = new OleDbCommand(connstring, conn);
-
-                try
-                {
-                    conn.Open();
-                    OleDbDataReader dr = cmd.ExecuteReader();
-
-                    if (dr.HasRows)
-                    {
-                        dr.Read();
-                        txtWDTypeID.Text = Convert.ToString(dr.GetValue(0));
-                        COBXWDTypeNM.Text = Convert.ToString(dr.GetValue(1));
-                        if (txtWDTypeID.Text == "3")
-                        { 
-                        txtWDJCAmt.Text = Convert.ToString(dr.GetValue(2));
-                        }
-                        if (txtWDTypeID.Text == "4")
-                        {
-                            txtWDJCAmt.Text = Convert.ToString(dr.GetValue(3));
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid TypeID. TypeID you have entered doesn't exist. Please enter a valid TypeID ");
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Exception occured" + ex);
-                }
-                finally
-                {
-                    conn.Close();
-                }
-
-            }
-            else
-            {
-                MessageBox.Show("Please check the TypeID you have entered");
-            }
-
-
-
+            //Do nothing
         }
 
         private void COBXWDTypeNM_SelectedIndexChanged(object sender, EventArgs e)
@@ -582,7 +485,112 @@ namespace RassiCements_LTD
 
         private void txtWDTypeID_Leave(object sender, EventArgs e)
         {
-            MessageBox.Show("tab leave");
+
+            if (txtWDTypeID.Text == "")
+            {
+                //donothing
+            }
+            else if (txtWDTypeID.Text == "1" || txtWDTypeID.Text == "2")
+            {
+
+
+                string connstring = "SELECT id,type,wagonamt,roadamt,hlamt,openwagonamt FROM  WageDetails WHERE id = " + txtWDTypeID.Text;
+                OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+                OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+                try
+                {
+                    conn.Open();
+                    OleDbDataReader dr = cmd.ExecuteReader();
+
+                    if (dr.HasRows)
+                    {
+                        dr.Read();
+                        txtWDTypeID.Text = Convert.ToString(dr.GetValue(0));
+                        COBXWDTypeNM.Text = Convert.ToString(dr.GetValue(1));
+                        txtWDWgnAmt.Text = Convert.ToString(dr.GetValue(2));
+                        txtWDRDAmt.Text = Convert.ToString(dr.GetValue(3));
+                        txtWDHLAmt.Text = Convert.ToString(dr.GetValue(4));
+                        textBoxOWAMT.Text = Convert.ToString(dr.GetValue(5));
+                        if(txtWDTypeID.Enabled==true)   { txtWDTypeID.Enabled = false; }
+                        if(COBXWDTypeNM.Enabled==true)  { COBXWDTypeNM.Enabled = false; }
+                        if(txtWDWgnAmt.Enabled==true)   { txtWDWgnAmt.Enabled = false; }
+                        if (txtWDRDAmt.Enabled == true) { txtWDRDAmt.Enabled = false; }
+                        if (txtWDHLAmt.Enabled == true) { txtWDHLAmt.Enabled = false; }
+                        if (textBoxOWAMT.Enabled == true) { textBoxOWAMT.Enabled = false; }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid TypeID. TypeID you have entered doesn't exist. Please enter a valid TypeID ");
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Exception occured" + ex);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+
+            }//Ends else if for id 1 or 2
+            else if (txtWDTypeID.Text == "3" || txtWDTypeID.Text == "4")
+            {
+
+                txtWDWgnAmt.Text = "";
+                txtWDRDAmt.Text = "";
+                txtWDHLAmt.Text = "";
+                textBoxOWAMT.Text = "";
+                txtWDJCAmt.Visible = true;
+                string connstring = "SELECT id,type,JaggeryAmt,CoconutOilAmt FROM  WageDetails WHERE id = " + txtWDTypeID.Text;
+                OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+                OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+                try
+                {
+                    conn.Open();
+                    OleDbDataReader dr = cmd.ExecuteReader();
+
+                    if (dr.HasRows)
+                    {
+                        dr.Read();
+                        txtWDTypeID.Text = Convert.ToString(dr.GetValue(0));
+                        COBXWDTypeNM.Text = Convert.ToString(dr.GetValue(1));
+                        if (txtWDTypeID.Text == "3")
+                        {
+                            txtWDJCAmt.Text = Convert.ToString(dr.GetValue(2));
+                            if (txtWDJCAmt.Enabled == true) { txtWDJCAmt.Enabled = false; }
+                        }
+                        if (txtWDTypeID.Text == "4")
+                        {
+                            txtWDJCAmt.Text = Convert.ToString(dr.GetValue(3));
+                            if (txtWDJCAmt.Enabled == true) { txtWDJCAmt.Enabled = false; }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid TypeID. TypeID you have entered doesn't exist. Please enter a valid TypeID ");
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Exception occured" + ex);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Please check the TypeID you have entered");
+            }
+
+
+
         }
     }
 }
