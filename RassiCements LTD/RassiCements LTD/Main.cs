@@ -469,8 +469,31 @@ namespace RassiCements_LTD
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
            
-            if(tabControl1.SelectedTab.Text=="BatchDetails")
-            { }
+            if(tabControl1.SelectedTab.Text=="Batch Details")
+            {
+                string connstring = "SELECT BatchNum FROM  BatchDetails ;";
+                OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+                OleDbCommand cmd = new OleDbCommand(connstring, conn);
+                //int Batchnum = 0;
+                try
+                {
+                    conn.Open();
+                    OleDbDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                       COBXBDBNO.Items.Add(dr.GetValue(0));
+                     }
+                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Exception occured" + ex);
+                }
+                finally
+                {
+                    conn.Close();
+                 }
+
+            }
         }
 
         private void btnWDSave_Click(object sender, EventArgs e)

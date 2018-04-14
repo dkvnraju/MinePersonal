@@ -604,14 +604,6 @@
             // COBXBDBNO
             // 
             this.COBXBDBNO.FormattingEnabled = true;
-            this.COBXBDBNO.Items.AddRange(new object[] {
-            "",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
             this.COBXBDBNO.Location = new System.Drawing.Point(427, 69);
             this.COBXBDBNO.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.COBXBDBNO.Name = "COBXBDBNO";
