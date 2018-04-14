@@ -474,7 +474,7 @@ namespace RassiCements_LTD
                 string connstring = "SELECT BatchNum FROM  BatchDetails ;";
                 OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
                 OleDbCommand cmd = new OleDbCommand(connstring, conn);
-                //int Batchnum = 0;
+                
                 try
                 {
                     conn.Open();
