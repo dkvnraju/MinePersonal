@@ -713,5 +713,48 @@ namespace RassiCements_LTD
             lblPLDDofRet.Visible = true;
             lblPLDDofRet.Text = dateTimePickerPLDDOB.Value.AddYears(60).Date.ToShortDateString();
         }
+
+        private void txtboxPLDTknNo_Leave(object sender, EventArgs e)
+        {
+            if(txtboxPLDTknNo.Text!="")
+            {
+                string connstring = "SELECT ID,TokenNo,TypeID,BatchNo,JoiningDate,PF,EmpName,EmpFName,DOB,PFAmt FROM  PLDetails WHERE TokenNO = " + COBXBDBNO.Text;
+                OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+                OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+                try
+                {
+                    conn.Open();
+                    OleDbDataReader dr = cmd.ExecuteReader();
+
+                    if (dr.HasRows)
+                    {
+                        dr.Read();
+                        COBXBDBNO.Text = Convert.ToString(dr.GetValue(0));
+                        txtBDBNM.Text = Convert.ToString(dr.GetValue(1));
+
+                        if (txtBDBNM.Enabled == true) { txtBDBNM.Enabled = false; }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid BatchNUmber. BatchNumber you have entered doesn't exist. Please enter a valid TypeID or click on Add button to add it to Database.");
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Exception occured" + ex);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+
+
+
+            }
+
+        }
     }
 }

@@ -884,6 +884,7 @@
             this.txtboxPLDTknNo.Name = "txtboxPLDTknNo";
             this.txtboxPLDTknNo.Size = new System.Drawing.Size(260, 41);
             this.txtboxPLDTknNo.TabIndex = 1;
+            this.txtboxPLDTknNo.Leave += new System.EventHandler(this.txtboxPLDTknNo_Leave);
             // 
             // lblPLDDofRet
             // 
