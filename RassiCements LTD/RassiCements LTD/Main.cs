@@ -468,7 +468,16 @@ namespace RassiCements_LTD
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+           if(tabControl1.SelectedTab.Text == "Packing Loading Details")
+            {
+                if(radioButtonPFYes.Checked==false)
+                { radioButtonPFYes.Checked = true; }
+                if(radioButtonPFYes.Checked==true)
+                { textBoxPLDPF.Visible = true; }
+            }
+
+
+
             if(tabControl1.SelectedTab.Text=="Batch Details")
             {
                 string connstring = "SELECT BatchNum FROM  BatchDetails ;";
