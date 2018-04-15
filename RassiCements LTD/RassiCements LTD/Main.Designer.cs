@@ -577,8 +577,9 @@
             this.btnBDUpdate.Name = "btnBDUpdate";
             this.btnBDUpdate.Size = new System.Drawing.Size(200, 55);
             this.btnBDUpdate.TabIndex = 5;
-            this.btnBDUpdate.Text = "Update";
+            this.btnBDUpdate.Text = "Modify";
             this.btnBDUpdate.UseVisualStyleBackColor = true;
+            this.btnBDUpdate.Click += new System.EventHandler(this.btnBDUpdate_Click);
             // 
             // btnBDSave
             // 
@@ -609,6 +610,7 @@
             this.COBXBDBNO.Name = "COBXBDBNO";
             this.COBXBDBNO.Size = new System.Drawing.Size(260, 39);
             this.COBXBDBNO.TabIndex = 2;
+            this.COBXBDBNO.SelectedIndexChanged += new System.EventHandler(this.COBXBDBNO_SelectedIndexChanged);
             // 
             // lblBDBNM
             // 

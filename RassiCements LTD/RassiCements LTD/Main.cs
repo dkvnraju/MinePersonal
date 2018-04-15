@@ -615,5 +615,57 @@ namespace RassiCements_LTD
 
 
         }
+
+        private void COBXBDBNO_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //ill the text box with the data
+
+            string connstring = "SELECT BatchNum,Name FROM  BatchDetails WHERE BatchNum = " + COBXBDBNO.Text;
+            OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+            OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+            try
+            {
+                conn.Open();
+                OleDbDataReader dr = cmd.ExecuteReader();
+
+                if (dr.HasRows)
+                {
+                    dr.Read();
+                    COBXBDBNO.Text = Convert.ToString(dr.GetValue(0));
+                    txtBDBNM.Text = Convert.ToString(dr.GetValue(1));
+                    
+                    if (txtBDBNM.Enabled == true) { txtBDBNM.Enabled = false; }
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Invalid BatchNUmber. BatchNumber you have entered doesn't exist. Please enter a valid TypeID or click on Add button to add it to Database.");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception occured" + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+
+        }
+
+        private void btnBDUpdate_Click(object sender, EventArgs e)
+        {
+            btnBDUpdate.Text = "Update";
+            if (txtBDBNM.Enabled == false) { txtBDBNM.Enabled = true; }
+            if(txtBDBNM.Text!="")
+            {
+
+            } else
+            { MessageBox.Show("Batch Name need to be entered"); }
+
+        }
     }
 }
