@@ -662,8 +662,32 @@ namespace RassiCements_LTD
             if (txtBDBNM.Enabled == false) { txtBDBNM.Enabled = true; }
             if(txtBDBNM.Text!="")
             {
+               string connstring = "UPDATE BatchDetails SET Name=" + "'" + txtBDBNM.Text + "'" + " WHERE BatchNum = " + COBXBDBNO.Text +";";
+                OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+                OleDbCommand cmd = new OleDbCommand(connstring, conn);
 
-            } else
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteReader();
+                    MessageBox.Show("Data Updated Successfully");
+                    btnBDUpdate.Text = "Modify";
+                    if (txtBDBNM.Enabled == true) { txtBDBNM.Enabled = false; }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Exception occured.Data not saved Please try updating it again" + ex);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+
+
+
+            }
+            else
             { MessageBox.Show("Batch Name need to be entered"); }
 
         }
