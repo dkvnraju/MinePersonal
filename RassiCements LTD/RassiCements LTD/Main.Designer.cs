@@ -699,7 +699,7 @@
             this.textBoxPLDPF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPLDPF.Name = "textBoxPLDPF";
             this.textBoxPLDPF.Size = new System.Drawing.Size(185, 41);
-            this.textBoxPLDPF.TabIndex = 28;
+            this.textBoxPLDPF.TabIndex = 10;
             this.textBoxPLDPF.Visible = false;
             // 
             // btnPLDDel
@@ -708,7 +708,7 @@
             this.btnPLDDel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnPLDDel.Name = "btnPLDDel";
             this.btnPLDDel.Size = new System.Drawing.Size(200, 55);
-            this.btnPLDDel.TabIndex = 27;
+            this.btnPLDDel.TabIndex = 14;
             this.btnPLDDel.Text = "Delete";
             this.btnPLDDel.UseVisualStyleBackColor = true;
             // 
@@ -718,7 +718,7 @@
             this.btnPLDUpdate.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnPLDUpdate.Name = "btnPLDUpdate";
             this.btnPLDUpdate.Size = new System.Drawing.Size(200, 55);
-            this.btnPLDUpdate.TabIndex = 26;
+            this.btnPLDUpdate.TabIndex = 12;
             this.btnPLDUpdate.Text = "Modify";
             this.btnPLDUpdate.UseVisualStyleBackColor = true;
             // 
@@ -728,7 +728,7 @@
             this.btnPLDClr.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnPLDClr.Name = "btnPLDClr";
             this.btnPLDClr.Size = new System.Drawing.Size(200, 55);
-            this.btnPLDClr.TabIndex = 25;
+            this.btnPLDClr.TabIndex = 13;
             this.btnPLDClr.Text = "Clear";
             this.btnPLDClr.UseVisualStyleBackColor = true;
             this.btnPLDClr.Click += new System.EventHandler(this.btnPLDClr_Click);
@@ -739,7 +739,7 @@
             this.btnPLDAdd.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnPLDAdd.Name = "btnPLDAdd";
             this.btnPLDAdd.Size = new System.Drawing.Size(200, 55);
-            this.btnPLDAdd.TabIndex = 24;
+            this.btnPLDAdd.TabIndex = 11;
             this.btnPLDAdd.Text = "Add";
             this.btnPLDAdd.UseVisualStyleBackColor = true;
             // 
@@ -750,7 +750,7 @@
             this.dateTimePickerPLDDOB.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.dateTimePickerPLDDOB.Name = "dateTimePickerPLDDOB";
             this.dateTimePickerPLDDOB.Size = new System.Drawing.Size(263, 41);
-            this.dateTimePickerPLDDOB.TabIndex = 23;
+            this.dateTimePickerPLDDOB.TabIndex = 7;
             this.dateTimePickerPLDDOB.ValueChanged += new System.EventHandler(this.dateTimePickerPLDDOB_ValueChanged);
             // 
             // txtboxPLDSINo
@@ -759,7 +759,7 @@
             this.txtboxPLDSINo.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtboxPLDSINo.Name = "txtboxPLDSINo";
             this.txtboxPLDSINo.Size = new System.Drawing.Size(260, 41);
-            this.txtboxPLDSINo.TabIndex = 22;
+            this.txtboxPLDSINo.TabIndex = 8;
             // 
             // txtboxPLDFNM
             // 
@@ -767,7 +767,7 @@
             this.txtboxPLDFNM.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtboxPLDFNM.Name = "txtboxPLDFNM";
             this.txtboxPLDFNM.Size = new System.Drawing.Size(436, 41);
-            this.txtboxPLDFNM.TabIndex = 21;
+            this.txtboxPLDFNM.TabIndex = 6;
             // 
             // txtboxPLDNM
             // 
@@ -775,7 +775,7 @@
             this.txtboxPLDNM.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtboxPLDNM.Name = "txtboxPLDNM";
             this.txtboxPLDNM.Size = new System.Drawing.Size(439, 41);
-            this.txtboxPLDNM.TabIndex = 20;
+            this.txtboxPLDNM.TabIndex = 5;
             // 
             // lblPLDSINo
             // 
@@ -824,7 +824,7 @@
             this.radioButtonPFNo.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.radioButtonPFNo.Name = "radioButtonPFNo";
             this.radioButtonPFNo.Size = new System.Drawing.Size(93, 40);
-            this.radioButtonPFNo.TabIndex = 15;
+            this.radioButtonPFNo.TabIndex = 9;
             this.radioButtonPFNo.TabStop = true;
             this.radioButtonPFNo.Text = "No";
             this.radioButtonPFNo.UseVisualStyleBackColor = true;
@@ -837,7 +837,7 @@
             this.radioButtonPFYes.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.radioButtonPFYes.Name = "radioButtonPFYes";
             this.radioButtonPFYes.Size = new System.Drawing.Size(106, 40);
-            this.radioButtonPFYes.TabIndex = 14;
+            this.radioButtonPFYes.TabIndex = 8;
             this.radioButtonPFYes.TabStop = true;
             this.radioButtonPFYes.Text = "Yes";
             this.radioButtonPFYes.UseVisualStyleBackColor = true;
@@ -849,7 +849,7 @@
             this.dateTimePickerPLDJNDt.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.dateTimePickerPLDJNDt.Name = "dateTimePickerPLDJNDt";
             this.dateTimePickerPLDJNDt.Size = new System.Drawing.Size(260, 41);
-            this.dateTimePickerPLDJNDt.TabIndex = 13;
+            this.dateTimePickerPLDJNDt.TabIndex = 4;
             this.dateTimePickerPLDJNDt.ValueChanged += new System.EventHandler(this.dateTimePickerPLDJNDt_ValueChanged);
             // 
             // comboBoxPLDBtchNo
@@ -866,7 +866,7 @@
             this.comboBoxPLDBtchNo.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.comboBoxPLDBtchNo.Name = "comboBoxPLDBtchNo";
             this.comboBoxPLDBtchNo.Size = new System.Drawing.Size(260, 44);
-            this.comboBoxPLDBtchNo.TabIndex = 12;
+            this.comboBoxPLDBtchNo.TabIndex = 3;
             // 
             // comboBoxPLDTypID
             // 
@@ -875,7 +875,7 @@
             this.comboBoxPLDTypID.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.comboBoxPLDTypID.Name = "comboBoxPLDTypID";
             this.comboBoxPLDTypID.Size = new System.Drawing.Size(260, 44);
-            this.comboBoxPLDTypID.TabIndex = 11;
+            this.comboBoxPLDTypID.TabIndex = 2;
             // 
             // txtboxPLDTknNo
             // 
@@ -883,7 +883,7 @@
             this.txtboxPLDTknNo.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtboxPLDTknNo.Name = "txtboxPLDTknNo";
             this.txtboxPLDTknNo.Size = new System.Drawing.Size(260, 41);
-            this.txtboxPLDTknNo.TabIndex = 10;
+            this.txtboxPLDTknNo.TabIndex = 1;
             // 
             // lblPLDDofRet
             // 
