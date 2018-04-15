@@ -719,7 +719,7 @@
             this.btnPLDUpdate.Name = "btnPLDUpdate";
             this.btnPLDUpdate.Size = new System.Drawing.Size(200, 55);
             this.btnPLDUpdate.TabIndex = 26;
-            this.btnPLDUpdate.Text = "Update";
+            this.btnPLDUpdate.Text = "Modify";
             this.btnPLDUpdate.UseVisualStyleBackColor = true;
             // 
             // btnPLDClr
