@@ -714,7 +714,7 @@
             // 
             // btnPLDUpdate
             // 
-            this.btnPLDUpdate.Location = new System.Drawing.Point(848, 668);
+            this.btnPLDUpdate.Location = new System.Drawing.Point(554, 668);
             this.btnPLDUpdate.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnPLDUpdate.Name = "btnPLDUpdate";
             this.btnPLDUpdate.Size = new System.Drawing.Size(200, 55);
@@ -724,7 +724,7 @@
             // 
             // btnPLDClr
             // 
-            this.btnPLDClr.Location = new System.Drawing.Point(560, 668);
+            this.btnPLDClr.Location = new System.Drawing.Point(843, 670);
             this.btnPLDClr.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnPLDClr.Name = "btnPLDClr";
             this.btnPLDClr.Size = new System.Drawing.Size(200, 55);
