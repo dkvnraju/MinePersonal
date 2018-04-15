@@ -691,5 +691,18 @@ namespace RassiCements_LTD
             { MessageBox.Show("Batch Name need to be entered"); }
 
         }
+
+        private void dateTimePickerPLDJNDt_ValueChanged(object sender, EventArgs e)
+        {
+            lblPLDYASDtVal.Visible = true;
+            lblPLDYASDtVal.Text = Convert.ToString( DateTime.Now.Year- dateTimePickerPLDJNDt.Value.Year);
+
+        }
+
+        private void dateTimePickerPLDDOB_ValueChanged(object sender, EventArgs e)
+        {
+            lblPLDDofRet.Visible = true;
+            lblPLDDofRet.Text = dateTimePickerPLDDOB.Value.AddYears(60).Date.ToShortDateString();
+        }
     }
 }

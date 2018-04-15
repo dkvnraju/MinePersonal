@@ -751,6 +751,7 @@
             this.dateTimePickerPLDDOB.Name = "dateTimePickerPLDDOB";
             this.dateTimePickerPLDDOB.Size = new System.Drawing.Size(263, 41);
             this.dateTimePickerPLDDOB.TabIndex = 23;
+            this.dateTimePickerPLDDOB.ValueChanged += new System.EventHandler(this.dateTimePickerPLDDOB_ValueChanged);
             // 
             // txtboxPLDSINo
             // 
@@ -849,6 +850,7 @@
             this.dateTimePickerPLDJNDt.Name = "dateTimePickerPLDJNDt";
             this.dateTimePickerPLDJNDt.Size = new System.Drawing.Size(260, 41);
             this.dateTimePickerPLDJNDt.TabIndex = 13;
+            this.dateTimePickerPLDJNDt.ValueChanged += new System.EventHandler(this.dateTimePickerPLDJNDt_ValueChanged);
             // 
             // comboBoxPLDBtchNo
             // 
