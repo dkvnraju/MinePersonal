@@ -98,6 +98,17 @@ namespace RassiCements_LTD
             { radioButtonPFNo.Checked = false; }
             comboBoxPLDTypID.Text = "";
             comboBoxPLDBtchNo.Text = "";
+
+            if (txtboxPLDSINo.Enabled == false) { txtboxPLDSINo.Enabled = true; }
+            if (txtboxPLDTknNo.Enabled == false) { txtboxPLDTknNo.Enabled = true; }
+            if (comboBoxPLDTypID.Enabled == false) { comboBoxPLDTypID.Enabled = true; }
+            if (comboBoxPLDBtchNo.Enabled == false) { comboBoxPLDBtchNo.Enabled = true; }
+            if (dateTimePickerPLDJNDt.Enabled == false) { dateTimePickerPLDJNDt.Enabled = true; }
+            if (radioButtonPFNo.Enabled == false || radioButtonPFNo.Enabled == false) { radioButtonPFNo.Enabled = true; radioButtonPFNo.Enabled = true; }
+            if (textBoxPLDPF.Enabled == false) { textBoxPLDPF.Enabled = true; }
+            if (txtboxPLDNM.Enabled == false) { txtboxPLDNM.Enabled = true; }
+            if (txtboxPLDFNM.Enabled == false) { txtboxPLDFNM.Enabled = true; }
+            if (dateTimePickerPLDDOB.Enabled == false) { dateTimePickerPLDDOB.Enabled = true; }
         }
 
         private void btnClr_Click(object sender, EventArgs e)
@@ -718,7 +729,7 @@ namespace RassiCements_LTD
         {
             if(txtboxPLDTknNo.Text!="")
             {
-                string connstring = "SELECT ID,TokenNo,TypeID,BatchNo,JoiningDate,PF,EmpName,EmpFName,DOB,PFAmt FROM  PLDetails WHERE TokenNO = " + txtboxPLDTknNo.Text;
+                string connstring = "SELECT ID,TokenNumber,TypeID,BatchNo,JoiningDate,PF,EmpName,EmpFName,Dateofbirth,PFno FROM  EmployeeDetails WHERE TokenNumber = " + txtboxPLDTknNo.Text;
                 OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
                 OleDbCommand cmd = new OleDbCommand(connstring, conn);
 
@@ -744,7 +755,7 @@ namespace RassiCements_LTD
                         }
                         txtboxPLDNM.Text = dr["EmpName"].ToString();
                         txtboxPLDFNM.Text = dr["EmpFName"].ToString();
-                        dateTimePickerPLDDOB.Text = dr["DOB"].ToString();
+                        dateTimePickerPLDDOB.Text = dr["Dateofbirth"].ToString();
 
                         if (txtboxPLDSINo.Enabled == true) { txtboxPLDSINo.Enabled = false; }
                         if (txtboxPLDTknNo.Enabled == true) { txtboxPLDTknNo.Enabled = false; }
