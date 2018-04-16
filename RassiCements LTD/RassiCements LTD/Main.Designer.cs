@@ -721,6 +721,7 @@
             this.btnPLDUpdate.TabIndex = 12;
             this.btnPLDUpdate.Text = "Modify";
             this.btnPLDUpdate.UseVisualStyleBackColor = true;
+            this.btnPLDUpdate.Click += new System.EventHandler(this.btnPLDUpdate_Click);
             // 
             // btnPLDClr
             // 

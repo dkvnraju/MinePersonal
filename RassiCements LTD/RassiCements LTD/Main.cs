@@ -778,5 +778,28 @@ namespace RassiCements_LTD
             }
 
         }
+
+        private void btnPLDUpdate_Click(object sender, EventArgs e)
+        {
+
+            if(btnPLDUpdate.Text=="Modify")
+            {
+                btnPLDUpdate.Text = "Update";
+                if (txtboxPLDSINo.Enabled == false) { txtboxPLDSINo.Enabled = true; }
+                if (txtboxPLDTknNo.Enabled == false) { txtboxPLDTknNo.Enabled = true; }
+                if (comboBoxPLDTypID.Enabled == false) { comboBoxPLDTypID.Enabled = true; }
+                if (comboBoxPLDBtchNo.Enabled == false) { comboBoxPLDBtchNo.Enabled = true; }
+                if (dateTimePickerPLDJNDt.Enabled == false) { dateTimePickerPLDJNDt.Enabled = true; }
+                if (radioButtonPFNo.Enabled == false || radioButtonPFNo.Enabled == false) { radioButtonPFNo.Enabled = true; radioButtonPFNo.Enabled = true; }
+                if (textBoxPLDPF.Enabled == false) { textBoxPLDPF.Enabled = true; }
+                if (txtboxPLDNM.Enabled == false) { txtboxPLDNM.Enabled = true; }
+                if (txtboxPLDFNM.Enabled == false) { txtboxPLDFNM.Enabled = true; }
+                if (dateTimePickerPLDDOB.Enabled == false) { dateTimePickerPLDDOB.Enabled = true; }
+
+
+            }
+           
+
+        }
     }
 }
