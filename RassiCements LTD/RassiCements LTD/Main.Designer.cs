@@ -977,9 +977,9 @@
             this.lblPLDTypID.Location = new System.Drawing.Point(205, 203);
             this.lblPLDTypID.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblPLDTypID.Name = "lblPLDTypID";
-            this.lblPLDTypID.Size = new System.Drawing.Size(143, 36);
+            this.lblPLDTypID.Size = new System.Drawing.Size(103, 36);
             this.lblPLDTypID.TabIndex = 1;
-            this.lblPLDTypID.Text = "Type ID :";
+            this.lblPLDTypID.Text = "Type :";
             // 
             // lblPLDTknNo
             // 

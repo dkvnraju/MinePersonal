@@ -718,7 +718,7 @@ namespace RassiCements_LTD
         {
             if(txtboxPLDTknNo.Text!="")
             {
-                string connstring = "SELECT ID,TokenNo,TypeID,BatchNo,JoiningDate,PF,EmpName,EmpFName,DOB,PFAmt FROM  PLDetails WHERE TokenNO = " + COBXBDBNO.Text;
+                string connstring = "SELECT ID,TokenNo,TypeID,BatchNo,JoiningDate,PF,EmpName,EmpFName,DOB,PFAmt FROM  PLDetails WHERE TokenNO = " + txtboxPLDTknNo.Text;
                 OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
                 OleDbCommand cmd = new OleDbCommand(connstring, conn);
 
@@ -738,7 +738,7 @@ namespace RassiCements_LTD
                     }
                     else
                     {
-                        MessageBox.Show("Invalid BatchNUmber. BatchNumber you have entered doesn't exist. Please enter a valid TypeID or click on Add button to add it to Database.");
+                        MessageBox.Show("Invalid TokenNumber. Token Number you have entered doesn't exist. Please enter a valid Token ID.");
                     }
 
                 }
