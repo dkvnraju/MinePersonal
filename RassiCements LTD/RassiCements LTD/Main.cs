@@ -797,7 +797,8 @@ namespace RassiCements_LTD
                 if (dateTimePickerPLDDOB.Enabled == false) { dateTimePickerPLDDOB.Enabled = true; }
 
 
-            }
+            }else if(btnPLDUpdate.Text == "Update")
+            { }
            
 
         }
