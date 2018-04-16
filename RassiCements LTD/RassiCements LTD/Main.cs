@@ -809,8 +809,41 @@ namespace RassiCements_LTD
 
 
             }else if(btnPLDUpdate.Text == "Update")
-            { }
-           
+            {
+                string connstring = "UPDATE EmployeeDetails SET TypeID=" + "'" + txtWDWgnAmt.Text + "'" + " ,BatchNo=" + "'" + txtWDRDAmt.Text + "'" + " ,JoiningDate=" + "'" + txtWDHLAmt.Text + "'" + " ,PF=" + "'" + textBoxOWAMT.Text + "'" + " WHERE ID=" + txtWDTypeID.Text + " AND TYPE=" + "'" + COBXWDTypeNM.Text + "'" + ";";
+                OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+                OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Data Updated Successfully");
+                    
+                    if (txtboxPLDSINo.Enabled == true) { txtboxPLDSINo.Enabled = false; }
+                    if (txtboxPLDTknNo.Enabled == true) { txtboxPLDTknNo.Enabled = false; }
+                    if (comboBoxPLDTypID.Enabled == true) { comboBoxPLDTypID.Enabled = false; }
+                    if (comboBoxPLDBtchNo.Enabled == true) { comboBoxPLDBtchNo.Enabled = false; }
+                    if (dateTimePickerPLDJNDt.Enabled == true) { dateTimePickerPLDJNDt.Enabled = false; }
+                    if (radioButtonPFNo.Enabled == true || radioButtonPFNo.Enabled == true) { radioButtonPFNo.Enabled = false; radioButtonPFNo.Enabled = false; }
+                    if (textBoxPLDPF.Enabled == true) { textBoxPLDPF.Enabled = false; }
+                    if (txtboxPLDNM.Enabled == true) { txtboxPLDNM.Enabled = false; }
+                    if (txtboxPLDFNM.Enabled == true) { txtboxPLDFNM.Enabled = false; }
+                    if (dateTimePickerPLDDOB.Enabled == true) { dateTimePickerPLDDOB.Enabled = false; }
+                    btnPLDUpdate.Text = "Modify";
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Exception occured.Data not saved Please try updating it again" + ex);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+
+            }
+
 
         }
     }
