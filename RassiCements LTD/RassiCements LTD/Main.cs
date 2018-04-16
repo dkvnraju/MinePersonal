@@ -730,10 +730,32 @@ namespace RassiCements_LTD
                     if (dr.HasRows)
                     {
                         dr.Read();
-                        COBXBDBNO.Text = Convert.ToString(dr.GetValue(0));
-                        txtBDBNM.Text = Convert.ToString(dr.GetValue(1));
+                        txtboxPLDSINo.Text = Convert.ToString(dr.GetValue(0));
+                        txtboxPLDTknNo.Text = Convert.ToString(dr.GetValue(1));
+                        comboBoxPLDTypID.Text = Convert.ToString(dr.GetValue(2));
+                        comboBoxPLDBtchNo.Text = Convert.ToString(dr.GetValue(3));
+                        dateTimePickerPLDJNDt.Text = Convert.ToString(dr.GetValue(4));
+                        if (dr.GetBoolean(5) == true)
+                        { radioButtonPFYes.Checked = true;
+                            textBoxPLDPF.Visible = true;
+                        } else
+                        { radioButtonPFNo.Checked = false;
+                            textBoxPLDPF.Visible = false;
+                        }
+                        txtboxPLDNM.Text = dr["EmpName"].ToString();
+                        txtboxPLDFNM.Text = dr["EmpFName"].ToString();
+                        dateTimePickerPLDDOB.Text = dr["DOB"].ToString();
 
-                        if (txtBDBNM.Enabled == true) { txtBDBNM.Enabled = false; }
+                        if (txtboxPLDSINo.Enabled == true) { txtboxPLDSINo.Enabled = false; }
+                        if (txtboxPLDTknNo.Enabled == true) { txtboxPLDTknNo.Enabled = false; }
+                        if (comboBoxPLDTypID.Enabled == true) { comboBoxPLDTypID.Enabled = false; }
+                        if (comboBoxPLDBtchNo.Enabled == true) { comboBoxPLDBtchNo.Enabled = false; }
+                        if (dateTimePickerPLDJNDt.Enabled == true) { dateTimePickerPLDJNDt.Enabled = false; }
+                        if (radioButtonPFNo.Enabled == true || radioButtonPFNo.Enabled == true) { radioButtonPFNo.Enabled = false; radioButtonPFNo.Enabled = false; }
+                        if (textBoxPLDPF.Enabled == true) { textBoxPLDPF.Enabled = false; }
+                        if (txtboxPLDNM.Enabled == true) { txtboxPLDNM.Enabled = false; }
+                        if (txtboxPLDFNM.Enabled == true) { txtboxPLDFNM.Enabled = false; }
+                        if (dateTimePickerPLDDOB.Enabled == true) { dateTimePickerPLDDOB.Enabled = false; }
 
                     }
                     else
