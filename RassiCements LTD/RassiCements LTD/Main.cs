@@ -811,14 +811,17 @@ namespace RassiCements_LTD
             }else if(btnPLDUpdate.Text == "Update")
             {
                 int PFYN=0;
+                int PFNo = 0;
                 if(radioButtonPFYes.Checked)
-                { PFYN = 1; }
+                { PFYN = 1;
+                    PFNo = Convert.ToInt16(textBoxPLDPF.Text);
+                }
                 else if(radioButtonPFNo.Checked)
                 { PFYN = 0; }
                 string connstring = "UPDATE EmployeeDetails SET TypeID=" + "'" + comboBoxPLDTypID.Text + "'" + " ,BatchNo=" + "'" 
                     + comboBoxPLDBtchNo.Text + "'" + " ,JoiningDate=" + "'" + dateTimePickerPLDJNDt.Text + "'" + " ,PF=" + "'" 
                     + PFYN + "'"+",EmpName="+"'"+ txtboxPLDNM .Text+ "'"+",EmpFName="+"'"+ txtboxPLDFNM.Text+"'"+
-                    ",DateOfBirth="+ dateTimePickerPLDDOB.Text+"'"+",PFNo="+ textBoxPLDPF.Text
+                    ",DateOfBirth="+ dateTimePickerPLDDOB.Text+"'"+",PFNo="+ PFNo
                     + " WHERE ID=" + txtboxPLDSINo.Text + " AND TokenNumber=" + txtboxPLDTknNo.Text + ";";
 
                 OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
