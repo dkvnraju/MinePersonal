@@ -710,6 +710,7 @@
             this.btnPLDAdd.TabIndex = 11;
             this.btnPLDAdd.Text = "Add";
             this.btnPLDAdd.UseVisualStyleBackColor = true;
+            this.btnPLDAdd.Click += new System.EventHandler(this.btnPLDAdd_Click);
             // 
             // dateTimePickerPLDDOB
             // 
