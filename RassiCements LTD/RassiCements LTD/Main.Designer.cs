@@ -680,6 +680,7 @@
             this.btnPLDDel.TabIndex = 14;
             this.btnPLDDel.Text = "Delete";
             this.btnPLDDel.UseVisualStyleBackColor = true;
+            this.btnPLDDel.Click += new System.EventHandler(this.btnPLDDel_Click);
             // 
             // btnPLDUpdate
             // 

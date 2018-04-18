@@ -859,5 +859,61 @@ namespace RassiCements_LTD
 
 
         }
+
+        private void btnPLDDel_Click(object sender, EventArgs e)
+        {
+            if (txtboxPLDTknNo.Text == "")
+            {
+                MessageBox.Show("Token Number cannot be empty. Please chack and try deleting again");
+            }
+            else
+            {
+                string connstring = "DELETE FROM EmployeeDetails  WHERE TokenNumber=" + txtboxPLDTknNo.Text + ";";
+                OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+                OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Data Deleted Successfully");
+
+                    txtboxPLDTknNo.Text = "";
+                    textBoxPLDPF.Text = "";
+                    txtboxPLDNM.Text = "";
+                    txtboxPLDFNM.Text = "";
+                    txtboxPLDSINo.Text = "";
+                    dateTimePickerPLDDOB.Text = "";
+                    dateTimePickerPLDJNDt.Text = "";
+                    lblPLDYASDtVal.Text = "";
+                    lblPLDDofRet.Text = "";
+                    if (radioButtonPFYes.Checked)
+                    { radioButtonPFYes.Checked = false; }
+                    if (radioButtonPFNo.Checked)
+                    { radioButtonPFNo.Checked = false; }
+                    comboBoxPLDTypID.Text = "";
+                    comboBoxPLDBtchNo.Text = "";
+
+                    if (txtboxPLDSINo.Enabled == false) { txtboxPLDSINo.Enabled = true; }
+                    if (txtboxPLDTknNo.Enabled == false) { txtboxPLDTknNo.Enabled = true; }
+                    if (comboBoxPLDTypID.Enabled == false) { comboBoxPLDTypID.Enabled = true; }
+                    if (comboBoxPLDBtchNo.Enabled == false) { comboBoxPLDBtchNo.Enabled = true; }
+                    if (dateTimePickerPLDJNDt.Enabled == false) { dateTimePickerPLDJNDt.Enabled = true; }
+                    if (radioButtonPFNo.Enabled == false || radioButtonPFNo.Enabled == false) { radioButtonPFNo.Enabled = true; radioButtonPFNo.Enabled = true; }
+                    if (textBoxPLDPF.Enabled == false) { textBoxPLDPF.Enabled = true; }
+                    if (txtboxPLDNM.Enabled == false) { txtboxPLDNM.Enabled = true; }
+                    if (txtboxPLDFNM.Enabled == false) { txtboxPLDFNM.Enabled = true; }
+                    if (dateTimePickerPLDDOB.Enabled == false) { dateTimePickerPLDDOB.Enabled = true; }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Exception occured.Data not Deleted Please try Deleting it again" + ex);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        }
     }
 }
