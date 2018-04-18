@@ -801,7 +801,7 @@ namespace RassiCements_LTD
                 if (comboBoxPLDTypID.Enabled == false) { comboBoxPLDTypID.Enabled = true; }
                 if (comboBoxPLDBtchNo.Enabled == false) { comboBoxPLDBtchNo.Enabled = true; }
                 if (dateTimePickerPLDJNDt.Enabled == false) { dateTimePickerPLDJNDt.Enabled = true; }
-                if (radioButtonPFNo.Enabled == false || radioButtonPFNo.Enabled == false) { radioButtonPFNo.Enabled = true; radioButtonPFNo.Enabled = true; }
+                if (radioButtonPFNo.Enabled == false || radioButtonPFNo.Enabled == true) { radioButtonPFNo.Enabled = false; radioButtonPFNo.Enabled = true; }
                 if (textBoxPLDPF.Enabled == false) { textBoxPLDPF.Enabled = true; }
                 if (txtboxPLDNM.Enabled == false) { txtboxPLDNM.Enabled = true; }
                 if (txtboxPLDFNM.Enabled == false) { txtboxPLDFNM.Enabled = true; }
@@ -821,7 +821,7 @@ namespace RassiCements_LTD
                 string connstring = "UPDATE EmployeeDetails SET TypeID=" + "'" + comboBoxPLDTypID.Text + "'" + " ,BatchNo=" + "'" 
                     + comboBoxPLDBtchNo.Text + "'" + " ,JoiningDate=" + "'" + dateTimePickerPLDJNDt.Text + "'" + " ,PF=" + "'" 
                     + PFYN + "'"+",EmpName="+"'"+ txtboxPLDNM .Text+ "'"+",EmpFName="+"'"+ txtboxPLDFNM.Text+"'"+
-                    ",DateOfBirth="+ dateTimePickerPLDDOB.Text+"'"+",PFNo="+ PFNo
+                    ",DateOfBirth="+"'"+ dateTimePickerPLDDOB.Text+"'"+",PFNo="+ PFNo
                     + " WHERE ID=" + txtboxPLDSINo.Text + " AND TokenNumber=" + txtboxPLDTknNo.Text + ";";
 
                 OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
