@@ -810,7 +810,17 @@ namespace RassiCements_LTD
 
             }else if(btnPLDUpdate.Text == "Update")
             {
-                string connstring = "UPDATE EmployeeDetails SET TypeID=" + "'" + txtWDWgnAmt.Text + "'" + " ,BatchNo=" + "'" + txtWDRDAmt.Text + "'" + " ,JoiningDate=" + "'" + txtWDHLAmt.Text + "'" + " ,PF=" + "'" + textBoxOWAMT.Text + "'" + " WHERE ID=" + txtWDTypeID.Text + " AND TYPE=" + "'" + COBXWDTypeNM.Text + "'" + ";";
+                int PFYN=0;
+                if(radioButtonPFYes.Checked)
+                { PFYN = 1; }
+                else if(radioButtonPFNo.Checked)
+                { PFYN = 0; }
+                string connstring = "UPDATE EmployeeDetails SET TypeID=" + "'" + comboBoxPLDTypID.Text + "'" + " ,BatchNo=" + "'" 
+                    + comboBoxPLDBtchNo.Text + "'" + " ,JoiningDate=" + "'" + dateTimePickerPLDJNDt.Text + "'" + " ,PF=" + "'" 
+                    + PFYN + "'"+",EmpName="+"'"+ txtboxPLDNM .Text+ "'"+",EmpFName="+"'"+ txtboxPLDFNM.Text+"'"+
+                    ",DateOfBirth="+ dateTimePickerPLDDOB.Text+"'"+",PFNo="+ textBoxPLDPF.Text
+                    + " WHERE ID=" + txtboxPLDSINo.Text + " AND TokenNumber=" + txtboxPLDTknNo.Text + ";";
+
                 OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
                 OleDbCommand cmd = new OleDbCommand(connstring, conn);
 
