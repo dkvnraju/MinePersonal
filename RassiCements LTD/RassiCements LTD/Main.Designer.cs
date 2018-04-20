@@ -1366,6 +1366,7 @@
             this.textBoxLDPkrAmtOldWgn.Name = "textBoxLDPkrAmtOldWgn";
             this.textBoxLDPkrAmtOldWgn.Size = new System.Drawing.Size(80, 21);
             this.textBoxLDPkrAmtOldWgn.TabIndex = 38;
+            this.textBoxLDPkrAmtOldWgn.Leave += new System.EventHandler(this.textBoxLDPkrAmtOldWgn_Leave);
             // 
             // textBoxLDLDAmtOldWgn
             // 
@@ -1373,6 +1374,7 @@
             this.textBoxLDLDAmtOldWgn.Name = "textBoxLDLDAmtOldWgn";
             this.textBoxLDLDAmtOldWgn.Size = new System.Drawing.Size(80, 21);
             this.textBoxLDLDAmtOldWgn.TabIndex = 37;
+            this.textBoxLDLDAmtOldWgn.Leave += new System.EventHandler(this.textBoxLDLDAmtOldWgn_Leave);
             // 
             // textBoxLDPkrAmtHL
             // 
@@ -1380,6 +1382,7 @@
             this.textBoxLDPkrAmtHL.Name = "textBoxLDPkrAmtHL";
             this.textBoxLDPkrAmtHL.Size = new System.Drawing.Size(78, 21);
             this.textBoxLDPkrAmtHL.TabIndex = 36;
+            this.textBoxLDPkrAmtHL.Leave += new System.EventHandler(this.textBoxLDPkrAmtHL_Leave);
             // 
             // textBoxLDLDAmtHL
             // 
@@ -1387,6 +1390,7 @@
             this.textBoxLDLDAmtHL.Name = "textBoxLDLDAmtHL";
             this.textBoxLDLDAmtHL.Size = new System.Drawing.Size(78, 21);
             this.textBoxLDLDAmtHL.TabIndex = 35;
+            this.textBoxLDLDAmtHL.Leave += new System.EventHandler(this.textBoxLDLDAmtHL_Leave);
             // 
             // textBoxLDPkrAmtWg
             // 
@@ -1394,6 +1398,7 @@
             this.textBoxLDPkrAmtWg.Name = "textBoxLDPkrAmtWg";
             this.textBoxLDPkrAmtWg.Size = new System.Drawing.Size(73, 21);
             this.textBoxLDPkrAmtWg.TabIndex = 34;
+            this.textBoxLDPkrAmtWg.Leave += new System.EventHandler(this.textBoxLDPkrAmtWg_Leave);
             // 
             // textBoxLDLDAmtWg
             // 
@@ -1401,6 +1406,7 @@
             this.textBoxLDLDAmtWg.Name = "textBoxLDLDAmtWg";
             this.textBoxLDLDAmtWg.Size = new System.Drawing.Size(73, 21);
             this.textBoxLDLDAmtWg.TabIndex = 33;
+            this.textBoxLDLDAmtWg.Leave += new System.EventHandler(this.textBoxLDLDAmtWg_Leave);
             // 
             // textBoxLDPkrAmtRd
             // 
@@ -1408,6 +1414,7 @@
             this.textBoxLDPkrAmtRd.Name = "textBoxLDPkrAmtRd";
             this.textBoxLDPkrAmtRd.Size = new System.Drawing.Size(66, 21);
             this.textBoxLDPkrAmtRd.TabIndex = 32;
+            this.textBoxLDPkrAmtRd.Leave += new System.EventHandler(this.textBoxLDPkrAmtRd_Leave);
             // 
             // textBoxLDLDAmtRd
             // 
@@ -1415,6 +1422,7 @@
             this.textBoxLDLDAmtRd.Name = "textBoxLDLDAmtRd";
             this.textBoxLDLDAmtRd.Size = new System.Drawing.Size(66, 21);
             this.textBoxLDLDAmtRd.TabIndex = 31;
+            this.textBoxLDLDAmtRd.Leave += new System.EventHandler(this.textBoxLDLDAmtRd_Leave);
             // 
             // dateTimePickerLDDt
             // 

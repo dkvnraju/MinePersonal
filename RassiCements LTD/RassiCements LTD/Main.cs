@@ -986,8 +986,83 @@ namespace RassiCements_LTD
         {
 
 
-           // textBoxLDLDTotAmt.Text = Convert.ToString();
-         
+           textBoxLDLDTotAmt.Text = Convert.ToString((textBoxLDLDAmtRd.Text==""?0:Convert.ToDouble(textBoxLDLDAmtRd.Text))+
+                                                     (textBoxLDLDAmtWg.Text==""?0:Convert.ToDouble(textBoxLDLDAmtWg.Text))+
+                                                     (textBoxLDLDAmtHL.Text==""?0:Convert.ToDouble(textBoxLDLDAmtHL.Text))+
+                                                     (textBoxLDLDAmtOldWgn.Text==""?0:Convert.ToDouble(textBoxLDLDAmtOldWgn.Text)));
+
+            textBoxLDPkrTotAmt.Text = Convert.ToString(textBoxLDPkrAmtRd.Text==""?0:Convert.ToDouble(textBoxLDPkrAmtRd.Text)+
+                                                        textBoxLDPkrAmtWg.Text==""?0:Convert.ToDouble(textBoxLDPkrAmtWg.Text)+
+                                                        textBoxLDPkrAmtHL.Text==""?0:Convert.ToDouble(textBoxLDPkrAmtHL.Text)+
+                                                        textBoxLDPkrAmtOldWgn.Text==""?0:Convert.ToDouble(textBoxLDPkrAmtOldWgn.Text));
+
+
+        }
+
+        private void textBoxLDLDAmtRd_Leave(object sender, EventArgs e)
+        {
+            textBoxLDLDTotAmt.Text = Convert.ToString((textBoxLDLDAmtRd.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtRd.Text)) +
+                                                     (textBoxLDLDAmtWg.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtWg.Text)) +
+                                                     (textBoxLDLDAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtHL.Text)) +
+                                                     (textBoxLDLDAmtOldWgn.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtOldWgn.Text)));
+
+           
+        }
+
+        private void textBoxLDLDAmtWg_Leave(object sender, EventArgs e)
+        {
+            textBoxLDLDTotAmt.Text = Convert.ToString((textBoxLDLDAmtRd.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtRd.Text)) +
+                                                     (textBoxLDLDAmtWg.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtWg.Text)) +
+                                                     (textBoxLDLDAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtHL.Text)) +
+                                                     (textBoxLDLDAmtOldWgn.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtOldWgn.Text)));
+        }
+
+        private void textBoxLDLDAmtHL_Leave(object sender, EventArgs e)
+        {
+            textBoxLDLDTotAmt.Text = Convert.ToString((textBoxLDLDAmtRd.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtRd.Text)) +
+                                                     (textBoxLDLDAmtWg.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtWg.Text)) +
+                                                     (textBoxLDLDAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtHL.Text)) +
+                                                     (textBoxLDLDAmtOldWgn.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtOldWgn.Text)));
+        }
+
+        private void textBoxLDLDAmtOldWgn_Leave(object sender, EventArgs e)
+        {
+            textBoxLDLDTotAmt.Text = Convert.ToString((textBoxLDLDAmtRd.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtRd.Text)) +
+                                                     (textBoxLDLDAmtWg.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtWg.Text)) +
+                                                     (textBoxLDLDAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtHL.Text)) +
+                                                     (textBoxLDLDAmtOldWgn.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtOldWgn.Text)));
+        }
+
+        private void textBoxLDPkrAmtRd_Leave(object sender, EventArgs e)
+        {
+            textBoxLDPkrTotAmt.Text = Convert.ToString(textBoxLDPkrAmtRd.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtRd.Text) +
+                                                      textBoxLDPkrAmtWg.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtWg.Text) +
+                                                      textBoxLDPkrAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtHL.Text) +
+                                                      textBoxLDPkrAmtOldWgn.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtOldWgn.Text));
+        }
+
+        private void textBoxLDPkrAmtWg_Leave(object sender, EventArgs e)
+        {
+            textBoxLDPkrTotAmt.Text = Convert.ToString(textBoxLDPkrAmtRd.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtRd.Text) +
+                                                      textBoxLDPkrAmtWg.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtWg.Text) +
+                                                      textBoxLDPkrAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtHL.Text) +
+                                                      textBoxLDPkrAmtOldWgn.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtOldWgn.Text));
+        }
+
+        private void textBoxLDPkrAmtHL_Leave(object sender, EventArgs e)
+        {
+            textBoxLDPkrTotAmt.Text = Convert.ToString(textBoxLDPkrAmtRd.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtRd.Text) +
+                                                      textBoxLDPkrAmtWg.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtWg.Text) +
+                                                      textBoxLDPkrAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtHL.Text) +
+                                                      textBoxLDPkrAmtOldWgn.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtOldWgn.Text));
+        }
+
+        private void textBoxLDPkrAmtOldWgn_Leave(object sender, EventArgs e)
+        {
+            textBoxLDPkrTotAmt.Text = Convert.ToString(textBoxLDPkrAmtRd.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtRd.Text) +
+                                                      textBoxLDPkrAmtWg.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtWg.Text) +
+                                                      textBoxLDPkrAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtHL.Text) +
+                                                      textBoxLDPkrAmtOldWgn.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtOldWgn.Text));
         }
     }
 }
