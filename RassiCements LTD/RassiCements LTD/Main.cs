@@ -918,7 +918,81 @@ namespace RassiCements_LTD
 
         private void btnPLDAdd_Click(object sender, EventArgs e)
         {
+            Boolean validation = true;
+            if (txtboxPLDTknNo.Text == "")
+            {
+                MessageBox.Show("Token Number cannot be empty. Please chack and try again");
+
+            }
+            else
+            {
+                if(comboBoxPLDTypID.Text=="")
+                { MessageBox.Show("Type cannot be blank"); validation = false; }
+                if(comboBoxPLDBtchNo.Text=="")
+                { MessageBox.Show("Batch No cannot be blank"); validation = false; }
+                if(radioButtonPFYes.Checked || radioButtonPFNo.Checked)
+                { MessageBox.Show("PF cannot be blank"); validation = false; }
+                if(txtboxPLDNM.Text=="")
+                { MessageBox.Show("Name cannot be blank"); validation = false; }
+                if(txtboxPLDFNM.Text=="")
+                { MessageBox.Show("Father Name cannot be blank"); validation = false; }
+                if(textBoxPLDPF.Text=="" && radioButtonPFYes.Checked)
+                { MessageBox.Show("PF NO  cannot be blank"); validation = false; }
+
+                if(validation)
+                {
+                    int pfyn = 0;
+                    if(radioButtonPFYes.Checked)
+                    { pfyn = 1; }
+                    string connstring = "INSERT INTO EmployeeDetails (TokenNumber,TypeID,BatchNo,JoiningDate,PF,EmpName,EmpFname," +
+                        "Dateofbirth,PFNo) VALUES (" + txtboxPLDTknNo.Text + "," + "'" + comboBoxPLDTypID.Text + "'" +","+
+                        "'"+ comboBoxPLDBtchNo.Text+"'"+","+"'"+ dateTimePickerPLDJNDt.Text+"'"+","+pfyn+","+"'"+ txtboxPLDNM.Text+"'"+
+                        ","+"'"+ txtboxPLDFNM.Text+"'"+","+"'"+ dateTimePickerPLDDOB.Text+"'"+","+ textBoxPLDPF.Text+
+                        ");";
+                    OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+                    OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+                    try
+                    {
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Data Inserted Successfully");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Exception occured.Data not Inserted Please try Inserting it again" + ex);
+                    }
+                    finally
+                    {
+                        conn.Close();
+                        validation = true;
+                    }
+
+                }   
+                    
+               
+                        
+               
+
+                    
+              }
+
+
+
+
+
+
+
+
+
 
         }
+
+
+
+
+
+
+
     }
 }
