@@ -722,6 +722,7 @@
             // 
             // txtboxPLDSINo
             // 
+            this.txtboxPLDSINo.Enabled = false;
             this.txtboxPLDSINo.Location = new System.Drawing.Point(429, 150);
             this.txtboxPLDSINo.Name = "txtboxPLDSINo";
             this.txtboxPLDSINo.Size = new System.Drawing.Size(100, 21);
@@ -799,6 +800,7 @@
             this.radioButtonPFYes.TabStop = true;
             this.radioButtonPFYes.Text = "Yes";
             this.radioButtonPFYes.UseVisualStyleBackColor = true;
+            this.radioButtonPFYes.CheckedChanged += new System.EventHandler(this.radioButtonPFYes_CheckedChanged);
             // 
             // dateTimePickerPLDJNDt
             // 

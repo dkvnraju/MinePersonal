@@ -99,7 +99,7 @@ namespace RassiCements_LTD
             comboBoxPLDTypID.Text = "";
             comboBoxPLDBtchNo.Text = "";
 
-            if (txtboxPLDSINo.Enabled == false) { txtboxPLDSINo.Enabled = true; }
+            //if (txtboxPLDSINo.Enabled == false) { txtboxPLDSINo.Enabled = true; }
             if (txtboxPLDTknNo.Enabled == false) { txtboxPLDTknNo.Enabled = true; }
             if (comboBoxPLDTypID.Enabled == false) { comboBoxPLDTypID.Enabled = true; }
             if (comboBoxPLDBtchNo.Enabled == false) { comboBoxPLDBtchNo.Enabled = true; }
@@ -757,7 +757,7 @@ namespace RassiCements_LTD
                         txtboxPLDFNM.Text = dr["EmpFName"].ToString();
                         dateTimePickerPLDDOB.Text = dr["Dateofbirth"].ToString();
 
-                        if (txtboxPLDSINo.Enabled == true) { txtboxPLDSINo.Enabled = false; }
+                       // if (txtboxPLDSINo.Enabled == true) { txtboxPLDSINo.Enabled = false; }
                         if (txtboxPLDTknNo.Enabled == true) { txtboxPLDTknNo.Enabled = false; }
                         if (comboBoxPLDTypID.Enabled == true) { comboBoxPLDTypID.Enabled = false; }
                         if (comboBoxPLDBtchNo.Enabled == true) { comboBoxPLDBtchNo.Enabled = false; }
@@ -796,7 +796,7 @@ namespace RassiCements_LTD
             if(btnPLDUpdate.Text=="Modify")
             {
                 btnPLDUpdate.Text = "Update";
-                if (txtboxPLDSINo.Enabled == false) { txtboxPLDSINo.Enabled = true; }
+               // if (txtboxPLDSINo.Enabled == false) { txtboxPLDSINo.Enabled = true; }
                 if (txtboxPLDTknNo.Enabled == false) { txtboxPLDTknNo.Enabled = true; }
                 if (comboBoxPLDTypID.Enabled == false) { comboBoxPLDTypID.Enabled = true; }
                 if (comboBoxPLDBtchNo.Enabled == false) { comboBoxPLDBtchNo.Enabled = true; }
@@ -833,7 +833,7 @@ namespace RassiCements_LTD
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Data Updated Successfully");
                     
-                    if (txtboxPLDSINo.Enabled == true) { txtboxPLDSINo.Enabled = false; }
+                   // if (txtboxPLDSINo.Enabled == true) { txtboxPLDSINo.Enabled = false; }
                     if (txtboxPLDTknNo.Enabled == true) { txtboxPLDTknNo.Enabled = false; }
                     if (comboBoxPLDTypID.Enabled == true) { comboBoxPLDTypID.Enabled = false; }
                     if (comboBoxPLDBtchNo.Enabled == true) { comboBoxPLDBtchNo.Enabled = false; }
@@ -894,7 +894,7 @@ namespace RassiCements_LTD
                     comboBoxPLDTypID.Text = "";
                     comboBoxPLDBtchNo.Text = "";
 
-                    if (txtboxPLDSINo.Enabled == false) { txtboxPLDSINo.Enabled = true; }
+                    //if (txtboxPLDSINo.Enabled == false) { txtboxPLDSINo.Enabled = true; }
                     if (txtboxPLDTknNo.Enabled == false) { txtboxPLDTknNo.Enabled = true; }
                     if (comboBoxPLDTypID.Enabled == false) { comboBoxPLDTypID.Enabled = true; }
                     if (comboBoxPLDBtchNo.Enabled == false) { comboBoxPLDBtchNo.Enabled = true; }
@@ -930,7 +930,7 @@ namespace RassiCements_LTD
                 { MessageBox.Show("Type cannot be blank"); validation = false; }
                 if(comboBoxPLDBtchNo.Text=="")
                 { MessageBox.Show("Batch No cannot be blank"); validation = false; }
-                if(radioButtonPFYes.Checked || radioButtonPFNo.Checked)
+                if(radioButtonPFYes.Checked==false && radioButtonPFNo.Checked==false)
                 { MessageBox.Show("PF cannot be blank"); validation = false; }
                 if(txtboxPLDNM.Text=="")
                 { MessageBox.Show("Name cannot be blank"); validation = false; }
@@ -970,29 +970,16 @@ namespace RassiCements_LTD
 
                 }   
                     
-               
-                        
-               
-
-                    
+                
               }
-
-
-
-
-
-
-
-
-
 
         }
 
+        private void radioButtonPFYes_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonPFYes.Checked)
+            { textBoxPLDPF.Visible = true; }
 
-
-
-
-
-
+        }
     }
 }
