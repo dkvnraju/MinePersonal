@@ -981,5 +981,13 @@ namespace RassiCements_LTD
             { textBoxPLDPF.Visible = true; }
 
         }
+
+        private void textBoxLDRdTns_Leave(object sender, EventArgs e)
+        {
+
+
+           // textBoxLDLDTotAmt.Text = Convert.ToString();
+         
+        }
     }
 }

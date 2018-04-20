@@ -1474,6 +1474,7 @@
             this.textBoxLDRdTns.TabIndex = 23;
             this.textBoxLDRdTns.TextChanged += new System.EventHandler(this.textBoxLDRdTns_TextChanged);
             this.textBoxLDRdTns.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLDRdTns_KeyPress);
+            this.textBoxLDRdTns.Leave += new System.EventHandler(this.textBoxLDRdTns_Leave);
             // 
             // comboBoxLDShft
             // 
