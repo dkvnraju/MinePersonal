@@ -829,6 +829,15 @@
             // comboBoxPLDTypID
             // 
             this.comboBoxPLDTypID.FormattingEnabled = true;
+            this.comboBoxPLDTypID.Items.AddRange(new object[] {
+            "",
+            "Loader",
+            "Packer",
+            "Jaggery",
+            "CoConut Oil",
+            "PF",
+            "HL",
+            "Dummy"});
             this.comboBoxPLDTypID.Location = new System.Drawing.Point(146, 85);
             this.comboBoxPLDTypID.Name = "comboBoxPLDTypID";
             this.comboBoxPLDTypID.Size = new System.Drawing.Size(100, 23);
