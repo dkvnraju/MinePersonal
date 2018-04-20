@@ -985,6 +985,13 @@ namespace RassiCements_LTD
         private void textBoxLDRdTns_Leave(object sender, EventArgs e)
         {
 
+            //Bring the rate from databse and didvide and enter the emount in the respective text boxes
+
+
+
+
+
+
 
            textBoxLDLDTotAmt.Text = Convert.ToString((textBoxLDLDAmtRd.Text==""?0:Convert.ToDouble(textBoxLDLDAmtRd.Text))+
                                                      (textBoxLDLDAmtWg.Text==""?0:Convert.ToDouble(textBoxLDLDAmtWg.Text))+
