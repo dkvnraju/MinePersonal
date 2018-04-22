@@ -14,13 +14,14 @@ namespace RassiCements_LTD
 {
     public partial class Main : Form
     {
+        
         public Main()
         {
             InitializeComponent();
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         }
+        
 
-     
 
         private void detailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -517,11 +518,13 @@ namespace RassiCements_LTD
 
             }
 
+
             if(tabControl1.SelectedTab.Text=="Loading Details")
             {
                 string connstring = "SELECT BatchNum FROM  BatchDetails ;";
                 OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
                 OleDbCommand cmd = new OleDbCommand(connstring, conn);
+                
 
                 try
                 {
@@ -1016,15 +1019,67 @@ namespace RassiCements_LTD
         {
 
             //Bring the rate from databse and didvide and enter the emount in the respective text boxes
+            string connstring = "SELECT ID,Type,WagonAmt,RoadAmt,HLAmt,OpenWagonAmt FROM  WageDetails where ID = 1  ;";
+            OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+            OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+            try
+            {
+                conn.Open();
+                OleDbDataReader dr = cmd.ExecuteReader();
+                while(dr.Read())
+                {
+                    textBoxLDLDAmtRd.Text = Convert.ToString(textBoxLDRdTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDRdTns.Text)
+                                                                * Convert.ToDouble(dr["Roadamt"].ToString()));
+                }
+             }
+             
+             catch (Exception ex)
+            {
+                MessageBox.Show("Exception occured." + ex);
+            }
+            finally
+            {
+                conn.Close();
+                
+            }
+
+            string connstring1 = "SELECT ID,Type,WagonAmt,RoadAmt,HLAmt,OpenWagonAmt FROM  WageDetails where ID = 2  ;";
+            OleDbConnection conn1 = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+            OleDbCommand cmd1 = new OleDbCommand(connstring1, conn1);
+
+            try
+            {
+                conn1.Open();
+                OleDbDataReader dr1 = cmd1.ExecuteReader();
+                while (dr1.Read())
+                {
+
+                    textBoxLDPkrAmtRd.Text = Convert.ToString(textBoxLDRdTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDRdTns.Text)
+                                                                    * Convert.ToDouble(dr1["Roadamt"].ToString()));
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception occured." + ex);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
 
 
 
+          
 
 
-            textBoxLDTotTns.Text = Convert.ToString(textBoxLDRdTns.Text==""?0:Convert.ToDouble(textBoxLDRdTns.Text)+
-                                                    textBoxLDWgTns.Text==""?0:Convert.ToDouble(textBoxLDWgTns.Text)+
-                                                    textBoxLDDWWagTns.Text==""?0:Convert.ToDouble(textBoxLDDWWagTns.Text)+
-                                                    textBoxLDHLTns.Text==""?0:Convert.ToDouble(textBoxLDHLTns.Text));
+
+            //textBoxLDTotTns.Text = Convert.ToString(textBoxLDRdTns.Text==""?0:Convert.ToDouble(textBoxLDRdTns.Text)+
+            //                                        textBoxLDWgTns.Text==""?0:Convert.ToDouble(textBoxLDWgTns.Text)+
+            //                                        textBoxLDDWWagTns.Text==""?0:Convert.ToDouble(textBoxLDDWWagTns.Text)+
+            //                                        textBoxLDHLTns.Text==""?0:Convert.ToDouble(textBoxLDHLTns.Text));
 
 
 
@@ -1035,10 +1090,10 @@ namespace RassiCements_LTD
                                                      (textBoxLDLDAmtHL.Text==""?0:Convert.ToDouble(textBoxLDLDAmtHL.Text))+
                                                      (textBoxLDLDAmtOldWgn.Text==""?0:Convert.ToDouble(textBoxLDLDAmtOldWgn.Text)));
 
-            textBoxLDPkrTotAmt.Text = Convert.ToString(textBoxLDPkrAmtRd.Text==""?0:Convert.ToDouble(textBoxLDPkrAmtRd.Text)+
-                                                        textBoxLDPkrAmtWg.Text==""?0:Convert.ToDouble(textBoxLDPkrAmtWg.Text)+
-                                                        textBoxLDPkrAmtHL.Text==""?0:Convert.ToDouble(textBoxLDPkrAmtHL.Text)+
-                                                        textBoxLDPkrAmtOldWgn.Text==""?0:Convert.ToDouble(textBoxLDPkrAmtOldWgn.Text));
+            //textBoxLDPkrTotAmt.Text = Convert.ToString(textBoxLDPkrAmtRd.Text==""?0:Convert.ToDouble(textBoxLDPkrAmtRd.Text)+
+            //                                            textBoxLDPkrAmtWg.Text==""?0:Convert.ToDouble(textBoxLDPkrAmtWg.Text)+
+            //                                            textBoxLDPkrAmtHL.Text==""?0:Convert.ToDouble(textBoxLDPkrAmtHL.Text)+
+            //                                            textBoxLDPkrAmtOldWgn.Text==""?0:Convert.ToDouble(textBoxLDPkrAmtOldWgn.Text));
 
 
         }
