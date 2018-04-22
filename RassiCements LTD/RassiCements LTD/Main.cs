@@ -1071,5 +1071,14 @@ namespace RassiCements_LTD
                                                       textBoxLDPkrAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtHL.Text) +
                                                       textBoxLDPkrAmtOldWgn.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtOldWgn.Text));
         }
+
+        private void textBoxLDNoPkrs_Leave(object sender, EventArgs e)
+        {
+            if(comboBoxLDBtchNo.Text!="" && comboBoxLDShft.Text!=""&& textBoxLDRdTns.Text!=""&& textBoxLDWgTns.Text!="" && textBoxLDDWWagTns.Text!=""&& textBoxLDHLTns.Text!=""
+                && textBoxLDTotTns.Text!="" && textBoxLDNoLdrs.Text!=""&& textBoxLDNoPkrs.Text!="")
+            { buttonOK.Visible = true; }
+        }
+
+
     }
 }
