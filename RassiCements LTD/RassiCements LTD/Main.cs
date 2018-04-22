@@ -477,6 +477,8 @@ namespace RassiCements_LTD
            // MessageBox.Show("You clicked on the tab page");
         }
 
+
+        
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
            if(tabControl1.SelectedTab.Text == "Packing Loading Details")
@@ -514,6 +516,34 @@ namespace RassiCements_LTD
                  }
 
             }
+
+            if(tabControl1.SelectedTab.Text=="Loading Details")
+            {
+                string connstring = "SELECT BatchNum FROM  BatchDetails ;";
+                OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+                OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+                try
+                {
+                    conn.Open();
+                    OleDbDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        comboBoxLDBtchNo.Items.Add(dr.GetValue(0));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Exception occured" + ex);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+
+            }
+
+
         }
 
         private void btnWDSave_Click(object sender, EventArgs e)
