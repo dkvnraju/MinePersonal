@@ -991,6 +991,13 @@ namespace RassiCements_LTD
 
 
 
+            textBoxLDTotTns.Text = Convert.ToString(textBoxLDRdTns.Text==""?0:Convert.ToDouble(textBoxLDRdTns.Text)+
+                                                    textBoxLDWgTns.Text==""?0:Convert.ToDouble(textBoxLDWgTns.Text)+
+                                                    textBoxLDDWWagTns.Text==""?0:Convert.ToDouble(textBoxLDDWWagTns.Text)+
+                                                    textBoxLDHLTns.Text==""?0:Convert.ToDouble(textBoxLDHLTns.Text));
+
+
+
 
 
            textBoxLDLDTotAmt.Text = Convert.ToString((textBoxLDLDAmtRd.Text==""?0:Convert.ToDouble(textBoxLDLDAmtRd.Text))+
@@ -1008,6 +1015,13 @@ namespace RassiCements_LTD
 
         private void textBoxLDLDAmtRd_Leave(object sender, EventArgs e)
         {
+
+
+            textBoxLDTotTns.Text = Convert.ToString(textBoxLDRdTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDRdTns.Text) +
+                                                   textBoxLDWgTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDWgTns.Text) +
+                                                   textBoxLDDWWagTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDDWWagTns.Text) +
+                                                   textBoxLDHLTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDHLTns.Text));
+
             textBoxLDLDTotAmt.Text = Convert.ToString((textBoxLDLDAmtRd.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtRd.Text)) +
                                                      (textBoxLDLDAmtWg.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtWg.Text)) +
                                                      (textBoxLDLDAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtHL.Text)) +
@@ -1018,6 +1032,12 @@ namespace RassiCements_LTD
 
         private void textBoxLDLDAmtWg_Leave(object sender, EventArgs e)
         {
+
+            textBoxLDTotTns.Text = Convert.ToString(textBoxLDRdTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDRdTns.Text) +
+                                                   textBoxLDWgTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDWgTns.Text) +
+                                                   textBoxLDDWWagTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDDWWagTns.Text) +
+                                                   textBoxLDHLTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDHLTns.Text));
+
             textBoxLDLDTotAmt.Text = Convert.ToString((textBoxLDLDAmtRd.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtRd.Text)) +
                                                      (textBoxLDLDAmtWg.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtWg.Text)) +
                                                      (textBoxLDLDAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtHL.Text)) +
@@ -1026,6 +1046,12 @@ namespace RassiCements_LTD
 
         private void textBoxLDLDAmtHL_Leave(object sender, EventArgs e)
         {
+
+            textBoxLDTotTns.Text = Convert.ToString(textBoxLDRdTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDRdTns.Text) +
+                                                   textBoxLDWgTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDWgTns.Text) +
+                                                   textBoxLDDWWagTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDDWWagTns.Text) +
+                                                   textBoxLDHLTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDHLTns.Text));
+
             textBoxLDLDTotAmt.Text = Convert.ToString((textBoxLDLDAmtRd.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtRd.Text)) +
                                                      (textBoxLDLDAmtWg.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtWg.Text)) +
                                                      (textBoxLDLDAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtHL.Text)) +
@@ -1034,6 +1060,12 @@ namespace RassiCements_LTD
 
         private void textBoxLDLDAmtOldWgn_Leave(object sender, EventArgs e)
         {
+            textBoxLDTotTns.Text = Convert.ToString(textBoxLDRdTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDRdTns.Text) +
+                                                   textBoxLDWgTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDWgTns.Text) +
+                                                   textBoxLDDWWagTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDDWWagTns.Text) +
+                                                   textBoxLDHLTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDHLTns.Text));
+
+
             textBoxLDLDTotAmt.Text = Convert.ToString((textBoxLDLDAmtRd.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtRd.Text)) +
                                                      (textBoxLDLDAmtWg.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtWg.Text)) +
                                                      (textBoxLDLDAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtHL.Text)) +
@@ -1042,6 +1074,13 @@ namespace RassiCements_LTD
 
         private void textBoxLDPkrAmtRd_Leave(object sender, EventArgs e)
         {
+
+            textBoxLDTotTns.Text = Convert.ToString(textBoxLDRdTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDRdTns.Text) +
+                                                   textBoxLDWgTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDWgTns.Text) +
+                                                   textBoxLDDWWagTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDDWWagTns.Text) +
+                                                   textBoxLDHLTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDHLTns.Text));
+
+
             textBoxLDPkrTotAmt.Text = Convert.ToString(textBoxLDPkrAmtRd.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtRd.Text) +
                                                       textBoxLDPkrAmtWg.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtWg.Text) +
                                                       textBoxLDPkrAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtHL.Text) +
@@ -1050,6 +1089,12 @@ namespace RassiCements_LTD
 
         private void textBoxLDPkrAmtWg_Leave(object sender, EventArgs e)
         {
+
+            textBoxLDTotTns.Text = Convert.ToString(textBoxLDRdTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDRdTns.Text) +
+                                                   textBoxLDWgTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDWgTns.Text) +
+                                                   textBoxLDDWWagTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDDWWagTns.Text) +
+                                                   textBoxLDHLTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDHLTns.Text));
+
             textBoxLDPkrTotAmt.Text = Convert.ToString(textBoxLDPkrAmtRd.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtRd.Text) +
                                                       textBoxLDPkrAmtWg.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtWg.Text) +
                                                       textBoxLDPkrAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtHL.Text) +
@@ -1058,6 +1103,12 @@ namespace RassiCements_LTD
 
         private void textBoxLDPkrAmtHL_Leave(object sender, EventArgs e)
         {
+            textBoxLDTotTns.Text = Convert.ToString(textBoxLDRdTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDRdTns.Text) +
+                                                   textBoxLDWgTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDWgTns.Text) +
+                                                   textBoxLDDWWagTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDDWWagTns.Text) +
+                                                   textBoxLDHLTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDHLTns.Text));
+
+
             textBoxLDPkrTotAmt.Text = Convert.ToString(textBoxLDPkrAmtRd.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtRd.Text) +
                                                       textBoxLDPkrAmtWg.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtWg.Text) +
                                                       textBoxLDPkrAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtHL.Text) +
@@ -1066,6 +1117,13 @@ namespace RassiCements_LTD
 
         private void textBoxLDPkrAmtOldWgn_Leave(object sender, EventArgs e)
         {
+
+
+            textBoxLDTotTns.Text = Convert.ToString(textBoxLDRdTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDRdTns.Text) +
+                                                   textBoxLDWgTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDWgTns.Text) +
+                                                   textBoxLDDWWagTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDDWWagTns.Text) +
+                                                   textBoxLDHLTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDHLTns.Text));
+
             textBoxLDPkrTotAmt.Text = Convert.ToString(textBoxLDPkrAmtRd.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtRd.Text) +
                                                       textBoxLDPkrAmtWg.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtWg.Text) +
                                                       textBoxLDPkrAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtHL.Text) +
