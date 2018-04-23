@@ -1442,10 +1442,10 @@ namespace RassiCements_LTD
             {
                 conn.Open();
                 OleDbDataReader dr = cmd.ExecuteReader();
-               
-                    using (DataTable emp = new DataTable())
-                    {
-                        emp.Columns.Add("SNO", typeof(int));
+
+                using (DataTable emp = new DataTable())
+                {
+                    emp.Columns.Add("SNO", typeof(int));
                         emp.Columns.Add("Name", typeof(string));
                         emp.Columns.Add("BatchNo", typeof(int));
                         emp.Columns.Add("Type",typeof(string));
@@ -1462,16 +1462,16 @@ namespace RassiCements_LTD
                         dr["TypeID"].ToString()=="Loader"?Convert.ToDouble(textBoxLDLDTotAmt.Text):Convert.ToDouble(textBoxLDPkrTotAmt.Text),
                         textBoxOCCNM.Text);
                     }
-
-                    dataGridView1.DataSource = emp;
-
-
-                    }
-                        
-                        
-                        
-
                 
+                dataGridView1.DataSource = emp;
+                }
+
+
+
+
+
+
+
             }
 
             catch (Exception ex)

@@ -272,7 +272,7 @@
             this.tabPage1.Controls.Add(this.lblWDHeading);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1572, 794);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -304,7 +304,7 @@
             // txtWDJCAmt
             // 
             this.txtWDJCAmt.Location = new System.Drawing.Point(339, 46);
-            this.txtWDJCAmt.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtWDJCAmt.Margin = new System.Windows.Forms.Padding(1);
             this.txtWDJCAmt.Name = "txtWDJCAmt";
             this.txtWDJCAmt.Size = new System.Drawing.Size(76, 20);
             this.txtWDJCAmt.TabIndex = 3;
@@ -313,7 +313,7 @@
             // textBoxOWAMT
             // 
             this.textBoxOWAMT.Location = new System.Drawing.Point(215, 188);
-            this.textBoxOWAMT.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxOWAMT.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxOWAMT.Name = "textBoxOWAMT";
             this.textBoxOWAMT.Size = new System.Drawing.Size(100, 20);
             this.textBoxOWAMT.TabIndex = 7;
@@ -491,7 +491,7 @@
             this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1572, 794);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -666,7 +666,7 @@
             // textBoxPLDPF
             // 
             this.textBoxPLDPF.Location = new System.Drawing.Point(429, 177);
-            this.textBoxPLDPF.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxPLDPF.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxPLDPF.Name = "textBoxPLDPF";
             this.textBoxPLDPF.Size = new System.Drawing.Size(72, 21);
             this.textBoxPLDPF.TabIndex = 10;
@@ -974,7 +974,7 @@
             this.panel5.Controls.Add(this.dataGridView2);
             this.panel5.Controls.Add(this.dataGridView1);
             this.panel5.Location = new System.Drawing.Point(33, 381);
-            this.panel5.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panel5.Margin = new System.Windows.Forms.Padding(1);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1143, 290);
             this.panel5.TabIndex = 2;
@@ -983,7 +983,7 @@
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(600, 8);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(1);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 40;
             this.dataGridView2.Size = new System.Drawing.Size(520, 268);
@@ -991,13 +991,11 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.rassiCementLTDDataSetBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(6, 8);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(1);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 40;
+            this.dataGridView1.RowTemplate.Height = 15;
             this.dataGridView1.Size = new System.Drawing.Size(514, 268);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -1071,7 +1069,7 @@
             // buttonOK
             // 
             this.buttonOK.Location = new System.Drawing.Point(254, 288);
-            this.buttonOK.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.buttonOK.Margin = new System.Windows.Forms.Padding(1);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(41, 27);
             this.buttonOK.TabIndex = 48;
@@ -1095,7 +1093,7 @@
             this.panOtherContractor.Controls.Add(this.lblOtherID);
             this.panOtherContractor.Controls.Add(this.lblOCBtchNo);
             this.panOtherContractor.Location = new System.Drawing.Point(269, 89);
-            this.panOtherContractor.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panOtherContractor.Margin = new System.Windows.Forms.Padding(1);
             this.panOtherContractor.Name = "panOtherContractor";
             this.panOtherContractor.Size = new System.Drawing.Size(504, 154);
             this.panOtherContractor.TabIndex = 47;
@@ -1104,7 +1102,7 @@
             // btnOCEXT
             // 
             this.btnOCEXT.Location = new System.Drawing.Point(240, 114);
-            this.btnOCEXT.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnOCEXT.Margin = new System.Windows.Forms.Padding(1);
             this.btnOCEXT.Name = "btnOCEXT";
             this.btnOCEXT.Size = new System.Drawing.Size(67, 24);
             this.btnOCEXT.TabIndex = 11;
@@ -1114,7 +1112,7 @@
             // btnOCOK
             // 
             this.btnOCOK.Location = new System.Drawing.Point(159, 114);
-            this.btnOCOK.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnOCOK.Margin = new System.Windows.Forms.Padding(1);
             this.btnOCOK.Name = "btnOCOK";
             this.btnOCOK.Size = new System.Drawing.Size(58, 24);
             this.btnOCOK.TabIndex = 10;
@@ -1125,7 +1123,7 @@
             // 
             this.comboBoxLDOCTyp.FormattingEnabled = true;
             this.comboBoxLDOCTyp.Location = new System.Drawing.Point(396, 13);
-            this.comboBoxLDOCTyp.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.comboBoxLDOCTyp.Margin = new System.Windows.Forms.Padding(1);
             this.comboBoxLDOCTyp.Name = "comboBoxLDOCTyp";
             this.comboBoxLDOCTyp.Size = new System.Drawing.Size(77, 23);
             this.comboBoxLDOCTyp.TabIndex = 9;
@@ -1133,7 +1131,7 @@
             // textBoxOCCNM
             // 
             this.textBoxOCCNM.Location = new System.Drawing.Point(143, 78);
-            this.textBoxOCCNM.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxOCCNM.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxOCCNM.Name = "textBoxOCCNM";
             this.textBoxOCCNM.Size = new System.Drawing.Size(236, 21);
             this.textBoxOCCNM.TabIndex = 8;
@@ -1141,7 +1139,7 @@
             // textBoxOCNM
             // 
             this.textBoxOCNM.Location = new System.Drawing.Point(143, 45);
-            this.textBoxOCNM.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxOCNM.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxOCNM.Name = "textBoxOCNM";
             this.textBoxOCNM.Size = new System.Drawing.Size(236, 21);
             this.textBoxOCNM.TabIndex = 7;
@@ -1149,7 +1147,7 @@
             // textBoxLDOthrID
             // 
             this.textBoxLDOthrID.Location = new System.Drawing.Point(253, 16);
-            this.textBoxLDOthrID.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxLDOthrID.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxLDOthrID.Name = "textBoxLDOthrID";
             this.textBoxLDOthrID.Size = new System.Drawing.Size(67, 21);
             this.textBoxLDOthrID.TabIndex = 6;
@@ -1157,7 +1155,7 @@
             // textBoxLDOCBtchNo
             // 
             this.textBoxLDOCBtchNo.Location = new System.Drawing.Point(93, 16);
-            this.textBoxLDOCBtchNo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxLDOCBtchNo.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxLDOCBtchNo.Name = "textBoxLDOCBtchNo";
             this.textBoxLDOCBtchNo.Size = new System.Drawing.Size(70, 21);
             this.textBoxLDOCBtchNo.TabIndex = 5;
@@ -1233,7 +1231,7 @@
             this.panOtherBatch.Controls.Add(this.lblOBBNo);
             this.panOtherBatch.Controls.Add(this.lblOBTknNo);
             this.panOtherBatch.Location = new System.Drawing.Point(784, 102);
-            this.panOtherBatch.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panOtherBatch.Margin = new System.Windows.Forms.Padding(1);
             this.panOtherBatch.Name = "panOtherBatch";
             this.panOtherBatch.Size = new System.Drawing.Size(368, 120);
             this.panOtherBatch.TabIndex = 0;
@@ -1242,7 +1240,7 @@
             // btnOBEXT
             // 
             this.btnOBEXT.Location = new System.Drawing.Point(197, 85);
-            this.btnOBEXT.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnOBEXT.Margin = new System.Windows.Forms.Padding(1);
             this.btnOBEXT.Name = "btnOBEXT";
             this.btnOBEXT.Size = new System.Drawing.Size(60, 23);
             this.btnOBEXT.TabIndex = 7;
@@ -1252,7 +1250,7 @@
             // BtnOBOK
             // 
             this.BtnOBOK.Location = new System.Drawing.Point(117, 85);
-            this.BtnOBOK.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.BtnOBOK.Margin = new System.Windows.Forms.Padding(1);
             this.BtnOBOK.Name = "BtnOBOK";
             this.BtnOBOK.Size = new System.Drawing.Size(54, 21);
             this.BtnOBOK.TabIndex = 6;
@@ -1262,7 +1260,7 @@
             // textBoxOBNM
             // 
             this.textBoxOBNM.Location = new System.Drawing.Point(100, 45);
-            this.textBoxOBNM.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxOBNM.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxOBNM.Name = "textBoxOBNM";
             this.textBoxOBNM.Size = new System.Drawing.Size(232, 21);
             this.textBoxOBNM.TabIndex = 5;
@@ -1270,7 +1268,7 @@
             // textBoxOBBtchNo
             // 
             this.textBoxOBBtchNo.Location = new System.Drawing.Point(256, 10);
-            this.textBoxOBBtchNo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxOBBtchNo.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxOBBtchNo.Name = "textBoxOBBtchNo";
             this.textBoxOBBtchNo.Size = new System.Drawing.Size(69, 21);
             this.textBoxOBBtchNo.TabIndex = 4;
@@ -1278,7 +1276,7 @@
             // textBoxOBTknNo
             // 
             this.textBoxOBTknNo.Location = new System.Drawing.Point(90, 10);
-            this.textBoxOBTknNo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxOBTknNo.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxOBTknNo.Name = "textBoxOBTknNo";
             this.textBoxOBTknNo.Size = new System.Drawing.Size(75, 21);
             this.textBoxOBTknNo.TabIndex = 3;
