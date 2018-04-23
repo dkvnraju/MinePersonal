@@ -1068,11 +1068,11 @@
             // 
             // buttonOK
             // 
-            this.buttonOK.Location = new System.Drawing.Point(254, 288);
+            this.buttonOK.Location = new System.Drawing.Point(254, 292);
             this.buttonOK.Margin = new System.Windows.Forms.Padding(1);
             this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(41, 27);
-            this.buttonOK.TabIndex = 48;
+            this.buttonOK.Size = new System.Drawing.Size(41, 24);
+            this.buttonOK.TabIndex = 11;
             this.buttonOK.Text = "OK";
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Visible = false;
@@ -1212,7 +1212,7 @@
             // 
             // btnLDOthrCntrct
             // 
-            this.btnLDOthrCntrct.Location = new System.Drawing.Point(878, 298);
+            this.btnLDOthrCntrct.Location = new System.Drawing.Point(878, 293);
             this.btnLDOthrCntrct.Name = "btnLDOthrCntrct";
             this.btnLDOthrCntrct.Size = new System.Drawing.Size(134, 23);
             this.btnLDOthrCntrct.TabIndex = 46;
@@ -1313,7 +1313,7 @@
             // 
             // btnLDOtrbtch
             // 
-            this.btnLDOtrbtch.Location = new System.Drawing.Point(736, 298);
+            this.btnLDOtrbtch.Location = new System.Drawing.Point(739, 293);
             this.btnLDOtrbtch.Name = "btnLDOtrbtch";
             this.btnLDOtrbtch.Size = new System.Drawing.Size(119, 23);
             this.btnLDOtrbtch.TabIndex = 45;
@@ -1323,7 +1323,7 @@
             // 
             // btnLDUpdate
             // 
-            this.btnLDUpdate.Location = new System.Drawing.Point(442, 298);
+            this.btnLDUpdate.Location = new System.Drawing.Point(435, 291);
             this.btnLDUpdate.Name = "btnLDUpdate";
             this.btnLDUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnLDUpdate.TabIndex = 44;
@@ -1332,7 +1332,7 @@
             // 
             // btnLDDel
             // 
-            this.btnLDDel.Location = new System.Drawing.Point(642, 298);
+            this.btnLDDel.Location = new System.Drawing.Point(641, 291);
             this.btnLDDel.Name = "btnLDDel";
             this.btnLDDel.Size = new System.Drawing.Size(75, 23);
             this.btnLDDel.TabIndex = 43;
@@ -1341,7 +1341,7 @@
             // 
             // btnClr
             // 
-            this.btnClr.Location = new System.Drawing.Point(539, 298);
+            this.btnClr.Location = new System.Drawing.Point(540, 292);
             this.btnClr.Name = "btnClr";
             this.btnClr.Size = new System.Drawing.Size(75, 23);
             this.btnClr.TabIndex = 42;
@@ -1351,7 +1351,7 @@
             // 
             // btnLDAdd
             // 
-            this.btnLDAdd.Location = new System.Drawing.Point(339, 298);
+            this.btnLDAdd.Location = new System.Drawing.Point(331, 291);
             this.btnLDAdd.Name = "btnLDAdd";
             this.btnLDAdd.Size = new System.Drawing.Size(75, 23);
             this.btnLDAdd.TabIndex = 41;
@@ -1464,7 +1464,7 @@
             this.textBoxLDTotTns.Location = new System.Drawing.Point(139, 225);
             this.textBoxLDTotTns.Name = "textBoxLDTotTns";
             this.textBoxLDTotTns.Size = new System.Drawing.Size(98, 21);
-            this.textBoxLDTotTns.TabIndex = 8;
+            this.textBoxLDTotTns.TabIndex = 40;
             // 
             // textBoxLDHLTns
             // 
