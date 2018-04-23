@@ -1473,6 +1473,7 @@
             this.textBoxLDHLTns.Name = "textBoxLDHLTns";
             this.textBoxLDHLTns.Size = new System.Drawing.Size(95, 21);
             this.textBoxLDHLTns.TabIndex = 7;
+            this.textBoxLDHLTns.Leave += new System.EventHandler(this.textBoxLDHLTns_Leave);
             // 
             // textBoxLDDWWagTns
             // 
@@ -1480,6 +1481,7 @@
             this.textBoxLDDWWagTns.Name = "textBoxLDDWWagTns";
             this.textBoxLDDWWagTns.Size = new System.Drawing.Size(98, 21);
             this.textBoxLDDWWagTns.TabIndex = 6;
+            this.textBoxLDDWWagTns.Leave += new System.EventHandler(this.textBoxLDDWWagTns_Leave);
             // 
             // textBoxLDWgTns
             // 
@@ -1487,6 +1489,7 @@
             this.textBoxLDWgTns.Name = "textBoxLDWgTns";
             this.textBoxLDWgTns.Size = new System.Drawing.Size(100, 21);
             this.textBoxLDWgTns.TabIndex = 5;
+            this.textBoxLDWgTns.Leave += new System.EventHandler(this.textBoxLDWgTns_Leave);
             // 
             // textBoxLDRdTns
             // 
@@ -1513,13 +1516,6 @@
             // comboBoxLDBtchNo
             // 
             this.comboBoxLDBtchNo.FormattingEnabled = true;
-            this.comboBoxLDBtchNo.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "Dummy"});
             this.comboBoxLDBtchNo.Location = new System.Drawing.Point(144, 19);
             this.comboBoxLDBtchNo.Name = "comboBoxLDBtchNo";
             this.comboBoxLDBtchNo.Size = new System.Drawing.Size(95, 23);

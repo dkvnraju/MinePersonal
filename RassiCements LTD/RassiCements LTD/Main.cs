@@ -1217,6 +1217,219 @@ namespace RassiCements_LTD
             { buttonOK.Visible = true; }
         }
 
+        private void textBoxLDWgTns_Leave(object sender, EventArgs e)
+        {
+            string connstring = "SELECT ID,Type,WagonAmt,RoadAmt,HLAmt,OpenWagonAmt FROM  WageDetails where ID = 1  ;";
+            OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+            OleDbCommand cmd = new OleDbCommand(connstring, conn);
 
+            try
+            {
+                conn.Open();
+                OleDbDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    textBoxLDLDAmtWg.Text = Convert.ToString(textBoxLDWgTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDWgTns.Text)
+                                                                * Convert.ToDouble(dr["WagonAmt"].ToString()));
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception occured." + ex);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+
+            string connstring1 = "SELECT ID,Type,WagonAmt,RoadAmt,HLAmt,OpenWagonAmt FROM  WageDetails where ID = 2  ;";
+            OleDbConnection conn1 = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+            OleDbCommand cmd1 = new OleDbCommand(connstring1, conn1);
+
+            try
+            {
+                conn1.Open();
+                OleDbDataReader dr1 = cmd1.ExecuteReader();
+                while (dr1.Read())
+                {
+
+                    textBoxLDPkrAmtWg.Text = Convert.ToString((textBoxLDWgTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDWgTns.Text))
+                                                                    * (Convert.ToDouble(dr1["WagonAmt"].ToString())));
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception occured." + ex);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+
+
+            textBoxLDTotTns.Text = Convert.ToString((textBoxLDRdTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDRdTns.Text)) +
+                                                  (textBoxLDWgTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDWgTns.Text)) +
+                                                 (textBoxLDDWWagTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDDWWagTns.Text)) +
+                                                  (textBoxLDHLTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDHLTns.Text)));
+
+
+
+
+
+            textBoxLDLDTotAmt.Text = Convert.ToString((textBoxLDLDAmtRd.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtRd.Text)) +
+                                                     (textBoxLDLDAmtWg.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtWg.Text)) +
+                                                     (textBoxLDLDAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtHL.Text)) +
+                                                     (textBoxLDLDAmtOldWgn.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtOldWgn.Text)));
+
+            textBoxLDPkrTotAmt.Text = Convert.ToString((textBoxLDPkrAmtRd.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtRd.Text)) +
+                                                        (textBoxLDPkrAmtWg.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtWg.Text)) +
+                                                        (textBoxLDPkrAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtHL.Text)) +
+                                                       (textBoxLDPkrAmtOldWgn.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtOldWgn.Text)));
+
+        }
+
+        private void textBoxLDDWWagTns_Leave(object sender, EventArgs e)
+        {
+            string connstring = "SELECT ID,Type,WagonAmt,RoadAmt,HLAmt,OpenWagonAmt FROM  WageDetails where ID = 1  ;";
+            OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+            OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+            try
+            {
+                conn.Open();
+                OleDbDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    textBoxLDLDAmtOldWgn.Text = Convert.ToString(textBoxLDDWWagTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDDWWagTns.Text)
+                                                                * Convert.ToDouble(dr["OpenWagonAmt"].ToString()));
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception occured." + ex);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+
+            string connstring1 = "SELECT ID,Type,WagonAmt,RoadAmt,HLAmt,OpenWagonAmt FROM  WageDetails where ID = 2  ;";
+            OleDbConnection conn1 = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+            OleDbCommand cmd1 = new OleDbCommand(connstring1, conn1);
+
+            try
+            {
+                conn1.Open();
+                OleDbDataReader dr1 = cmd1.ExecuteReader();
+                while (dr1.Read())
+                {
+
+                    textBoxLDPkrAmtOldWgn.Text = Convert.ToString((textBoxLDDWWagTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDDWWagTns.Text))
+                                                                    * (Convert.ToDouble(dr1["OpenWagonAmt"].ToString())));
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception occured." + ex);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+
+            textBoxLDTotTns.Text = Convert.ToString((textBoxLDRdTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDRdTns.Text)) +
+                                                  (textBoxLDWgTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDWgTns.Text)) +
+                                                 (textBoxLDDWWagTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDDWWagTns.Text)) +
+                                                  (textBoxLDHLTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDHLTns.Text)));
+
+            textBoxLDLDTotAmt.Text = Convert.ToString((textBoxLDLDAmtRd.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtRd.Text)) +
+                                                     (textBoxLDLDAmtWg.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtWg.Text)) +
+                                                     (textBoxLDLDAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtHL.Text)) +
+                                                     (textBoxLDLDAmtOldWgn.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtOldWgn.Text)));
+
+            textBoxLDPkrTotAmt.Text = Convert.ToString((textBoxLDPkrAmtRd.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtRd.Text)) +
+                                                        (textBoxLDPkrAmtWg.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtWg.Text)) +
+                                                        (textBoxLDPkrAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtHL.Text)) +
+                                                       (textBoxLDPkrAmtOldWgn.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtOldWgn.Text)));
+
+        }
+
+        private void textBoxLDHLTns_Leave(object sender, EventArgs e)
+        {
+            string connstring = "SELECT ID,Type,WagonAmt,RoadAmt,HLAmt,OpenWagonAmt FROM  WageDetails where ID = 1  ;";
+            OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+            OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+            try
+            {
+                conn.Open();
+                OleDbDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    textBoxLDLDAmtHL.Text = Convert.ToString(textBoxLDHLTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDHLTns.Text)
+                                                                * Convert.ToDouble(dr["HLAmt"].ToString()));
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception occured." + ex);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+
+            string connstring1 = "SELECT ID,Type,WagonAmt,RoadAmt,HLAmt,OpenWagonAmt FROM  WageDetails where ID = 2  ;";
+            OleDbConnection conn1 = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+            OleDbCommand cmd1 = new OleDbCommand(connstring1, conn1);
+
+            try
+            {
+                conn1.Open();
+                OleDbDataReader dr1 = cmd1.ExecuteReader();
+                while (dr1.Read())
+                {
+
+                    textBoxLDPkrAmtHL.Text = Convert.ToString((textBoxLDHLTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDHLTns.Text))
+                                                                    * (Convert.ToDouble(dr1["HLAmt"].ToString())));
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception occured." + ex);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+
+            textBoxLDTotTns.Text = Convert.ToString((textBoxLDRdTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDRdTns.Text)) +
+                                                  (textBoxLDWgTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDWgTns.Text)) +
+                                                 (textBoxLDDWWagTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDDWWagTns.Text)) +
+                                                  (textBoxLDHLTns.Text == "" ? 0 : Convert.ToDouble(textBoxLDHLTns.Text)));
+
+            textBoxLDLDTotAmt.Text = Convert.ToString((textBoxLDLDAmtRd.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtRd.Text)) +
+                                                     (textBoxLDLDAmtWg.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtWg.Text)) +
+                                                     (textBoxLDLDAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtHL.Text)) +
+                                                     (textBoxLDLDAmtOldWgn.Text == "" ? 0 : Convert.ToDouble(textBoxLDLDAmtOldWgn.Text)));
+
+            textBoxLDPkrTotAmt.Text = Convert.ToString((textBoxLDPkrAmtRd.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtRd.Text)) +
+                                                        (textBoxLDPkrAmtWg.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtWg.Text)) +
+                                                        (textBoxLDPkrAmtHL.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtHL.Text)) +
+                                                       (textBoxLDPkrAmtOldWgn.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtOldWgn.Text)));
+
+        }
     }
 }
