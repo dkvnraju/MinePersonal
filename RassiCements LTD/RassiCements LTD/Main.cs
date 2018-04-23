@@ -1431,5 +1431,58 @@ namespace RassiCements_LTD
                                                        (textBoxLDPkrAmtOldWgn.Text == "" ? 0 : Convert.ToDouble(textBoxLDPkrAmtOldWgn.Text)));
 
         }
+
+        private void buttonOK_Click(object sender, EventArgs e)
+        {
+            string connstring = "SELECT ID,EmpName,BatchNo,TypeID,TokenNumber FROM  EmployeeDetails where BatchNo ="+"'" + comboBoxLDBtchNo.Text +"'"+ ";";
+            OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+            OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+            try
+            {
+                conn.Open();
+                OleDbDataReader dr = cmd.ExecuteReader();
+               
+                    using (DataTable emp = new DataTable())
+                    {
+                        emp.Columns.Add("SNO", typeof(int));
+                        emp.Columns.Add("Name", typeof(string));
+                        emp.Columns.Add("BatchNo", typeof(int));
+                        emp.Columns.Add("Type",typeof(string));
+                        emp.Columns.Add("TokenNo",typeof(int));
+                        emp.Columns.Add("Shift",typeof(string));
+                        emp.Columns.Add("Date", typeof(string));
+                        emp.Columns.Add("DayAmount",typeof(double));
+                        emp.Columns.Add("Contractor",typeof(string));
+
+                    while (dr.Read())
+                    {
+                        emp.Rows.Add( Convert.ToInt16(dr["ID"].ToString()),dr["EmpName"].ToString(),Convert.ToInt16(dr["BatchNo"].ToString())
+                        ,dr["TypeID"].ToString(), Convert.ToInt16(dr["TokenNumber"].ToString()), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
+                        dr["TypeID"].ToString()=="Loader"?Convert.ToDouble(textBoxLDLDTotAmt.Text):Convert.ToDouble(textBoxLDPkrTotAmt.Text),
+                        textBoxOCCNM.Text);
+                    }
+
+                    dataGridView1.DataSource = emp;
+
+
+                    }
+                        
+                        
+                        
+
+                
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception occured." + ex);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+        }
     }
 }

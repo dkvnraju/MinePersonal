@@ -1078,6 +1078,7 @@
             this.buttonOK.Text = "OK";
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Visible = false;
+            this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
             // panOtherContractor
             // 
