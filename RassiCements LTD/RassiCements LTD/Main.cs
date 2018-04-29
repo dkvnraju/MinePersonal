@@ -1445,7 +1445,8 @@ namespace RassiCements_LTD
 
                 using (DataTable emp = new DataTable())
                 {
-                    emp.Columns.Add("SNO", typeof(int));
+                        emp.Columns.Add("Sel",typeof(bool));
+                        emp.Columns.Add("SNO", typeof(int));
                         emp.Columns.Add("Name", typeof(string));
                         emp.Columns.Add("BatchNo", typeof(int));
                         emp.Columns.Add("Type",typeof(string));
@@ -1457,7 +1458,7 @@ namespace RassiCements_LTD
 
                     while (dr.Read())
                     {
-                        emp.Rows.Add( Convert.ToInt16(dr["ID"].ToString()),dr["EmpName"].ToString(),Convert.ToInt16(dr["BatchNo"].ToString())
+                        emp.Rows.Add( false,Convert.ToInt16(dr["ID"].ToString()),dr["EmpName"].ToString(),Convert.ToInt16(dr["BatchNo"].ToString())
                         ,dr["TypeID"].ToString(), Convert.ToInt16(dr["TokenNumber"].ToString()), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
                         dr["TypeID"].ToString()=="Loader"?Convert.ToDouble(textBoxLDLDTotAmt.Text):Convert.ToDouble(textBoxLDPkrTotAmt.Text),
                         textBoxOCCNM.Text);
@@ -1465,12 +1466,6 @@ namespace RassiCements_LTD
                 
                 dataGridView1.DataSource = emp;
                 }
-
-
-
-
-
-
 
             }
 
@@ -1482,6 +1477,14 @@ namespace RassiCements_LTD
             {
                 conn.Close();
 
+            }
+        }
+
+        private void btnRi8_Click(object sender, EventArgs e)
+        {
+            for (int i= dataGridView1.RowCount - 1; i >= 0; i--)
+            {
+               
             }
         }
     }
