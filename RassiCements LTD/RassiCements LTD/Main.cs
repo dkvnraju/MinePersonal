@@ -1468,6 +1468,8 @@ namespace RassiCements_LTD
                         emp.Columns.Add("DayAmount",typeof(double));
                         emp.Columns.Add("Contractor",typeof(string));
 
+                
+
                     while (dr.Read())
                     {
                         emp.Rows.Add( false,Convert.ToInt16(dr["ID"].ToString()),dr["EmpName"].ToString(),Convert.ToInt16(dr["BatchNo"].ToString())
@@ -1477,6 +1479,7 @@ namespace RassiCements_LTD
                     }
                 
                 dataGridView1.DataSource = emp;
+                dataGridView1.Columns[0].Width = 0;
                 //Datatable initiliase
                 Nemp.Columns.Add("Sel", typeof(bool));
                 Nemp.Columns.Add("SNO", typeof(int));
@@ -1516,7 +1519,8 @@ namespace RassiCements_LTD
                 dr.Delete();
             }
             dataGridView2.DataSource = Nemp;
-           
+            dataGridView2.Columns[0].Width = 0;
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -1538,6 +1542,9 @@ namespace RassiCements_LTD
                 else
                 {
                     dataGridView1.SelectedRows[0].Cells[0].Value = false;
+                    dataGridView1.DefaultCellStyle.SelectionBackColor = Color.AliceBlue;
+                    emp.AcceptChanges();
+
                 }
 
             }
@@ -1564,10 +1571,13 @@ namespace RassiCements_LTD
                 {
                     dataGridView2.SelectedRows[0].Cells[0].Value = true;
                     dataGridView2.DefaultCellStyle.SelectionBackColor = Color.Blue;
+                    Nemp.AcceptChanges();
                 }
                 else
                 {
                     dataGridView2.SelectedRows[0].Cells[0].Value = false;
+                    dataGridView2.DefaultCellStyle.SelectionBackColor = Color.AliceBlue;
+                    Nemp.AcceptChanges();
                 }
 
             }
