@@ -16,6 +16,17 @@ namespace RassiCements_LTD
     {
         DataTable emp = new DataTable();
         DataTable Nemp = new DataTable();
+
+
+
+
+
+
+
+
+
+
+
         public Main()
         {
             InitializeComponent();
@@ -1466,7 +1477,18 @@ namespace RassiCements_LTD
                     }
                 
                 dataGridView1.DataSource = emp;
-              
+                //Datatable initiliase
+                Nemp.Columns.Add("Sel", typeof(bool));
+                Nemp.Columns.Add("SNO", typeof(int));
+                Nemp.Columns.Add("Name", typeof(string));
+                Nemp.Columns.Add("BatchNo", typeof(int));
+                Nemp.Columns.Add("Type", typeof(string));
+                Nemp.Columns.Add("TokenNo", typeof(int));
+                Nemp.Columns.Add("Shift", typeof(string));
+                Nemp.Columns.Add("Date", typeof(string));
+                Nemp.Columns.Add("DayAmount", typeof(double));
+                Nemp.Columns.Add("Contractor", typeof(string));
+
 
             }
 
@@ -1483,12 +1505,17 @@ namespace RassiCements_LTD
 
         private void btnRi8_Click(object sender, EventArgs e)
         {
-            foreach(DataRow dr in emp.Rows)
+
+           
+
+
+            foreach (DataRow dr in emp.Rows)
             {
+                
                 Nemp.ImportRow(dr);
                 dr.Delete();
             }
-
+            dataGridView2.DataSource = Nemp;
            //foreach(DataGridViewRow item in dataGridView1.Rows)
            // {
            //     if(Convert.ToBoolean(item.Cells[0].Value)==true)
@@ -1538,6 +1565,7 @@ namespace RassiCements_LTD
                 {
                     dataGridView1.SelectedRows[0].Cells[0].Value = true;
                     dataGridView1.DefaultCellStyle.SelectionBackColor = Color.Blue;
+                    emp.AcceptChanges();
                 }
                 else
                 {
@@ -1551,7 +1579,12 @@ namespace RassiCements_LTD
         private void btnLft_Click(object sender, EventArgs e)
         {
 
-            
+            foreach(DataRow dr in Nemp.Rows)
+            {
+                emp.ImportRow(dr);
+                dr.Delete();
+            }
+            dataGridView1.DataSource = emp;
             //foreach (DataGridViewRow item in dataGridView2.Rows)
             //{
             //    if (Convert.ToBoolean(item.Cells[0].Value )== true)

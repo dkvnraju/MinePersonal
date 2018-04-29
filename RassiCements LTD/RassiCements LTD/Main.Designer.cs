@@ -2063,6 +2063,9 @@
         private System.Windows.Forms.Button buttonOK;
         private System.Windows.Forms.Button btnLft;
         private System.Windows.Forms.Button btnRi8;
+
+    
+
     }
 }
 
