@@ -1516,39 +1516,7 @@ namespace RassiCements_LTD
                 dr.Delete();
             }
             dataGridView2.DataSource = Nemp;
-           //foreach(DataGridViewRow item in dataGridView1.Rows)
-           // {
-           //     if(Convert.ToBoolean(item.Cells[0].Value)==true)
-           //     {
-           //         dataGridView2.Columns.Add("Sel","Sel");
-           //         dataGridView2.Columns.Add("Sno", "Sno");
-           //         dataGridView2.Columns.Add("Name", "Name");
-           //         dataGridView2.Columns.Add("BatchNo", "BatchNo");
-           //         dataGridView2.Columns.Add("Type", "Type");
-           //         dataGridView2.Columns.Add("TokenNo", "TokenNo");
-           //         dataGridView2.Columns.Add("Shift", "Shift");
-           //         dataGridView2.Columns.Add("Date", "Date");
-           //         dataGridView2.Columns.Add("DayAmount", "DayAmount");
-           //         dataGridView2.Columns.Add("Contractor", "Contractor");
-
-
-
-           //         int n = dataGridView2.Rows.Add();
-           //         dataGridView2.Rows[n].Cells[0].Value = item.Cells[0].Value.ToString();
-           //         dataGridView2.Rows[n].Cells[1].Value = item.Cells[1].Value.ToString();
-           //         dataGridView2.Rows[n].Cells[2].Value = item.Cells[2].Value.ToString();
-           //         dataGridView2.Rows[n].Cells[3].Value = item.Cells[3].Value.ToString();
-           //         dataGridView2.Rows[n].Cells[4].Value = item.Cells[4].Value.ToString();
-           //         dataGridView2.Rows[n].Cells[5].Value = item.Cells[5].Value;
-           //         dataGridView2.Rows[n].Cells[6].Value = item.Cells[6].Value.ToString();
-           //         dataGridView2.Rows[n].Cells[7].Value = item.Cells[7].Value.ToString();
-           //         dataGridView2.Rows[n].Cells[8].Value = item.Cells[8].Value.ToString();
-           //         dataGridView2.Rows[n].Cells[9].Value = item.Cells[9].Value.ToString();
-
-
-           //         dataGridView1.Rows.RemoveAt(item.Index);
-           //     }
-           // }
+           
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -1585,26 +1553,7 @@ namespace RassiCements_LTD
                 dr.Delete();
             }
             dataGridView1.DataSource = emp;
-            //foreach (DataGridViewRow item in dataGridView2.Rows)
-            //{
-            //    if (Convert.ToBoolean(item.Cells[0].Value )== true)
-            //    {
-            //        int n = dataGridView1.Rows.Add();
-            //        dataGridView1.Rows[n].Cells[0].Value = item.Cells[0].Value.ToString();
-            //        dataGridView1.Rows[n].Cells[1].Value = item.Cells[1].Value.ToString();
-            //        dataGridView1.Rows[n].Cells[2].Value = item.Cells[2].Value.ToString();
-            //        dataGridView1.Rows[n].Cells[3].Value = item.Cells[3].Value.ToString();
-            //        dataGridView1.Rows[n].Cells[4].Value = item.Cells[4].Value.ToString();
-            //        dataGridView1.Rows[n].Cells[5].Value = item.Cells[5].Value;
-            //        dataGridView1.Rows[n].Cells[6].Value = item.Cells[6].Value.ToString();
-            //        dataGridView1.Rows[n].Cells[7].Value = item.Cells[7].Value.ToString();
-            //        dataGridView1.Rows[n].Cells[8].Value = item.Cells[8].Value.ToString();
-            //        dataGridView1.Rows[n].Cells[9].Value = item.Cells[9].Value.ToString();
-
-
-            //        dataGridView2.Rows.RemoveAt(item.Index);
-            //    }
-            //}
+            
         }
 
         private void dataGridView2_MouseClick(object sender, MouseEventArgs e)
