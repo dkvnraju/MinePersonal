@@ -14,7 +14,8 @@ namespace RassiCements_LTD
 {
     public partial class Main : Form
     {
-        
+        DataTable emp = new DataTable();
+        DataTable Nemp = new DataTable();
         public Main()
         {
             InitializeComponent();
@@ -1432,7 +1433,7 @@ namespace RassiCements_LTD
 
         }
 
-        private void buttonOK_Click(object sender, EventArgs e)
+        public void buttonOK_Click(object sender, EventArgs e)
         {
             string connstring = "SELECT ID,EmpName,BatchNo,TypeID,TokenNumber FROM  EmployeeDetails where BatchNo ="+"'" + comboBoxLDBtchNo.Text +"'"+ ";";
             OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
@@ -1443,8 +1444,8 @@ namespace RassiCements_LTD
                 conn.Open();
                 OleDbDataReader dr = cmd.ExecuteReader();
 
-                using (DataTable emp = new DataTable())
-                {
+                
+               
                         emp.Columns.Add("Sel",typeof(bool));
                         emp.Columns.Add("SNO", typeof(int));
                         emp.Columns.Add("Name", typeof(string));
@@ -1465,7 +1466,7 @@ namespace RassiCements_LTD
                     }
                 
                 dataGridView1.DataSource = emp;
-                }
+              
 
             }
 
@@ -1482,39 +1483,45 @@ namespace RassiCements_LTD
 
         private void btnRi8_Click(object sender, EventArgs e)
         {
-           foreach(DataGridViewRow item in dataGridView1.Rows)
+            foreach(DataRow dr in emp.Rows)
             {
-                if(Convert.ToBoolean(item.Cells[0].Value)==true)
-                {
-                    dataGridView2.Columns.Add("Sel","Sel");
-                    dataGridView2.Columns.Add("Sno", "Sno");
-                    dataGridView2.Columns.Add("Name", "Name");
-                    dataGridView2.Columns.Add("BatchNo", "BatchNo");
-                    dataGridView2.Columns.Add("Type", "Type");
-                    dataGridView2.Columns.Add("TokenNo", "TokenNo");
-                    dataGridView2.Columns.Add("Shift", "Shift");
-                    dataGridView2.Columns.Add("Date", "Date");
-                    dataGridView2.Columns.Add("DayAmount", "DayAmount");
-                    dataGridView2.Columns.Add("Contractor", "Contractor");
-
-
-
-                    int n = dataGridView2.Rows.Add();
-                    dataGridView2.Rows[n].Cells[0].Value = item.Cells[0].Value.ToString();
-                    dataGridView2.Rows[n].Cells[1].Value = item.Cells[1].Value.ToString();
-                    dataGridView2.Rows[n].Cells[2].Value = item.Cells[2].Value.ToString();
-                    dataGridView2.Rows[n].Cells[3].Value = item.Cells[3].Value.ToString();
-                    dataGridView2.Rows[n].Cells[4].Value = item.Cells[4].Value.ToString();
-                    dataGridView2.Rows[n].Cells[5].Value = item.Cells[5].Value;
-                    dataGridView2.Rows[n].Cells[6].Value = item.Cells[6].Value.ToString();
-                    dataGridView2.Rows[n].Cells[7].Value = item.Cells[7].Value.ToString();
-                    dataGridView2.Rows[n].Cells[8].Value = item.Cells[8].Value.ToString();
-                    dataGridView2.Rows[n].Cells[9].Value = item.Cells[9].Value.ToString();
-
-
-                    dataGridView1.Rows.RemoveAt(item.Index);
-                }
+                Nemp.ImportRow(dr);
+                dr.Delete();
             }
+
+           //foreach(DataGridViewRow item in dataGridView1.Rows)
+           // {
+           //     if(Convert.ToBoolean(item.Cells[0].Value)==true)
+           //     {
+           //         dataGridView2.Columns.Add("Sel","Sel");
+           //         dataGridView2.Columns.Add("Sno", "Sno");
+           //         dataGridView2.Columns.Add("Name", "Name");
+           //         dataGridView2.Columns.Add("BatchNo", "BatchNo");
+           //         dataGridView2.Columns.Add("Type", "Type");
+           //         dataGridView2.Columns.Add("TokenNo", "TokenNo");
+           //         dataGridView2.Columns.Add("Shift", "Shift");
+           //         dataGridView2.Columns.Add("Date", "Date");
+           //         dataGridView2.Columns.Add("DayAmount", "DayAmount");
+           //         dataGridView2.Columns.Add("Contractor", "Contractor");
+
+
+
+           //         int n = dataGridView2.Rows.Add();
+           //         dataGridView2.Rows[n].Cells[0].Value = item.Cells[0].Value.ToString();
+           //         dataGridView2.Rows[n].Cells[1].Value = item.Cells[1].Value.ToString();
+           //         dataGridView2.Rows[n].Cells[2].Value = item.Cells[2].Value.ToString();
+           //         dataGridView2.Rows[n].Cells[3].Value = item.Cells[3].Value.ToString();
+           //         dataGridView2.Rows[n].Cells[4].Value = item.Cells[4].Value.ToString();
+           //         dataGridView2.Rows[n].Cells[5].Value = item.Cells[5].Value;
+           //         dataGridView2.Rows[n].Cells[6].Value = item.Cells[6].Value.ToString();
+           //         dataGridView2.Rows[n].Cells[7].Value = item.Cells[7].Value.ToString();
+           //         dataGridView2.Rows[n].Cells[8].Value = item.Cells[8].Value.ToString();
+           //         dataGridView2.Rows[n].Cells[9].Value = item.Cells[9].Value.ToString();
+
+
+           //         dataGridView1.Rows.RemoveAt(item.Index);
+           //     }
+           // }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -1543,26 +1550,28 @@ namespace RassiCements_LTD
 
         private void btnLft_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow item in dataGridView2.Rows)
-            {
-                if (Convert.ToBoolean(item.Cells[0].Value )== true)
-                {
-                    int n = dataGridView2.Rows.Add();
-                    dataGridView1.Rows[n].Cells[0].Value = item.Cells[0].Value.ToString();
-                    dataGridView1.Rows[n].Cells[1].Value = item.Cells[1].Value.ToString();
-                    dataGridView1.Rows[n].Cells[2].Value = item.Cells[2].Value.ToString();
-                    dataGridView1.Rows[n].Cells[3].Value = item.Cells[3].Value.ToString();
-                    dataGridView1.Rows[n].Cells[4].Value = item.Cells[4].Value.ToString();
-                    dataGridView1.Rows[n].Cells[5].Value = item.Cells[5].Value;
-                    dataGridView1.Rows[n].Cells[6].Value = item.Cells[6].Value.ToString();
-                    dataGridView1.Rows[n].Cells[7].Value = item.Cells[7].Value.ToString();
-                    dataGridView1.Rows[n].Cells[8].Value = item.Cells[8].Value.ToString();
-                    dataGridView1.Rows[n].Cells[9].Value = item.Cells[9].Value.ToString();
+
+            
+            //foreach (DataGridViewRow item in dataGridView2.Rows)
+            //{
+            //    if (Convert.ToBoolean(item.Cells[0].Value )== true)
+            //    {
+            //        int n = dataGridView1.Rows.Add();
+            //        dataGridView1.Rows[n].Cells[0].Value = item.Cells[0].Value.ToString();
+            //        dataGridView1.Rows[n].Cells[1].Value = item.Cells[1].Value.ToString();
+            //        dataGridView1.Rows[n].Cells[2].Value = item.Cells[2].Value.ToString();
+            //        dataGridView1.Rows[n].Cells[3].Value = item.Cells[3].Value.ToString();
+            //        dataGridView1.Rows[n].Cells[4].Value = item.Cells[4].Value.ToString();
+            //        dataGridView1.Rows[n].Cells[5].Value = item.Cells[5].Value;
+            //        dataGridView1.Rows[n].Cells[6].Value = item.Cells[6].Value.ToString();
+            //        dataGridView1.Rows[n].Cells[7].Value = item.Cells[7].Value.ToString();
+            //        dataGridView1.Rows[n].Cells[8].Value = item.Cells[8].Value.ToString();
+            //        dataGridView1.Rows[n].Cells[9].Value = item.Cells[9].Value.ToString();
 
 
-                    dataGridView2.Rows.RemoveAt(item.Index);
-                }
-            }
+            //        dataGridView2.Rows.RemoveAt(item.Index);
+            //    }
+            //}
         }
 
         private void dataGridView2_MouseClick(object sender, MouseEventArgs e)
