@@ -1484,7 +1484,7 @@ namespace RassiCements_LTD
         {
            foreach(DataGridViewRow item in dataGridView1.Rows)
             {
-                if((bool)item.Cells[0].Value==true)
+                if(Convert.ToBoolean(item.Cells[0].Value)==true)
                 {
                     dataGridView2.Columns.Add("Sel","Sel");
                     dataGridView2.Columns.Add("Sno", "Sno");
@@ -1527,7 +1527,7 @@ namespace RassiCements_LTD
 
             if(dataGridView1.SelectedRows.Count>0)
             {
-                if ((bool)dataGridView1.SelectedRows[0].Cells[0].Value == false)
+                if ( Convert.ToBoolean( dataGridView1.SelectedRows[0].Cells[0].Value) == false)
                 {
                     dataGridView1.SelectedRows[0].Cells[0].Value = true;
                     dataGridView1.DefaultCellStyle.SelectionBackColor = Color.Blue;
@@ -1545,7 +1545,7 @@ namespace RassiCements_LTD
         {
             foreach (DataGridViewRow item in dataGridView2.Rows)
             {
-                if ((bool)item.Cells[0].Value == true)
+                if (Convert.ToBoolean(item.Cells[0].Value )== true)
                 {
                     int n = dataGridView2.Rows.Add();
                     dataGridView1.Rows[n].Cells[0].Value = item.Cells[0].Value.ToString();
@@ -1569,7 +1569,7 @@ namespace RassiCements_LTD
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                if ((bool)dataGridView1.SelectedRows[0].Cells[0].Value == false)
+                if ( Convert.ToBoolean( dataGridView1.SelectedRows[0].Cells[0].Value) == false)
                 {
                     dataGridView1.SelectedRows[0].Cells[0].Value = true;
                     dataGridView1.DefaultCellStyle.SelectionBackColor = Color.Blue;
