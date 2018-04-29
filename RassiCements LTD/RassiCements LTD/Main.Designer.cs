@@ -102,6 +102,8 @@
             this.lblPLDHead = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnLft = new System.Windows.Forms.Button();
+            this.btnRi8 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -177,8 +179,6 @@
             this.lblLDHead = new System.Windows.Forms.Label();
             this.rassiCementLTDDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rassiCementLTDDataSet = new RassiCements_LTD.RassiCementLTDDataSet();
-            this.btnRi8 = new System.Windows.Forms.Button();
-            this.btnLft = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1043,22 +1043,48 @@
             this.panel5.Size = new System.Drawing.Size(3048, 692);
             this.panel5.TabIndex = 2;
             // 
+            // btnLft
+            // 
+            this.btnLft.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLft.Location = new System.Drawing.Point(1453, 384);
+            this.btnLft.Name = "btnLft";
+            this.btnLft.Size = new System.Drawing.Size(88, 98);
+            this.btnLft.TabIndex = 3;
+            this.btnLft.Text = "<<";
+            this.btnLft.UseVisualStyleBackColor = true;
+            // 
+            // btnRi8
+            // 
+            this.btnRi8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRi8.Location = new System.Drawing.Point(1447, 199);
+            this.btnRi8.Name = "btnRi8";
+            this.btnRi8.Size = new System.Drawing.Size(88, 98);
+            this.btnRi8.TabIndex = 2;
+            this.btnRi8.Text = ">>";
+            this.btnRi8.UseVisualStyleBackColor = true;
+            // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(1600, 19);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 40;
             this.dataGridView2.Size = new System.Drawing.Size(1387, 639);
             this.dataGridView2.TabIndex = 1;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(16, 19);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 15;
             this.dataGridView1.Size = new System.Drawing.Size(1371, 639);
             this.dataGridView1.TabIndex = 0;
@@ -1832,26 +1858,6 @@
             // 
             this.rassiCementLTDDataSet.DataSetName = "RassiCementLTDDataSet";
             this.rassiCementLTDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // btnRi8
-            // 
-            this.btnRi8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRi8.Location = new System.Drawing.Point(1447, 199);
-            this.btnRi8.Name = "btnRi8";
-            this.btnRi8.Size = new System.Drawing.Size(88, 98);
-            this.btnRi8.TabIndex = 2;
-            this.btnRi8.Text = ">>";
-            this.btnRi8.UseVisualStyleBackColor = true;
-            // 
-            // btnLft
-            // 
-            this.btnLft.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLft.Location = new System.Drawing.Point(1453, 384);
-            this.btnLft.Name = "btnLft";
-            this.btnLft.Size = new System.Drawing.Size(88, 98);
-            this.btnLft.TabIndex = 3;
-            this.btnLft.Text = "<<";
-            this.btnLft.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
