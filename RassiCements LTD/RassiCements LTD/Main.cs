@@ -1542,7 +1542,7 @@ namespace RassiCements_LTD
                 else
                 {
                     dataGridView1.SelectedRows[0].Cells[0].Value = false;
-                    dataGridView1.DefaultCellStyle.SelectionBackColor = Color.AliceBlue;
+                    dataGridView1.DefaultCellStyle.SelectionBackColor = Color.CadetBlue;
                     emp.AcceptChanges();
 
                 }
@@ -1576,7 +1576,7 @@ namespace RassiCements_LTD
                 else
                 {
                     dataGridView2.SelectedRows[0].Cells[0].Value = false;
-                    dataGridView2.DefaultCellStyle.SelectionBackColor = Color.AliceBlue;
+                    dataGridView2.DefaultCellStyle.SelectionBackColor = Color.CadetBlue;
                     Nemp.AcceptChanges();
                 }
 
