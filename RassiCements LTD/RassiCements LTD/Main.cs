@@ -1524,14 +1524,61 @@ namespace RassiCements_LTD
 
         private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
         {
-            if ((bool)dataGridView1.SelectedRows[0].Cells[0].Value == false)
+
+            if(dataGridView1.SelectedRows.Count>0)
             {
-                dataGridView1.SelectedRows[0].Cells[0].Value = true;
-                dataGridView1.DefaultCellStyle.SelectionBackColor = Color.LightYellow;
+                if ((bool)dataGridView1.SelectedRows[0].Cells[0].Value == false)
+                {
+                    dataGridView1.SelectedRows[0].Cells[0].Value = true;
+                    dataGridView1.DefaultCellStyle.SelectionBackColor = Color.Blue;
+                }
+                else
+                {
+                    dataGridView1.SelectedRows[0].Cells[0].Value = false;
+                }
+
             }
-            else
+           
+        }
+
+        private void btnLft_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow item in dataGridView2.Rows)
             {
-                dataGridView1.SelectedRows[0].Cells[0].Value = false;
+                if ((bool)item.Cells[0].Value == true)
+                {
+                    int n = dataGridView2.Rows.Add();
+                    dataGridView1.Rows[n].Cells[0].Value = item.Cells[0].Value.ToString();
+                    dataGridView1.Rows[n].Cells[1].Value = item.Cells[1].Value.ToString();
+                    dataGridView1.Rows[n].Cells[2].Value = item.Cells[2].Value.ToString();
+                    dataGridView1.Rows[n].Cells[3].Value = item.Cells[3].Value.ToString();
+                    dataGridView1.Rows[n].Cells[4].Value = item.Cells[4].Value.ToString();
+                    dataGridView1.Rows[n].Cells[5].Value = item.Cells[5].Value.ToString();
+                    dataGridView1.Rows[n].Cells[6].Value = item.Cells[6].Value.ToString();
+                    dataGridView1.Rows[n].Cells[7].Value = item.Cells[7].Value.ToString();
+                    dataGridView1.Rows[n].Cells[8].Value = item.Cells[8].Value.ToString();
+                    dataGridView1.Rows[n].Cells[9].Value = item.Cells[9].Value.ToString();
+
+
+                    dataGridView2.Rows.RemoveAt(item.Index);
+                }
+            }
+        }
+
+        private void dataGridView2_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                if ((bool)dataGridView1.SelectedRows[0].Cells[0].Value == false)
+                {
+                    dataGridView1.SelectedRows[0].Cells[0].Value = true;
+                    dataGridView1.DefaultCellStyle.SelectionBackColor = Color.Blue;
+                }
+                else
+                {
+                    dataGridView1.SelectedRows[0].Cells[0].Value = false;
+                }
+
             }
         }
     }

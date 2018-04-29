@@ -1052,6 +1052,7 @@
             this.btnLft.TabIndex = 3;
             this.btnLft.Text = "<<";
             this.btnLft.UseVisualStyleBackColor = true;
+            this.btnLft.Click += new System.EventHandler(this.btnLft_Click);
             // 
             // btnRi8
             // 
@@ -1076,6 +1077,7 @@
             this.dataGridView2.RowTemplate.Height = 40;
             this.dataGridView2.Size = new System.Drawing.Size(1387, 639);
             this.dataGridView2.TabIndex = 1;
+            this.dataGridView2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView2_MouseClick);
             // 
             // dataGridView1
             // 
