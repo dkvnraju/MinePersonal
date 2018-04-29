@@ -179,7 +179,6 @@
             this.lblLDHead = new System.Windows.Forms.Label();
             this.rassiCementLTDDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rassiCementLTDDataSet = new RassiCements_LTD.RassiCementLTDDataSet();
-            this.Sel = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1047,9 +1046,9 @@
             // btnLft
             // 
             this.btnLft.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLft.Location = new System.Drawing.Point(1453, 384);
+            this.btnLft.Location = new System.Drawing.Point(1449, 333);
             this.btnLft.Name = "btnLft";
-            this.btnLft.Size = new System.Drawing.Size(88, 98);
+            this.btnLft.Size = new System.Drawing.Size(112, 58);
             this.btnLft.TabIndex = 3;
             this.btnLft.Text = "<<";
             this.btnLft.UseVisualStyleBackColor = true;
@@ -1057,9 +1056,9 @@
             // btnRi8
             // 
             this.btnRi8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRi8.Location = new System.Drawing.Point(1447, 199);
+            this.btnRi8.Location = new System.Drawing.Point(1447, 236);
             this.btnRi8.Name = "btnRi8";
-            this.btnRi8.Size = new System.Drawing.Size(88, 98);
+            this.btnRi8.Size = new System.Drawing.Size(121, 63);
             this.btnRi8.TabIndex = 2;
             this.btnRi8.Text = ">>";
             this.btnRi8.UseVisualStyleBackColor = true;
@@ -1083,8 +1082,6 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Sel});
             this.dataGridView1.Location = new System.Drawing.Point(16, 19);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
@@ -1864,12 +1861,6 @@
             this.rassiCementLTDDataSet.DataSetName = "RassiCementLTDDataSet";
             this.rassiCementLTDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // Sel
-            // 
-            this.Sel.HeaderText = "Sel";
-            this.Sel.Name = "Sel";
-            this.Sel.ReadOnly = true;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -2067,7 +2058,6 @@
         private System.Windows.Forms.Button buttonOK;
         private System.Windows.Forms.Button btnLft;
         private System.Windows.Forms.Button btnRi8;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Sel;
     }
 }
 
