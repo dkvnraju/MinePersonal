@@ -1486,6 +1486,19 @@ namespace RassiCements_LTD
             {
                 if((bool)item.Cells[0].Value==true)
                 {
+                    dataGridView2.Columns.Add("Sel","Sel");
+                    dataGridView2.Columns.Add("Sno", "Sno");
+                    dataGridView2.Columns.Add("Name", "Name");
+                    dataGridView2.Columns.Add("BatchNo", "BatchNo");
+                    dataGridView2.Columns.Add("Type", "Type");
+                    dataGridView2.Columns.Add("TokenNo", "TokenNo");
+                    dataGridView2.Columns.Add("Shift", "Shift");
+                    dataGridView2.Columns.Add("Date", "Date");
+                    dataGridView2.Columns.Add("DayAmount", "DayAmount");
+                    dataGridView2.Columns.Add("Contractor", "Contractor");
+
+
+
                     int n = dataGridView2.Rows.Add();
                     dataGridView2.Rows[n].Cells[0].Value = item.Cells[0].Value.ToString();
                     dataGridView2.Rows[n].Cells[1].Value = item.Cells[1].Value.ToString();
@@ -1506,9 +1519,15 @@ namespace RassiCements_LTD
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if((bool)dataGridView1.SelectedRows[0].Cells[0].Value==false)
+          //Donothing
+        }
+
+        private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if ((bool)dataGridView1.SelectedRows[0].Cells[0].Value == false)
             {
                 dataGridView1.SelectedRows[0].Cells[0].Value = true;
+                dataGridView1.DefaultCellStyle.SelectionBackColor = Color.LightYellow;
             }
             else
             {
