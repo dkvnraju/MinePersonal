@@ -1567,16 +1567,16 @@ namespace RassiCements_LTD
 
         private void dataGridView2_MouseClick(object sender, MouseEventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (dataGridView2.SelectedRows.Count > 0)
             {
-                if ( Convert.ToBoolean( dataGridView1.SelectedRows[0].Cells[0].Value) == false)
+                if ( Convert.ToBoolean( dataGridView2.SelectedRows[0].Cells[0].Value) == false)
                 {
-                    dataGridView1.SelectedRows[0].Cells[0].Value = true;
-                    dataGridView1.DefaultCellStyle.SelectionBackColor = Color.Blue;
+                    dataGridView2.SelectedRows[0].Cells[0].Value = true;
+                    dataGridView2.DefaultCellStyle.SelectionBackColor = Color.Blue;
                 }
                 else
                 {
-                    dataGridView1.SelectedRows[0].Cells[0].Value = false;
+                    dataGridView2.SelectedRows[0].Cells[0].Value = false;
                 }
 
             }
