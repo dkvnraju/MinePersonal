@@ -1505,7 +1505,7 @@ namespace RassiCements_LTD
                     dataGridView2.Rows[n].Cells[2].Value = item.Cells[2].Value.ToString();
                     dataGridView2.Rows[n].Cells[3].Value = item.Cells[3].Value.ToString();
                     dataGridView2.Rows[n].Cells[4].Value = item.Cells[4].Value.ToString();
-                    dataGridView2.Rows[n].Cells[5].Value = item.Cells[5].Value.ToString();
+                    dataGridView2.Rows[n].Cells[5].Value = item.Cells[5].Value;
                     dataGridView2.Rows[n].Cells[6].Value = item.Cells[6].Value.ToString();
                     dataGridView2.Rows[n].Cells[7].Value = item.Cells[7].Value.ToString();
                     dataGridView2.Rows[n].Cells[8].Value = item.Cells[8].Value.ToString();
@@ -1553,7 +1553,7 @@ namespace RassiCements_LTD
                     dataGridView1.Rows[n].Cells[2].Value = item.Cells[2].Value.ToString();
                     dataGridView1.Rows[n].Cells[3].Value = item.Cells[3].Value.ToString();
                     dataGridView1.Rows[n].Cells[4].Value = item.Cells[4].Value.ToString();
-                    dataGridView1.Rows[n].Cells[5].Value = item.Cells[5].Value.ToString();
+                    dataGridView1.Rows[n].Cells[5].Value = item.Cells[5].Value;
                     dataGridView1.Rows[n].Cells[6].Value = item.Cells[6].Value.ToString();
                     dataGridView1.Rows[n].Cells[7].Value = item.Cells[7].Value.ToString();
                     dataGridView1.Rows[n].Cells[8].Value = item.Cells[8].Value.ToString();
