@@ -1048,7 +1048,7 @@
             this.btnLft.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLft.Location = new System.Drawing.Point(1449, 333);
             this.btnLft.Name = "btnLft";
-            this.btnLft.Size = new System.Drawing.Size(112, 58);
+            this.btnLft.Size = new System.Drawing.Size(121, 63);
             this.btnLft.TabIndex = 3;
             this.btnLft.Text = "<<";
             this.btnLft.UseVisualStyleBackColor = true;
