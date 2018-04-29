@@ -1514,9 +1514,12 @@ namespace RassiCements_LTD
 
             foreach (DataRow dr in emp.Rows)
             {
+                if(dr["Sel"].ToString()=="true")
+                {
+                    Nemp.ImportRow(dr);
+                    dr.Delete();
+                }
                 
-                Nemp.ImportRow(dr);
-                dr.Delete();
             }
             dataGridView2.DataSource = Nemp;
             dataGridView2.Columns[0].Width = 0;
@@ -1542,7 +1545,7 @@ namespace RassiCements_LTD
                 else
                 {
                     dataGridView1.SelectedRows[0].Cells[0].Value = false;
-                    dataGridView1.DefaultCellStyle.SelectionBackColor = Color.CadetBlue;
+                    dataGridView1.DefaultCellStyle.SelectionBackColor = Color.LightSkyBlue;
                     emp.AcceptChanges();
 
                 }
@@ -1556,8 +1559,12 @@ namespace RassiCements_LTD
 
             foreach(DataRow dr in Nemp.Rows)
             {
-                emp.ImportRow(dr);
-                dr.Delete();
+                if (dr["Sel"].ToString() == "True")
+                {
+                    emp.ImportRow(dr);
+                    dr.Delete();
+                }
+               
             }
             dataGridView1.DataSource = emp;
             
@@ -1576,7 +1583,7 @@ namespace RassiCements_LTD
                 else
                 {
                     dataGridView2.SelectedRows[0].Cells[0].Value = false;
-                    dataGridView2.DefaultCellStyle.SelectionBackColor = Color.CadetBlue;
+                    dataGridView2.DefaultCellStyle.SelectionBackColor = Color.LightSkyBlue;
                     Nemp.AcceptChanges();
                 }
 
