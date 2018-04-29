@@ -1074,7 +1074,7 @@
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowTemplate.Height = 40;
+            this.dataGridView2.RowTemplate.Height = 15;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(1387, 639);
             this.dataGridView2.TabIndex = 1;

@@ -1508,13 +1508,9 @@ namespace RassiCements_LTD
 
         private void btnRi8_Click(object sender, EventArgs e)
         {
-
-           
-
-
             foreach (DataRow dr in emp.Rows)
             {
-                if(dr["Sel"].ToString()=="true")
+                if(Convert.ToBoolean( dr["Sel"].ToString())==true)
                 {
                     Nemp.ImportRow(dr);
                     dr.Delete();
@@ -1523,8 +1519,7 @@ namespace RassiCements_LTD
             }
             dataGridView2.DataSource = Nemp;
             dataGridView2.Columns[0].Width = 0;
-
-        }
+            }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -1559,7 +1554,7 @@ namespace RassiCements_LTD
 
             foreach(DataRow dr in Nemp.Rows)
             {
-                if (dr["Sel"].ToString() == "True")
+                if ( Convert.ToBoolean( dr["Sel"].ToString()) ==true)
                 {
                     emp.ImportRow(dr);
                     dr.Delete();
