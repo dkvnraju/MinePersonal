@@ -1455,42 +1455,51 @@ namespace RassiCements_LTD
                 conn.Open();
                 OleDbDataReader dr = cmd.ExecuteReader();
 
-                
-               
-                        emp.Columns.Add("Sel",typeof(bool));
-                        emp.Columns.Add("SNO", typeof(int));
-                        emp.Columns.Add("Name", typeof(string));
-                        emp.Columns.Add("BatchNo", typeof(int));
-                        emp.Columns.Add("Type",typeof(string));
-                        emp.Columns.Add("TokenNo",typeof(int));
-                        emp.Columns.Add("Shift",typeof(string));
-                        emp.Columns.Add("Date", typeof(string));
-                        emp.Columns.Add("DayAmount",typeof(double));
-                        emp.Columns.Add("Contractor",typeof(string));
+                if(dr.HasRows)
+                {
+                    emp.Columns.Add("Sel", typeof(bool));
+                    emp.Columns.Add("SNO", typeof(int));
+                    emp.Columns.Add("Name", typeof(string));
+                    emp.Columns.Add("BatchNo", typeof(int));
+                    emp.Columns.Add("Type", typeof(string));
+                    emp.Columns.Add("TokenNo", typeof(int));
+                    emp.Columns.Add("Shift", typeof(string));
+                    emp.Columns.Add("Date", typeof(string));
+                    emp.Columns.Add("DayAmount", typeof(double));
+                    emp.Columns.Add("Contractor", typeof(string));
 
-                
+
 
                     while (dr.Read())
                     {
-                        emp.Rows.Add( false,Convert.ToInt16(dr["ID"].ToString()),dr["EmpName"].ToString(),Convert.ToInt16(dr["BatchNo"].ToString())
-                        ,dr["TypeID"].ToString(), Convert.ToInt16(dr["TokenNumber"].ToString()), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
-                        dr["TypeID"].ToString()=="Loader"?Convert.ToDouble(textBoxLDLDTotAmt.Text):Convert.ToDouble(textBoxLDPkrTotAmt.Text),
+                        emp.Rows.Add(false, Convert.ToInt16(dr["ID"].ToString()), dr["EmpName"].ToString(), Convert.ToInt16(dr["BatchNo"].ToString())
+                        , dr["TypeID"].ToString(), Convert.ToInt16(dr["TokenNumber"].ToString()), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
+                        dr["TypeID"].ToString() == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text),
                         textBoxOCCNM.Text);
                     }
+
+                    dataGridView1.DataSource = emp;
+                    dataGridView1.Columns[0].Width = 0;
+                    //Datatable initiliase
+                    Nemp.Columns.Add("Sel", typeof(bool));
+                    Nemp.Columns.Add("SNO", typeof(int));
+                    Nemp.Columns.Add("Name", typeof(string));
+                    Nemp.Columns.Add("BatchNo", typeof(int));
+                    Nemp.Columns.Add("Type", typeof(string));
+                    Nemp.Columns.Add("TokenNo", typeof(int));
+                    Nemp.Columns.Add("Shift", typeof(string));
+                    Nemp.Columns.Add("Date", typeof(string));
+                    Nemp.Columns.Add("DayAmount", typeof(double));
+                    Nemp.Columns.Add("Contractor", typeof(string));
+
+                    panel5.Visible = true;
+                }else
+                {
+                    MessageBox.Show("No Data Found for the Batch No please check and try again");
+                }
                 
-                dataGridView1.DataSource = emp;
-                dataGridView1.Columns[0].Width = 0;
-                //Datatable initiliase
-                Nemp.Columns.Add("Sel", typeof(bool));
-                Nemp.Columns.Add("SNO", typeof(int));
-                Nemp.Columns.Add("Name", typeof(string));
-                Nemp.Columns.Add("BatchNo", typeof(int));
-                Nemp.Columns.Add("Type", typeof(string));
-                Nemp.Columns.Add("TokenNo", typeof(int));
-                Nemp.Columns.Add("Shift", typeof(string));
-                Nemp.Columns.Add("Date", typeof(string));
-                Nemp.Columns.Add("DayAmount", typeof(double));
-                Nemp.Columns.Add("Contractor", typeof(string));
+               
+                       
 
 
             }
@@ -1504,6 +1513,7 @@ namespace RassiCements_LTD
                 conn.Close();
 
             }
+
         }
 
         private void btnRi8_Click(object sender, EventArgs e)
