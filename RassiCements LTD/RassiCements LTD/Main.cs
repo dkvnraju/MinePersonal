@@ -16,17 +16,8 @@ namespace RassiCements_LTD
     {
         DataTable emp = new DataTable();
         DataTable Nemp = new DataTable();
-
-
-
-
-
-
-
-
-
-
-
+        int ID;
+        string Type;
         public Main()
         {
             InitializeComponent();
@@ -1497,11 +1488,7 @@ namespace RassiCements_LTD
                 {
                     MessageBox.Show("No Data Found for the Batch No please check and try again");
                 }
-                
-               
-                       
-
-
+         
             }
 
             catch (Exception ex)
@@ -1593,6 +1580,51 @@ namespace RassiCements_LTD
                 }
 
             }
+        }
+
+        private void BtnOBOK_Click(object sender, EventArgs e)
+        {
+            emp.Rows.Add(false, ID, textBoxOBNM.Text, Convert.ToInt16(textBoxOBBtchNo.Text)
+                        ,Type, Convert.ToInt16(textBoxOBTknNo.Text), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
+                        Type == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text),
+                        textBoxOCCNM.Text);
+            emp.AcceptChanges();
+        }
+
+        private void textBoxOBTknNo_Leave(object sender, EventArgs e)
+        {
+            string connstring = "SELECT ID,EmpName,BatchNo,TypeID,TokenNumber FROM  EmployeeDetails where TokenNumber =" + textBoxOBTknNo.Text + ";";
+            OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+            OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+            try
+            {
+                conn.Open();
+                OleDbDataReader dr = cmd.ExecuteReader();
+
+                if (dr.HasRows)
+                {
+                    while(dr.Read())
+                    {
+                        textBoxOBBtchNo.Text= dr["BatchNo"].ToString();
+                        textBoxOBNM.Text = dr["EmpName"].ToString();
+                        ID = Convert.ToInt16(dr["ID"].ToString());
+                        Type = dr["TypeID"].ToString();
+                    }
+                }
+                else { MessageBox.Show("Token Number Does't Exist!"); }
+             }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception occured." + ex);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+
         }
     }
 }
