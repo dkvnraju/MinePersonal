@@ -1715,5 +1715,27 @@ namespace RassiCements_LTD
 
 
         }
+
+        private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            foreach(DataGridViewRow dgr in dataGridView1.Rows)
+            {
+                if(Convert.ToString( dgr.Cells["BatchNo"].Value)=="OTH")
+                { dgr.DefaultCellStyle.BackColor = Color.Red; }
+            
+            }
+
+        }
+
+        private void dataGridView2_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            foreach (DataGridViewRow dgr in dataGridView1.Rows)
+            {
+                if (Convert.ToString(dgr.Cells["BatchNo"].Value) == "OTH")
+                { dgr.DefaultCellStyle.BackColor = Color.Red; }
+
+            }
+
+        }
     }
 }
