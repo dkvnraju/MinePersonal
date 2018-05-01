@@ -1675,36 +1675,44 @@ namespace RassiCements_LTD
 
         private void btnOCOK_Click(object sender, EventArgs e)
         {
-            string connstring = "SELECT ID,BatchNo,TokenNo,Type,EmpName,ContractorName FROM  Contrator where TokenNumber =" + textBoxLDOthrID.Text + ";";
-            OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
-            OleDbCommand cmd = new OleDbCommand(connstring, conn);
-
-            try
+            if(textBoxLDOCBtchNo.Text!=""&& textBoxLDOthrID.Text!=""&& comboBoxLDOCTyp.Text!=""&& textBoxOCNM.Text!=""&& textBoxOCCNM.Text!="")
             {
-                conn.Open();
-                OleDbDataReader dr = cmd.ExecuteReader();
 
-                if (dr.HasRows)
+                string connstring = "SELECT ID,BatchNo,TokenNo,Type,EmpName,ContractorName FROM  Contrator where TokenNumber =" + textBoxLDOthrID.Text + ";";
+                OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+                OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+                try
                 {
-                    emp.Rows.Add(false, dr["ID"].ToString(), textBoxOCNM.Text, textBoxLDOCBtchNo.Text
-                        , comboBoxLDOCTyp.Text, Convert.ToInt16(textBoxLDOthrID.Text), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
-                        comboBoxLDOCTyp.Text == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text),
-                        textBoxOCCNM.Text);
-                    emp.AcceptChanges();
+                    conn.Open();
+                    OleDbDataReader dr = cmd.ExecuteReader();
+
+                    if (dr.HasRows)
+                    {
+                        emp.Rows.Add(false, dr["ID"].ToString(), textBoxOCNM.Text, textBoxLDOCBtchNo.Text
+                            , comboBoxLDOCTyp.Text, Convert.ToInt16(textBoxLDOthrID.Text), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
+                            comboBoxLDOCTyp.Text == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text),
+                            textBoxOCCNM.Text);
+                        emp.AcceptChanges();
+
+                    }
+                    else { MessageBox.Show("Token Number Does't Exist!"); }
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Exception occured." + ex);
+                }
+                finally
+                {
+                    conn.Close();
 
                 }
-                else { MessageBox.Show("Token Number Does't Exist!"); }
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show("Exception occured." + ex);
-            }
-            finally
-            {
-                conn.Close();
 
             }
+            else { MessageBox.Show("Please check all the input feilds and try again"); }
+
+
 
         }
     }
