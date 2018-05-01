@@ -1631,5 +1631,46 @@ namespace RassiCements_LTD
         {
 
         }
+
+        private void textBoxLDOthrID_Leave(object sender, EventArgs e)
+        {
+            string connstring = "SELECT BatchNo,TokenNo,Type,EmpName,ContractorName FROM  Contrator where TokenNumber =" + textBoxLDOthrID.Text + ";";
+            OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+            OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+            try
+            {
+                conn.Open();
+                OleDbDataReader dr = cmd.ExecuteReader();
+
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        textBoxLDOCBtchNo.Text = dr["BatchNo"].ToString();
+                        comboBoxLDOCTyp.Text = dr["Type"].ToString();
+                        textBoxOCNM.Text = dr["EmpName"].ToString();
+                        textBoxOCCNM.Text = dr["ContractorName"].ToString();
+                    }
+                }
+                else { MessageBox.Show("Token Number Does't Exist!"); }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception occured." + ex);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+
+        }
+
+        private void comboBoxLDOCTyp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

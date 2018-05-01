@@ -1229,6 +1229,7 @@
             this.comboBoxLDOCTyp.Name = "comboBoxLDOCTyp";
             this.comboBoxLDOCTyp.Size = new System.Drawing.Size(199, 44);
             this.comboBoxLDOCTyp.TabIndex = 9;
+            this.comboBoxLDOCTyp.SelectedIndexChanged += new System.EventHandler(this.comboBoxLDOCTyp_SelectedIndexChanged);
             // 
             // textBoxOCCNM
             // 
@@ -1253,6 +1254,7 @@
             this.textBoxLDOthrID.Name = "textBoxLDOthrID";
             this.textBoxLDOthrID.Size = new System.Drawing.Size(172, 41);
             this.textBoxLDOthrID.TabIndex = 6;
+            this.textBoxLDOthrID.Leave += new System.EventHandler(this.textBoxLDOthrID_Leave);
             // 
             // textBoxLDOCBtchNo
             // 
