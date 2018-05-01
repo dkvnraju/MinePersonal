@@ -1634,7 +1634,7 @@ namespace RassiCements_LTD
 
         private void textBoxLDOthrID_Leave(object sender, EventArgs e)
         {
-            string connstring = "SELECT BatchNo,TokenNo,Type,EmpName,ContractorName FROM  Contrator where TokenNumber =" + textBoxLDOthrID.Text + ";";
+            string connstring = "SELECT BatchNo,TokenNo,Type,EmpName,ContractorName FROM  Contrator where TokenNo =" + textBoxLDOthrID.Text + ";";
             OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
             OleDbCommand cmd = new OleDbCommand(connstring, conn);
 
