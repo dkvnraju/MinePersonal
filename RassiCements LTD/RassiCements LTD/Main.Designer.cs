@@ -1073,7 +1073,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(227, 47);
+            this.label3.Location = new System.Drawing.Point(244, 47);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(244, 46);
             this.label3.TabIndex = 1;
@@ -1310,11 +1310,13 @@
             // 
             // textBoxLDOCBtchNo
             // 
+            this.textBoxLDOCBtchNo.Enabled = false;
             this.textBoxLDOCBtchNo.Location = new System.Drawing.Point(248, 38);
             this.textBoxLDOCBtchNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxLDOCBtchNo.Name = "textBoxLDOCBtchNo";
             this.textBoxLDOCBtchNo.Size = new System.Drawing.Size(180, 41);
             this.textBoxLDOCBtchNo.TabIndex = 5;
+            this.textBoxLDOCBtchNo.Text = "OTH";
             // 
             // label1
             // 

@@ -1720,7 +1720,9 @@ namespace RassiCements_LTD
         {
             foreach(DataGridViewRow dgr in dataGridView1.Rows)
             {
-                if(Convert.ToString( dgr.Cells["BatchNo"].Value)=="OTH")
+                if (Convert.ToString(dgr.Cells["BatchNo"].Value) == comboBoxLDBtchNo.Text)
+                { dgr.DefaultCellStyle.BackColor = Color.LimeGreen; }
+                if (Convert.ToString( dgr.Cells["BatchNo"].Value)=="OTH")
                 { dgr.DefaultCellStyle.BackColor = Color.Red; }
             
             }
@@ -1729,8 +1731,10 @@ namespace RassiCements_LTD
 
         private void dataGridView2_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            foreach (DataGridViewRow dgr in dataGridView1.Rows)
+            foreach (DataGridViewRow dgr in dataGridView2.Rows)
             {
+                if(Convert.ToString(dgr.Cells["BatchNo"].Value) == comboBoxLDBtchNo.Text)
+                { dgr.DefaultCellStyle.BackColor = Color.LimeGreen; }
                 if (Convert.ToString(dgr.Cells["BatchNo"].Value) == "OTH")
                 { dgr.DefaultCellStyle.BackColor = Color.Red; }
 
