@@ -1220,6 +1220,10 @@
             // comboBoxLDOCTyp
             // 
             this.comboBoxLDOCTyp.FormattingEnabled = true;
+            this.comboBoxLDOCTyp.Items.AddRange(new object[] {
+            "",
+            "Packer",
+            "Loader"});
             this.comboBoxLDOCTyp.Location = new System.Drawing.Point(1056, 31);
             this.comboBoxLDOCTyp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxLDOCTyp.Name = "comboBoxLDOCTyp";
