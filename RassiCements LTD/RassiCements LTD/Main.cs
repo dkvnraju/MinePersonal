@@ -1678,7 +1678,7 @@ namespace RassiCements_LTD
             if(textBoxLDOCBtchNo.Text!=""&& textBoxLDOthrID.Text!=""&& comboBoxLDOCTyp.Text!=""&& textBoxOCNM.Text!=""&& textBoxOCCNM.Text!="")
             {
 
-                string connstring = "SELECT ID,BatchNo,TokenNo,Type,EmpName,ContractorName FROM  Contrator where TokenNumber =" + textBoxLDOthrID.Text + ";";
+                string connstring = "SELECT ID,BatchNo,TokenNo,Type,EmpName,ContractorName FROM  Contrator where TokenNo =" + textBoxLDOthrID.Text + ";";
                 OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
                 OleDbCommand cmd = new OleDbCommand(connstring, conn);
 
