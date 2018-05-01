@@ -1451,7 +1451,7 @@ namespace RassiCements_LTD
                     emp.Columns.Add("Sel", typeof(bool));
                     emp.Columns.Add("SNO", typeof(int));
                     emp.Columns.Add("Name", typeof(string));
-                    emp.Columns.Add("BatchNo", typeof(int));
+                    emp.Columns.Add("BatchNo", typeof(string));
                     emp.Columns.Add("Type", typeof(string));
                     emp.Columns.Add("TokenNo", typeof(int));
                     emp.Columns.Add("Shift", typeof(string));
@@ -1463,7 +1463,7 @@ namespace RassiCements_LTD
 
                     while (dr.Read())
                     {
-                        emp.Rows.Add(false, Convert.ToInt16(dr["ID"].ToString()), dr["EmpName"].ToString(), Convert.ToInt16(dr["BatchNo"].ToString())
+                        emp.Rows.Add(false, Convert.ToInt16(dr["ID"].ToString()), dr["EmpName"].ToString(), dr["BatchNo"].ToString()
                         , dr["TypeID"].ToString(), Convert.ToInt16(dr["TokenNumber"].ToString()), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
                         dr["TypeID"].ToString() == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text),
                         textBoxOCCNM.Text);
@@ -1475,7 +1475,7 @@ namespace RassiCements_LTD
                     Nemp.Columns.Add("Sel", typeof(bool));
                     Nemp.Columns.Add("SNO", typeof(int));
                     Nemp.Columns.Add("Name", typeof(string));
-                    Nemp.Columns.Add("BatchNo", typeof(int));
+                    Nemp.Columns.Add("BatchNo", typeof(string));
                     Nemp.Columns.Add("Type", typeof(string));
                     Nemp.Columns.Add("TokenNo", typeof(int));
                     Nemp.Columns.Add("Shift", typeof(string));
@@ -1584,7 +1584,7 @@ namespace RassiCements_LTD
 
         private void BtnOBOK_Click(object sender, EventArgs e)
         {
-            emp.Rows.Add(false, ID, textBoxOBNM.Text, Convert.ToInt16(textBoxOBBtchNo.Text)
+            emp.Rows.Add(false, ID, textBoxOBNM.Text, textBoxOBBtchNo.Text
                         ,Type, Convert.ToInt16(textBoxOBTknNo.Text), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
                         Type == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text),
                         textBoxOCCNM.Text);
