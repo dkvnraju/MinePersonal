@@ -101,6 +101,11 @@
             this.lblPLDTknNo = new System.Windows.Forms.Label();
             this.lblPLDHead = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnLft = new System.Windows.Forms.Button();
             this.btnRi8 = new System.Windows.Forms.Button();
@@ -179,11 +184,6 @@
             this.lblLDHead = new System.Windows.Forms.Label();
             this.rassiCementLTDDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rassiCementLTDDataSet = new RassiCements_LTD.RassiCementLTDDataSet();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -193,6 +193,7 @@
             this.tabPage3.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -201,7 +202,6 @@
             this.panOtherBatch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSet)).BeginInit();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -1038,6 +1038,56 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.label4);
+            this.panel6.Controls.Add(this.label3);
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Location = new System.Drawing.Point(3167, 95);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(623, 1506);
+            this.panel6.TabIndex = 3;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(252, 113);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(334, 46);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Other Contractor";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(69, 131);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 32);
+            this.label4.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(227, 47);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(244, 46);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Other Batch";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.LimeGreen;
+            this.label2.Location = new System.Drawing.Point(63, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 32);
+            this.label2.TabIndex = 0;
+            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.btnLft);
@@ -1216,6 +1266,7 @@
             this.btnOCOK.TabIndex = 10;
             this.btnOCOK.Text = "OK";
             this.btnOCOK.UseVisualStyleBackColor = true;
+            this.btnOCOK.Click += new System.EventHandler(this.btnOCOK_Click);
             // 
             // comboBoxLDOCTyp
             // 
@@ -1884,56 +1935,6 @@
             this.rassiCementLTDDataSet.DataSetName = "RassiCementLTDDataSet";
             this.rassiCementLTDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.label3);
-            this.panel6.Controls.Add(this.label2);
-            this.panel6.Location = new System.Drawing.Point(3167, 95);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(623, 1506);
-            this.panel6.TabIndex = 3;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.LimeGreen;
-            this.label2.Location = new System.Drawing.Point(63, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 32);
-            this.label2.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(227, 47);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(244, 46);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Other Batch";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(69, 131);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 32);
-            this.label4.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(252, 113);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(334, 46);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Other Contractor";
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -1963,6 +1964,8 @@
             this.panel3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -1974,8 +1977,6 @@
             this.panOtherBatch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSet)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
