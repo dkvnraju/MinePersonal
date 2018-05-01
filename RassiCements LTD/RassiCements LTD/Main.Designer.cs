@@ -184,6 +184,8 @@
             this.lblLDHead = new System.Windows.Forms.Label();
             this.rassiCementLTDDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rassiCementLTDDataSet = new RassiCements_LTD.RassiCementLTDDataSet();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1040,6 +1042,8 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.label7);
+            this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.label3);
@@ -1938,6 +1942,22 @@
             this.rassiCementLTDDataSet.DataSetName = "RassiCementLTDDataSet";
             this.rassiCementLTDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.LimeGreen;
+            this.label6.Location = new System.Drawing.Point(105, 59);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 32);
+            this.label6.TabIndex = 4;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(105, 131);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 32);
+            this.label7.TabIndex = 48;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -2142,6 +2162,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
     }
 }
 
