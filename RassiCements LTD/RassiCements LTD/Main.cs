@@ -1696,7 +1696,25 @@ namespace RassiCements_LTD
                         emp.AcceptChanges();
 
                     }
-                    else { MessageBox.Show("Token Number Does't Exist!"); }
+                    else
+                    {
+                        MessageBox.Show("Token Number Does't Exist!");
+                        OleDbDataAdapter dt = new OleDbDataAdapter("select max(ID) FROM  Contrator", conn);
+                        DataSet ds = new DataSet();
+                        dt.Fill(ds,"Contractor");
+
+                       int id= Convert.ToInt16( ds.Tables["Contractor"].Rows[0].ToString())+1;
+
+                        string constr = "Insert into Contrator (ID,BatchNo,TokenNo,Type,EmpName,ContractorName) values (";
+
+                        emp.Rows.Add(false, id, textBoxOCNM.Text, textBoxLDOCBtchNo.Text
+                            , comboBoxLDOCTyp.Text, Convert.ToInt16(textBoxLDOthrID.Text), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
+                            comboBoxLDOCTyp.Text == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text),
+                            textBoxOCCNM.Text);
+                        emp.AcceptChanges();
+
+
+                    }
                 }
 
                 catch (Exception ex)
