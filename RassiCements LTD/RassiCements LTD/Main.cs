@@ -1705,7 +1705,10 @@ namespace RassiCements_LTD
 
                        int id= Convert.ToInt16( ds.Tables["Contractor"].Rows[0].ToString())+1;
 
-                        string constr = "Insert into Contrator (ID,BatchNo,TokenNo,Type,EmpName,ContractorName) values (";
+                        string constr = "Insert into Contrator (BatchNo,TokenNo,Type,EmpName,ContractorName) values (" + "'" + textBoxLDOCBtchNo.Text + "'," +
+                            textBoxLDOthrID.Text + ",'" + comboBoxLDOCTyp.Text + "'," + "'" + textBoxOCNM.Text + "'," + "'" + textBoxOCCNM.Text + "');";
+                        OleDbCommand cmd1 = new OleDbCommand(constr, conn);
+                        cmd1.ExecuteNonQuery();
 
                         emp.Rows.Add(false, id, textBoxOCNM.Text, textBoxLDOCBtchNo.Text
                             , comboBoxLDOCTyp.Text, Convert.ToInt16(textBoxLDOthrID.Text), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
