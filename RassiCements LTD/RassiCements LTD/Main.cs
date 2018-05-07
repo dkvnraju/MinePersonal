@@ -1689,6 +1689,7 @@ namespace RassiCements_LTD
 
                     if (dr.HasRows)
                     {
+                        dr.Read();
                         emp.Rows.Add(false, dr["ID"].ToString(), textBoxOCNM.Text, textBoxLDOCBtchNo.Text
                             , comboBoxLDOCTyp.Text, Convert.ToInt16(textBoxLDOthrID.Text), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
                             comboBoxLDOCTyp.Text == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text),
@@ -1699,11 +1700,17 @@ namespace RassiCements_LTD
                     else
                     {
                         MessageBox.Show("Token Number Does't Exist!");
-                        OleDbDataAdapter dt = new OleDbDataAdapter("select max(ID) FROM  Contrator", conn);
-                        DataSet ds = new DataSet();
-                        dt.Fill(ds,"Contractor");
-
-                       int id= Convert.ToInt16( ds.Tables["Contractor"].Rows[0].ToString())+1;
+                        int id;
+                        string Constring="select max(ID) FROM  Contrator";
+                        OleDbCommand cmdmax = new OleDbCommand(Constring,conn);
+                        //conn.Open();
+                        OleDbDataReader drmax = cmdmax.ExecuteReader();
+                        if(drmax.HasRows)
+                        {
+                            drmax.Read();
+                            id = Convert.ToInt16(drmax.GetValue(0)) + 1; }
+                        else { id = 0; }
+                       
 
                         string constr = "Insert into Contrator (BatchNo,TokenNo,Type,EmpName,ContractorName) values (" + "'" + textBoxLDOCBtchNo.Text + "'," +
                             textBoxLDOthrID.Text + ",'" + comboBoxLDOCTyp.Text + "'," + "'" + textBoxOCNM.Text + "'," + "'" + textBoxOCCNM.Text + "');";
