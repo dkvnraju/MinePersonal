@@ -1701,15 +1701,22 @@ namespace RassiCements_LTD
                     {
                         MessageBox.Show("Token Number Does't Exist!");
                         int id;
-                        string Constring="select max(ID) FROM  Contrator";
+                        string Constring="select max(ID) as ID FROM  Contrator";
                         OleDbCommand cmdmax = new OleDbCommand(Constring,conn);
-                        //conn.Open();
+                        
                         OleDbDataReader drmax = cmdmax.ExecuteReader();
                         if(drmax.HasRows)
                         {
                             drmax.Read();
-                            id = Convert.ToInt16(drmax.GetValue(0)) + 1; }
-                        else { id = 0; }
+                            id = Convert.ToInt16( drmax["ID"].ToString()==""?"0":drmax["ID"].ToString()) + 1;
+
+                            emp.Rows.Add(false, id, textBoxOCNM.Text, textBoxLDOCBtchNo.Text
+                        , comboBoxLDOCTyp.Text, Convert.ToInt16(textBoxLDOthrID.Text), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
+                        comboBoxLDOCTyp.Text == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text),
+                        textBoxOCCNM.Text);
+                            emp.AcceptChanges();
+                        }
+                        
                        
 
                         string constr = "Insert into Contrator (BatchNo,TokenNo,Type,EmpName,ContractorName) values (" + "'" + textBoxLDOCBtchNo.Text + "'," +
@@ -1717,11 +1724,7 @@ namespace RassiCements_LTD
                         OleDbCommand cmd1 = new OleDbCommand(constr, conn);
                         cmd1.ExecuteNonQuery();
 
-                        emp.Rows.Add(false, id, textBoxOCNM.Text, textBoxLDOCBtchNo.Text
-                            , comboBoxLDOCTyp.Text, Convert.ToInt16(textBoxLDOthrID.Text), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
-                            comboBoxLDOCTyp.Text == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text),
-                            textBoxOCCNM.Text);
-                        emp.AcceptChanges();
+                    
 
 
                     }
