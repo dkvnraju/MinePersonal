@@ -1465,10 +1465,23 @@ namespace RassiCements_LTD
 
                     while (dr.Read())
                     {
-                        dataGridView1.Rows.Add(false, Convert.ToInt16(dr["ID"].ToString()), dr["EmpName"].ToString(), dr["BatchNo"].ToString()
-                        , dr["TypeID"].ToString(), Convert.ToInt16(dr["TokenNumber"].ToString()), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
-                        dr["TypeID"].ToString() == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text),
-                        textBoxOCCNM.Text);
+
+                        int n = dataGridView1.Rows.Add();
+
+                        dataGridView1.Rows[n].Cells[0].Value = false;
+                        dataGridView1.Rows[n].Cells[1].Value = Convert.ToInt16(dr["ID"].ToString());
+                        dataGridView1.Rows[n].Cells[2].Value = dr["EmpName"].ToString();
+                        dataGridView1.Rows[n].Cells[3].Value = dr["BatchNo"].ToString();
+                        dataGridView1.Rows[n].Cells[4].Value = dr["TypeID"].ToString();
+                        dataGridView1.Rows[n].Cells[5].Value = Convert.ToInt16(dr["TokenNumber"].ToString());
+                        dataGridView1.Rows[n].Cells[6].Value = comboBoxLDShft.Text;
+                        dataGridView1.Rows[n].Cells[7].Value = dateTimePickerLDDt.Text;
+                        dataGridView1.Rows[n].Cells[8].Value = dr["TypeID"].ToString() == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text);
+                        dataGridView1.Rows[n].Cells[9].Value = textBoxOCCNM.Text;
+                        //dataGridView1.Rows.Add(false, Convert.ToInt16(dr["ID"].ToString()), dr["EmpName"].ToString(), dr["BatchNo"].ToString()
+                        //, dr["TypeID"].ToString(), Convert.ToInt16(dr["TokenNumber"].ToString()), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
+                        //dr["TypeID"].ToString() == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text),
+                        //textBoxOCCNM.Text);
                     }
 
                    // dataGridView1.DataSource = emp;
