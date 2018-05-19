@@ -1973,6 +1973,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(39, 31);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 40;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1368, 627);
             this.dataGridView1.TabIndex = 4;
             // 
