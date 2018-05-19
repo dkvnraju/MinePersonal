@@ -1848,13 +1848,23 @@ namespace RassiCements_LTD
 
         private void dataGridView1_MouseClick_1(object sender, MouseEventArgs e)
         {
-            if(dataGridView1.Rows.Count>0)
+            //if(dataGridView1.Rows.Count>0)
+            //{
+            //    if ((bool)dataGridView1.SelectedRows[0].Cells[0].Value == false)
+            //    { dataGridView1.SelectedRows[0].Cells[0].Value = true; }
+            //    else { dataGridView1.SelectedRows[0].Cells[0].Value = false; }
+            //}
+         
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows.Count > 0)
             {
                 if ((bool)dataGridView1.SelectedRows[0].Cells[0].Value == false)
                 { dataGridView1.SelectedRows[0].Cells[0].Value = true; }
                 else { dataGridView1.SelectedRows[0].Cells[0].Value = false; }
             }
-         
         }
     }
 }
