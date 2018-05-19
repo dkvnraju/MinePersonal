@@ -1497,7 +1497,10 @@ namespace RassiCements_LTD
                     //Nemp.Columns.Add("Contractor", typeof(string));
 
                     panel5.Visible = true;
-                }else
+                    buttonOK.Enabled = false;
+                    btnLDAdd.Enabled = true;
+                }
+                else
                 {
                     MessageBox.Show("No Data Found for the Batch No please check and try again");
                 }
@@ -1914,6 +1917,16 @@ namespace RassiCements_LTD
             { dataGridView1.SelectedRows[0].Cells[0].Value = true; }
             else { dataGridView1.SelectedRows[0].Cells[0].Value = false; }
 
+        }
+
+        private void btnLDAdd_Click(object sender, EventArgs e)
+        {
+            if(Convert.ToInt16(textBoxLDNoLdrs.Text)+Convert.ToInt16(textBoxLDNoPkrs.Text)==dataGridView1.Rows.Count)
+            { }
+            else
+            {
+                MessageBox.Show("Please check the data in below grid");
+            }
         }
     }
 }

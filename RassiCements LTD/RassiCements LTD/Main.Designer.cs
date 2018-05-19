@@ -1574,6 +1574,7 @@
             // 
             // btnLDAdd
             // 
+            this.btnLDAdd.Enabled = false;
             this.btnLDAdd.Location = new System.Drawing.Point(883, 694);
             this.btnLDAdd.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnLDAdd.Name = "btnLDAdd";
@@ -1581,6 +1582,7 @@
             this.btnLDAdd.TabIndex = 41;
             this.btnLDAdd.Text = "Add";
             this.btnLDAdd.UseVisualStyleBackColor = true;
+            this.btnLDAdd.Click += new System.EventHandler(this.btnLDAdd_Click);
             // 
             // textBoxLDPkrTotAmt
             // 
