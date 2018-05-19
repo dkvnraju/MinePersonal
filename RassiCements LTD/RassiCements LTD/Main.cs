@@ -1485,16 +1485,16 @@ namespace RassiCements_LTD
                    // dataGridView1.DataSource = emp;
                     //dataGridView1.Columns[0].Width = 0;
                     //Datatable initiliase
-                    Nemp.Columns.Add("Sel", typeof(bool));
-                    Nemp.Columns.Add("SNO", typeof(int));
-                    Nemp.Columns.Add("Name", typeof(string));
-                    Nemp.Columns.Add("BatchNo", typeof(string));
-                    Nemp.Columns.Add("Type", typeof(string));
-                    Nemp.Columns.Add("TokenNo", typeof(int));
-                    Nemp.Columns.Add("Shift", typeof(string));
-                    Nemp.Columns.Add("Date", typeof(string));
-                    Nemp.Columns.Add("DayAmount", typeof(double));
-                    Nemp.Columns.Add("Contractor", typeof(string));
+                    //Nemp.Columns.Add("Sel", typeof(bool));
+                    //Nemp.Columns.Add("SNO", typeof(int));
+                    //Nemp.Columns.Add("Name", typeof(string));
+                    //Nemp.Columns.Add("BatchNo", typeof(string));
+                    //Nemp.Columns.Add("Type", typeof(string));
+                    //Nemp.Columns.Add("TokenNo", typeof(int));
+                    //Nemp.Columns.Add("Shift", typeof(string));
+                    //Nemp.Columns.Add("Date", typeof(string));
+                    //Nemp.Columns.Add("DayAmount", typeof(double));
+                    //Nemp.Columns.Add("Contractor", typeof(string));
 
                     panel5.Visible = true;
                 }else
@@ -1518,13 +1518,24 @@ namespace RassiCements_LTD
 
         private void btnRi8_Click(object sender, EventArgs e)
         {
-            foreach (DataRow dr in emp.Rows)
+            foreach (DataGridViewRow dr in dataGridView1.Rows)
             {
-                if(Convert.ToBoolean( dr["Sel"].ToString())==true)
+                if(Convert.ToBoolean( dr.Cells[0].Value)==true)
                 {
-                    dr.SetField("sel", false);
-                    Nemp.ImportRow(dr);
-                    dr.Delete();
+                    int n = dataGridView2.Rows.Add();
+
+                    dataGridView2.Rows[n].Cells[0].Value = dr.Cells[0].Value.ToString();
+                    dataGridView2.Rows[n].Cells[1].Value = dr.Cells[1].Value.ToString();
+                    dataGridView2.Rows[n].Cells[2].Value = dr.Cells[2].Value.ToString();
+                    dataGridView2.Rows[n].Cells[3].Value = dr.Cells[3].Value.ToString();
+                    dataGridView2.Rows[n].Cells[4].Value = dr.Cells[4].Value.ToString();
+                    dataGridView2.Rows[n].Cells[5].Value = dr.Cells[5].Value.ToString();
+                    dataGridView2.Rows[n].Cells[6].Value = dr.Cells[6].Value.ToString();
+                    dataGridView2.Rows[n].Cells[7].Value = dr.Cells[7].Value.ToString();
+                    dataGridView2.Rows[n].Cells[8].Value = dr.Cells[8].Value.ToString();
+                    dataGridView2.Rows[n].Cells[9].Value = dr.Cells[9].Value.ToString();
+
+                    dataGridView1.Rows.RemoveAt(dr.Index);
                 }
                 
             }
@@ -1818,6 +1829,13 @@ namespace RassiCements_LTD
             textBoxOCNM.Text = "";
             textBoxOCCNM.Text = "";
             panOtherContractor.Visible = false;
+        }
+
+        private void dataGridView1_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            if((bool)dataGridView1.SelectedRows[0].Cells[0].Value==true)
+            { dataGridView1.SelectedRows[0].Cells[0].Value = true; }
+            else { dataGridView1.SelectedRows[0].Cells[0].Value = false; }
         }
     }
 }

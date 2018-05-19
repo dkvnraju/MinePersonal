@@ -186,7 +186,7 @@
             this.rassiCementLTDDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rassiCementLTDDataSet = new RassiCements_LTD.RassiCementLTDDataSet();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Selected = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Sel = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmpName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Batchno = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -196,6 +196,16 @@
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DayAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contractor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Selected = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.SRNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpRName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BatchNoR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TypeIDR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TokenNoR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShiftR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DayAmountR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContractorR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1160,11 +1170,22 @@
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Selected,
+            this.SRNo,
+            this.EmpRName,
+            this.BatchNoR,
+            this.TypeIDR,
+            this.TokenNoR,
+            this.ShiftR,
+            this.DateR,
+            this.DayAmountR,
+            this.ContractorR});
             this.dataGridView2.Location = new System.Drawing.Point(1600, 19);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowTemplate.Height = 15;
+            this.dataGridView2.RowTemplate.Height = 20;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(1387, 639);
             this.dataGridView2.TabIndex = 1;
@@ -1958,9 +1979,11 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Selected,
+            this.Sel,
             this.Sno,
             this.EmpName,
             this.Batchno,
@@ -1972,60 +1995,135 @@
             this.Contractor});
             this.dataGridView1.Location = new System.Drawing.Point(39, 31);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 40;
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 20;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1368, 627);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick_1);
             // 
-            // Selected
+            // Sel
             // 
-            this.Selected.HeaderText = "Selected";
-            this.Selected.Name = "Selected";
+            this.Sel.HeaderText = "Selected";
+            this.Sel.Name = "Sel";
+            this.Sel.ReadOnly = true;
+            this.Sel.Width = 50;
             // 
             // Sno
             // 
             this.Sno.HeaderText = "Sno";
             this.Sno.Name = "Sno";
+            this.Sno.ReadOnly = true;
             // 
             // EmpName
             // 
+            this.EmpName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.EmpName.HeaderText = "Name";
             this.EmpName.Name = "EmpName";
+            this.EmpName.ReadOnly = true;
             // 
             // Batchno
             // 
             this.Batchno.HeaderText = "BatchNo";
             this.Batchno.Name = "Batchno";
+            this.Batchno.ReadOnly = true;
             // 
             // TypeID
             // 
             this.TypeID.HeaderText = "Type";
             this.TypeID.Name = "TypeID";
+            this.TypeID.ReadOnly = true;
             // 
             // TokenNo
             // 
             this.TokenNo.HeaderText = "TokenNo";
             this.TokenNo.Name = "TokenNo";
+            this.TokenNo.ReadOnly = true;
             // 
             // Shift
             // 
             this.Shift.HeaderText = "Shift";
             this.Shift.Name = "Shift";
+            this.Shift.ReadOnly = true;
             // 
             // Date
             // 
             this.Date.HeaderText = "Date";
             this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
             // 
             // DayAmount
             // 
             this.DayAmount.HeaderText = "Day Amount";
             this.DayAmount.Name = "DayAmount";
+            this.DayAmount.ReadOnly = true;
             // 
             // Contractor
             // 
+            this.Contractor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Contractor.HeaderText = "Contractor";
             this.Contractor.Name = "Contractor";
+            this.Contractor.ReadOnly = true;
+            // 
+            // Selected
+            // 
+            this.Selected.HeaderText = "Sel";
+            this.Selected.Name = "Selected";
+            this.Selected.ReadOnly = true;
+            // 
+            // SRNo
+            // 
+            this.SRNo.HeaderText = "SNo";
+            this.SRNo.Name = "SRNo";
+            this.SRNo.ReadOnly = true;
+            // 
+            // EmpRName
+            // 
+            this.EmpRName.HeaderText = "Name";
+            this.EmpRName.Name = "EmpRName";
+            this.EmpRName.ReadOnly = true;
+            // 
+            // BatchNoR
+            // 
+            this.BatchNoR.HeaderText = "BatchNo";
+            this.BatchNoR.Name = "BatchNoR";
+            this.BatchNoR.ReadOnly = true;
+            // 
+            // TypeIDR
+            // 
+            this.TypeIDR.HeaderText = "Type";
+            this.TypeIDR.Name = "TypeIDR";
+            this.TypeIDR.ReadOnly = true;
+            // 
+            // TokenNoR
+            // 
+            this.TokenNoR.HeaderText = "TokenNo";
+            this.TokenNoR.Name = "TokenNoR";
+            this.TokenNoR.ReadOnly = true;
+            // 
+            // ShiftR
+            // 
+            this.ShiftR.HeaderText = "Shift";
+            this.ShiftR.Name = "ShiftR";
+            this.ShiftR.ReadOnly = true;
+            // 
+            // DateR
+            // 
+            this.DateR.HeaderText = "Date";
+            this.DateR.Name = "DateR";
+            this.DateR.ReadOnly = true;
+            // 
+            // DayAmountR
+            // 
+            this.DayAmountR.HeaderText = "DayAmount";
+            this.DayAmountR.Name = "DayAmountR";
+            this.DayAmountR.ReadOnly = true;
+            // 
+            // ContractorR
+            // 
+            this.ContractorR.HeaderText = "Contractor";
+            this.ContractorR.Name = "ContractorR";
+            this.ContractorR.ReadOnly = true;
             // 
             // Main
             // 
@@ -2233,7 +2331,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Selected;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Sel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sno;
         private System.Windows.Forms.DataGridViewTextBoxColumn EmpName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Batchno;
@@ -2243,6 +2341,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn DayAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Contractor;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Selected;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SRNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpRName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BatchNoR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TypeIDR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TokenNoR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShiftR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DayAmountR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ContractorR;
     }
 }
 
