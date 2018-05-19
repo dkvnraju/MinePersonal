@@ -1600,11 +1600,11 @@ namespace RassiCements_LTD
 
         private void dataGridView2_MouseClick(object sender, MouseEventArgs e)
         {
-            if (dataGridView2.SelectedRows.Count > 0)
+            if (dataGridView2.Rows.Count > 0)
             {
-                if ((bool)dataGridView1.SelectedRows[0].Cells[0].Value == false)
-                { dataGridView1.SelectedRows[0].Cells[0].Value = true; }
-                else { dataGridView1.SelectedRows[0].Cells[0].Value = false; }
+                if ((bool)dataGridView2.SelectedRows[0].Cells[0].Value == false)
+                { dataGridView2.SelectedRows[0].Cells[0].Value = true; }
+                else { dataGridView2.SelectedRows[0].Cells[0].Value = false; }
 
             }
         }
