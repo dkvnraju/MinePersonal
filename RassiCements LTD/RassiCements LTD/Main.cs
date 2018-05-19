@@ -1524,7 +1524,7 @@ namespace RassiCements_LTD
                 {
                     int n = dataGridView2.Rows.Add();
 
-                    dataGridView2.Rows[n].Cells[0].Value = dr.Cells[0].Value.ToString();
+                    dataGridView2.Rows[n].Cells[0].Value = false;
                     dataGridView2.Rows[n].Cells[1].Value = dr.Cells[1].Value.ToString();
                     dataGridView2.Rows[n].Cells[2].Value = dr.Cells[2].Value.ToString();
                     dataGridView2.Rows[n].Cells[3].Value = dr.Cells[3].Value.ToString();
@@ -1574,37 +1574,37 @@ namespace RassiCements_LTD
         private void btnLft_Click(object sender, EventArgs e)
         {
 
-            foreach(DataRow dr in Nemp.Rows)
+            foreach (DataGridViewRow dr in dataGridView2.Rows)
             {
-                if ( Convert.ToBoolean( dr["Sel"].ToString()) ==true)
+                if (Convert.ToBoolean(dr.Cells[0].Value) == true)
                 {
-                    dr.SetField("Sel",false);
-                    emp.ImportRow(dr);
-                    
-                    dr.Delete();
+                    int n = dataGridView1.Rows.Add();
+
+                    dataGridView1.Rows[n].Cells[0].Value = false;
+                    dataGridView1.Rows[n].Cells[1].Value = dr.Cells[1].Value.ToString();
+                    dataGridView1.Rows[n].Cells[2].Value = dr.Cells[2].Value.ToString();
+                    dataGridView1.Rows[n].Cells[3].Value = dr.Cells[3].Value.ToString();
+                    dataGridView1.Rows[n].Cells[4].Value = dr.Cells[4].Value.ToString();
+                    dataGridView1.Rows[n].Cells[5].Value = dr.Cells[5].Value.ToString();
+                    dataGridView1.Rows[n].Cells[6].Value = dr.Cells[6].Value.ToString();
+                    dataGridView1.Rows[n].Cells[7].Value = dr.Cells[7].Value.ToString();
+                    dataGridView1.Rows[n].Cells[8].Value = dr.Cells[8].Value.ToString();
+                    dataGridView1.Rows[n].Cells[9].Value = dr.Cells[9].Value.ToString();
+
+                    dataGridView2.Rows.RemoveAt(dr.Index);
                 }
-               
+
             }
-            dataGridView1.DataSource = emp;
-            
+
         }
 
         private void dataGridView2_MouseClick(object sender, MouseEventArgs e)
         {
             if (dataGridView2.SelectedRows.Count > 0)
             {
-                if ( Convert.ToBoolean( dataGridView2.SelectedRows[0].Cells[0].Value) == false)
-                {
-                    dataGridView2.SelectedRows[0].Cells[0].Value = true;
-                    dataGridView2.DefaultCellStyle.SelectionBackColor = Color.Blue;
-                    Nemp.AcceptChanges();
-                }
-                else
-                {
-                    dataGridView2.SelectedRows[0].Cells[0].Value = false;
-                    dataGridView2.DefaultCellStyle.SelectionBackColor = Color.LightSkyBlue;
-                    Nemp.AcceptChanges();
-                }
+                if ((bool)dataGridView1.SelectedRows[0].Cells[0].Value == false)
+                { dataGridView1.SelectedRows[0].Cells[0].Value = true; }
+                else { dataGridView1.SelectedRows[0].Cells[0].Value = false; }
 
             }
         }
@@ -1833,9 +1833,13 @@ namespace RassiCements_LTD
 
         private void dataGridView1_MouseClick_1(object sender, MouseEventArgs e)
         {
-            if((bool)dataGridView1.SelectedRows[0].Cells[0].Value==false)
-            { dataGridView1.SelectedRows[0].Cells[0].Value = true; }
-            else { dataGridView1.SelectedRows[0].Cells[0].Value = false; }
+            if(dataGridView1.Rows.Count>0)
+            {
+                if ((bool)dataGridView1.SelectedRows[0].Cells[0].Value == false)
+                { dataGridView1.SelectedRows[0].Cells[0].Value = true; }
+                else { dataGridView1.SelectedRows[0].Cells[0].Value = false; }
+            }
+         
         }
     }
 }

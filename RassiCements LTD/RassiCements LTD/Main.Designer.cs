@@ -2070,6 +2070,7 @@
             this.Selected.HeaderText = "Sel";
             this.Selected.Name = "Selected";
             this.Selected.ReadOnly = true;
+            this.Selected.Width = 50;
             // 
             // SRNo
             // 
