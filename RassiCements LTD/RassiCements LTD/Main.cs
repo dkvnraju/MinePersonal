@@ -1732,11 +1732,25 @@ namespace RassiCements_LTD
                     if (dr.HasRows)
                     {
                         dr.Read();
-                        emp.Rows.Add(false, dr["ID"].ToString(), textBoxOCNM.Text, textBoxLDOCBtchNo.Text
-                            , comboBoxLDOCTyp.Text, Convert.ToInt16(textBoxLDOthrID.Text), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
-                            comboBoxLDOCTyp.Text == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text),
-                            textBoxOCCNM.Text);
-                        emp.AcceptChanges();
+
+                        int n = dataGridView1.Rows.Add();
+
+                        dataGridView1.Rows[n].Cells[0].Value = false;
+                        dataGridView1.Rows[n].Cells[1].Value = dr["ID"].ToString();
+                        dataGridView1.Rows[n].Cells[2].Value = textBoxOCNM.Text;
+                        dataGridView1.Rows[n].Cells[3].Value = textBoxLDOCBtchNo.Text;
+                        dataGridView1.Rows[n].Cells[4].Value = comboBoxLDOCTyp.Text;
+                        dataGridView1.Rows[n].Cells[5].Value = textBoxLDOthrID.Text;
+                        dataGridView1.Rows[n].Cells[6].Value = comboBoxLDShft.Text;
+                        dataGridView1.Rows[n].Cells[7].Value = dateTimePickerLDDt.Text;
+                        dataGridView1.Rows[n].Cells[8].Value = comboBoxLDOCTyp.Text == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text);
+                        dataGridView1.Rows[n].Cells[9].Value = textBoxOCCNM.Text;
+
+                        //emp.Rows.Add(false, dr["ID"].ToString(), textBoxOCNM.Text, textBoxLDOCBtchNo.Text
+                        //    , comboBoxLDOCTyp.Text, Convert.ToInt16(textBoxLDOthrID.Text), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
+                        //    comboBoxLDOCTyp.Text == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text),
+                        //    textBoxOCCNM.Text);
+                        //emp.AcceptChanges();
 
                     }
                     else
@@ -1752,11 +1766,26 @@ namespace RassiCements_LTD
                             drmax.Read();
                             id = Convert.ToInt16( drmax["ID"].ToString()==""?"0":drmax["ID"].ToString()) + 1;
 
-                            emp.Rows.Add(false, id, textBoxOCNM.Text, textBoxLDOCBtchNo.Text
-                        , comboBoxLDOCTyp.Text, Convert.ToInt16(textBoxLDOthrID.Text), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
-                        comboBoxLDOCTyp.Text == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text),
-                        textBoxOCCNM.Text);
-                            emp.AcceptChanges();
+                            int n = dataGridView1.Rows.Add();
+
+                            dataGridView1.Rows[n].Cells[0].Value = false;
+                            dataGridView1.Rows[n].Cells[1].Value = id;
+                            dataGridView1.Rows[n].Cells[2].Value = textBoxOCNM.Text;
+                            dataGridView1.Rows[n].Cells[3].Value = textBoxLDOCBtchNo.Text;
+                            dataGridView1.Rows[n].Cells[4].Value = comboBoxLDOCTyp.Text;
+                            dataGridView1.Rows[n].Cells[5].Value = textBoxLDOthrID.Text;
+                            dataGridView1.Rows[n].Cells[6].Value = comboBoxLDShft.Text;
+                            dataGridView1.Rows[n].Cells[7].Value = dateTimePickerLDDt.Text;
+                            dataGridView1.Rows[n].Cells[8].Value = comboBoxLDOCTyp.Text == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text);
+                            dataGridView1.Rows[n].Cells[9].Value = textBoxOCCNM.Text;
+
+
+
+                        //    emp.Rows.Add(false, id, textBoxOCNM.Text, textBoxLDOCBtchNo.Text
+                        //, comboBoxLDOCTyp.Text, Convert.ToInt16(textBoxLDOthrID.Text), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
+                        //comboBoxLDOCTyp.Text == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text),
+                        //textBoxOCCNM.Text);
+                        //    emp.AcceptChanges();
                         }
                         
                        
