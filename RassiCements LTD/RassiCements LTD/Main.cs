@@ -1624,7 +1624,7 @@ namespace RassiCements_LTD
             dataGridView1.Rows[n].Cells[7].Value = dateTimePickerLDDt.Text;
             dataGridView1.Rows[n].Cells[8].Value = Type == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text);
             dataGridView1.Rows[n].Cells[9].Value = textBoxOCCNM.Text;
-
+            dataGridView1.Rows[n].DefaultCellStyle.BackColor = Color.LimeGreen;
 
             //emp.Rows.Add(false, ID, textBoxOBNM.Text, textBoxOBBtchNo.Text
             //            ,Type, Convert.ToInt16(textBoxOBTknNo.Text), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
@@ -1745,7 +1745,7 @@ namespace RassiCements_LTD
                         dataGridView1.Rows[n].Cells[7].Value = dateTimePickerLDDt.Text;
                         dataGridView1.Rows[n].Cells[8].Value = comboBoxLDOCTyp.Text == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text);
                         dataGridView1.Rows[n].Cells[9].Value = textBoxOCCNM.Text;
-
+                        dataGridView1.Rows[n].DefaultCellStyle.BackColor = Color.Red;
                         //emp.Rows.Add(false, dr["ID"].ToString(), textBoxOCNM.Text, textBoxLDOCBtchNo.Text
                         //    , comboBoxLDOCTyp.Text, Convert.ToInt16(textBoxLDOthrID.Text), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
                         //    comboBoxLDOCTyp.Text == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text),
@@ -1778,7 +1778,7 @@ namespace RassiCements_LTD
                             dataGridView1.Rows[n].Cells[7].Value = dateTimePickerLDDt.Text;
                             dataGridView1.Rows[n].Cells[8].Value = comboBoxLDOCTyp.Text == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text);
                             dataGridView1.Rows[n].Cells[9].Value = textBoxOCCNM.Text;
-
+                            dataGridView1.Rows[n].DefaultCellStyle.BackColor = Color.Red;
 
 
                         //    emp.Rows.Add(false, id, textBoxOCNM.Text, textBoxLDOCBtchNo.Text
@@ -1820,27 +1820,27 @@ namespace RassiCements_LTD
 
         private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            foreach(DataGridViewRow dgr in dataGridView1.Rows)
-            {
-                if (Convert.ToString(dgr.Cells["BatchNo"].Value) != comboBoxLDBtchNo.Text)
-                { dgr.DefaultCellStyle.BackColor = Color.LimeGreen; }
-                if (Convert.ToString( dgr.Cells["BatchNo"].Value)=="OTH")
-                { dgr.DefaultCellStyle.BackColor = Color.Red; }
+            //foreach(DataGridViewRow dgr in dataGridView1.Rows)
+            //{
+            //    if (Convert.ToString(dgr.Cells["BatchNo"].Value) != comboBoxLDBtchNo.Text)
+            //    { dgr.DefaultCellStyle.BackColor = Color.LimeGreen; }
+            //    if (Convert.ToString( dgr.Cells["BatchNo"].Value)=="OTH")
+            //    { dgr.DefaultCellStyle.BackColor = Color.Red; }
             
-            }
+            //}
 
         }
 
         private void dataGridView2_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            foreach (DataGridViewRow dgr in dataGridView2.Rows)
-            {
-                if(Convert.ToString(dgr.Cells["BatchNoR"].Value) != comboBoxLDBtchNo.Text)
-                { dgr.DefaultCellStyle.BackColor = Color.LimeGreen; }
-                if (Convert.ToString(dgr.Cells["BatchNoR"].Value) == "OTH")
-                { dgr.DefaultCellStyle.BackColor = Color.Red; }
+            //foreach (DataGridViewRow dgr in dataGridView2.Rows)
+            //{
+            //    if(Convert.ToString(dgr.Cells["BatchNoR"].Value) != comboBoxLDBtchNo.Text)
+            //    { dgr.DefaultCellStyle.BackColor = Color.LimeGreen; }
+            //    if (Convert.ToString(dgr.Cells["BatchNoR"].Value) == "OTH")
+            //    { dgr.DefaultCellStyle.BackColor = Color.Red; }
 
-            }
+            //}
 
         }
 
