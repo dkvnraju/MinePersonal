@@ -1450,29 +1450,29 @@ namespace RassiCements_LTD
 
                 if(dr.HasRows)
                 {
-                    emp.Columns.Add("Sel", typeof(bool));
-                    emp.Columns.Add("SNO", typeof(int));
-                    emp.Columns.Add("Name", typeof(string));
-                    emp.Columns.Add("BatchNo", typeof(string));
-                    emp.Columns.Add("Type", typeof(string));
-                    emp.Columns.Add("TokenNo", typeof(int));
-                    emp.Columns.Add("Shift", typeof(string));
-                    emp.Columns.Add("Date", typeof(string));
-                    emp.Columns.Add("DayAmount", typeof(double));
-                    emp.Columns.Add("Contractor", typeof(string));
+                    //emp.Columns.Add("Sel", typeof(bool));
+                    //emp.Columns.Add("SNO", typeof(int));
+                    //emp.Columns.Add("Name", typeof(string));
+                    //emp.Columns.Add("BatchNo", typeof(string));
+                    //emp.Columns.Add("Type", typeof(string));
+                    //emp.Columns.Add("TokenNo", typeof(int));
+                    //emp.Columns.Add("Shift", typeof(string));
+                    //emp.Columns.Add("Date", typeof(string));
+                    //emp.Columns.Add("DayAmount", typeof(double));
+                    //emp.Columns.Add("Contractor", typeof(string));
 
 
 
                     while (dr.Read())
                     {
-                        emp.Rows.Add(false, Convert.ToInt16(dr["ID"].ToString()), dr["EmpName"].ToString(), dr["BatchNo"].ToString()
+                        dataGridView1.Rows.Add(false, Convert.ToInt16(dr["ID"].ToString()), dr["EmpName"].ToString(), dr["BatchNo"].ToString()
                         , dr["TypeID"].ToString(), Convert.ToInt16(dr["TokenNumber"].ToString()), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
                         dr["TypeID"].ToString() == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text),
                         textBoxOCCNM.Text);
                     }
 
-                    dataGridView1.DataSource = emp;
-                    dataGridView1.Columns[0].Width = 0;
+                   // dataGridView1.DataSource = emp;
+                    //dataGridView1.Columns[0].Width = 0;
                     //Datatable initiliase
                     Nemp.Columns.Add("Sel", typeof(bool));
                     Nemp.Columns.Add("SNO", typeof(int));
@@ -1533,15 +1533,15 @@ namespace RassiCements_LTD
             {
                 if ( Convert.ToBoolean( dataGridView1.SelectedRows[0].Cells[0].Value) == false)
                 {
-                    dataGridView1.SelectedRows[0].Cells[0].Value = true;
-                    dataGridView1.DefaultCellStyle.SelectionBackColor = Color.Blue;
-                    emp.AcceptChanges();
+                   // dataGridView1.SelectedRows[0].Cells[0].Value = true;
+                    //dataGridView1.DefaultCellStyle.SelectionBackColor = Color.Blue;
+                    //emp.AcceptChanges();
                 }
                 else
                 {
-                    dataGridView1.SelectedRows[0].Cells[0].Value = false;
-                    dataGridView1.DefaultCellStyle.SelectionBackColor = Color.LightSkyBlue;
-                    emp.AcceptChanges();
+                  //  dataGridView1.SelectedRows[0].Cells[0].Value = false;
+                  //  dataGridView1.DefaultCellStyle.SelectionBackColor = Color.LightSkyBlue;
+                  //  emp.AcceptChanges();
 
                 }
 

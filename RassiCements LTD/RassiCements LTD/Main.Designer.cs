@@ -188,7 +188,7 @@
             this.rassiCementLTDDataSet = new RassiCements_LTD.RassiCementLTDDataSet();
             this.Sel = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EMPName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BatchNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TokenNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -1179,7 +1179,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Sel,
             this.Sno,
-            this.Name,
+            this.EMPName,
             this.BatchNo,
             this.TypeID,
             this.TokenNo,
@@ -1995,11 +1995,11 @@
             this.Sno.Name = "Sno";
             this.Sno.ReadOnly = true;
             // 
-            // Name
+            // EMPName
             // 
-            this.Name.HeaderText = "Name";
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
+            this.EMPName.HeaderText = "Name";
+            this.EMPName.Name = "EMPName";
+            this.EMPName.ReadOnly = true;
             // 
             // BatchNo
             // 
@@ -2251,7 +2251,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Sel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EMPName;
         private System.Windows.Forms.DataGridViewTextBoxColumn BatchNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn TypeID;
         private System.Windows.Forms.DataGridViewTextBoxColumn TokenNo;
