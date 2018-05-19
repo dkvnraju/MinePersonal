@@ -1869,7 +1869,10 @@ namespace RassiCements_LTD
 
         private void dataGridView1_Sorted(object sender, EventArgs e)
         {
-            MessageBox.Show("you are sorting");
+            if ((bool)dataGridView1.SelectedRows[0].Cells[0].Value == true)
+            { dataGridView1.SelectedRows[0].Cells[0].Value = true; }
+            else { dataGridView1.SelectedRows[0].Cells[0].Value = false; }
+
         }
     }
 }
