@@ -1539,8 +1539,8 @@ namespace RassiCements_LTD
                 }
                 
             }
-            dataGridView2.DataSource = Nemp;
-            dataGridView2.Columns[0].Width = 0;
+          //  dataGridView2.DataSource = Nemp;
+          //  dataGridView2.Columns[0].Width = 0;
             }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -1791,9 +1791,9 @@ namespace RassiCements_LTD
         {
             foreach (DataGridViewRow dgr in dataGridView2.Rows)
             {
-                if(Convert.ToString(dgr.Cells["BatchNo"].Value) != comboBoxLDBtchNo.Text)
+                if(Convert.ToString(dgr.Cells["BatchNoR"].Value) != comboBoxLDBtchNo.Text)
                 { dgr.DefaultCellStyle.BackColor = Color.LimeGreen; }
-                if (Convert.ToString(dgr.Cells["BatchNo"].Value) == "OTH")
+                if (Convert.ToString(dgr.Cells["BatchNoR"].Value) == "OTH")
                 { dgr.DefaultCellStyle.BackColor = Color.Red; }
 
             }
@@ -1833,7 +1833,7 @@ namespace RassiCements_LTD
 
         private void dataGridView1_MouseClick_1(object sender, MouseEventArgs e)
         {
-            if((bool)dataGridView1.SelectedRows[0].Cells[0].Value==true)
+            if((bool)dataGridView1.SelectedRows[0].Cells[0].Value==false)
             { dataGridView1.SelectedRows[0].Cells[0].Value = true; }
             else { dataGridView1.SelectedRows[0].Cells[0].Value = false; }
         }
