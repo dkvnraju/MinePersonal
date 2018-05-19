@@ -1538,7 +1538,7 @@ namespace RassiCements_LTD
                 else
                 {
                     dataGridView1.SelectedRows[0].Cells[0].Value = false;
-                    dataGridView1.DefaultCellStyle.SelectionBackColor = Color.WhiteSmoke;
+                    dataGridView1.DefaultCellStyle.SelectionBackColor = Color.LightSkyBlue;
                     emp.AcceptChanges();
 
                 }
@@ -1578,7 +1578,7 @@ namespace RassiCements_LTD
                 else
                 {
                     dataGridView2.SelectedRows[0].Cells[0].Value = false;
-                    dataGridView2.DefaultCellStyle.SelectionBackColor = Color.WhiteSmoke;
+                    dataGridView2.DefaultCellStyle.SelectionBackColor = Color.LightSkyBlue;
                     Nemp.AcceptChanges();
                 }
 
@@ -1754,7 +1754,7 @@ namespace RassiCements_LTD
         {
             foreach(DataGridViewRow dgr in dataGridView1.Rows)
             {
-                if (Convert.ToString(dgr.Cells["BatchNo"].Value) == comboBoxLDBtchNo.Text)
+                if (Convert.ToString(dgr.Cells["BatchNo"].Value) != comboBoxLDBtchNo.Text)
                 { dgr.DefaultCellStyle.BackColor = Color.LimeGreen; }
                 if (Convert.ToString( dgr.Cells["BatchNo"].Value)=="OTH")
                 { dgr.DefaultCellStyle.BackColor = Color.Red; }
@@ -1767,7 +1767,7 @@ namespace RassiCements_LTD
         {
             foreach (DataGridViewRow dgr in dataGridView2.Rows)
             {
-                if(Convert.ToString(dgr.Cells["BatchNo"].Value) == comboBoxLDBtchNo.Text)
+                if(Convert.ToString(dgr.Cells["BatchNo"].Value) != comboBoxLDBtchNo.Text)
                 { dgr.DefaultCellStyle.BackColor = Color.LimeGreen; }
                 if (Convert.ToString(dgr.Cells["BatchNo"].Value) == "OTH")
                 { dgr.DefaultCellStyle.BackColor = Color.Red; }
