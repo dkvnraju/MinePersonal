@@ -1534,7 +1534,11 @@ namespace RassiCements_LTD
                     dataGridView2.Rows[n].Cells[7].Value = dr.Cells[7].Value.ToString();
                     dataGridView2.Rows[n].Cells[8].Value = dr.Cells[8].Value.ToString();
                     dataGridView2.Rows[n].Cells[9].Value = dr.Cells[9].Value.ToString();
-
+                    if(dr.DefaultCellStyle.BackColor==Color.Red)
+                    { dataGridView2.Rows[n].DefaultCellStyle.BackColor = Color.Red; }
+                    else if(dr.DefaultCellStyle.BackColor == Color.LimeGreen)
+                    { dataGridView2.Rows[n].DefaultCellStyle.BackColor = Color.LimeGreen; }
+                  
                     dataGridView1.Rows.RemoveAt(dr.Index);
                 }
                 
@@ -1590,7 +1594,10 @@ namespace RassiCements_LTD
                     dataGridView1.Rows[n].Cells[7].Value = dr.Cells[7].Value.ToString();
                     dataGridView1.Rows[n].Cells[8].Value = dr.Cells[8].Value.ToString();
                     dataGridView1.Rows[n].Cells[9].Value = dr.Cells[9].Value.ToString();
-
+                    if (dr.DefaultCellStyle.BackColor == Color.Red)
+                    { dataGridView1.Rows[n].DefaultCellStyle.BackColor = Color.Red; }
+                    else if (dr.DefaultCellStyle.BackColor == Color.LimeGreen)
+                    { dataGridView1.Rows[n].DefaultCellStyle.BackColor = Color.LimeGreen; }
                     dataGridView2.Rows.RemoveAt(dr.Index);
                 }
 
@@ -1894,6 +1901,11 @@ namespace RassiCements_LTD
                 { dataGridView1.SelectedRows[0].Cells[0].Value = true; }
                 else { dataGridView1.SelectedRows[0].Cells[0].Value = false; }
             }
+
+            if(dataGridView1.SelectedRows[0].DefaultCellStyle.BackColor==Color.Red)
+            { dataGridView1.SelectedRows[0].DefaultCellStyle.BackColor = Color.Red; }
+            else if(dataGridView1.SelectedRows[0].DefaultCellStyle.BackColor == Color.LimeGreen)
+            { dataGridView1.SelectedRows[0].DefaultCellStyle.BackColor = Color.LimeGreen; }
         }
 
         private void dataGridView1_Sorted(object sender, EventArgs e)
