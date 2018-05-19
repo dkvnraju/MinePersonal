@@ -186,6 +186,16 @@
             this.lblLDHead = new System.Windows.Forms.Label();
             this.rassiCementLTDDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rassiCementLTDDataSet = new RassiCements_LTD.RassiCementLTDDataSet();
+            this.Sel = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BatchNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TokenNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Shift = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DayAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Contractor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1166,6 +1176,17 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Sel,
+            this.Sno,
+            this.Name,
+            this.BatchNo,
+            this.TypeID,
+            this.TokenNo,
+            this.Shift,
+            this.Date,
+            this.DayAmount,
+            this.Contractor});
             this.dataGridView1.Location = new System.Drawing.Point(16, 19);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
@@ -1962,6 +1983,66 @@
             this.rassiCementLTDDataSet.DataSetName = "RassiCementLTDDataSet";
             this.rassiCementLTDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // Sel
+            // 
+            this.Sel.HeaderText = "Sel";
+            this.Sel.Name = "Sel";
+            this.Sel.ReadOnly = true;
+            // 
+            // Sno
+            // 
+            this.Sno.HeaderText = "Sno";
+            this.Sno.Name = "Sno";
+            this.Sno.ReadOnly = true;
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "Name";
+            this.Name.Name = "Name";
+            this.Name.ReadOnly = true;
+            // 
+            // BatchNo
+            // 
+            this.BatchNo.HeaderText = "BatchNo";
+            this.BatchNo.Name = "BatchNo";
+            this.BatchNo.ReadOnly = true;
+            // 
+            // TypeID
+            // 
+            this.TypeID.HeaderText = "TypeID";
+            this.TypeID.Name = "TypeID";
+            this.TypeID.ReadOnly = true;
+            // 
+            // TokenNo
+            // 
+            this.TokenNo.HeaderText = "TokenNo";
+            this.TokenNo.Name = "TokenNo";
+            this.TokenNo.ReadOnly = true;
+            // 
+            // Shift
+            // 
+            this.Shift.HeaderText = "Shift";
+            this.Shift.Name = "Shift";
+            this.Shift.ReadOnly = true;
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // DayAmount
+            // 
+            this.DayAmount.HeaderText = "DayAmount";
+            this.DayAmount.Name = "DayAmount";
+            this.DayAmount.ReadOnly = true;
+            // 
+            // Contractor
+            // 
+            this.Contractor.HeaderText = "Contractor";
+            this.Contractor.Name = "Contractor";
+            this.Contractor.ReadOnly = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -2168,6 +2249,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Sel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BatchNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TypeID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TokenNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Shift;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DayAmount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Contractor;
     }
 }
 
