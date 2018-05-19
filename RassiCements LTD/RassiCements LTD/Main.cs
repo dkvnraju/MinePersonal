@@ -1611,11 +1611,26 @@ namespace RassiCements_LTD
 
         private void BtnOBOK_Click(object sender, EventArgs e)
         {
-            emp.Rows.Add(false, ID, textBoxOBNM.Text, textBoxOBBtchNo.Text
-                        ,Type, Convert.ToInt16(textBoxOBTknNo.Text), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
-                        Type == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text),
-                        textBoxOCCNM.Text);
-            emp.AcceptChanges();
+
+            int n = dataGridView1.Rows.Add();
+
+            dataGridView1.Rows[n].Cells[0].Value = false;
+            dataGridView1.Rows[n].Cells[1].Value = ID;
+            dataGridView1.Rows[n].Cells[2].Value = textBoxOBNM.Text;
+            dataGridView1.Rows[n].Cells[3].Value = textBoxOBBtchNo.Text;
+            dataGridView1.Rows[n].Cells[4].Value = Type;
+            dataGridView1.Rows[n].Cells[5].Value = textBoxOBTknNo.Text;
+            dataGridView1.Rows[n].Cells[6].Value = comboBoxLDShft.Text;
+            dataGridView1.Rows[n].Cells[7].Value = dateTimePickerLDDt.Text;
+            dataGridView1.Rows[n].Cells[8].Value = Type == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text);
+            dataGridView1.Rows[n].Cells[9].Value = textBoxOCCNM.Text;
+
+
+            //emp.Rows.Add(false, ID, textBoxOBNM.Text, textBoxOBBtchNo.Text
+            //            ,Type, Convert.ToInt16(textBoxOBTknNo.Text), comboBoxLDShft.Text, dateTimePickerLDDt.Text,
+            //            Type == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text),
+            //            textBoxOCCNM.Text);
+            //emp.AcceptChanges();
         }
 
         private void textBoxOBTknNo_Leave(object sender, EventArgs e)
