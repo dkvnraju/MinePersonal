@@ -154,6 +154,8 @@ namespace RassiCements_LTD
             if(panOtherContractor.Visible==true)
             { panOtherContractor.Visible = false; }
             panOtherBatch.Visible = true;
+            if(BtnOBOK.Enabled==false)
+            { BtnOBOK.Enabled = true; }
 
         }
 
@@ -1615,7 +1617,7 @@ namespace RassiCements_LTD
                         Type = dr["TypeID"].ToString();
                     }
                 }
-                else { MessageBox.Show("Token Number Does't Exist!"); }
+                else { MessageBox.Show("Token Number Does't Exist!"); BtnOBOK.Enabled = false; }
              }
 
             catch (Exception ex)
@@ -1774,6 +1776,37 @@ namespace RassiCements_LTD
 
             }
 
+        }
+
+        private void textBoxOBBtchNo_MouseLeave(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void textBoxOBBtchNo_Leave(object sender, EventArgs e)
+        {
+            if (textBoxOBBtchNo.Text == comboBoxLDBtchNo.Text)
+            {
+                MessageBox.Show("Batch No cannot be : " + comboBoxLDBtchNo.Text);
+                textBoxOBBtchNo.Text = "";
+            }
+        }
+
+        private void btnOBEXT_Click(object sender, EventArgs e)
+        {
+            textBoxOBTknNo.Text = "";
+            textBoxOBBtchNo.Text = "";
+            textBoxOBNM.Text = "";
+            panOtherBatch.Visible = false;
+        }
+
+        private void btnOCEXT_Click(object sender, EventArgs e)
+        {
+            textBoxLDOthrID.Text = "";
+            comboBoxLDOCTyp.Text = "";
+            textBoxOCNM.Text = "";
+            textBoxOCCNM.Text = "";
+            panOtherContractor.Visible = false;
         }
     }
 }

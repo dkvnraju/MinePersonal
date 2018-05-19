@@ -102,6 +102,8 @@
             this.lblPLDHead = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -184,8 +186,6 @@
             this.lblLDHead = new System.Windows.Forms.Label();
             this.rassiCementLTDDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rassiCementLTDDataSet = new RassiCements_LTD.RassiCementLTDDataSet();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1054,6 +1054,22 @@
             this.panel6.TabIndex = 3;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(105, 131);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 32);
+            this.label7.TabIndex = 48;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.LimeGreen;
+            this.label6.Location = new System.Drawing.Point(105, 59);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 32);
+            this.label6.TabIndex = 4;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -1261,6 +1277,7 @@
             this.btnOCEXT.TabIndex = 11;
             this.btnOCEXT.Text = "EXIT";
             this.btnOCEXT.UseVisualStyleBackColor = true;
+            this.btnOCEXT.Click += new System.EventHandler(this.btnOCEXT_Click);
             // 
             // btnOCOK
             // 
@@ -1404,6 +1421,7 @@
             this.btnOBEXT.TabIndex = 7;
             this.btnOBEXT.Text = "EXIT";
             this.btnOBEXT.UseVisualStyleBackColor = true;
+            this.btnOBEXT.Click += new System.EventHandler(this.btnOBEXT_Click);
             // 
             // BtnOBOK
             // 
@@ -1431,6 +1449,8 @@
             this.textBoxOBBtchNo.Name = "textBoxOBBtchNo";
             this.textBoxOBBtchNo.Size = new System.Drawing.Size(177, 41);
             this.textBoxOBBtchNo.TabIndex = 4;
+            this.textBoxOBBtchNo.Leave += new System.EventHandler(this.textBoxOBBtchNo_Leave);
+            this.textBoxOBBtchNo.MouseLeave += new System.EventHandler(this.textBoxOBBtchNo_MouseLeave);
             // 
             // textBoxOBTknNo
             // 
@@ -1941,22 +1961,6 @@
             // 
             this.rassiCementLTDDataSet.DataSetName = "RassiCementLTDDataSet";
             this.rassiCementLTDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.LimeGreen;
-            this.label6.Location = new System.Drawing.Point(105, 59);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 32);
-            this.label6.TabIndex = 4;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(105, 131);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 32);
-            this.label7.TabIndex = 48;
             // 
             // Main
             // 
