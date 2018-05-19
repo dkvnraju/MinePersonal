@@ -1628,7 +1628,7 @@ namespace RassiCements_LTD
                         Type = dr["TypeID"].ToString();
                     }
                 }
-                else { MessageBox.Show("Token Number Does't Exist!"); BtnOBOK.Enabled = false; }
+                else { MessageBox.Show("Token Number Does't Exist!"); BtnOBOK.Enabled = true; }
              }
 
             catch (Exception ex)
