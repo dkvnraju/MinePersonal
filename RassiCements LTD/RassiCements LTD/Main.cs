@@ -1866,5 +1866,10 @@ namespace RassiCements_LTD
                 else { dataGridView1.SelectedRows[0].Cells[0].Value = false; }
             }
         }
+
+        private void dataGridView1_Sorted(object sender, EventArgs e)
+        {
+            MessageBox.Show("you are sorting");
+        }
     }
 }
