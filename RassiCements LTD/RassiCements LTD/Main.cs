@@ -1464,9 +1464,7 @@ namespace RassiCements_LTD
 
 
                     while (dr.Read())
-                    {
-
-                        int n = dataGridView1.Rows.Add();
+                    {                      int n = dataGridView1.Rows.Add();
 
                         dataGridView1.Rows[n].Cells[0].Value = false;
                         dataGridView1.Rows[n].Cells[1].Value = Convert.ToInt16(dr["ID"].ToString());

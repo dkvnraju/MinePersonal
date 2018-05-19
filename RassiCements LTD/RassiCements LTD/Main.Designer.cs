@@ -112,7 +112,6 @@
             this.btnLft = new System.Windows.Forms.Button();
             this.btnRi8 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.buttonOK = new System.Windows.Forms.Button();
             this.panOtherContractor = new System.Windows.Forms.Panel();
@@ -186,10 +185,11 @@
             this.lblLDHead = new System.Windows.Forms.Label();
             this.rassiCementLTDDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rassiCementLTDDataSet = new RassiCements_LTD.RassiCementLTDDataSet();
-            this.Sel = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Selected = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EMPName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BatchNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Batchno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TokenNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Shift = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -208,12 +208,12 @@
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panOtherContractor.SuspendLayout();
             this.panOtherBatch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -1120,10 +1120,10 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.dataGridView1);
             this.panel5.Controls.Add(this.btnLft);
             this.panel5.Controls.Add(this.btnRi8);
             this.panel5.Controls.Add(this.dataGridView2);
-            this.panel5.Controls.Add(this.dataGridView1);
             this.panel5.Location = new System.Drawing.Point(88, 909);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
@@ -1170,31 +1170,6 @@
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView2_RowsAdded);
             this.dataGridView2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView2_MouseClick);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Sel,
-            this.Sno,
-            this.EMPName,
-            this.BatchNo,
-            this.TypeID,
-            this.TokenNo,
-            this.Shift,
-            this.Date,
-            this.DayAmount,
-            this.Contractor});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 19);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 15;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1371, 639);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
-            this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
             // 
             // panel4
             // 
@@ -1981,65 +1956,75 @@
             this.rassiCementLTDDataSet.DataSetName = "RassiCementLTDDataSet";
             this.rassiCementLTDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // Sel
+            // dataGridView1
             // 
-            this.Sel.HeaderText = "Sel";
-            this.Sel.Name = "Sel";
-            this.Sel.ReadOnly = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Selected,
+            this.Sno,
+            this.EmpName,
+            this.Batchno,
+            this.TypeID,
+            this.TokenNo,
+            this.Shift,
+            this.Date,
+            this.DayAmount,
+            this.Contractor});
+            this.dataGridView1.Location = new System.Drawing.Point(39, 31);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 40;
+            this.dataGridView1.Size = new System.Drawing.Size(1368, 627);
+            this.dataGridView1.TabIndex = 4;
+            // 
+            // Selected
+            // 
+            this.Selected.HeaderText = "Selected";
+            this.Selected.Name = "Selected";
             // 
             // Sno
             // 
             this.Sno.HeaderText = "Sno";
             this.Sno.Name = "Sno";
-            this.Sno.ReadOnly = true;
             // 
-            // EMPName
+            // EmpName
             // 
-            this.EMPName.HeaderText = "Name";
-            this.EMPName.Name = "EMPName";
-            this.EMPName.ReadOnly = true;
+            this.EmpName.HeaderText = "Name";
+            this.EmpName.Name = "EmpName";
             // 
-            // BatchNo
+            // Batchno
             // 
-            this.BatchNo.HeaderText = "BatchNo";
-            this.BatchNo.Name = "BatchNo";
-            this.BatchNo.ReadOnly = true;
+            this.Batchno.HeaderText = "BatchNo";
+            this.Batchno.Name = "Batchno";
             // 
             // TypeID
             // 
-            this.TypeID.HeaderText = "TypeID";
+            this.TypeID.HeaderText = "Type";
             this.TypeID.Name = "TypeID";
-            this.TypeID.ReadOnly = true;
             // 
             // TokenNo
             // 
             this.TokenNo.HeaderText = "TokenNo";
             this.TokenNo.Name = "TokenNo";
-            this.TokenNo.ReadOnly = true;
             // 
             // Shift
             // 
             this.Shift.HeaderText = "Shift";
             this.Shift.Name = "Shift";
-            this.Shift.ReadOnly = true;
             // 
             // Date
             // 
             this.Date.HeaderText = "Date";
             this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
             // 
             // DayAmount
             // 
-            this.DayAmount.HeaderText = "DayAmount";
+            this.DayAmount.HeaderText = "Day Amount";
             this.DayAmount.Name = "DayAmount";
-            this.DayAmount.ReadOnly = true;
             // 
             // Contractor
             // 
             this.Contractor.HeaderText = "Contractor";
             this.Contractor.Name = "Contractor";
-            this.Contractor.ReadOnly = true;
             // 
             // Main
             // 
@@ -2074,7 +2059,6 @@
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panOtherContractor.ResumeLayout(false);
@@ -2083,6 +2067,7 @@
             this.panOtherBatch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2234,7 +2219,6 @@
         private System.Windows.Forms.Label LblPLDPFNo;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource rassiCementLTDDataSetBindingSource;
         private RassiCementLTDDataSet rassiCementLTDDataSet;
         private System.Windows.Forms.Button buttonOK;
@@ -2247,10 +2231,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Sel;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Selected;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EMPName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BatchNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Batchno;
         private System.Windows.Forms.DataGridViewTextBoxColumn TypeID;
         private System.Windows.Forms.DataGridViewTextBoxColumn TokenNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Shift;
