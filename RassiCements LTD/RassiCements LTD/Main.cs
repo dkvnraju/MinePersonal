@@ -139,6 +139,9 @@ namespace RassiCements_LTD
             textBoxLDPkrTotAmt.Text = "";
             dataGridView1.Rows.Clear();
             dataGridView2.Rows.Clear();
+
+            if(btnLDUpdate.Text=="modify")
+            { btnLDUpdate.Text = "Update"; }
         }
 
         private void personalDetailsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1969,6 +1972,67 @@ namespace RassiCements_LTD
             {
                 MessageBox.Show("Please check the data in below grid");
             }
+        }
+
+        private void comboBoxLDShft_Leave(object sender, EventArgs e)
+        {
+            if(comboBoxLDBtchNo.Text==""|| comboBoxLDShft.Text=="")
+            { //fetch nothing
+            }
+            else
+            {
+                string connstring = "SELECT * FROM  Wages where BatchNo =" + "'" + comboBoxLDBtchNo.Text + "'" + "and WageDate=" + "'" + dateTimePickerLDDt.Text + "'" + "and Shift=" + "'" + comboBoxLDShft.Text + "'" + ";";
+                OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+                OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+                try
+                {
+                    conn.Open();
+                    OleDbDataReader dr = cmd.ExecuteReader();
+
+                    if (dr.HasRows)
+                    {
+                        while (dr.Read())
+                        {
+                            int n = dataGridView1.Rows.Add();
+                            dataGridView1.Rows[n].Cells[1].Value = dr["Sno"].ToString();
+                            dataGridView1.Rows[n].Cells[2].Value = dr["EmpName"].ToString();
+                            dataGridView1.Rows[n].Cells[3].Value = dr["BatchNo"].ToString();
+                            dataGridView1.Rows[n].Cells[4].Value = dr["TypeID"].ToString();
+                            dataGridView1.Rows[n].Cells[5].Value = dr["TokenNo"].ToString();
+                            dataGridView1.Rows[n].Cells[6].Value = dr["Shift"].ToString();
+                            dataGridView1.Rows[n].Cells[7].Value = dr["WageDate"].ToString();
+                            dataGridView1.Rows[n].Cells[8].Value = dr["DayAmount"].ToString();
+                            dataGridView1.Rows[n].Cells[9].Value = dr["Contractor"].ToString();
+
+                        }
+                        btnLDUpdate.Text = "Modify";
+                    }
+                    else
+                    { //MessageBox.Show("Token Number Does't Exist!");
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Exception occured." + ex);
+                }
+                finally
+                {
+                    conn.Close();
+
+                }
+            }
+        }
+
+        private void btnLDUpdate_Click(object sender, EventArgs e)
+        {
+            if(btnLDUpdate.Text=="Modify")
+            { dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter;
+                btnLDUpdate.Text = "Update";
+            }
+            else if(btnLDUpdate.Text == "Update")
+            { }
         }
     }
 }
