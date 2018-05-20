@@ -137,6 +137,8 @@ namespace RassiCements_LTD
             textBoxLDPkrAmtOldWgn.Text = "";
             textBoxLDLDTotAmt.Text = "";
             textBoxLDPkrTotAmt.Text = "";
+            dataGridView1.Rows.Clear();
+            dataGridView2.Rows.Clear();
         }
 
         private void personalDetailsToolStripMenuItem_Click(object sender, EventArgs e)
