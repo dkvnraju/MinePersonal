@@ -1925,18 +1925,29 @@ namespace RassiCements_LTD
         {
             if(Convert.ToInt16(textBoxLDNoLdrs.Text)+Convert.ToInt16(textBoxLDNoPkrs.Text)==dataGridView1.Rows.Count)
             {
-                string connstring = "INSERT INTO EmployeeDetails (TokenNumber,TypeID,BatchNo,JoiningDate,PF,EmpName,EmpFname," +
-                       "Dateofbirth,PFNo) VALUES (" + txtboxPLDTknNo.Text + "," + "'" + comboBoxPLDTypID.Text + "'" + "," +
-                       "'" + comboBoxPLDBtchNo.Text + "'" + "," + "'" + dateTimePickerPLDJNDt.Text + "'" + "," + pfyn + "," + "'" + txtboxPLDNM.Text + "'" +
-                       "," + "'" + txtboxPLDFNM.Text + "'" + "," + "'" + dateTimePickerPLDDOB.Text + "'" + "," + textBoxPLDPF.Text +
-                       ");";
+              
+               
+                string connstring = "";
                 OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
                 OleDbCommand cmd = new OleDbCommand(connstring, conn);
 
                 try
                 {
                     conn.Open();
-                    cmd.ExecuteNonQuery();
+
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        if (!row.IsNewRow)
+                        {
+                            connstring = "INSERT INTO Wages(Sno, EMPName, BatchNo, TypeID, TokenNo, Shift, WageDate, DayAmount, Contractor) VALUES (" + row.Cells[1].Value + "," + "'" + row.Cells[2].Value + "'" + "," +
+                             "'" + row.Cells[3].Value + "'" + "," + "'" + row.Cells[4].Value + "'" + "," + row.Cells[5].Value + "," + "'" + row.Cells[6].Value + "'" +
+                             "," + row.Cells[7].Value + "," + row.Cells[8].Value + "," + "'" + row.Cells[9].Value + "'" + ");";
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+
+
+                    
                     MessageBox.Show("Data Inserted Successfully");
                 }
                 catch (Exception ex)
