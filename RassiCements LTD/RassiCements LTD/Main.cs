@@ -1927,9 +1927,9 @@ namespace RassiCements_LTD
             {
               
                
-                string connstring = "";
+               
                 OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
-                OleDbCommand cmd = new OleDbCommand(connstring, conn);
+               
 
                 try
                 {
@@ -1939,9 +1939,10 @@ namespace RassiCements_LTD
                     {
                         if (!row.IsNewRow)
                         {
-                            connstring = "INSERT INTO Wages(Sno, EMPName, BatchNo, TypeID, TokenNo, Shift, WageDate, DayAmount, Contractor) VALUES (" + row.Cells[1].Value + "," + "'" + row.Cells[2].Value + "'" + "," +
+                            string connstring = "INSERT INTO Wages(Sno, EMPName, BatchNo, TypeID, TokenNo, Shift, WageDate, DayAmount, Contractor) VALUES (" + row.Cells[1].Value + "," + "'" + row.Cells[2].Value + "'" + "," +
                              "'" + row.Cells[3].Value + "'" + "," + "'" + row.Cells[4].Value + "'" + "," + row.Cells[5].Value + "," + "'" + row.Cells[6].Value + "'" +
-                             "," + row.Cells[7].Value + "," + row.Cells[8].Value + "," + "'" + row.Cells[9].Value + "'" + ");";
+                             "," +"'"+ row.Cells[7].Value +"'"+ "," + row.Cells[8].Value + "," + "'" + row.Cells[9].Value + "'" + ");";
+                            OleDbCommand cmd = new OleDbCommand(connstring, conn);
                             cmd.ExecuteNonQuery();
                         }
                     }
