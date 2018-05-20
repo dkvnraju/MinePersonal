@@ -1643,6 +1643,9 @@ namespace RassiCements_LTD
             //            Type == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text),
             //            textBoxOCCNM.Text);
             //emp.AcceptChanges();
+            textBoxOBTknNo.Text = "";
+            textBoxOBBtchNo.Text = "";
+            textBoxOBNM.Text = "";
         }
 
         private void textBoxOBTknNo_Leave(object sender, EventArgs e)
@@ -1767,7 +1770,7 @@ namespace RassiCements_LTD
                     }
                     else
                     {
-                        MessageBox.Show("Token Number Does't Exist!");
+                        //MessageBox.Show("Token Number Does't Exist!");
                         int id;
                         string Constring="select max(ID) as ID FROM  Contrator";
                         OleDbCommand cmdmax = new OleDbCommand(Constring,conn);
@@ -1806,9 +1809,10 @@ namespace RassiCements_LTD
                             textBoxLDOthrID.Text + ",'" + comboBoxLDOCTyp.Text + "'," + "'" + textBoxOCNM.Text + "'," + "'" + textBoxOCCNM.Text + "');";
                         OleDbCommand cmd1 = new OleDbCommand(constr, conn);
                         cmd1.ExecuteNonQuery();
-
-                    
-
+                        textBoxLDOthrID.Text = "";
+                        comboBoxLDOCTyp.Text = "";
+                        textBoxOCNM.Text = "";
+                        textBoxOCCNM.Text = "";
 
                     }
                 }
