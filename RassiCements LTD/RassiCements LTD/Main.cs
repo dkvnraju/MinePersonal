@@ -1924,7 +1924,31 @@ namespace RassiCements_LTD
         private void btnLDAdd_Click(object sender, EventArgs e)
         {
             if(Convert.ToInt16(textBoxLDNoLdrs.Text)+Convert.ToInt16(textBoxLDNoPkrs.Text)==dataGridView1.Rows.Count)
-            { }
+            {
+                string connstring = "INSERT INTO EmployeeDetails (TokenNumber,TypeID,BatchNo,JoiningDate,PF,EmpName,EmpFname," +
+                       "Dateofbirth,PFNo) VALUES (" + txtboxPLDTknNo.Text + "," + "'" + comboBoxPLDTypID.Text + "'" + "," +
+                       "'" + comboBoxPLDBtchNo.Text + "'" + "," + "'" + dateTimePickerPLDJNDt.Text + "'" + "," + pfyn + "," + "'" + txtboxPLDNM.Text + "'" +
+                       "," + "'" + txtboxPLDFNM.Text + "'" + "," + "'" + dateTimePickerPLDDOB.Text + "'" + "," + textBoxPLDPF.Text +
+                       ");";
+                OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+                OleDbCommand cmd = new OleDbCommand(connstring, conn);
+
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Data Inserted Successfully");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Exception occured.Data not Inserted Please try Inserting it again" + ex);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+
+            }
             else
             {
                 MessageBox.Show("Please check the data in below grid");
