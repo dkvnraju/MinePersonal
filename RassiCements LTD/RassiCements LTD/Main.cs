@@ -1786,19 +1786,19 @@ namespace RassiCements_LTD
                             drmax.Read();
                             id = Convert.ToInt16( drmax["ID"].ToString()==""?"0":drmax["ID"].ToString()) + 1;
 
-                            int n = dataGridView1.Rows.Add();
+                            int i = dataGridView1.Rows.Add();
 
-                            dataGridView1.Rows[n].Cells[0].Value = false;
-                            dataGridView1.Rows[n].Cells[1].Value = id;
-                            dataGridView1.Rows[n].Cells[2].Value = textBoxOCNM.Text;
-                            dataGridView1.Rows[n].Cells[3].Value = textBoxLDOCBtchNo.Text;
-                            dataGridView1.Rows[n].Cells[4].Value = comboBoxLDOCTyp.Text;
-                            dataGridView1.Rows[n].Cells[5].Value = textBoxLDOthrID.Text;
-                            dataGridView1.Rows[n].Cells[6].Value = comboBoxLDShft.Text;
-                            dataGridView1.Rows[n].Cells[7].Value = dateTimePickerLDDt.Text;
-                            dataGridView1.Rows[n].Cells[8].Value = comboBoxLDOCTyp.Text == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text);
-                            dataGridView1.Rows[n].Cells[9].Value = textBoxOCCNM.Text;
-                            dataGridView1.Rows[n].DefaultCellStyle.BackColor = Color.Red;
+                            dataGridView1.Rows[i].Cells[0].Value = false;
+                            dataGridView1.Rows[i].Cells[1].Value = id;
+                            dataGridView1.Rows[i].Cells[2].Value = textBoxOCNM.Text;
+                            dataGridView1.Rows[i].Cells[3].Value = textBoxLDOCBtchNo.Text;
+                            dataGridView1.Rows[i].Cells[4].Value = comboBoxLDOCTyp.Text;
+                            dataGridView1.Rows[i].Cells[5].Value = textBoxLDOthrID.Text;
+                            dataGridView1.Rows[i].Cells[6].Value = comboBoxLDShft.Text;
+                            dataGridView1.Rows[i].Cells[7].Value = dateTimePickerLDDt.Text;
+                            dataGridView1.Rows[i].Cells[8].Value = comboBoxLDOCTyp.Text == "Loader" ? Convert.ToDouble(textBoxLDLDTotAmt.Text) : Convert.ToDouble(textBoxLDPkrTotAmt.Text);
+                            dataGridView1.Rows[i].Cells[9].Value = textBoxOCCNM.Text;
+                            dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.Red;
 
 
                         //    emp.Rows.Add(false, id, textBoxOCNM.Text, textBoxLDOCBtchNo.Text
@@ -1964,6 +1964,7 @@ namespace RassiCements_LTD
 
                     
                     MessageBox.Show("Data Inserted Successfully");
+                    dataGridView1.Rows.Clear();
                 }
                 catch (Exception ex)
                 {
@@ -2041,6 +2042,44 @@ namespace RassiCements_LTD
             }
             else if(btnLDUpdate.Text == "Update")
             { }
+        }
+
+        private void btnLDDel_Click(object sender, EventArgs e)
+        {
+            OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+
+
+            try
+            {
+                conn.Open();
+
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (!row.IsNewRow)
+                    {
+                        string connstring = "Delete from Wages where BatchNo="+"'" + row.Cells[3].Value + "'"+" and SHIFt="+"'" + row.Cells[6].Value + "'"+" and WageDate= " +"#"+ row.Cells[7].Value +"# ;";
+                        OleDbCommand cmd = new OleDbCommand(connstring, conn);
+                        int n = cmd.ExecuteNonQuery();
+                        if (n > 0)
+                        { }
+                        else { throw new NotImplementedException("Data not Deleted properly please try again"); }
+
+                    }
+                }
+
+
+
+                MessageBox.Show("Data Deleted Successfully");
+                dataGridView1.Rows.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception occured.Data not deleted Please try deleting it again" + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }
