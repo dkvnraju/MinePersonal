@@ -212,6 +212,8 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
+            this.comboBoxrep = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -2068,6 +2070,8 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Linen;
+            this.panel7.Controls.Add(this.label12);
+            this.panel7.Controls.Add(this.comboBoxrep);
             this.panel7.Controls.Add(this.button1);
             this.panel7.Controls.Add(this.dateTimePicker2);
             this.panel7.Controls.Add(this.dateTimePicker1);
@@ -2075,16 +2079,17 @@
             this.panel7.Controls.Add(this.label10);
             this.panel7.Controls.Add(this.label9);
             this.panel7.Controls.Add(this.label8);
-            this.panel7.Location = new System.Drawing.Point(90, 55);
+            this.panel7.Location = new System.Drawing.Point(90, 45);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(703, 177);
+            this.panel7.Size = new System.Drawing.Size(703, 233);
             this.panel7.TabIndex = 0;
             // 
             // label8
             // 
             this.label8.BackColor = System.Drawing.Color.LightGray;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(17, 23);
+            this.label8.Location = new System.Drawing.Point(276, 14);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(139, 30);
             this.label8.TabIndex = 0;
@@ -2096,7 +2101,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Gainsboro;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(252, 35);
+            this.label9.Location = new System.Drawing.Point(159, 76);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(46, 20);
             this.label9.TabIndex = 1;
@@ -2107,7 +2112,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Gainsboro;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(470, 34);
+            this.label10.Location = new System.Drawing.Point(379, 75);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(27, 20);
             this.label10.TabIndex = 2;
@@ -2117,7 +2122,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(430, 33);
+            this.label11.Location = new System.Drawing.Point(339, 74);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(15, 20);
             this.label11.TabIndex = 3;
@@ -2126,7 +2131,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(313, 35);
+            this.dateTimePicker1.Location = new System.Drawing.Point(225, 75);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(95, 20);
             this.dateTimePicker1.TabIndex = 4;
@@ -2134,19 +2139,39 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(503, 34);
+            this.dateTimePicker2.Location = new System.Drawing.Point(429, 74);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(96, 20);
             this.dateTimePicker2.TabIndex = 5;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(552, 138);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button1.Location = new System.Drawing.Point(515, 185);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 23);
+            this.button1.Size = new System.Drawing.Size(136, 31);
             this.button1.TabIndex = 6;
             this.button1.Text = "Generate Pay Slips";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxrep
+            // 
+            this.comboBoxrep.FormattingEnabled = true;
+            this.comboBoxrep.Location = new System.Drawing.Point(239, 128);
+            this.comboBoxrep.Name = "comboBoxrep";
+            this.comboBoxrep.Size = new System.Drawing.Size(95, 21);
+            this.comboBoxrep.TabIndex = 7;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.LightGray;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(148, 129);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(75, 20);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "BatchNo:";
             // 
             // Main
             // 
@@ -2382,6 +2407,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox comboBoxrep;
     }
 }
 
