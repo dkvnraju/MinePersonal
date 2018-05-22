@@ -34,7 +34,9 @@ namespace RassiCements_LTD
             tabPage2.Text = "Batch Details";
             tabPage3.Text = "Packing Loading Details";
             tabPage4.Text = "Loading Details";
-           
+            tabPage5.Text = "Reporting";
+
+
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -154,7 +156,10 @@ namespace RassiCements_LTD
 
         private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tabControl1.Visible = false;
+            tabControl1.Visible = true;
+            
+            tabPage5.Text = "Reporting";
+
         }
 
         private void btnLDOtrbtch_Click(object sender, EventArgs e)
