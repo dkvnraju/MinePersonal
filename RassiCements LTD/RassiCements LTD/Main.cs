@@ -1948,7 +1948,7 @@ namespace RassiCements_LTD
                         {
                             string connstring = "INSERT INTO Wages(Sno, EMPName, BatchNo, TypeID, TokenNo, Shift, WageDate, DayAmount, Contractor) VALUES (" + row.Cells[1].Value + "," + "'" + row.Cells[2].Value + "'" + "," +
                              "'" + row.Cells[3].Value + "'" + "," + "'" + row.Cells[4].Value + "'" + "," + row.Cells[5].Value + "," + "'" + row.Cells[6].Value + "'" +
-                             "," +"'"+ row.Cells[7].Value +"'"+ "," + row.Cells[8].Value + "," + "'" + row.Cells[9].Value + "'" + ");";
+                             "," +"#"+ row.Cells[7].Value +"#"+ "," + row.Cells[8].Value + "," + "'" + row.Cells[9].Value + "'" + ");";
                             OleDbCommand cmd = new OleDbCommand(connstring, conn);
                             cmd.ExecuteNonQuery();
                         }
@@ -1981,7 +1981,7 @@ namespace RassiCements_LTD
             }
             else
             {
-                string connstring = "SELECT * FROM  Wages where BatchNo =" + "'" + comboBoxLDBtchNo.Text + "'" + "and WageDate=" + "'" + dateTimePickerLDDt.Text + "'" + "and Shift=" + "'" + comboBoxLDShft.Text + "'" + ";";
+                string connstring = "SELECT * FROM  Wages where BatchNo =" + "'" + comboBoxLDBtchNo.Text + "'" + "and WageDate=" + "#" + dateTimePickerLDDt.Text + "#" + "and Shift=" + "'" + comboBoxLDShft.Text + "'" + ";";
                 OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
                 OleDbCommand cmd = new OleDbCommand(connstring, conn);
 
@@ -1995,6 +1995,7 @@ namespace RassiCements_LTD
                         while (dr.Read())
                         {
                             int n = dataGridView1.Rows.Add();
+                            dataGridView1.Rows[n].Cells[0].Value = false;
                             dataGridView1.Rows[n].Cells[1].Value = dr["Sno"].ToString();
                             dataGridView1.Rows[n].Cells[2].Value = dr["EmpName"].ToString();
                             dataGridView1.Rows[n].Cells[3].Value = dr["BatchNo"].ToString();
