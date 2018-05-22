@@ -142,6 +142,9 @@ namespace RassiCements_LTD
 
             if(btnLDUpdate.Text=="modify")
             { btnLDUpdate.Text = "Update"; }
+
+            if(!buttonOK.Enabled)
+            { buttonOK.Enabled = true; }
         }
 
         private void personalDetailsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2016,6 +2019,7 @@ namespace RassiCements_LTD
 
                         }
                         btnLDUpdate.Text = "Modify";
+                        if (!buttonOK.Enabled) { buttonOK.Enabled = true; }
                     }
                     else
                     { //MessageBox.Show("Token Number Does't Exist!");
@@ -2037,11 +2041,59 @@ namespace RassiCements_LTD
         private void btnLDUpdate_Click(object sender, EventArgs e)
         {
             if(btnLDUpdate.Text=="Modify")
-            { dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter;
+            {
+                dataGridView1.ReadOnly = false;
+
                 btnLDUpdate.Text = "Update";
             }
             else if(btnLDUpdate.Text == "Update")
-            { }
+            {
+
+                OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+
+
+                try
+                {
+                    conn.Open();
+
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        if (!row.IsNewRow)
+                        {
+                            string connstring = "Update Wages set Sno =" + row.Cells[1].Value + ", EmpName =" +"'" + row.Cells[2].Value + "'" + ", BatchNo =" +
+                             "'" + row.Cells[3].Value + "'" + ", TypeID=" + "'" + row.Cells[4].Value + "'" + ", TokenNo =" + row.Cells[5].Value + ", Shift =" + "'" + row.Cells[6].Value + "'" +
+                             ", WageDate =" + "#" + row.Cells[7].Value + "#" + ", DayAmount =" + row.Cells[8].Value + ", Contractor =" + "'" + row.Cells[9].Value + "'" + ";";
+                            OleDbCommand cmd = new OleDbCommand(connstring, conn);
+                            int n = cmd.ExecuteNonQuery();
+                            if (n > 0)
+                            { }
+                            else { throw new NotImplementedException("data not inserted properly please try again"); }
+
+                        }
+                    }
+
+
+
+                    MessageBox.Show("Data Updated Successfully");
+                    dataGridView1.Rows.Clear();
+                    dataGridView1.ReadOnly = true;
+                    btnLDUpdate.Text = "Modify";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Exception occured.Data not Updated Please try Updating it again" + ex);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+
+               
+
+
+
+
+            }
         }
 
         private void btnLDDel_Click(object sender, EventArgs e)
