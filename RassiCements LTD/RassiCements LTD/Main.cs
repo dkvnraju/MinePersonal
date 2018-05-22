@@ -468,8 +468,10 @@ namespace RassiCements_LTD
                 try
                 {
                     conn.Open();
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Data Inserted Successfully");
+                   int n= cmd.ExecuteNonQuery();
+                    if(n>0)
+                    { MessageBox.Show("Data Inserted Successfully"); }
+                    
                 }
                 catch (Exception ex)
                 {
@@ -998,8 +1000,8 @@ namespace RassiCements_LTD
                     try
                     {
                         conn.Open();
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Data Inserted Successfully");
+                      int n=  cmd.ExecuteNonQuery();
+                        if (n > 0) { MessageBox.Show("Data Inserted Successfully"); }
                     }
                     catch (Exception ex)
                     {
@@ -1811,7 +1813,8 @@ namespace RassiCements_LTD
                         string constr = "Insert into Contrator (BatchNo,TokenNo,Type,EmpName,ContractorName) values (" + "'" + textBoxLDOCBtchNo.Text + "'," +
                             textBoxLDOthrID.Text + ",'" + comboBoxLDOCTyp.Text + "'," + "'" + textBoxOCNM.Text + "'," + "'" + textBoxOCCNM.Text + "');";
                         OleDbCommand cmd1 = new OleDbCommand(constr, conn);
-                        cmd1.ExecuteNonQuery();
+                        int n=cmd1.ExecuteNonQuery();
+                        if (n > 0) { MessageBox.Show("Data saved successfully"); }
                         textBoxLDOthrID.Text = "";
                         comboBoxLDOCTyp.Text = "";
                         textBoxOCNM.Text = "";
@@ -1950,7 +1953,11 @@ namespace RassiCements_LTD
                              "'" + row.Cells[3].Value + "'" + "," + "'" + row.Cells[4].Value + "'" + "," + row.Cells[5].Value + "," + "'" + row.Cells[6].Value + "'" +
                              "," +"#"+ row.Cells[7].Value +"#"+ "," + row.Cells[8].Value + "," + "'" + row.Cells[9].Value + "'" + ");";
                             OleDbCommand cmd = new OleDbCommand(connstring, conn);
-                            cmd.ExecuteNonQuery();
+                           int n= cmd.ExecuteNonQuery();
+                            if(n>0)
+                            { }
+                            else { throw new NotImplementedException("data not inserted properly please try again"); }
+
                         }
                     }
 
