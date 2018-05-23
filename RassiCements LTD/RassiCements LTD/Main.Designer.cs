@@ -201,19 +201,19 @@
             this.lblLDDt = new System.Windows.Forms.Label();
             this.lblLDBtchNo = new System.Windows.Forms.Label();
             this.lblLDHead = new System.Windows.Forms.Label();
-            this.rassiCementLTDDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rassiCementLTDDataSet = new RassiCements_LTD.RassiCementLTDDataSet();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBoxrep = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.comboBoxrep = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.rassiCementLTDDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rassiCementLTDDataSet = new RassiCements_LTD.RassiCementLTDDataSet();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -230,10 +230,10 @@
             this.panel4.SuspendLayout();
             this.panOtherContractor.SuspendLayout();
             this.panOtherBatch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSet)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -286,7 +286,7 @@
             this.tabPage1.Controls.Add(this.lblWDHeading);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1572, 794);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -318,7 +318,7 @@
             // txtWDJCAmt
             // 
             this.txtWDJCAmt.Location = new System.Drawing.Point(339, 46);
-            this.txtWDJCAmt.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtWDJCAmt.Margin = new System.Windows.Forms.Padding(1);
             this.txtWDJCAmt.Name = "txtWDJCAmt";
             this.txtWDJCAmt.Size = new System.Drawing.Size(76, 20);
             this.txtWDJCAmt.TabIndex = 3;
@@ -327,7 +327,7 @@
             // textBoxOWAMT
             // 
             this.textBoxOWAMT.Location = new System.Drawing.Point(215, 188);
-            this.textBoxOWAMT.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxOWAMT.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxOWAMT.Name = "textBoxOWAMT";
             this.textBoxOWAMT.Size = new System.Drawing.Size(100, 20);
             this.textBoxOWAMT.TabIndex = 7;
@@ -505,7 +505,7 @@
             this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1572, 794);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -680,7 +680,7 @@
             // textBoxPLDPF
             // 
             this.textBoxPLDPF.Location = new System.Drawing.Point(429, 177);
-            this.textBoxPLDPF.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxPLDPF.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxPLDPF.Name = "textBoxPLDPF";
             this.textBoxPLDPF.Size = new System.Drawing.Size(72, 21);
             this.textBoxPLDPF.TabIndex = 10;
@@ -993,7 +993,7 @@
             this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.label2);
             this.panel6.Location = new System.Drawing.Point(1188, 40);
-            this.panel6.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panel6.Margin = new System.Windows.Forms.Padding(1);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(234, 632);
             this.panel6.TabIndex = 3;
@@ -1066,7 +1066,7 @@
             this.panel5.Controls.Add(this.btnRi8);
             this.panel5.Controls.Add(this.dataGridView2);
             this.panel5.Location = new System.Drawing.Point(33, 381);
-            this.panel5.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panel5.Margin = new System.Windows.Forms.Padding(1);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1143, 290);
             this.panel5.TabIndex = 2;
@@ -1089,7 +1089,7 @@
             this.DayAmount,
             this.Contractor});
             this.dataGridView1.Location = new System.Drawing.Point(15, 13);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(1);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 20;
@@ -1182,7 +1182,7 @@
             // 
             this.btnLft.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLft.Location = new System.Drawing.Point(543, 140);
-            this.btnLft.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnLft.Margin = new System.Windows.Forms.Padding(1);
             this.btnLft.Name = "btnLft";
             this.btnLft.Size = new System.Drawing.Size(45, 26);
             this.btnLft.TabIndex = 3;
@@ -1194,7 +1194,7 @@
             // 
             this.btnRi8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRi8.Location = new System.Drawing.Point(543, 99);
-            this.btnRi8.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnRi8.Margin = new System.Windows.Forms.Padding(1);
             this.btnRi8.Name = "btnRi8";
             this.btnRi8.Size = new System.Drawing.Size(45, 26);
             this.btnRi8.TabIndex = 2;
@@ -1219,7 +1219,7 @@
             this.DayAmountR,
             this.ContractorR});
             this.dataGridView2.Location = new System.Drawing.Point(600, 8);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(1);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 20;
@@ -1368,7 +1368,7 @@
             // buttonOK
             // 
             this.buttonOK.Location = new System.Drawing.Point(254, 292);
-            this.buttonOK.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.buttonOK.Margin = new System.Windows.Forms.Padding(1);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(41, 24);
             this.buttonOK.TabIndex = 11;
@@ -1392,7 +1392,7 @@
             this.panOtherContractor.Controls.Add(this.lblOtherID);
             this.panOtherContractor.Controls.Add(this.lblOCBtchNo);
             this.panOtherContractor.Location = new System.Drawing.Point(269, 89);
-            this.panOtherContractor.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panOtherContractor.Margin = new System.Windows.Forms.Padding(1);
             this.panOtherContractor.Name = "panOtherContractor";
             this.panOtherContractor.Size = new System.Drawing.Size(504, 154);
             this.panOtherContractor.TabIndex = 47;
@@ -1401,7 +1401,7 @@
             // btnOCEXT
             // 
             this.btnOCEXT.Location = new System.Drawing.Point(240, 114);
-            this.btnOCEXT.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnOCEXT.Margin = new System.Windows.Forms.Padding(1);
             this.btnOCEXT.Name = "btnOCEXT";
             this.btnOCEXT.Size = new System.Drawing.Size(67, 24);
             this.btnOCEXT.TabIndex = 11;
@@ -1412,7 +1412,7 @@
             // btnOCOK
             // 
             this.btnOCOK.Location = new System.Drawing.Point(159, 114);
-            this.btnOCOK.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnOCOK.Margin = new System.Windows.Forms.Padding(1);
             this.btnOCOK.Name = "btnOCOK";
             this.btnOCOK.Size = new System.Drawing.Size(58, 24);
             this.btnOCOK.TabIndex = 10;
@@ -1428,7 +1428,7 @@
             "Packer",
             "Loader"});
             this.comboBoxLDOCTyp.Location = new System.Drawing.Point(396, 13);
-            this.comboBoxLDOCTyp.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.comboBoxLDOCTyp.Margin = new System.Windows.Forms.Padding(1);
             this.comboBoxLDOCTyp.Name = "comboBoxLDOCTyp";
             this.comboBoxLDOCTyp.Size = new System.Drawing.Size(77, 23);
             this.comboBoxLDOCTyp.TabIndex = 9;
@@ -1437,7 +1437,7 @@
             // textBoxOCCNM
             // 
             this.textBoxOCCNM.Location = new System.Drawing.Point(143, 78);
-            this.textBoxOCCNM.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxOCCNM.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxOCCNM.Name = "textBoxOCCNM";
             this.textBoxOCCNM.Size = new System.Drawing.Size(236, 21);
             this.textBoxOCCNM.TabIndex = 8;
@@ -1445,7 +1445,7 @@
             // textBoxOCNM
             // 
             this.textBoxOCNM.Location = new System.Drawing.Point(143, 45);
-            this.textBoxOCNM.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxOCNM.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxOCNM.Name = "textBoxOCNM";
             this.textBoxOCNM.Size = new System.Drawing.Size(236, 21);
             this.textBoxOCNM.TabIndex = 7;
@@ -1453,7 +1453,7 @@
             // textBoxLDOthrID
             // 
             this.textBoxLDOthrID.Location = new System.Drawing.Point(253, 16);
-            this.textBoxLDOthrID.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxLDOthrID.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxLDOthrID.Name = "textBoxLDOthrID";
             this.textBoxLDOthrID.Size = new System.Drawing.Size(67, 21);
             this.textBoxLDOthrID.TabIndex = 6;
@@ -1463,7 +1463,7 @@
             // 
             this.textBoxLDOCBtchNo.Enabled = false;
             this.textBoxLDOCBtchNo.Location = new System.Drawing.Point(93, 16);
-            this.textBoxLDOCBtchNo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxLDOCBtchNo.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxLDOCBtchNo.Name = "textBoxLDOCBtchNo";
             this.textBoxLDOCBtchNo.Size = new System.Drawing.Size(70, 21);
             this.textBoxLDOCBtchNo.TabIndex = 5;
@@ -1540,7 +1540,7 @@
             this.panOtherBatch.Controls.Add(this.lblOBBNo);
             this.panOtherBatch.Controls.Add(this.lblOBTknNo);
             this.panOtherBatch.Location = new System.Drawing.Point(784, 102);
-            this.panOtherBatch.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panOtherBatch.Margin = new System.Windows.Forms.Padding(1);
             this.panOtherBatch.Name = "panOtherBatch";
             this.panOtherBatch.Size = new System.Drawing.Size(368, 120);
             this.panOtherBatch.TabIndex = 0;
@@ -1549,7 +1549,7 @@
             // btnOBEXT
             // 
             this.btnOBEXT.Location = new System.Drawing.Point(197, 85);
-            this.btnOBEXT.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnOBEXT.Margin = new System.Windows.Forms.Padding(1);
             this.btnOBEXT.Name = "btnOBEXT";
             this.btnOBEXT.Size = new System.Drawing.Size(60, 23);
             this.btnOBEXT.TabIndex = 7;
@@ -1560,7 +1560,7 @@
             // BtnOBOK
             // 
             this.BtnOBOK.Location = new System.Drawing.Point(117, 85);
-            this.BtnOBOK.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.BtnOBOK.Margin = new System.Windows.Forms.Padding(1);
             this.BtnOBOK.Name = "BtnOBOK";
             this.BtnOBOK.Size = new System.Drawing.Size(54, 21);
             this.BtnOBOK.TabIndex = 6;
@@ -1571,7 +1571,7 @@
             // textBoxOBNM
             // 
             this.textBoxOBNM.Location = new System.Drawing.Point(100, 45);
-            this.textBoxOBNM.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxOBNM.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxOBNM.Name = "textBoxOBNM";
             this.textBoxOBNM.Size = new System.Drawing.Size(232, 21);
             this.textBoxOBNM.TabIndex = 5;
@@ -1579,7 +1579,7 @@
             // textBoxOBBtchNo
             // 
             this.textBoxOBBtchNo.Location = new System.Drawing.Point(256, 10);
-            this.textBoxOBBtchNo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxOBBtchNo.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxOBBtchNo.Name = "textBoxOBBtchNo";
             this.textBoxOBBtchNo.Size = new System.Drawing.Size(69, 21);
             this.textBoxOBBtchNo.TabIndex = 4;
@@ -1589,7 +1589,7 @@
             // textBoxOBTknNo
             // 
             this.textBoxOBTknNo.Location = new System.Drawing.Point(90, 10);
-            this.textBoxOBTknNo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxOBTknNo.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxOBTknNo.Name = "textBoxOBTknNo";
             this.textBoxOBTknNo.Size = new System.Drawing.Size(75, 21);
             this.textBoxOBTknNo.TabIndex = 3;
@@ -2048,16 +2048,6 @@
             this.lblLDHead.TabIndex = 0;
             this.lblLDHead.Text = "Loading Details-Daily Loading Details";
             // 
-            // rassiCementLTDDataSetBindingSource
-            // 
-            this.rassiCementLTDDataSetBindingSource.DataSource = this.rassiCementLTDDataSet;
-            this.rassiCementLTDDataSetBindingSource.Position = 0;
-            // 
-            // rassiCementLTDDataSet
-            // 
-            this.rassiCementLTDDataSet.DataSetName = "RassiCementLTDDataSet";
-            this.rassiCementLTDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.panel7);
@@ -2084,28 +2074,61 @@
             this.panel7.Size = new System.Drawing.Size(703, 233);
             this.panel7.TabIndex = 0;
             // 
-            // label8
+            // label12
             // 
-            this.label8.BackColor = System.Drawing.Color.LightGray;
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(276, 14);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(139, 30);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Pay Slip";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.LightGray;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(148, 129);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(75, 20);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "BatchNo:";
             // 
-            // label9
+            // comboBoxrep
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Gainsboro;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(159, 76);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 20);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "From";
+            this.comboBoxrep.FormattingEnabled = true;
+            this.comboBoxrep.Location = new System.Drawing.Point(239, 128);
+            this.comboBoxrep.Name = "comboBoxrep";
+            this.comboBoxrep.Size = new System.Drawing.Size(95, 21);
+            this.comboBoxrep.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button1.Location = new System.Drawing.Point(515, 185);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(136, 31);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Generate Pay Slips";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(429, 74);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(96, 20);
+            this.dateTimePicker2.TabIndex = 5;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(225, 75);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(95, 20);
+            this.dateTimePicker1.TabIndex = 4;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(339, 74);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(15, 20);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "-";
             // 
             // label10
             // 
@@ -2118,60 +2141,38 @@
             this.label10.TabIndex = 2;
             this.label10.Text = "To";
             // 
-            // label11
+            // label9
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(339, 74);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(15, 20);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "-";
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Gainsboro;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(159, 76);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(46, 20);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "From";
             // 
-            // dateTimePicker1
+            // label8
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(225, 75);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(95, 20);
-            this.dateTimePicker1.TabIndex = 4;
+            this.label8.BackColor = System.Drawing.Color.LightGray;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(276, 14);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(139, 30);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Pay Slip";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // dateTimePicker2
+            // rassiCementLTDDataSetBindingSource
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(429, 74);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(96, 20);
-            this.dateTimePicker2.TabIndex = 5;
+            this.rassiCementLTDDataSetBindingSource.DataSource = this.rassiCementLTDDataSet;
+            this.rassiCementLTDDataSetBindingSource.Position = 0;
             // 
-            // button1
+            // rassiCementLTDDataSet
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Location = new System.Drawing.Point(515, 185);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 31);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Generate Pay Slips";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxrep
-            // 
-            this.comboBoxrep.FormattingEnabled = true;
-            this.comboBoxrep.Location = new System.Drawing.Point(239, 128);
-            this.comboBoxrep.Name = "comboBoxrep";
-            this.comboBoxrep.Size = new System.Drawing.Size(95, 21);
-            this.comboBoxrep.TabIndex = 7;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.LightGray;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(148, 129);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(75, 20);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "BatchNo:";
+            this.rassiCementLTDDataSet.DataSetName = "RassiCementLTDDataSet";
+            this.rassiCementLTDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Main
             // 
@@ -2212,11 +2213,11 @@
             this.panOtherContractor.PerformLayout();
             this.panOtherBatch.ResumeLayout(false);
             this.panOtherBatch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSet)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rassiCementLTDDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
