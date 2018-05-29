@@ -1013,7 +1013,11 @@ namespace RassiCements_LTD
                     {
                         conn.Open();
                       int n=  cmd.ExecuteNonQuery();
-                        if (n > 0) { MessageBox.Show("Data Inserted Successfully"); }
+                        if (n > 0)
+                        { MessageBox.Show("Data Inserted Successfully");
+                            btnPLDClr_Click(sender,e);
+                        }
+
                     }
                     catch (Exception ex)
                     {
