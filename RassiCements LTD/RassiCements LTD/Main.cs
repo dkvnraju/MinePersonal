@@ -478,7 +478,11 @@ namespace RassiCements_LTD
                     conn.Open();
                    int n= cmd.ExecuteNonQuery();
                     if(n>0)
-                    { MessageBox.Show("Data Inserted Successfully"); }
+                    { MessageBox.Show("Data Inserted Successfully");
+
+                        btnBDClr_Click(sender,e);
+
+                    }
                     
                 }
                 catch (Exception ex)
@@ -1981,6 +1985,7 @@ namespace RassiCements_LTD
                     
                     MessageBox.Show("Data Inserted Successfully");
                     dataGridView1.Rows.Clear();
+                    btnClr_Click(sender,e);
                 }
                 catch (Exception ex)
                 {
