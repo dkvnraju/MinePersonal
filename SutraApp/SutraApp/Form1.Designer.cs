@@ -34,17 +34,19 @@
             // HomePanel
             // 
             this.HomePanel.BackColor = System.Drawing.SystemColors.Control;
-            this.HomePanel.Location = new System.Drawing.Point(38, 26);
+            this.HomePanel.Location = new System.Drawing.Point(14, 11);
+            this.HomePanel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.HomePanel.Name = "HomePanel";
-            this.HomePanel.Size = new System.Drawing.Size(3650, 2048);
+            this.HomePanel.Size = new System.Drawing.Size(1369, 859);
             this.HomePanel.TabIndex = 0;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(3719, 2108);
+            this.ClientSize = new System.Drawing.Size(1370, 750);
             this.Controls.Add(this.HomePanel);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
