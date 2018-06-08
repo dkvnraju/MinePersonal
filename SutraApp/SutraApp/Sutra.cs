@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace SutraApp
 {
-    public partial class Form1 : Form
+    public partial class Sutra : Form
     {
-        public Form1()
+        public Sutra()
         {
             InitializeComponent();
         }
