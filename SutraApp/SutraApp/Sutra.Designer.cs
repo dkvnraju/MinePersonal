@@ -54,6 +54,7 @@
             this.adminViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblheading = new System.Windows.Forms.Label();
+            this.PnlPrdtGirl = new System.Windows.Forms.Panel();
             this.HomePanel.SuspendLayout();
             this.parenttabcontrol.SuspendLayout();
             this.tabPagestdtl.SuspendLayout();
@@ -64,10 +65,10 @@
             // 
             this.HomePanel.BackColor = System.Drawing.SystemColors.Control;
             this.HomePanel.Controls.Add(this.parenttabcontrol);
-            this.HomePanel.Location = new System.Drawing.Point(6, 25);
+            this.HomePanel.Location = new System.Drawing.Point(5, 25);
             this.HomePanel.Margin = new System.Windows.Forms.Padding(1);
             this.HomePanel.Name = "HomePanel";
-            this.HomePanel.Size = new System.Drawing.Size(1517, 700);
+            this.HomePanel.Size = new System.Drawing.Size(1300, 700);
             this.HomePanel.TabIndex = 0;
             // 
             // parenttabcontrol
@@ -75,14 +76,15 @@
             this.parenttabcontrol.Controls.Add(this.tabPagestdtl);
             this.parenttabcontrol.Controls.Add(this.tabPagestdf);
             this.parenttabcontrol.Controls.Add(this.tabPageStdPndg);
-            this.parenttabcontrol.Location = new System.Drawing.Point(8, 7);
+            this.parenttabcontrol.Location = new System.Drawing.Point(7, 7);
             this.parenttabcontrol.Name = "parenttabcontrol";
             this.parenttabcontrol.SelectedIndex = 0;
-            this.parenttabcontrol.Size = new System.Drawing.Size(1505, 653);
+            this.parenttabcontrol.Size = new System.Drawing.Size(1290, 653);
             this.parenttabcontrol.TabIndex = 0;
             // 
             // tabPagestdtl
             // 
+            this.tabPagestdtl.Controls.Add(this.PnlPrdtGirl);
             this.tabPagestdtl.Controls.Add(this.textBox1);
             this.tabPagestdtl.Controls.Add(this.LblEmail);
             this.tabPagestdtl.Controls.Add(this.TxtLndLine);
@@ -99,23 +101,23 @@
             this.tabPagestdtl.Location = new System.Drawing.Point(4, 22);
             this.tabPagestdtl.Name = "tabPagestdtl";
             this.tabPagestdtl.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagestdtl.Size = new System.Drawing.Size(1497, 627);
+            this.tabPagestdtl.Size = new System.Drawing.Size(1282, 627);
             this.tabPagestdtl.TabIndex = 0;
             this.tabPagestdtl.Text = "Student Details";
             this.tabPagestdtl.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(185, 170);
+            this.textBox1.Location = new System.Drawing.Point(159, 170);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(263, 20);
+            this.textBox1.Size = new System.Drawing.Size(226, 20);
             this.textBox1.TabIndex = 12;
             // 
             // LblEmail
             // 
             this.LblEmail.AutoSize = true;
             this.LblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmail.Location = new System.Drawing.Point(107, 176);
+            this.LblEmail.Location = new System.Drawing.Point(92, 176);
             this.LblEmail.Name = "LblEmail";
             this.LblEmail.Size = new System.Drawing.Size(52, 15);
             this.LblEmail.TabIndex = 11;
@@ -123,9 +125,9 @@
             // 
             // TxtLndLine
             // 
-            this.TxtLndLine.Location = new System.Drawing.Point(461, 133);
+            this.TxtLndLine.Location = new System.Drawing.Point(395, 133);
             this.TxtLndLine.Name = "TxtLndLine";
-            this.TxtLndLine.Size = new System.Drawing.Size(165, 20);
+            this.TxtLndLine.Size = new System.Drawing.Size(142, 20);
             this.TxtLndLine.TabIndex = 10;
             this.TxtLndLine.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
@@ -133,7 +135,7 @@
             // 
             this.lbllandline.AutoSize = true;
             this.lbllandline.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbllandline.Location = new System.Drawing.Point(371, 138);
+            this.lbllandline.Location = new System.Drawing.Point(318, 138);
             this.lbllandline.Name = "lbllandline";
             this.lbllandline.Size = new System.Drawing.Size(71, 15);
             this.lbllandline.TabIndex = 9;
@@ -141,16 +143,16 @@
             // 
             // TxtConcatNum
             // 
-            this.TxtConcatNum.Location = new System.Drawing.Point(185, 133);
+            this.TxtConcatNum.Location = new System.Drawing.Point(159, 133);
             this.TxtConcatNum.Name = "TxtConcatNum";
-            this.TxtConcatNum.Size = new System.Drawing.Size(161, 20);
+            this.TxtConcatNum.Size = new System.Drawing.Size(139, 20);
             this.TxtConcatNum.TabIndex = 8;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 138);
+            this.label2.Location = new System.Drawing.Point(34, 138);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 15);
             this.label2.TabIndex = 7;
@@ -158,16 +160,16 @@
             // 
             // TxtStdNm
             // 
-            this.TxtStdNm.Location = new System.Drawing.Point(185, 90);
+            this.TxtStdNm.Location = new System.Drawing.Point(159, 90);
             this.TxtStdNm.Name = "TxtStdNm";
-            this.TxtStdNm.Size = new System.Drawing.Size(263, 20);
+            this.TxtStdNm.Size = new System.Drawing.Size(226, 20);
             this.TxtStdNm.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 96);
+            this.label1.Location = new System.Drawing.Point(20, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 15);
             this.label1.TabIndex = 5;
@@ -175,16 +177,16 @@
             // 
             // TxtCustNbr
             // 
-            this.TxtCustNbr.Location = new System.Drawing.Point(185, 56);
+            this.TxtCustNbr.Location = new System.Drawing.Point(159, 56);
             this.TxtCustNbr.Name = "TxtCustNbr";
-            this.TxtCustNbr.Size = new System.Drawing.Size(140, 20);
+            this.TxtCustNbr.Size = new System.Drawing.Size(121, 20);
             this.TxtCustNbr.TabIndex = 4;
             // 
             // lblCustomerno
             // 
             this.lblCustomerno.AutoSize = true;
             this.lblCustomerno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerno.Location = new System.Drawing.Point(15, 56);
+            this.lblCustomerno.Location = new System.Drawing.Point(13, 56);
             this.lblCustomerno.Name = "lblCustomerno";
             this.lblCustomerno.Size = new System.Drawing.Size(131, 15);
             this.lblCustomerno.TabIndex = 3;
@@ -193,25 +195,25 @@
             // LblSchoolname
             // 
             this.LblSchoolname.AutoSize = true;
-            this.LblSchoolname.Location = new System.Drawing.Point(442, 21);
+            this.LblSchoolname.Location = new System.Drawing.Point(379, 21);
             this.LblSchoolname.Name = "LblSchoolname";
-            this.LblSchoolname.Size = new System.Drawing.Size(41, 13);
+            this.LblSchoolname.Size = new System.Drawing.Size(35, 13);
             this.LblSchoolname.TabIndex = 2;
             this.LblSchoolname.Text = "label1";
             // 
             // comboBoxSC
             // 
             this.comboBoxSC.FormattingEnabled = true;
-            this.comboBoxSC.Location = new System.Drawing.Point(185, 18);
+            this.comboBoxSC.Location = new System.Drawing.Point(159, 18);
             this.comboBoxSC.Name = "comboBoxSC";
-            this.comboBoxSC.Size = new System.Drawing.Size(140, 21);
+            this.comboBoxSC.Size = new System.Drawing.Size(121, 21);
             this.comboBoxSC.TabIndex = 1;
             // 
             // lblSchCd
             // 
             this.lblSchCd.AutoSize = true;
             this.lblSchCd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSchCd.Location = new System.Drawing.Point(56, 19);
+            this.lblSchCd.Location = new System.Drawing.Point(48, 19);
             this.lblSchCd.Name = "lblSchCd";
             this.lblSchCd.Size = new System.Drawing.Size(96, 15);
             this.lblSchCd.TabIndex = 0;
@@ -222,7 +224,7 @@
             this.tabPagestdf.Location = new System.Drawing.Point(4, 22);
             this.tabPagestdf.Name = "tabPagestdf";
             this.tabPagestdf.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagestdf.Size = new System.Drawing.Size(1497, 627);
+            this.tabPagestdf.Size = new System.Drawing.Size(1282, 627);
             this.tabPagestdf.TabIndex = 1;
             this.tabPagestdf.Text = "Find Student";
             this.tabPagestdf.UseVisualStyleBackColor = true;
@@ -231,7 +233,7 @@
             // 
             this.tabPageStdPndg.Location = new System.Drawing.Point(4, 22);
             this.tabPageStdPndg.Name = "tabPageStdPndg";
-            this.tabPageStdPndg.Size = new System.Drawing.Size(1497, 627);
+            this.tabPageStdPndg.Size = new System.Drawing.Size(1282, 627);
             this.tabPageStdPndg.TabIndex = 2;
             this.tabPageStdPndg.Text = "Pending";
             this.tabPageStdPndg.UseVisualStyleBackColor = true;
@@ -244,8 +246,7 @@
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1370, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1174, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -296,21 +297,28 @@
             // 
             this.lblheading.AutoSize = true;
             this.lblheading.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblheading.Location = new System.Drawing.Point(619, 0);
+            this.lblheading.Location = new System.Drawing.Point(531, 0);
             this.lblheading.Name = "lblheading";
             this.lblheading.Size = new System.Drawing.Size(168, 24);
             this.lblheading.TabIndex = 0;
             this.lblheading.Text = "Sutra Application";
             // 
+            // PnlPrdtGirl
+            // 
+            this.PnlPrdtGirl.Location = new System.Drawing.Point(22, 247);
+            this.PnlPrdtGirl.Name = "PnlPrdtGirl";
+            this.PnlPrdtGirl.Size = new System.Drawing.Size(829, 163);
+            this.PnlPrdtGirl.TabIndex = 13;
+            // 
             // Sutra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 750);
+            this.ClientSize = new System.Drawing.Size(1174, 750);
             this.Controls.Add(this.lblheading);
             this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.menuStrip1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "Sutra";
             this.Text = "Sutra App";
@@ -353,6 +361,7 @@
         private System.Windows.Forms.Label lblCustomerno;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label LblEmail;
+        private System.Windows.Forms.Panel PnlPrdtGirl;
     }
 }
 
