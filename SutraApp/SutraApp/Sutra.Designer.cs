@@ -55,6 +55,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblheading = new System.Windows.Forms.Label();
             this.PnlPrdtGirl = new System.Windows.Forms.Panel();
+            this.lblsubhead = new System.Windows.Forms.Label();
             this.HomePanel.SuspendLayout();
             this.parenttabcontrol.SuspendLayout();
             this.tabPagestdtl.SuspendLayout();
@@ -84,6 +85,7 @@
             // 
             // tabPagestdtl
             // 
+            this.tabPagestdtl.Controls.Add(this.lblsubhead);
             this.tabPagestdtl.Controls.Add(this.PnlPrdtGirl);
             this.tabPagestdtl.Controls.Add(this.textBox1);
             this.tabPagestdtl.Controls.Add(this.LblEmail);
@@ -98,6 +100,7 @@
             this.tabPagestdtl.Controls.Add(this.LblSchoolname);
             this.tabPagestdtl.Controls.Add(this.comboBoxSC);
             this.tabPagestdtl.Controls.Add(this.lblSchCd);
+            this.tabPagestdtl.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPagestdtl.Location = new System.Drawing.Point(4, 22);
             this.tabPagestdtl.Name = "tabPagestdtl";
             this.tabPagestdtl.Padding = new System.Windows.Forms.Padding(3);
@@ -197,7 +200,7 @@
             this.LblSchoolname.AutoSize = true;
             this.LblSchoolname.Location = new System.Drawing.Point(379, 21);
             this.LblSchoolname.Name = "LblSchoolname";
-            this.LblSchoolname.Size = new System.Drawing.Size(35, 13);
+            this.LblSchoolname.Size = new System.Drawing.Size(35, 14);
             this.LblSchoolname.TabIndex = 2;
             this.LblSchoolname.Text = "label1";
             // 
@@ -206,7 +209,7 @@
             this.comboBoxSC.FormattingEnabled = true;
             this.comboBoxSC.Location = new System.Drawing.Point(159, 18);
             this.comboBoxSC.Name = "comboBoxSC";
-            this.comboBoxSC.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxSC.Size = new System.Drawing.Size(121, 22);
             this.comboBoxSC.TabIndex = 1;
             // 
             // lblSchCd
@@ -305,10 +308,22 @@
             // 
             // PnlPrdtGirl
             // 
-            this.PnlPrdtGirl.Location = new System.Drawing.Point(22, 247);
+            this.PnlPrdtGirl.Location = new System.Drawing.Point(23, 241);
             this.PnlPrdtGirl.Name = "PnlPrdtGirl";
-            this.PnlPrdtGirl.Size = new System.Drawing.Size(829, 163);
+            this.PnlPrdtGirl.Size = new System.Drawing.Size(978, 224);
             this.PnlPrdtGirl.TabIndex = 13;
+            // 
+            // lblsubhead
+            // 
+            this.lblsubhead.AutoSize = true;
+            this.lblsubhead.BackColor = System.Drawing.Color.Transparent;
+            this.lblsubhead.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsubhead.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblsubhead.Location = new System.Drawing.Point(421, 225);
+            this.lblsubhead.Name = "lblsubhead";
+            this.lblsubhead.Size = new System.Drawing.Size(318, 15);
+            this.lblsubhead.TabIndex = 14;
+            this.lblsubhead.Text = "UNIFORM / PRODUCT / COSTUMES / CLOTHING";
             // 
             // Sutra
             // 
@@ -362,6 +377,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label LblEmail;
         private System.Windows.Forms.Panel PnlPrdtGirl;
+        private System.Windows.Forms.Label lblsubhead;
     }
 }
 
