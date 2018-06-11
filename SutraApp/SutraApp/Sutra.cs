@@ -25,5 +25,11 @@ namespace SutraApp
         {
 
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Would you like to exit?", "Exit Window", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            { Application.Exit(); }
+        }
     }
 }
