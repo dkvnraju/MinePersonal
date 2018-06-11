@@ -31,6 +31,8 @@
             this.HomePanel = new System.Windows.Forms.Panel();
             this.parenttabcontrol = new System.Windows.Forms.TabControl();
             this.tabPagestdtl = new System.Windows.Forms.TabPage();
+            this.lblsubhead = new System.Windows.Forms.Label();
+            this.PnlPrdtGirl = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.LblEmail = new System.Windows.Forms.Label();
             this.TxtLndLine = new System.Windows.Forms.TextBox();
@@ -54,11 +56,12 @@
             this.adminViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblheading = new System.Windows.Forms.Label();
-            this.PnlPrdtGirl = new System.Windows.Forms.Panel();
-            this.lblsubhead = new System.Windows.Forms.Label();
+            this.comboBoxGender = new System.Windows.Forms.ComboBox();
+            this.labelgender = new System.Windows.Forms.Label();
             this.HomePanel.SuspendLayout();
             this.parenttabcontrol.SuspendLayout();
             this.tabPagestdtl.SuspendLayout();
+            this.PnlPrdtGirl.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,6 +111,27 @@
             this.tabPagestdtl.TabIndex = 0;
             this.tabPagestdtl.Text = "Student Details";
             this.tabPagestdtl.UseVisualStyleBackColor = true;
+            // 
+            // lblsubhead
+            // 
+            this.lblsubhead.AutoSize = true;
+            this.lblsubhead.BackColor = System.Drawing.Color.Transparent;
+            this.lblsubhead.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsubhead.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblsubhead.Location = new System.Drawing.Point(421, 225);
+            this.lblsubhead.Name = "lblsubhead";
+            this.lblsubhead.Size = new System.Drawing.Size(318, 15);
+            this.lblsubhead.TabIndex = 14;
+            this.lblsubhead.Text = "UNIFORM / PRODUCT / COSTUMES / CLOTHING";
+            // 
+            // PnlPrdtGirl
+            // 
+            this.PnlPrdtGirl.Controls.Add(this.labelgender);
+            this.PnlPrdtGirl.Controls.Add(this.comboBoxGender);
+            this.PnlPrdtGirl.Location = new System.Drawing.Point(23, 241);
+            this.PnlPrdtGirl.Name = "PnlPrdtGirl";
+            this.PnlPrdtGirl.Size = new System.Drawing.Size(978, 224);
+            this.PnlPrdtGirl.TabIndex = 13;
             // 
             // textBox1
             // 
@@ -274,19 +298,19 @@
             // stockEntryToolStripMenuItem
             // 
             this.stockEntryToolStripMenuItem.Name = "stockEntryToolStripMenuItem";
-            this.stockEntryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stockEntryToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.stockEntryToolStripMenuItem.Text = "Stock Entry";
             // 
             // stockViewToolStripMenuItem
             // 
             this.stockViewToolStripMenuItem.Name = "stockViewToolStripMenuItem";
-            this.stockViewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stockViewToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.stockViewToolStripMenuItem.Text = "Stock View";
             // 
             // adminViewToolStripMenuItem
             // 
             this.adminViewToolStripMenuItem.Name = "adminViewToolStripMenuItem";
-            this.adminViewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.adminViewToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.adminViewToolStripMenuItem.Text = "Admin View";
             // 
             // exitToolStripMenuItem
@@ -306,24 +330,26 @@
             this.lblheading.TabIndex = 0;
             this.lblheading.Text = "Sutra Application";
             // 
-            // PnlPrdtGirl
+            // comboBoxGender
             // 
-            this.PnlPrdtGirl.Location = new System.Drawing.Point(23, 241);
-            this.PnlPrdtGirl.Name = "PnlPrdtGirl";
-            this.PnlPrdtGirl.Size = new System.Drawing.Size(978, 224);
-            this.PnlPrdtGirl.TabIndex = 13;
+            this.comboBoxGender.FormattingEnabled = true;
+            this.comboBoxGender.Items.AddRange(new object[] {
+            "Boy",
+            "Girl"});
+            this.comboBoxGender.Location = new System.Drawing.Point(85, 11);
+            this.comboBoxGender.Name = "comboBoxGender";
+            this.comboBoxGender.Size = new System.Drawing.Size(91, 22);
+            this.comboBoxGender.TabIndex = 0;
             // 
-            // lblsubhead
+            // labelgender
             // 
-            this.lblsubhead.AutoSize = true;
-            this.lblsubhead.BackColor = System.Drawing.Color.Transparent;
-            this.lblsubhead.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblsubhead.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblsubhead.Location = new System.Drawing.Point(421, 225);
-            this.lblsubhead.Name = "lblsubhead";
-            this.lblsubhead.Size = new System.Drawing.Size(318, 15);
-            this.lblsubhead.TabIndex = 14;
-            this.lblsubhead.Text = "UNIFORM / PRODUCT / COSTUMES / CLOTHING";
+            this.labelgender.AutoSize = true;
+            this.labelgender.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelgender.Location = new System.Drawing.Point(25, 13);
+            this.labelgender.Name = "labelgender";
+            this.labelgender.Size = new System.Drawing.Size(54, 15);
+            this.labelgender.TabIndex = 1;
+            this.labelgender.Text = "Gender :";
             // 
             // Sutra
             // 
@@ -341,6 +367,8 @@
             this.parenttabcontrol.ResumeLayout(false);
             this.tabPagestdtl.ResumeLayout(false);
             this.tabPagestdtl.PerformLayout();
+            this.PnlPrdtGirl.ResumeLayout(false);
+            this.PnlPrdtGirl.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -378,6 +406,8 @@
         private System.Windows.Forms.Label LblEmail;
         private System.Windows.Forms.Panel PnlPrdtGirl;
         private System.Windows.Forms.Label lblsubhead;
+        private System.Windows.Forms.Label labelgender;
+        private System.Windows.Forms.ComboBox comboBoxGender;
     }
 }
 
