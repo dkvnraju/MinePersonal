@@ -36,5 +36,22 @@ namespace SutraApp
         {
            
         }
+
+        private void  lbltextShrtSkrt()
+        {
+            if (comboBoxGender.Text=="Boy")
+            {
+                if(comboBoxGrade.SelectedIndex <=9 && comboBoxGrade.SelectedIndex != -1)
+                {
+                    labelShrtSkrt.Text = "Short :";
+                } else if(comboBoxGrade.SelectedIndex > 9 && comboBoxGrade.SelectedIndex != -1)
+                { labelShrtSkrt.Text = "Pant :"; }
+            }else if (comboBoxGender.Text=="Girl")
+            { if(comboBoxGrade.SelectedIndex <= 9 && comboBoxGrade.SelectedIndex != -1)
+                { labelShrtSkrt.Text = "Skirt :"; } else if (comboBoxGrade.SelectedIndex > 9 && comboBoxGrade.SelectedIndex != -1) { labelShrtSkrt.Text = "Skirt :"; }      
+                        
+             }
+
+        }
     }
 }
