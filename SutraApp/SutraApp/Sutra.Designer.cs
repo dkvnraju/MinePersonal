@@ -58,6 +58,8 @@
             this.lblheading = new System.Windows.Forms.Label();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.labelgender = new System.Windows.Forms.Label();
+            this.labelGrade = new System.Windows.Forms.Label();
+            this.comboBoxGrade = new System.Windows.Forms.ComboBox();
             this.HomePanel.SuspendLayout();
             this.parenttabcontrol.SuspendLayout();
             this.tabPagestdtl.SuspendLayout();
@@ -126,6 +128,8 @@
             // 
             // PnlPrdtGirl
             // 
+            this.PnlPrdtGirl.Controls.Add(this.comboBoxGrade);
+            this.PnlPrdtGirl.Controls.Add(this.labelGrade);
             this.PnlPrdtGirl.Controls.Add(this.labelgender);
             this.PnlPrdtGirl.Controls.Add(this.comboBoxGender);
             this.PnlPrdtGirl.Location = new System.Drawing.Point(23, 241);
@@ -333,6 +337,7 @@
             // 
             // comboBoxGender
             // 
+            this.comboBoxGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxGender.FormattingEnabled = true;
             this.comboBoxGender.Items.AddRange(new object[] {
             "Boy",
@@ -351,6 +356,38 @@
             this.labelgender.Size = new System.Drawing.Size(54, 15);
             this.labelgender.TabIndex = 1;
             this.labelgender.Text = "Gender :";
+            // 
+            // labelGrade
+            // 
+            this.labelGrade.AutoSize = true;
+            this.labelGrade.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGrade.Location = new System.Drawing.Point(211, 14);
+            this.labelGrade.Name = "labelGrade";
+            this.labelGrade.Size = new System.Drawing.Size(47, 15);
+            this.labelGrade.TabIndex = 2;
+            this.labelGrade.Text = "Grade :";
+            // 
+            // comboBoxGrade
+            // 
+            this.comboBoxGrade.FormattingEnabled = true;
+            this.comboBoxGrade.Items.AddRange(new object[] {
+            "NUR",
+            "PP!",
+            "PP2",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.comboBoxGrade.Location = new System.Drawing.Point(270, 11);
+            this.comboBoxGrade.Name = "comboBoxGrade";
+            this.comboBoxGrade.Size = new System.Drawing.Size(79, 22);
+            this.comboBoxGrade.TabIndex = 3;
             // 
             // Sutra
             // 
@@ -409,6 +446,8 @@
         private System.Windows.Forms.Label lblsubhead;
         private System.Windows.Forms.Label labelgender;
         private System.Windows.Forms.ComboBox comboBoxGender;
+        private System.Windows.Forms.ComboBox comboBoxGrade;
+        private System.Windows.Forms.Label labelGrade;
     }
 }
 
