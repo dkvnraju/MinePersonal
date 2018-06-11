@@ -34,7 +34,7 @@ namespace SutraApp
 
         private void comboBoxGender_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            lbltextShrtSkrt();
         }
 
         private void  lbltextShrtSkrt()
@@ -52,6 +52,11 @@ namespace SutraApp
                         
              }
 
+        }
+
+        private void comboBoxGrade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lbltextShrtSkrt();
         }
     }
 }

@@ -28,11 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sutra));
             this.HomePanel = new System.Windows.Forms.Panel();
             this.parenttabcontrol = new System.Windows.Forms.TabControl();
             this.tabPagestdtl = new System.Windows.Forms.TabPage();
             this.lblsubhead = new System.Windows.Forms.Label();
             this.PnlPrdtGirl = new System.Windows.Forms.Panel();
+            this.labelShrtSkrt = new System.Windows.Forms.Label();
+            this.textBoxShrtSkrt = new System.Windows.Forms.TextBox();
+            this.textBoxShirt = new System.Windows.Forms.TextBox();
+            this.labelShirt = new System.Windows.Forms.Label();
+            this.labelreguniform = new System.Windows.Forms.Label();
+            this.comboBoxGrade = new System.Windows.Forms.ComboBox();
+            this.labelGrade = new System.Windows.Forms.Label();
+            this.labelgender = new System.Windows.Forms.Label();
+            this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.LblEmail = new System.Windows.Forms.Label();
             this.TxtLndLine = new System.Windows.Forms.TextBox();
@@ -56,20 +66,30 @@
             this.adminViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblheading = new System.Windows.Forms.Label();
-            this.comboBoxGender = new System.Windows.Forms.ComboBox();
-            this.labelgender = new System.Windows.Forms.Label();
-            this.labelGrade = new System.Windows.Forms.Label();
-            this.comboBoxGrade = new System.Windows.Forms.ComboBox();
-            this.labelreguniform = new System.Windows.Forms.Label();
-            this.labelShirt = new System.Windows.Forms.Label();
-            this.textBoxShirt = new System.Windows.Forms.TextBox();
-            this.textBoxShrtSkrt = new System.Windows.Forms.TextBox();
-            this.labelShrtSkrt = new System.Windows.Forms.Label();
+            this.labelSprtUnfm = new System.Windows.Forms.Label();
+            this.labelTShrt = new System.Windows.Forms.Label();
+            this.labelShort = new System.Windows.Forms.Label();
+            this.textBoxSTShrt = new System.Windows.Forms.TextBox();
+            this.textBoxSShort = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.labelHdjac = new System.Windows.Forms.Label();
+            this.textBoxHdJac = new System.Windows.Forms.TextBox();
+            this.labelSh = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.labelskx = new System.Windows.Forms.Label();
+            this.textBoxskx = new System.Windows.Forms.TextBox();
+            this.labelCSh = new System.Windows.Forms.Label();
+            this.textBoxCSh = new System.Windows.Forms.TextBox();
+            this.labelBlt = new System.Windows.Forms.Label();
+            this.textBoxBlt = new System.Windows.Forms.TextBox();
             this.HomePanel.SuspendLayout();
             this.parenttabcontrol.SuspendLayout();
             this.tabPagestdtl.SuspendLayout();
             this.PnlPrdtGirl.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // HomePanel
@@ -123,16 +143,33 @@
             // 
             this.lblsubhead.AutoSize = true;
             this.lblsubhead.BackColor = System.Drawing.Color.Transparent;
-            this.lblsubhead.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsubhead.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsubhead.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblsubhead.Location = new System.Drawing.Point(421, 225);
+            this.lblsubhead.Location = new System.Drawing.Point(3, 204);
             this.lblsubhead.Name = "lblsubhead";
-            this.lblsubhead.Size = new System.Drawing.Size(318, 15);
+            this.lblsubhead.Size = new System.Drawing.Size(409, 20);
             this.lblsubhead.TabIndex = 14;
             this.lblsubhead.Text = "UNIFORM / PRODUCT / COSTUMES / CLOTHING";
             // 
             // PnlPrdtGirl
             // 
+            this.PnlPrdtGirl.Controls.Add(this.textBoxBlt);
+            this.PnlPrdtGirl.Controls.Add(this.labelBlt);
+            this.PnlPrdtGirl.Controls.Add(this.textBoxCSh);
+            this.PnlPrdtGirl.Controls.Add(this.labelCSh);
+            this.PnlPrdtGirl.Controls.Add(this.textBoxskx);
+            this.PnlPrdtGirl.Controls.Add(this.labelskx);
+            this.PnlPrdtGirl.Controls.Add(this.textBox2);
+            this.PnlPrdtGirl.Controls.Add(this.labelSh);
+            this.PnlPrdtGirl.Controls.Add(this.textBoxHdJac);
+            this.PnlPrdtGirl.Controls.Add(this.labelHdjac);
+            this.PnlPrdtGirl.Controls.Add(this.pictureBox2);
+            this.PnlPrdtGirl.Controls.Add(this.pictureBox1);
+            this.PnlPrdtGirl.Controls.Add(this.textBoxSShort);
+            this.PnlPrdtGirl.Controls.Add(this.textBoxSTShrt);
+            this.PnlPrdtGirl.Controls.Add(this.labelShort);
+            this.PnlPrdtGirl.Controls.Add(this.labelTShrt);
+            this.PnlPrdtGirl.Controls.Add(this.labelSprtUnfm);
             this.PnlPrdtGirl.Controls.Add(this.labelShrtSkrt);
             this.PnlPrdtGirl.Controls.Add(this.textBoxShrtSkrt);
             this.PnlPrdtGirl.Controls.Add(this.textBoxShirt);
@@ -143,10 +180,109 @@
             this.PnlPrdtGirl.Controls.Add(this.labelgender);
             this.PnlPrdtGirl.Controls.Add(this.comboBoxGender);
             this.PnlPrdtGirl.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PnlPrdtGirl.Location = new System.Drawing.Point(23, 241);
+            this.PnlPrdtGirl.Location = new System.Drawing.Point(7, 227);
             this.PnlPrdtGirl.Name = "PnlPrdtGirl";
-            this.PnlPrdtGirl.Size = new System.Drawing.Size(978, 224);
+            this.PnlPrdtGirl.Size = new System.Drawing.Size(978, 379);
             this.PnlPrdtGirl.TabIndex = 13;
+            // 
+            // labelShrtSkrt
+            // 
+            this.labelShrtSkrt.AutoSize = true;
+            this.labelShrtSkrt.Location = new System.Drawing.Point(327, 60);
+            this.labelShrtSkrt.Name = "labelShrtSkrt";
+            this.labelShrtSkrt.Size = new System.Drawing.Size(55, 15);
+            this.labelShrtSkrt.TabIndex = 8;
+            this.labelShrtSkrt.Text = "ShrtSkrt";
+            // 
+            // textBoxShrtSkrt
+            // 
+            this.textBoxShrtSkrt.Location = new System.Drawing.Point(384, 56);
+            this.textBoxShrtSkrt.Name = "textBoxShrtSkrt";
+            this.textBoxShrtSkrt.Size = new System.Drawing.Size(69, 21);
+            this.textBoxShrtSkrt.TabIndex = 7;
+            // 
+            // textBoxShirt
+            // 
+            this.textBoxShirt.Location = new System.Drawing.Point(228, 58);
+            this.textBoxShirt.Name = "textBoxShirt";
+            this.textBoxShirt.Size = new System.Drawing.Size(66, 21);
+            this.textBoxShirt.TabIndex = 6;
+            // 
+            // labelShirt
+            // 
+            this.labelShirt.AutoSize = true;
+            this.labelShirt.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelShirt.Location = new System.Drawing.Point(182, 61);
+            this.labelShirt.Name = "labelShirt";
+            this.labelShirt.Size = new System.Drawing.Size(40, 15);
+            this.labelShirt.TabIndex = 5;
+            this.labelShirt.Text = "Shirt :";
+            // 
+            // labelreguniform
+            // 
+            this.labelreguniform.AutoSize = true;
+            this.labelreguniform.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelreguniform.Location = new System.Drawing.Point(6, 60);
+            this.labelreguniform.Name = "labelreguniform";
+            this.labelreguniform.Size = new System.Drawing.Size(122, 16);
+            this.labelreguniform.TabIndex = 4;
+            this.labelreguniform.Text = "Regular Uniform";
+            // 
+            // comboBoxGrade
+            // 
+            this.comboBoxGrade.FormattingEnabled = true;
+            this.comboBoxGrade.Items.AddRange(new object[] {
+            "NUR",
+            "PP!",
+            "PP2",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.comboBoxGrade.Location = new System.Drawing.Point(270, 11);
+            this.comboBoxGrade.Name = "comboBoxGrade";
+            this.comboBoxGrade.Size = new System.Drawing.Size(79, 23);
+            this.comboBoxGrade.TabIndex = 3;
+            this.comboBoxGrade.SelectedIndexChanged += new System.EventHandler(this.comboBoxGrade_SelectedIndexChanged);
+            // 
+            // labelGrade
+            // 
+            this.labelGrade.AutoSize = true;
+            this.labelGrade.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGrade.Location = new System.Drawing.Point(211, 14);
+            this.labelGrade.Name = "labelGrade";
+            this.labelGrade.Size = new System.Drawing.Size(47, 15);
+            this.labelGrade.TabIndex = 2;
+            this.labelGrade.Text = "Grade :";
+            // 
+            // labelgender
+            // 
+            this.labelgender.AutoSize = true;
+            this.labelgender.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelgender.Location = new System.Drawing.Point(25, 13);
+            this.labelgender.Name = "labelgender";
+            this.labelgender.Size = new System.Drawing.Size(54, 15);
+            this.labelgender.TabIndex = 1;
+            this.labelgender.Text = "Gender :";
+            // 
+            // comboBoxGender
+            // 
+            this.comboBoxGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxGender.FormattingEnabled = true;
+            this.comboBoxGender.Items.AddRange(new object[] {
+            "Boy",
+            "Girl"});
+            this.comboBoxGender.Location = new System.Drawing.Point(85, 11);
+            this.comboBoxGender.Name = "comboBoxGender";
+            this.comboBoxGender.Size = new System.Drawing.Size(91, 23);
+            this.comboBoxGender.TabIndex = 0;
+            this.comboBoxGender.SelectedIndexChanged += new System.EventHandler(this.comboBoxGender_SelectedIndexChanged);
             // 
             // textBox1
             // 
@@ -346,103 +482,147 @@
             this.lblheading.TabIndex = 0;
             this.lblheading.Text = "Sutra Application";
             // 
-            // comboBoxGender
+            // labelSprtUnfm
             // 
-            this.comboBoxGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxGender.FormattingEnabled = true;
-            this.comboBoxGender.Items.AddRange(new object[] {
-            "Boy",
-            "Girl"});
-            this.comboBoxGender.Location = new System.Drawing.Point(85, 11);
-            this.comboBoxGender.Name = "comboBoxGender";
-            this.comboBoxGender.Size = new System.Drawing.Size(91, 23);
-            this.comboBoxGender.TabIndex = 0;
-            this.comboBoxGender.SelectedIndexChanged += new System.EventHandler(this.comboBoxGender_SelectedIndexChanged);
+            this.labelSprtUnfm.AutoSize = true;
+            this.labelSprtUnfm.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSprtUnfm.Location = new System.Drawing.Point(6, 99);
+            this.labelSprtUnfm.Name = "labelSprtUnfm";
+            this.labelSprtUnfm.Size = new System.Drawing.Size(113, 16);
+            this.labelSprtUnfm.TabIndex = 9;
+            this.labelSprtUnfm.Text = "Sports Uniform";
             // 
-            // labelgender
+            // labelTShrt
             // 
-            this.labelgender.AutoSize = true;
-            this.labelgender.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelgender.Location = new System.Drawing.Point(25, 13);
-            this.labelgender.Name = "labelgender";
-            this.labelgender.Size = new System.Drawing.Size(54, 15);
-            this.labelgender.TabIndex = 1;
-            this.labelgender.Text = "Gender :";
+            this.labelTShrt.AutoSize = true;
+            this.labelTShrt.Location = new System.Drawing.Point(175, 101);
+            this.labelTShrt.Name = "labelTShrt";
+            this.labelTShrt.Size = new System.Drawing.Size(47, 15);
+            this.labelTShrt.TabIndex = 10;
+            this.labelTShrt.Text = "TShirt :";
             // 
-            // labelGrade
+            // labelShort
             // 
-            this.labelGrade.AutoSize = true;
-            this.labelGrade.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGrade.Location = new System.Drawing.Point(211, 14);
-            this.labelGrade.Name = "labelGrade";
-            this.labelGrade.Size = new System.Drawing.Size(47, 15);
-            this.labelGrade.TabIndex = 2;
-            this.labelGrade.Text = "Grade :";
+            this.labelShort.AutoSize = true;
+            this.labelShort.Location = new System.Drawing.Point(333, 103);
+            this.labelShort.Name = "labelShort";
+            this.labelShort.Size = new System.Drawing.Size(44, 15);
+            this.labelShort.TabIndex = 11;
+            this.labelShort.Text = "Short :";
             // 
-            // comboBoxGrade
+            // textBoxSTShrt
             // 
-            this.comboBoxGrade.FormattingEnabled = true;
-            this.comboBoxGrade.Items.AddRange(new object[] {
-            "NUR",
-            "PP!",
-            "PP2",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.comboBoxGrade.Location = new System.Drawing.Point(270, 11);
-            this.comboBoxGrade.Name = "comboBoxGrade";
-            this.comboBoxGrade.Size = new System.Drawing.Size(79, 23);
-            this.comboBoxGrade.TabIndex = 3;
+            this.textBoxSTShrt.Location = new System.Drawing.Point(228, 98);
+            this.textBoxSTShrt.Name = "textBoxSTShrt";
+            this.textBoxSTShrt.Size = new System.Drawing.Size(63, 21);
+            this.textBoxSTShrt.TabIndex = 12;
             // 
-            // labelreguniform
+            // textBoxSShort
             // 
-            this.labelreguniform.AutoSize = true;
-            this.labelreguniform.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelreguniform.Location = new System.Drawing.Point(160, 49);
-            this.labelreguniform.Name = "labelreguniform";
-            this.labelreguniform.Size = new System.Drawing.Size(122, 16);
-            this.labelreguniform.TabIndex = 4;
-            this.labelreguniform.Text = "Regular Uniform";
+            this.textBoxSShort.Location = new System.Drawing.Point(382, 99);
+            this.textBoxSShort.Name = "textBoxSShort";
+            this.textBoxSShort.Size = new System.Drawing.Size(69, 21);
+            this.textBoxSShort.TabIndex = 13;
             // 
-            // labelShirt
+            // pictureBox1
             // 
-            this.labelShirt.AutoSize = true;
-            this.labelShirt.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelShirt.Location = new System.Drawing.Point(28, 86);
-            this.labelShirt.Name = "labelShirt";
-            this.labelShirt.Size = new System.Drawing.Size(40, 15);
-            this.labelShirt.TabIndex = 5;
-            this.labelShirt.Text = "Shirt :";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(129, 58);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 19);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
-            // textBoxShirt
+            // pictureBox2
             // 
-            this.textBoxShirt.Location = new System.Drawing.Point(72, 84);
-            this.textBoxShirt.Name = "textBoxShirt";
-            this.textBoxShirt.Size = new System.Drawing.Size(66, 21);
-            this.textBoxShirt.TabIndex = 6;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(129, 99);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 19);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
             // 
-            // textBoxShrtSkrt
+            // labelHdjac
             // 
-            this.textBoxShrtSkrt.Location = new System.Drawing.Point(270, 81);
-            this.textBoxShrtSkrt.Name = "textBoxShrtSkrt";
-            this.textBoxShrtSkrt.Size = new System.Drawing.Size(69, 21);
-            this.textBoxShrtSkrt.TabIndex = 7;
+            this.labelHdjac.AutoSize = true;
+            this.labelHdjac.Location = new System.Drawing.Point(13, 144);
+            this.labelHdjac.Name = "labelHdjac";
+            this.labelHdjac.Size = new System.Drawing.Size(94, 15);
+            this.labelHdjac.TabIndex = 16;
+            this.labelHdjac.Text = "Hoodic Jacket :";
             // 
-            // labelShrtSkrt
+            // textBoxHdJac
             // 
-            this.labelShrtSkrt.AutoSize = true;
-            this.labelShrtSkrt.Location = new System.Drawing.Point(182, 86);
-            this.labelShrtSkrt.Name = "labelShrtSkrt";
-            this.labelShrtSkrt.Size = new System.Drawing.Size(82, 15);
-            this.labelShrtSkrt.TabIndex = 8;
-            this.labelShrtSkrt.Text = "labelShrtSkrt";
+            this.textBoxHdJac.Location = new System.Drawing.Point(113, 140);
+            this.textBoxHdJac.Name = "textBoxHdJac";
+            this.textBoxHdJac.Size = new System.Drawing.Size(63, 21);
+            this.textBoxHdJac.TabIndex = 17;
+            // 
+            // labelSh
+            // 
+            this.labelSh.AutoSize = true;
+            this.labelSh.Location = new System.Drawing.Point(56, 177);
+            this.labelSh.Name = "labelSh";
+            this.labelSh.Size = new System.Drawing.Size(49, 15);
+            this.labelSh.TabIndex = 18;
+            this.labelSh.Text = "Shoes :";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(113, 175);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(63, 21);
+            this.textBox2.TabIndex = 19;
+            // 
+            // labelskx
+            // 
+            this.labelskx.AutoSize = true;
+            this.labelskx.Location = new System.Drawing.Point(54, 213);
+            this.labelskx.Name = "labelskx";
+            this.labelskx.Size = new System.Drawing.Size(49, 15);
+            this.labelskx.TabIndex = 20;
+            this.labelskx.Text = "Socus :";
+            // 
+            // textBoxskx
+            // 
+            this.textBoxskx.Location = new System.Drawing.Point(113, 210);
+            this.textBoxskx.Name = "textBoxskx";
+            this.textBoxskx.Size = new System.Drawing.Size(63, 21);
+            this.textBoxskx.TabIndex = 21;
+            // 
+            // labelCSh
+            // 
+            this.labelCSh.AutoSize = true;
+            this.labelCSh.Location = new System.Drawing.Point(10, 245);
+            this.labelCSh.Name = "labelCSh";
+            this.labelCSh.Size = new System.Drawing.Size(93, 15);
+            this.labelCSh.TabIndex = 22;
+            this.labelCSh.Text = "Cycling Shoes :";
+            // 
+            // textBoxCSh
+            // 
+            this.textBoxCSh.Location = new System.Drawing.Point(113, 242);
+            this.textBoxCSh.Name = "textBoxCSh";
+            this.textBoxCSh.Size = new System.Drawing.Size(63, 21);
+            this.textBoxCSh.TabIndex = 23;
+            // 
+            // labelBlt
+            // 
+            this.labelBlt.AutoSize = true;
+            this.labelBlt.Location = new System.Drawing.Point(65, 279);
+            this.labelBlt.Name = "labelBlt";
+            this.labelBlt.Size = new System.Drawing.Size(35, 15);
+            this.labelBlt.TabIndex = 24;
+            this.labelBlt.Text = "Belt :";
+            // 
+            // textBoxBlt
+            // 
+            this.textBoxBlt.Location = new System.Drawing.Point(113, 275);
+            this.textBoxBlt.Name = "textBoxBlt";
+            this.textBoxBlt.Size = new System.Drawing.Size(63, 21);
+            this.textBoxBlt.TabIndex = 25;
             // 
             // Sutra
             // 
@@ -464,6 +644,8 @@
             this.PnlPrdtGirl.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -508,6 +690,23 @@
         private System.Windows.Forms.TextBox textBoxShirt;
         private System.Windows.Forms.Label labelShirt;
         private System.Windows.Forms.Label labelreguniform;
+        private System.Windows.Forms.TextBox textBoxSShort;
+        private System.Windows.Forms.TextBox textBoxSTShrt;
+        private System.Windows.Forms.Label labelShort;
+        private System.Windows.Forms.Label labelTShrt;
+        private System.Windows.Forms.Label labelSprtUnfm;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBoxHdJac;
+        private System.Windows.Forms.Label labelHdjac;
+        private System.Windows.Forms.TextBox textBoxCSh;
+        private System.Windows.Forms.Label labelCSh;
+        private System.Windows.Forms.TextBox textBoxskx;
+        private System.Windows.Forms.Label labelskx;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label labelSh;
+        private System.Windows.Forms.TextBox textBoxBlt;
+        private System.Windows.Forms.Label labelBlt;
     }
 }
 
