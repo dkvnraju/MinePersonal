@@ -31,5 +31,10 @@ namespace SutraApp
             if (MessageBox.Show("Would you like to exit?", "Exit Window", MessageBoxButtons.YesNo) == DialogResult.Yes)
             { Application.Exit(); }
         }
+
+        private void comboBoxGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
