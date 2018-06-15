@@ -75,9 +75,6 @@ namespace SutraApp
             {
                 string Query = "Select SchoolID from School;";
 
-
-
-                SqlCommand cmd = new SqlCommand(Query, conn);
                 try
                 {
                     SqlDataAdapter da = new SqlDataAdapter(Query, conn);
@@ -102,6 +99,46 @@ namespace SutraApp
               
             }
             
+
+        }
+
+        private void comboBoxSC_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SutraApp.Properties.Settings.Connection"].ConnectionString))
+            {
+                        
+                string Query = "Select SchoolNM from School where SchoolID="+"'"+ comboBoxSC.Text +"'"+ ";";
+
+                try
+                {
+                    SqlDataAdapter da = new SqlDataAdapter(Query, conn);
+
+                    DataSet schDs = new DataSet();
+                    da.Fill(schDs, "School");
+
+
+
+                    foreach (DataRow row in schDs.Tables["School"].Rows)
+                    {
+
+                        LblSchoolname.Text = row["SchoolNM"].ToString();
+
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Following error Occured" + ex.Message);
+                }
+
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LblSchoolname.Text = "";
+            comboBoxSC.Text = "";
 
         }
     }
