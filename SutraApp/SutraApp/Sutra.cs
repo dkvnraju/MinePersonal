@@ -71,7 +71,7 @@ namespace SutraApp
         private void studentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             parenttabcontrol.Visible = true;
-            
+           
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SutraApp.Properties.Settings.Connection"].ConnectionString))
             {
                 string Query = "Select SchoolID from School;";
@@ -153,6 +153,59 @@ namespace SutraApp
             textBoxFnm.Text = "";
             textBoxFCNM.Text = "";
             textBoxFM.Text = "";
+        }
+
+        private void buttonAddschool_Click(object sender, EventArgs e)
+        {
+
+            if(textBoxSchoolNm.Text!="" && textBoxSchoolCd.Text!="")
+            { 
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SutraApp.Properties.Settings.Connection"].ConnectionString))
+                {
+                            try { 
+                            string Query = "Insert into  School (SchoolNm,SchoolID) Values (" + "'" + textBoxSchoolNm.Text.Trim() + "' , '"+ textBoxSchoolCd.Text.Trim() + "' ) ;";
+
+                            SqlCommand cmd = new SqlCommand(Query,conn);
+                        conn.Open();
+                            int count = cmd.ExecuteNonQuery();
+                            if (count !=0)
+                            { MessageBox.Show("Data Inserted successfully");
+                            buttonClear_Click(sender,e);
+                            }
+                            else
+                            { MessageBox.Show("Data was not inserted"); }
+                            }
+                    catch(Exception ex)
+                    { MessageBox.Show("Following Exception occured while inserting data" +ex.Message); }
+                    finally
+                    {
+                        conn.Close();
+                    }
+                }
+
+            }
+            else
+            { MessageBox.Show("Please check the Input's and try again");
+            }
+
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxSchoolNm.Text = "";
+            textBoxSchoolCd.Text = "";
+        }
+
+        private void Sutra_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'sutraDataSet.School' table. You can move, or remove it, as needed.
+            this.schoolTableAdapter.Fill(this.sutraDataSet.School);
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            dataGridViewSchool.Visible = true;
         }
     }
 }

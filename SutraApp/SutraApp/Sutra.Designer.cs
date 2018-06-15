@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sutra));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -158,11 +159,14 @@
             this.tabPageStdPndg = new System.Windows.Forms.TabPage();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stockEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblheading = new System.Windows.Forms.Label();
             this.buttonFclean = new System.Windows.Forms.Button();
+            this.sutraDataSet = new SutraApp.SutraDataSet();
+            this.schoolBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.schoolTableAdapter = new SutraApp.SutraDataSetTableAdapters.SchoolTableAdapter();
+            this.schoolNMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.schoolIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HomePanel.SuspendLayout();
             this.parenttabcontrol.SuspendLayout();
             this.tabPagestdtl.SuspendLayout();
@@ -177,6 +181,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchool)).BeginInit();
             this.panel3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sutraDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.schoolBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // HomePanel
@@ -981,6 +987,9 @@
             // 
             // dataGridViewSchool
             // 
+            this.dataGridViewSchool.AllowUserToAddRows = false;
+            this.dataGridViewSchool.AllowUserToDeleteRows = false;
+            this.dataGridViewSchool.AutoGenerateColumns = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -990,6 +999,10 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewSchool.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewSchool.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSchool.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.schoolNMDataGridViewTextBoxColumn,
+            this.schoolIDDataGridViewTextBoxColumn});
+            this.dataGridViewSchool.DataSource = this.schoolBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1000,6 +1013,7 @@
             this.dataGridViewSchool.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewSchool.Location = new System.Drawing.Point(97, 237);
             this.dataGridViewSchool.Name = "dataGridViewSchool";
+            this.dataGridViewSchool.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1008,43 +1022,47 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewSchool.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewSchool.Size = new System.Drawing.Size(570, 201);
+            this.dataGridViewSchool.Size = new System.Drawing.Size(473, 201);
             this.dataGridViewSchool.TabIndex = 8;
+            this.dataGridViewSchool.Visible = false;
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(384, 197);
+            this.linkLabel1.Location = new System.Drawing.Point(547, 195);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(120, 17);
             this.linkLabel1.TabIndex = 7;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "View School INFO";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // buttonClear
             // 
-            this.buttonClear.Location = new System.Drawing.Point(249, 187);
+            this.buttonClear.Location = new System.Drawing.Point(315, 189);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(75, 23);
             this.buttonClear.TabIndex = 6;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // buttonAddschool
             // 
-            this.buttonAddschool.Location = new System.Drawing.Point(151, 189);
+            this.buttonAddschool.Location = new System.Drawing.Point(206, 189);
             this.buttonAddschool.Name = "buttonAddschool";
             this.buttonAddschool.Size = new System.Drawing.Size(75, 23);
             this.buttonAddschool.TabIndex = 5;
             this.buttonAddschool.Text = "Add";
             this.buttonAddschool.UseVisualStyleBackColor = true;
+            this.buttonAddschool.Click += new System.EventHandler(this.buttonAddschool_Click);
             // 
             // textBoxSchoolCd
             // 
             this.textBoxSchoolCd.Location = new System.Drawing.Point(181, 128);
             this.textBoxSchoolCd.Name = "textBoxSchoolCd";
-            this.textBoxSchoolCd.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSchoolCd.Size = new System.Drawing.Size(155, 20);
             this.textBoxSchoolCd.TabIndex = 4;
             // 
             // textBoxSchoolNm
@@ -1413,14 +1431,12 @@
             this.tabPageStdPndg.Name = "tabPageStdPndg";
             this.tabPageStdPndg.Size = new System.Drawing.Size(1537, 779);
             this.tabPageStdPndg.TabIndex = 2;
-            this.tabPageStdPndg.Text = "Pending";
             this.tabPageStdPndg.UseVisualStyleBackColor = true;
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.studentToolStripMenuItem,
-            this.adminToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -1435,21 +1451,6 @@
             this.studentToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.studentToolStripMenuItem.Text = "Student";
             this.studentToolStripMenuItem.Click += new System.EventHandler(this.studentToolStripMenuItem_Click);
-            // 
-            // adminToolStripMenuItem
-            // 
-            this.adminToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.stockEntryToolStripMenuItem});
-            this.adminToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.adminToolStripMenuItem.Text = "Admin";
-            // 
-            // stockEntryToolStripMenuItem
-            // 
-            this.stockEntryToolStripMenuItem.Name = "stockEntryToolStripMenuItem";
-            this.stockEntryToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.stockEntryToolStripMenuItem.Text = "Stock Entry";
             // 
             // exitToolStripMenuItem
             // 
@@ -1479,6 +1480,38 @@
             this.buttonFclean.UseVisualStyleBackColor = true;
             this.buttonFclean.Click += new System.EventHandler(this.buttonFclean_Click);
             // 
+            // sutraDataSet
+            // 
+            this.sutraDataSet.DataSetName = "SutraDataSet";
+            this.sutraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // schoolBindingSource
+            // 
+            this.schoolBindingSource.DataMember = "School";
+            this.schoolBindingSource.DataSource = this.sutraDataSet;
+            // 
+            // schoolTableAdapter
+            // 
+            this.schoolTableAdapter.ClearBeforeFill = true;
+            // 
+            // schoolNMDataGridViewTextBoxColumn
+            // 
+            this.schoolNMDataGridViewTextBoxColumn.DataPropertyName = "SchoolNM";
+            this.schoolNMDataGridViewTextBoxColumn.HeaderText = "SchoolNM";
+            this.schoolNMDataGridViewTextBoxColumn.MinimumWidth = 230;
+            this.schoolNMDataGridViewTextBoxColumn.Name = "schoolNMDataGridViewTextBoxColumn";
+            this.schoolNMDataGridViewTextBoxColumn.ReadOnly = true;
+            this.schoolNMDataGridViewTextBoxColumn.Width = 230;
+            // 
+            // schoolIDDataGridViewTextBoxColumn
+            // 
+            this.schoolIDDataGridViewTextBoxColumn.DataPropertyName = "SchoolID";
+            this.schoolIDDataGridViewTextBoxColumn.HeaderText = "SchoolID";
+            this.schoolIDDataGridViewTextBoxColumn.MinimumWidth = 230;
+            this.schoolIDDataGridViewTextBoxColumn.Name = "schoolIDDataGridViewTextBoxColumn";
+            this.schoolIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.schoolIDDataGridViewTextBoxColumn.Width = 230;
+            // 
             // Sutra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1491,6 +1524,7 @@
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "Sutra";
             this.Text = "Sutra App";
+            this.Load += new System.EventHandler(this.Sutra_Load);
             this.HomePanel.ResumeLayout(false);
             this.parenttabcontrol.ResumeLayout(false);
             this.tabPagestdtl.ResumeLayout(false);
@@ -1512,6 +1546,8 @@
             this.panel3.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sutraDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.schoolBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1522,8 +1558,6 @@
         private System.Windows.Forms.Panel HomePanel;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem studentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem stockEntryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Label lblheading;
         private System.Windows.Forms.TabControl parenttabcontrol;
@@ -1650,6 +1684,11 @@
         private System.Windows.Forms.TextBox textBox22;
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.Button buttonFclean;
+        private SutraDataSet sutraDataSet;
+        private System.Windows.Forms.BindingSource schoolBindingSource;
+        private SutraDataSetTableAdapters.SchoolTableAdapter schoolTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn schoolNMDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn schoolIDDataGridViewTextBoxColumn;
     }
 }
 
