@@ -159,7 +159,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(262, 592);
+            this.button3.Location = new System.Drawing.Point(219, 710);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 17;
@@ -168,7 +168,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(357, 592);
+            this.button2.Location = new System.Drawing.Point(353, 710);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 16;
@@ -177,7 +177,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(159, 592);
+            this.button1.Location = new System.Drawing.Point(92, 710);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 15;
@@ -232,7 +232,7 @@
             this.PnlPrdtGirl.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PnlPrdtGirl.Location = new System.Drawing.Point(7, 227);
             this.PnlPrdtGirl.Name = "PnlPrdtGirl";
-            this.PnlPrdtGirl.Size = new System.Drawing.Size(676, 338);
+            this.PnlPrdtGirl.Size = new System.Drawing.Size(676, 441);
             this.PnlPrdtGirl.TabIndex = 13;
             // 
             // textBox4
@@ -470,7 +470,7 @@
             this.comboBoxGrade.FormattingEnabled = true;
             this.comboBoxGrade.Items.AddRange(new object[] {
             "NUR",
-            "PP!",
+            "PP1",
             "PP2",
             "1",
             "2",
