@@ -119,6 +119,17 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox31 = new System.Windows.Forms.TextBox();
+            this.textBox30 = new System.Windows.Forms.TextBox();
+            this.textBox29 = new System.Windows.Forms.TextBox();
+            this.textBox28 = new System.Windows.Forms.TextBox();
+            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.textBox21 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox18 = new System.Windows.Forms.TextBox();
@@ -151,17 +162,6 @@
             this.stockEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblheading = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
             this.HomePanel.SuspendLayout();
             this.parenttabcontrol.SuspendLayout();
             this.tabPagestdtl.SuspendLayout();
@@ -1015,7 +1015,7 @@
             // 
             // buttonClear
             // 
-            this.buttonClear.Location = new System.Drawing.Point(249, 191);
+            this.buttonClear.Location = new System.Drawing.Point(249, 187);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(75, 23);
             this.buttonClear.TabIndex = 6;
@@ -1115,6 +1115,83 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(641, 731);
             this.panel3.TabIndex = 0;
+            // 
+            // textBox31
+            // 
+            this.textBox31.Location = new System.Drawing.Point(237, 442);
+            this.textBox31.Name = "textBox31";
+            this.textBox31.Size = new System.Drawing.Size(100, 20);
+            this.textBox31.TabIndex = 35;
+            // 
+            // textBox30
+            // 
+            this.textBox30.Location = new System.Drawing.Point(114, 442);
+            this.textBox30.Name = "textBox30";
+            this.textBox30.Size = new System.Drawing.Size(100, 20);
+            this.textBox30.TabIndex = 34;
+            // 
+            // textBox29
+            // 
+            this.textBox29.Location = new System.Drawing.Point(237, 405);
+            this.textBox29.Name = "textBox29";
+            this.textBox29.Size = new System.Drawing.Size(100, 20);
+            this.textBox29.TabIndex = 33;
+            // 
+            // textBox28
+            // 
+            this.textBox28.Location = new System.Drawing.Point(114, 405);
+            this.textBox28.Name = "textBox28";
+            this.textBox28.Size = new System.Drawing.Size(100, 20);
+            this.textBox28.TabIndex = 32;
+            // 
+            // textBox27
+            // 
+            this.textBox27.Location = new System.Drawing.Point(237, 366);
+            this.textBox27.Name = "textBox27";
+            this.textBox27.Size = new System.Drawing.Size(100, 20);
+            this.textBox27.TabIndex = 31;
+            // 
+            // textBox26
+            // 
+            this.textBox26.Location = new System.Drawing.Point(115, 370);
+            this.textBox26.Name = "textBox26";
+            this.textBox26.Size = new System.Drawing.Size(100, 20);
+            this.textBox26.TabIndex = 30;
+            // 
+            // textBox25
+            // 
+            this.textBox25.Location = new System.Drawing.Point(237, 327);
+            this.textBox25.Name = "textBox25";
+            this.textBox25.Size = new System.Drawing.Size(100, 20);
+            this.textBox25.TabIndex = 29;
+            // 
+            // textBox24
+            // 
+            this.textBox24.Location = new System.Drawing.Point(115, 327);
+            this.textBox24.Name = "textBox24";
+            this.textBox24.Size = new System.Drawing.Size(100, 20);
+            this.textBox24.TabIndex = 28;
+            // 
+            // textBox23
+            // 
+            this.textBox23.Location = new System.Drawing.Point(237, 289);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(100, 20);
+            this.textBox23.TabIndex = 27;
+            // 
+            // textBox22
+            // 
+            this.textBox22.Location = new System.Drawing.Point(115, 289);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(100, 20);
+            this.textBox22.TabIndex = 26;
+            // 
+            // textBox21
+            // 
+            this.textBox21.Location = new System.Drawing.Point(237, 248);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(100, 20);
+            this.textBox21.TabIndex = 25;
             // 
             // button5
             // 
@@ -1381,83 +1458,6 @@
             this.lblheading.Size = new System.Drawing.Size(168, 24);
             this.lblheading.TabIndex = 0;
             this.lblheading.Text = "Sutra Application";
-            // 
-            // textBox21
-            // 
-            this.textBox21.Location = new System.Drawing.Point(237, 248);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(100, 20);
-            this.textBox21.TabIndex = 25;
-            // 
-            // textBox22
-            // 
-            this.textBox22.Location = new System.Drawing.Point(115, 289);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(100, 20);
-            this.textBox22.TabIndex = 26;
-            // 
-            // textBox23
-            // 
-            this.textBox23.Location = new System.Drawing.Point(237, 289);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(100, 20);
-            this.textBox23.TabIndex = 27;
-            // 
-            // textBox24
-            // 
-            this.textBox24.Location = new System.Drawing.Point(115, 327);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(100, 20);
-            this.textBox24.TabIndex = 28;
-            // 
-            // textBox25
-            // 
-            this.textBox25.Location = new System.Drawing.Point(237, 327);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(100, 20);
-            this.textBox25.TabIndex = 29;
-            // 
-            // textBox26
-            // 
-            this.textBox26.Location = new System.Drawing.Point(115, 370);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(100, 20);
-            this.textBox26.TabIndex = 30;
-            // 
-            // textBox27
-            // 
-            this.textBox27.Location = new System.Drawing.Point(237, 366);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(100, 20);
-            this.textBox27.TabIndex = 31;
-            // 
-            // textBox28
-            // 
-            this.textBox28.Location = new System.Drawing.Point(114, 405);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(100, 20);
-            this.textBox28.TabIndex = 32;
-            // 
-            // textBox29
-            // 
-            this.textBox29.Location = new System.Drawing.Point(237, 405);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(100, 20);
-            this.textBox29.TabIndex = 33;
-            // 
-            // textBox30
-            // 
-            this.textBox30.Location = new System.Drawing.Point(114, 442);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(100, 20);
-            this.textBox30.TabIndex = 34;
-            // 
-            // textBox31
-            // 
-            this.textBox31.Location = new System.Drawing.Point(237, 442);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(100, 20);
-            this.textBox31.TabIndex = 35;
             // 
             // Sutra
             // 
