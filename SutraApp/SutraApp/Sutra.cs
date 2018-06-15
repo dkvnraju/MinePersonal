@@ -70,17 +70,36 @@ namespace SutraApp
 
         private void studentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using(SqlConnection conn= new SqlConnection(ConfigurationManager.ConnectionStrings["Connection"].ConnectionString))
+            parenttabcontrol.Visible = true;
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SutraApp.Properties.Settings.Connection"].ConnectionString))
             {
                 string Query = "Select SchoolID from School;";
 
+
+
                 SqlCommand cmd = new SqlCommand(Query, conn);
+                try
+                {
+                    SqlDataAdapter da = new SqlDataAdapter(Query, conn);
 
-                cmd.ExecuteReader();
+                    DataSet schDs = new DataSet();
+                    da.Fill(schDs, "School");
 
-                 
 
 
+                    foreach (DataRow row in schDs.Tables["School"].Rows)
+                    {
+                        comboBoxSC.Items.Add(row["SchoolID"].ToString());
+
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Following error Occured" + ex.Message);
+                }
+              
             }
             
 
