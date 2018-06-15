@@ -207,5 +207,45 @@ namespace SutraApp
         {
             dataGridViewSchool.Visible = true;
         }
+
+        private void buttonSClear_Click(object sender, EventArgs e)
+        {
+            comboBoxSBeltSz.Text = "";
+            comboBoxSCShoeSz.Text = "";
+            comboBoxSDSz.Text = "";
+            comboBoxSHJSz.Text = "";
+            comboBoxSShoeSz.Text = "";
+            comboBoxSShortSz.Text = "";
+            comboBoxSShrtSz.Text = "";
+            comboBoxSSkrtSz.Text = "";
+            comboBoxSSocusSz.Text = "";
+            comboBoxSSShortSz.Text = "";
+            comboBoxSTShrtSz.Text = "";
+
+            textBoxSBeltP.Text = "";
+            textBoxSBeltQt.Text = "";
+            textBoxSCShoeP.Text = "";
+            textBoxSCShoeQt.Text = "";
+            textBoxSDP.Text = "";
+            textBoxSDQt.Text = "";
+            textBoxSHJQt.Text = "";
+            textBoxSHJP.Text = "";            
+            textBoxSTshrtP.Text = "";
+            textBoxSTShrtQt.Text = "";
+            textBoxSSShortQt.Text = "";
+            textBoxSSShortP.Text = "";
+            textBoxSSocusQt.Text = "";
+            textBoxSSocusP.Text = "";
+            textBoxSSkrtQt.Text = "";
+            textBoxSSkrtP.Text = "";
+            textBoxSShrtP.Text = "";
+            textBoxSShrtQt.Text = "";           
+            textBoxSShortP.Text = "";
+            textBoxSShortQt.Text = "";
+            textBoxSShoeQt.Text = "";
+            textBoxSShoeP.Text = "";
+
+
+        }
     }
 }
