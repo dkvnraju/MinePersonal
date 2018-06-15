@@ -32,6 +32,19 @@
             this.HomePanel = new System.Windows.Forms.Panel();
             this.parenttabcontrol = new System.Windows.Forms.TabControl();
             this.tabPagestdtl = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.labelCShoes = new System.Windows.Forms.Label();
+            this.labelSocus = new System.Windows.Forms.Label();
+            this.labelShoes = new System.Windows.Forms.Label();
+            this.labelBelt = new System.Windows.Forms.Label();
+            this.labelHDJacket = new System.Windows.Forms.Label();
+            this.labelSShrt = new System.Windows.Forms.Label();
+            this.labeltshirt = new System.Windows.Forms.Label();
+            this.lblShort = new System.Windows.Forms.Label();
+            this.labelSkrt = new System.Windows.Forms.Label();
+            this.labelShrt = new System.Windows.Forms.Label();
+            this.labelDungree = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -97,28 +110,27 @@
             this.adminViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblheading = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.labelDungree = new System.Windows.Forms.Label();
-            this.labelShrt = new System.Windows.Forms.Label();
-            this.labelSkrt = new System.Windows.Forms.Label();
-            this.lblShort = new System.Windows.Forms.Label();
-            this.labeltshirt = new System.Windows.Forms.Label();
-            this.labelSShrt = new System.Windows.Forms.Label();
-            this.labelHDJacket = new System.Windows.Forms.Label();
-            this.labelBelt = new System.Windows.Forms.Label();
-            this.labelShoes = new System.Windows.Forms.Label();
-            this.labelSocus = new System.Windows.Forms.Label();
-            this.labelCShoes = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.labelFCustNm = new System.Windows.Forms.Label();
+            this.labelFNm = new System.Windows.Forms.Label();
+            this.labelFMbl = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.buttonFind = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.HomePanel.SuspendLayout();
             this.parenttabcontrol.SuspendLayout();
             this.tabPagestdtl.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.PnlPrdtGirl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPagestdf.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // HomePanel
@@ -144,6 +156,8 @@
             // 
             // tabPagestdtl
             // 
+            this.tabPagestdtl.Controls.Add(this.pictureBox3);
+            this.tabPagestdtl.Controls.Add(this.panel2);
             this.tabPagestdtl.Controls.Add(this.panel1);
             this.tabPagestdtl.Controls.Add(this.button3);
             this.tabPagestdtl.Controls.Add(this.button2);
@@ -171,6 +185,145 @@
             this.tabPagestdtl.TabIndex = 0;
             this.tabPagestdtl.Text = "Student Details";
             this.tabPagestdtl.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.labelCShoes);
+            this.panel1.Controls.Add(this.labelSocus);
+            this.panel1.Controls.Add(this.labelShoes);
+            this.panel1.Controls.Add(this.labelBelt);
+            this.panel1.Controls.Add(this.labelHDJacket);
+            this.panel1.Controls.Add(this.labelSShrt);
+            this.panel1.Controls.Add(this.labeltshirt);
+            this.panel1.Controls.Add(this.lblShort);
+            this.panel1.Controls.Add(this.labelSkrt);
+            this.panel1.Controls.Add(this.labelShrt);
+            this.panel1.Controls.Add(this.labelDungree);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Location = new System.Drawing.Point(1326, 6);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(190, 638);
+            this.panel1.TabIndex = 18;
+            // 
+            // labelCShoes
+            // 
+            this.labelCShoes.AutoSize = true;
+            this.labelCShoes.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCShoes.Location = new System.Drawing.Point(30, 500);
+            this.labelCShoes.Name = "labelCShoes";
+            this.labelCShoes.Size = new System.Drawing.Size(106, 16);
+            this.labelCShoes.TabIndex = 11;
+            this.labelCShoes.Text = "Cycling Shoes :";
+            // 
+            // labelSocus
+            // 
+            this.labelSocus.AutoSize = true;
+            this.labelSocus.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSocus.Location = new System.Drawing.Point(48, 444);
+            this.labelSocus.Name = "labelSocus";
+            this.labelSocus.Size = new System.Drawing.Size(55, 16);
+            this.labelSocus.TabIndex = 10;
+            this.labelSocus.Text = "Socus :";
+            // 
+            // labelShoes
+            // 
+            this.labelShoes.AutoSize = true;
+            this.labelShoes.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelShoes.Location = new System.Drawing.Point(48, 396);
+            this.labelShoes.Name = "labelShoes";
+            this.labelShoes.Size = new System.Drawing.Size(56, 16);
+            this.labelShoes.TabIndex = 9;
+            this.labelShoes.Text = "Shoes :";
+            // 
+            // labelBelt
+            // 
+            this.labelBelt.AutoSize = true;
+            this.labelBelt.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBelt.Location = new System.Drawing.Point(48, 353);
+            this.labelBelt.Name = "labelBelt";
+            this.labelBelt.Size = new System.Drawing.Size(40, 16);
+            this.labelBelt.TabIndex = 8;
+            this.labelBelt.Text = "Belt :";
+            // 
+            // labelHDJacket
+            // 
+            this.labelHDJacket.AutoSize = true;
+            this.labelHDJacket.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHDJacket.Location = new System.Drawing.Point(27, 311);
+            this.labelHDJacket.Name = "labelHDJacket";
+            this.labelHDJacket.Size = new System.Drawing.Size(100, 16);
+            this.labelHDJacket.TabIndex = 7;
+            this.labelHDJacket.Text = "HodieeJacket :";
+            // 
+            // labelSShrt
+            // 
+            this.labelSShrt.AutoSize = true;
+            this.labelSShrt.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSShrt.Location = new System.Drawing.Point(30, 268);
+            this.labelSShrt.Name = "labelSShrt";
+            this.labelSShrt.Size = new System.Drawing.Size(95, 16);
+            this.labelSShrt.TabIndex = 6;
+            this.labelSShrt.Text = "Sports Short :";
+            // 
+            // labeltshirt
+            // 
+            this.labeltshirt.AutoSize = true;
+            this.labeltshirt.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeltshirt.Location = new System.Drawing.Point(39, 223);
+            this.labeltshirt.Name = "labeltshirt";
+            this.labeltshirt.Size = new System.Drawing.Size(50, 16);
+            this.labeltshirt.TabIndex = 5;
+            this.labeltshirt.Text = "T-Shirt";
+            // 
+            // lblShort
+            // 
+            this.lblShort.AutoSize = true;
+            this.lblShort.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShort.Location = new System.Drawing.Point(48, 185);
+            this.lblShort.Name = "lblShort";
+            this.lblShort.Size = new System.Drawing.Size(50, 16);
+            this.lblShort.TabIndex = 4;
+            this.lblShort.Text = "Short :";
+            // 
+            // labelSkrt
+            // 
+            this.labelSkrt.AutoSize = true;
+            this.labelSkrt.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSkrt.Location = new System.Drawing.Point(46, 134);
+            this.labelSkrt.Name = "labelSkrt";
+            this.labelSkrt.Size = new System.Drawing.Size(44, 16);
+            this.labelSkrt.TabIndex = 3;
+            this.labelSkrt.Text = "Skirt :";
+            // 
+            // labelShrt
+            // 
+            this.labelShrt.AutoSize = true;
+            this.labelShrt.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelShrt.Location = new System.Drawing.Point(48, 91);
+            this.labelShrt.Name = "labelShrt";
+            this.labelShrt.Size = new System.Drawing.Size(45, 16);
+            this.labelShrt.TabIndex = 2;
+            this.labelShrt.Text = "Shirt :";
+            // 
+            // labelDungree
+            // 
+            this.labelDungree.AutoSize = true;
+            this.labelDungree.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDungree.Location = new System.Drawing.Point(40, 52);
+            this.labelDungree.Name = "labelDungree";
+            this.labelDungree.Size = new System.Drawing.Size(71, 16);
+            this.labelDungree.TabIndex = 1;
+            this.labelDungree.Text = "Dungree :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(62, 16);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 24);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Stock";
             // 
             // button3
             // 
@@ -547,7 +700,7 @@
             // 
             this.LblEmail.AutoSize = true;
             this.LblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmail.Location = new System.Drawing.Point(92, 176);
+            this.LblEmail.Location = new System.Drawing.Point(92, 173);
             this.LblEmail.Name = "LblEmail";
             this.LblEmail.Size = new System.Drawing.Size(52, 15);
             this.LblEmail.TabIndex = 11;
@@ -565,7 +718,7 @@
             // 
             this.lbllandline.AutoSize = true;
             this.lbllandline.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbllandline.Location = new System.Drawing.Point(318, 138);
+            this.lbllandline.Location = new System.Drawing.Point(318, 135);
             this.lbllandline.Name = "lbllandline";
             this.lbllandline.Size = new System.Drawing.Size(71, 15);
             this.lbllandline.TabIndex = 9;
@@ -582,11 +735,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 138);
+            this.label2.Location = new System.Drawing.Point(34, 135);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 15);
+            this.label2.Size = new System.Drawing.Size(114, 15);
             this.label2.TabIndex = 7;
-            this.label2.Text = "MobileNumber :";
+            this.label2.Text = "Mobile Number :";
             // 
             // TxtStdNm
             // 
@@ -599,7 +752,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 96);
+            this.label1.Location = new System.Drawing.Point(20, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 15);
             this.label1.TabIndex = 5;
@@ -616,7 +769,7 @@
             // 
             this.lblCustomerno.AutoSize = true;
             this.lblCustomerno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerno.Location = new System.Drawing.Point(13, 56);
+            this.lblCustomerno.Location = new System.Drawing.Point(13, 58);
             this.lblCustomerno.Name = "lblCustomerno";
             this.lblCustomerno.Size = new System.Drawing.Size(131, 15);
             this.lblCustomerno.TabIndex = 3;
@@ -644,7 +797,7 @@
             // 
             this.lblSchCd.AutoSize = true;
             this.lblSchCd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSchCd.Location = new System.Drawing.Point(48, 19);
+            this.lblSchCd.Location = new System.Drawing.Point(48, 21);
             this.lblSchCd.Name = "lblSchCd";
             this.lblSchCd.Size = new System.Drawing.Size(96, 15);
             this.lblSchCd.TabIndex = 0;
@@ -661,7 +814,7 @@
             this.tabPagestdf.Location = new System.Drawing.Point(4, 22);
             this.tabPagestdf.Name = "tabPagestdf";
             this.tabPagestdf.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagestdf.Size = new System.Drawing.Size(1282, 664);
+            this.tabPagestdf.Size = new System.Drawing.Size(1537, 779);
             this.tabPagestdf.TabIndex = 1;
             this.tabPagestdf.Text = "Find Student";
             this.tabPagestdf.UseVisualStyleBackColor = true;
@@ -722,7 +875,7 @@
             // 
             this.tabPageStdPndg.Location = new System.Drawing.Point(4, 22);
             this.tabPageStdPndg.Name = "tabPageStdPndg";
-            this.tabPageStdPndg.Size = new System.Drawing.Size(1282, 664);
+            this.tabPageStdPndg.Size = new System.Drawing.Size(1537, 779);
             this.tabPageStdPndg.TabIndex = 2;
             this.tabPageStdPndg.Text = "Pending";
             this.tabPageStdPndg.UseVisualStyleBackColor = true;
@@ -793,144 +946,99 @@
             this.lblheading.TabIndex = 0;
             this.lblheading.Text = "Sutra Application";
             // 
-            // panel1
+            // panel2
             // 
-            this.panel1.Controls.Add(this.labelCShoes);
-            this.panel1.Controls.Add(this.labelSocus);
-            this.panel1.Controls.Add(this.labelShoes);
-            this.panel1.Controls.Add(this.labelBelt);
-            this.panel1.Controls.Add(this.labelHDJacket);
-            this.panel1.Controls.Add(this.labelSShrt);
-            this.panel1.Controls.Add(this.labeltshirt);
-            this.panel1.Controls.Add(this.lblShort);
-            this.panel1.Controls.Add(this.labelSkrt);
-            this.panel1.Controls.Add(this.labelShrt);
-            this.panel1.Controls.Add(this.labelDungree);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(1375, 19);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(156, 638);
-            this.panel1.TabIndex = 18;
+            this.panel2.Controls.Add(this.buttonFind);
+            this.panel2.Controls.Add(this.textBox7);
+            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.labelFMbl);
+            this.panel2.Controls.Add(this.labelFNm);
+            this.panel2.Controls.Add(this.labelFCustNm);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Location = new System.Drawing.Point(717, 26);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(516, 307);
+            this.panel2.TabIndex = 19;
             // 
-            // label6
+            // label7
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(62, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 24);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Stock";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(227, 10);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(131, 24);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Find Student";
             // 
-            // labelDungree
+            // labelFCustNm
             // 
-            this.labelDungree.AutoSize = true;
-            this.labelDungree.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDungree.Location = new System.Drawing.Point(40, 52);
-            this.labelDungree.Name = "labelDungree";
-            this.labelDungree.Size = new System.Drawing.Size(71, 16);
-            this.labelDungree.TabIndex = 1;
-            this.labelDungree.Text = "Dungree :";
+            this.labelFCustNm.AutoSize = true;
+            this.labelFCustNm.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFCustNm.Location = new System.Drawing.Point(63, 71);
+            this.labelFCustNm.Name = "labelFCustNm";
+            this.labelFCustNm.Size = new System.Drawing.Size(116, 15);
+            this.labelFCustNm.TabIndex = 1;
+            this.labelFCustNm.Text = "Customer Number :";
             // 
-            // labelShrt
+            // labelFNm
             // 
-            this.labelShrt.AutoSize = true;
-            this.labelShrt.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelShrt.Location = new System.Drawing.Point(48, 91);
-            this.labelShrt.Name = "labelShrt";
-            this.labelShrt.Size = new System.Drawing.Size(45, 16);
-            this.labelShrt.TabIndex = 2;
-            this.labelShrt.Text = "Shirt :";
+            this.labelFNm.AutoSize = true;
+            this.labelFNm.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFNm.Location = new System.Drawing.Point(129, 111);
+            this.labelFNm.Name = "labelFNm";
+            this.labelFNm.Size = new System.Drawing.Size(47, 15);
+            this.labelFNm.TabIndex = 2;
+            this.labelFNm.Text = "Name :";
             // 
-            // labelSkrt
+            // labelFMbl
             // 
-            this.labelSkrt.AutoSize = true;
-            this.labelSkrt.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSkrt.Location = new System.Drawing.Point(46, 134);
-            this.labelSkrt.Name = "labelSkrt";
-            this.labelSkrt.Size = new System.Drawing.Size(44, 16);
-            this.labelSkrt.TabIndex = 3;
-            this.labelSkrt.Text = "Skirt :";
+            this.labelFMbl.AutoSize = true;
+            this.labelFMbl.Location = new System.Drawing.Point(96, 150);
+            this.labelFMbl.Name = "labelFMbl";
+            this.labelFMbl.Size = new System.Drawing.Size(83, 14);
+            this.labelFMbl.TabIndex = 3;
+            this.labelFMbl.Text = "Mobile Number :";
             // 
-            // lblShort
+            // textBox5
             // 
-            this.lblShort.AutoSize = true;
-            this.lblShort.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShort.Location = new System.Drawing.Point(48, 185);
-            this.lblShort.Name = "lblShort";
-            this.lblShort.Size = new System.Drawing.Size(50, 16);
-            this.lblShort.TabIndex = 4;
-            this.lblShort.Text = "Short :";
+            this.textBox5.Location = new System.Drawing.Point(185, 68);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(161, 20);
+            this.textBox5.TabIndex = 4;
             // 
-            // labeltshirt
+            // textBox6
             // 
-            this.labeltshirt.AutoSize = true;
-            this.labeltshirt.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeltshirt.Location = new System.Drawing.Point(39, 223);
-            this.labeltshirt.Name = "labeltshirt";
-            this.labeltshirt.Size = new System.Drawing.Size(50, 16);
-            this.labeltshirt.TabIndex = 5;
-            this.labeltshirt.Text = "T-Shirt";
+            this.textBox6.Location = new System.Drawing.Point(186, 107);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(161, 20);
+            this.textBox6.TabIndex = 5;
             // 
-            // labelSShrt
+            // textBox7
             // 
-            this.labelSShrt.AutoSize = true;
-            this.labelSShrt.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSShrt.Location = new System.Drawing.Point(30, 268);
-            this.labelSShrt.Name = "labelSShrt";
-            this.labelSShrt.Size = new System.Drawing.Size(95, 16);
-            this.labelSShrt.TabIndex = 6;
-            this.labelSShrt.Text = "Sports Short :";
+            this.textBox7.Location = new System.Drawing.Point(188, 147);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(161, 20);
+            this.textBox7.TabIndex = 6;
             // 
-            // labelHDJacket
+            // buttonFind
             // 
-            this.labelHDJacket.AutoSize = true;
-            this.labelHDJacket.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHDJacket.Location = new System.Drawing.Point(27, 311);
-            this.labelHDJacket.Name = "labelHDJacket";
-            this.labelHDJacket.Size = new System.Drawing.Size(100, 16);
-            this.labelHDJacket.TabIndex = 7;
-            this.labelHDJacket.Text = "HodieeJacket :";
+            this.buttonFind.Location = new System.Drawing.Point(219, 215);
+            this.buttonFind.Name = "buttonFind";
+            this.buttonFind.Size = new System.Drawing.Size(75, 23);
+            this.buttonFind.TabIndex = 7;
+            this.buttonFind.Text = "Find";
+            this.buttonFind.UseVisualStyleBackColor = true;
             // 
-            // labelBelt
+            // pictureBox3
             // 
-            this.labelBelt.AutoSize = true;
-            this.labelBelt.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBelt.Location = new System.Drawing.Point(48, 353);
-            this.labelBelt.Name = "labelBelt";
-            this.labelBelt.Size = new System.Drawing.Size(40, 16);
-            this.labelBelt.TabIndex = 8;
-            this.labelBelt.Text = "Belt :";
-            // 
-            // labelShoes
-            // 
-            this.labelShoes.AutoSize = true;
-            this.labelShoes.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelShoes.Location = new System.Drawing.Point(48, 396);
-            this.labelShoes.Name = "labelShoes";
-            this.labelShoes.Size = new System.Drawing.Size(56, 16);
-            this.labelShoes.TabIndex = 9;
-            this.labelShoes.Text = "Shoes :";
-            // 
-            // labelSocus
-            // 
-            this.labelSocus.AutoSize = true;
-            this.labelSocus.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSocus.Location = new System.Drawing.Point(48, 444);
-            this.labelSocus.Name = "labelSocus";
-            this.labelSocus.Size = new System.Drawing.Size(55, 16);
-            this.labelSocus.TabIndex = 10;
-            this.labelSocus.Text = "Socus :";
-            // 
-            // labelCShoes
-            // 
-            this.labelCShoes.AutoSize = true;
-            this.labelCShoes.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCShoes.Location = new System.Drawing.Point(30, 500);
-            this.labelCShoes.Name = "labelCShoes";
-            this.labelCShoes.Size = new System.Drawing.Size(106, 16);
-            this.labelCShoes.TabIndex = 11;
-            this.labelCShoes.Text = "Cycling Shoes :";
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(1241, 7);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(34, 28);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 20;
+            this.pictureBox3.TabStop = false;
             // 
             // Sutra
             // 
@@ -948,6 +1056,8 @@
             this.parenttabcontrol.ResumeLayout(false);
             this.tabPagestdtl.ResumeLayout(false);
             this.tabPagestdtl.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.PnlPrdtGirl.ResumeLayout(false);
             this.PnlPrdtGirl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -956,8 +1066,9 @@
             this.tabPagestdf.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1046,6 +1157,16 @@
         private System.Windows.Forms.Label lblShort;
         private System.Windows.Forms.Label labelSkrt;
         private System.Windows.Forms.Label labelShrt;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label labelFMbl;
+        private System.Windows.Forms.Label labelFNm;
+        private System.Windows.Forms.Label labelFCustNm;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button buttonFind;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 
