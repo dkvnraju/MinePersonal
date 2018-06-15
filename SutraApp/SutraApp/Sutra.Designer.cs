@@ -94,20 +94,12 @@
             this.LblSchoolname = new System.Windows.Forms.Label();
             this.comboBoxSC = new System.Windows.Forms.ComboBox();
             this.lblSchCd = new System.Windows.Forms.Label();
-            this.tabPagestdf = new System.Windows.Forms.TabPage();
-            this.buttonClear = new System.Windows.Forms.Button();
-            this.buttonFStd = new System.Windows.Forms.Button();
-            this.textBoxStdNm = new System.Windows.Forms.TextBox();
-            this.textBoxFCNo = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.tabPagesSE = new System.Windows.Forms.TabPage();
             this.tabPageStdPndg = new System.Windows.Forms.TabPage();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stockViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adminViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblheading = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -127,7 +119,6 @@
             this.PnlPrdtGirl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabPagestdf.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -146,7 +137,7 @@
             // parenttabcontrol
             // 
             this.parenttabcontrol.Controls.Add(this.tabPagestdtl);
-            this.parenttabcontrol.Controls.Add(this.tabPagestdf);
+            this.parenttabcontrol.Controls.Add(this.tabPagesSE);
             this.parenttabcontrol.Controls.Add(this.tabPageStdPndg);
             this.parenttabcontrol.Location = new System.Drawing.Point(7, 7);
             this.parenttabcontrol.Name = "parenttabcontrol";
@@ -803,73 +794,15 @@
             this.lblSchCd.TabIndex = 0;
             this.lblSchCd.Text = "School Code :";
             // 
-            // tabPagestdf
+            // tabPagesSE
             // 
-            this.tabPagestdf.Controls.Add(this.buttonClear);
-            this.tabPagestdf.Controls.Add(this.buttonFStd);
-            this.tabPagestdf.Controls.Add(this.textBoxStdNm);
-            this.tabPagestdf.Controls.Add(this.textBoxFCNo);
-            this.tabPagestdf.Controls.Add(this.label5);
-            this.tabPagestdf.Controls.Add(this.label4);
-            this.tabPagestdf.Location = new System.Drawing.Point(4, 22);
-            this.tabPagestdf.Name = "tabPagestdf";
-            this.tabPagestdf.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagestdf.Size = new System.Drawing.Size(1537, 779);
-            this.tabPagestdf.TabIndex = 1;
-            this.tabPagestdf.Text = "Find Student";
-            this.tabPagestdf.UseVisualStyleBackColor = true;
-            // 
-            // buttonClear
-            // 
-            this.buttonClear.Location = new System.Drawing.Point(255, 114);
-            this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(75, 23);
-            this.buttonClear.TabIndex = 5;
-            this.buttonClear.Text = "Clear";
-            this.buttonClear.UseVisualStyleBackColor = true;
-            // 
-            // buttonFStd
-            // 
-            this.buttonFStd.Location = new System.Drawing.Point(157, 114);
-            this.buttonFStd.Name = "buttonFStd";
-            this.buttonFStd.Size = new System.Drawing.Size(75, 23);
-            this.buttonFStd.TabIndex = 4;
-            this.buttonFStd.Text = "Find";
-            this.buttonFStd.UseVisualStyleBackColor = true;
-            // 
-            // textBoxStdNm
-            // 
-            this.textBoxStdNm.Location = new System.Drawing.Point(157, 69);
-            this.textBoxStdNm.Name = "textBoxStdNm";
-            this.textBoxStdNm.Size = new System.Drawing.Size(237, 20);
-            this.textBoxStdNm.TabIndex = 3;
-            // 
-            // textBoxFCNo
-            // 
-            this.textBoxFCNo.Location = new System.Drawing.Point(157, 34);
-            this.textBoxFCNo.Name = "textBoxFCNo";
-            this.textBoxFCNo.Size = new System.Drawing.Size(134, 20);
-            this.textBoxFCNo.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(41, 68);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 15);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Student Name :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(20, 35);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 15);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Customer Number :";
+            this.tabPagesSE.Location = new System.Drawing.Point(4, 22);
+            this.tabPagesSE.Name = "tabPagesSE";
+            this.tabPagesSE.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPagesSE.Size = new System.Drawing.Size(1537, 779);
+            this.tabPagesSE.TabIndex = 1;
+            this.tabPagesSE.Text = "Stock Entry";
+            this.tabPagesSE.UseVisualStyleBackColor = true;
             // 
             // tabPageStdPndg
             // 
@@ -902,9 +835,7 @@
             // adminToolStripMenuItem
             // 
             this.adminToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.stockEntryToolStripMenuItem,
-            this.stockViewToolStripMenuItem,
-            this.adminViewToolStripMenuItem});
+            this.stockEntryToolStripMenuItem});
             this.adminToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
             this.adminToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
@@ -913,20 +844,8 @@
             // stockEntryToolStripMenuItem
             // 
             this.stockEntryToolStripMenuItem.Name = "stockEntryToolStripMenuItem";
-            this.stockEntryToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.stockEntryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.stockEntryToolStripMenuItem.Text = "Stock Entry";
-            // 
-            // stockViewToolStripMenuItem
-            // 
-            this.stockViewToolStripMenuItem.Name = "stockViewToolStripMenuItem";
-            this.stockViewToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
-            this.stockViewToolStripMenuItem.Text = "Stock View";
-            // 
-            // adminViewToolStripMenuItem
-            // 
-            this.adminViewToolStripMenuItem.Name = "adminViewToolStripMenuItem";
-            this.adminViewToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
-            this.adminViewToolStripMenuItem.Text = "Admin View";
             // 
             // exitToolStripMenuItem
             // 
@@ -1062,8 +981,6 @@
             this.PnlPrdtGirl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabPagestdf.ResumeLayout(false);
-            this.tabPagestdf.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1081,13 +998,11 @@
         private System.Windows.Forms.ToolStripMenuItem studentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stockEntryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem stockViewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem adminViewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Label lblheading;
         private System.Windows.Forms.TabControl parenttabcontrol;
         private System.Windows.Forms.TabPage tabPagestdtl;
-        private System.Windows.Forms.TabPage tabPagestdf;
+        private System.Windows.Forms.TabPage tabPagesSE;
         private System.Windows.Forms.ComboBox comboBoxSC;
         private System.Windows.Forms.Label lblSchCd;
         private System.Windows.Forms.TabPage tabPageStdPndg;
@@ -1138,12 +1053,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button buttonClear;
-        private System.Windows.Forms.Button buttonFStd;
-        private System.Windows.Forms.TextBox textBoxStdNm;
-        private System.Windows.Forms.TextBox textBoxFCNo;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelDungree;
