@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sutra));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.HomePanel = new System.Windows.Forms.Panel();
             this.parenttabcontrol = new System.Windows.Forms.TabControl();
             this.tabPagestdtl = new System.Windows.Forms.TabPage();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelFind = new System.Windows.Forms.Panel();
             this.buttonFind = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxFM = new System.Windows.Forms.TextBox();
+            this.textBoxFnm = new System.Windows.Forms.TextBox();
+            this.textBoxFCNM = new System.Windows.Forms.TextBox();
             this.labelFMbl = new System.Windows.Forms.Label();
             this.labelFNm = new System.Windows.Forms.Label();
             this.labelFCustNm = new System.Windows.Forms.Label();
@@ -162,11 +162,12 @@
             this.stockEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblheading = new System.Windows.Forms.Label();
+            this.buttonFclean = new System.Windows.Forms.Button();
             this.HomePanel.SuspendLayout();
             this.parenttabcontrol.SuspendLayout();
             this.tabPagestdtl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.panelFind.SuspendLayout();
             this.panel1.SuspendLayout();
             this.PnlPrdtGirl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -203,7 +204,7 @@
             // tabPagestdtl
             // 
             this.tabPagestdtl.Controls.Add(this.pictureBox3);
-            this.tabPagestdtl.Controls.Add(this.panel2);
+            this.tabPagestdtl.Controls.Add(this.panelFind);
             this.tabPagestdtl.Controls.Add(this.panel1);
             this.tabPagestdtl.Controls.Add(this.button3);
             this.tabPagestdtl.Controls.Add(this.button2);
@@ -235,62 +236,65 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1197, 18);
+            this.pictureBox3.Location = new System.Drawing.Point(1087, 18);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 28);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 20;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // panel2
+            // panelFind
             // 
-            this.panel2.Controls.Add(this.buttonFind);
-            this.panel2.Controls.Add(this.textBox7);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.labelFMbl);
-            this.panel2.Controls.Add(this.labelFNm);
-            this.panel2.Controls.Add(this.labelFCustNm);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(715, 56);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(516, 261);
-            this.panel2.TabIndex = 19;
+            this.panelFind.Controls.Add(this.buttonFclean);
+            this.panelFind.Controls.Add(this.buttonFind);
+            this.panelFind.Controls.Add(this.textBoxFM);
+            this.panelFind.Controls.Add(this.textBoxFnm);
+            this.panelFind.Controls.Add(this.textBoxFCNM);
+            this.panelFind.Controls.Add(this.labelFMbl);
+            this.panelFind.Controls.Add(this.labelFNm);
+            this.panelFind.Controls.Add(this.labelFCustNm);
+            this.panelFind.Controls.Add(this.label7);
+            this.panelFind.Location = new System.Drawing.Point(689, 52);
+            this.panelFind.Name = "panelFind";
+            this.panelFind.Size = new System.Drawing.Size(432, 261);
+            this.panelFind.TabIndex = 19;
+            this.panelFind.Visible = false;
             // 
             // buttonFind
             // 
-            this.buttonFind.Location = new System.Drawing.Point(219, 215);
+            this.buttonFind.Location = new System.Drawing.Point(142, 185);
             this.buttonFind.Name = "buttonFind";
             this.buttonFind.Size = new System.Drawing.Size(75, 23);
             this.buttonFind.TabIndex = 7;
             this.buttonFind.Text = "Find";
             this.buttonFind.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // textBoxFM
             // 
-            this.textBox7.Location = new System.Drawing.Point(188, 147);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(161, 20);
-            this.textBox7.TabIndex = 6;
+            this.textBoxFM.Location = new System.Drawing.Point(163, 132);
+            this.textBoxFM.Name = "textBoxFM";
+            this.textBoxFM.Size = new System.Drawing.Size(161, 20);
+            this.textBoxFM.TabIndex = 6;
             // 
-            // textBox6
+            // textBoxFnm
             // 
-            this.textBox6.Location = new System.Drawing.Point(186, 107);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(161, 20);
-            this.textBox6.TabIndex = 5;
+            this.textBoxFnm.Location = new System.Drawing.Point(163, 59);
+            this.textBoxFnm.Name = "textBoxFnm";
+            this.textBoxFnm.Size = new System.Drawing.Size(237, 20);
+            this.textBoxFnm.TabIndex = 5;
             // 
-            // textBox5
+            // textBoxFCNM
             // 
-            this.textBox5.Location = new System.Drawing.Point(185, 68);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(161, 20);
-            this.textBox5.TabIndex = 4;
+            this.textBoxFCNM.Location = new System.Drawing.Point(163, 95);
+            this.textBoxFCNM.Name = "textBoxFCNM";
+            this.textBoxFCNM.Size = new System.Drawing.Size(161, 20);
+            this.textBoxFCNM.TabIndex = 4;
             // 
             // labelFMbl
             // 
             this.labelFMbl.AutoSize = true;
-            this.labelFMbl.Location = new System.Drawing.Point(96, 150);
+            this.labelFMbl.Location = new System.Drawing.Point(74, 135);
             this.labelFMbl.Name = "labelFMbl";
             this.labelFMbl.Size = new System.Drawing.Size(83, 14);
             this.labelFMbl.TabIndex = 3;
@@ -300,7 +304,7 @@
             // 
             this.labelFNm.AutoSize = true;
             this.labelFNm.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFNm.Location = new System.Drawing.Point(129, 111);
+            this.labelFNm.Location = new System.Drawing.Point(110, 61);
             this.labelFNm.Name = "labelFNm";
             this.labelFNm.Size = new System.Drawing.Size(47, 15);
             this.labelFNm.TabIndex = 2;
@@ -310,7 +314,7 @@
             // 
             this.labelFCustNm.AutoSize = true;
             this.labelFCustNm.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFCustNm.Location = new System.Drawing.Point(63, 71);
+            this.labelFCustNm.Location = new System.Drawing.Point(41, 97);
             this.labelFCustNm.Name = "labelFCustNm";
             this.labelFCustNm.Size = new System.Drawing.Size(116, 15);
             this.labelFCustNm.TabIndex = 1;
@@ -320,7 +324,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(227, 10);
+            this.label7.Location = new System.Drawing.Point(159, 15);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(131, 24);
             this.label7.TabIndex = 0;
@@ -340,9 +344,9 @@
             this.panel1.Controls.Add(this.labelShrt);
             this.panel1.Controls.Add(this.labelDungree);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(1285, 6);
+            this.panel1.Location = new System.Drawing.Point(1150, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(235, 638);
+            this.panel1.Size = new System.Drawing.Size(358, 638);
             this.panel1.TabIndex = 18;
             // 
             // labelCShoes
@@ -919,11 +923,11 @@
             // LblSchoolname
             // 
             this.LblSchoolname.AutoSize = true;
-            this.LblSchoolname.Location = new System.Drawing.Point(379, 21);
+            this.LblSchoolname.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSchoolname.Location = new System.Drawing.Point(307, 22);
             this.LblSchoolname.Name = "LblSchoolname";
-            this.LblSchoolname.Size = new System.Drawing.Size(35, 14);
+            this.LblSchoolname.Size = new System.Drawing.Size(0, 16);
             this.LblSchoolname.TabIndex = 2;
-            this.LblSchoolname.Text = "label1";
             // 
             // comboBoxSC
             // 
@@ -977,33 +981,33 @@
             // 
             // dataGridViewSchool
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewSchool.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewSchool.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewSchool.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewSchool.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewSchool.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewSchool.Location = new System.Drawing.Point(97, 237);
             this.dataGridViewSchool.Name = "dataGridViewSchool";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewSchool.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewSchool.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewSchool.Size = new System.Drawing.Size(570, 201);
             this.dataGridViewSchool.TabIndex = 8;
             // 
@@ -1465,6 +1469,16 @@
             this.lblheading.TabIndex = 0;
             this.lblheading.Text = "Sutra Application";
             // 
+            // buttonFclean
+            // 
+            this.buttonFclean.Location = new System.Drawing.Point(250, 184);
+            this.buttonFclean.Name = "buttonFclean";
+            this.buttonFclean.Size = new System.Drawing.Size(75, 23);
+            this.buttonFclean.TabIndex = 8;
+            this.buttonFclean.Text = "Clear";
+            this.buttonFclean.UseVisualStyleBackColor = true;
+            this.buttonFclean.Click += new System.EventHandler(this.buttonFclean_Click);
+            // 
             // Sutra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1482,8 +1496,8 @@
             this.tabPagestdtl.ResumeLayout(false);
             this.tabPagestdtl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelFind.ResumeLayout(false);
+            this.panelFind.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.PnlPrdtGirl.ResumeLayout(false);
@@ -1578,15 +1592,15 @@
         private System.Windows.Forms.Label lblShort;
         private System.Windows.Forms.Label labelSkrt;
         private System.Windows.Forms.Label labelShrt;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelFind;
         private System.Windows.Forms.Label labelFMbl;
         private System.Windows.Forms.Label labelFNm;
         private System.Windows.Forms.Label labelFCustNm;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buttonFind;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxFM;
+        private System.Windows.Forms.TextBox textBoxFnm;
+        private System.Windows.Forms.TextBox textBoxFCNM;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label4;
@@ -1635,6 +1649,7 @@
         private System.Windows.Forms.TextBox textBox23;
         private System.Windows.Forms.TextBox textBox22;
         private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.Button buttonFclean;
     }
 }
 

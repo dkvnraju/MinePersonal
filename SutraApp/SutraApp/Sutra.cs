@@ -71,6 +71,7 @@ namespace SutraApp
         private void studentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             parenttabcontrol.Visible = true;
+            
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SutraApp.Properties.Settings.Connection"].ConnectionString))
             {
                 string Query = "Select SchoolID from School;";
@@ -140,6 +141,18 @@ namespace SutraApp
             LblSchoolname.Text = "";
             comboBoxSC.Text = "";
 
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            panelFind.Visible = true;
+        }
+
+        private void buttonFclean_Click(object sender, EventArgs e)
+        {
+            textBoxFnm.Text = "";
+            textBoxFCNM.Text = "";
+            textBoxFM.Text = "";
         }
     }
 }
