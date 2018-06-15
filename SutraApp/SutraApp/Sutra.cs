@@ -6,7 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
+using System.Configuration;
 namespace SutraApp
 {
     public partial class Sutra : Form
@@ -64,6 +65,24 @@ namespace SutraApp
 
         private void label4_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void studentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using(SqlConnection conn= new SqlConnection(ConfigurationManager.ConnectionStrings["Connection"].ConnectionString))
+            {
+                string Query = "Select SchoolID from School;";
+
+                SqlCommand cmd = new SqlCommand(Query, conn);
+
+                cmd.ExecuteReader();
+
+                 
+
+
+            }
+            
 
         }
     }
