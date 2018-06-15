@@ -247,5 +247,18 @@ namespace SutraApp
 
 
         }
+
+        private void buttonSSave_Click(object sender, EventArgs e)
+        {
+            String query = "";
+            if(comboBoxSDSz.Text!="" && textBoxSDQt.Text!="" && textBoxSDP.Text!="")
+            {
+                query = query + "Insert into ";
+            }
+
+
+
+            buttonSClear_Click(sender,e);
+        }
     }
 }
