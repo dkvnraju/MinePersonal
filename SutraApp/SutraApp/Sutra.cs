@@ -39,9 +39,12 @@ namespace SutraApp
 
         private void  lbltextShrtSkrt()
         {
-            if (comboBoxGender.Text=="Boy")
-            {
-                if(comboBoxGrade.SelectedIndex <=9 && comboBoxGrade.SelectedIndex != -1)
+            if (comboBoxGrade.SelectedIndex !=1 && comboBoxGrade.SelectedIndex >=0 && comboBoxGrade.SelectedIndex <=2)
+                { labelShrtSkrt.Text = "Dungree :"; }
+
+            else if (comboBoxGender.Text=="Boy")
+            {                
+                if (comboBoxGrade.SelectedIndex <=9 && comboBoxGrade.SelectedIndex != -1)
                 {
                     labelShrtSkrt.Text = "Short :";
                 } else if(comboBoxGrade.SelectedIndex > 9 && comboBoxGrade.SelectedIndex != -1)

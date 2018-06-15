@@ -425,7 +425,7 @@
             // labelShrtSkrt
             // 
             this.labelShrtSkrt.AutoSize = true;
-            this.labelShrtSkrt.Location = new System.Drawing.Point(327, 60);
+            this.labelShrtSkrt.Location = new System.Drawing.Point(318, 60);
             this.labelShrtSkrt.Name = "labelShrtSkrt";
             this.labelShrtSkrt.Size = new System.Drawing.Size(55, 15);
             this.labelShrtSkrt.TabIndex = 8;
@@ -433,7 +433,7 @@
             // 
             // textBoxShrtSkrt
             // 
-            this.textBoxShrtSkrt.Location = new System.Drawing.Point(384, 56);
+            this.textBoxShrtSkrt.Location = new System.Drawing.Point(382, 56);
             this.textBoxShrtSkrt.Name = "textBoxShrtSkrt";
             this.textBoxShrtSkrt.Size = new System.Drawing.Size(69, 21);
             this.textBoxShrtSkrt.TabIndex = 7;
