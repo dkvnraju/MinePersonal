@@ -242,5 +242,18 @@ namespace SutraApp
                 dataGridViewPrdt.DataSource = null;
             }
         }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.productsTableAdapter.FillBy(this.sutraDataSet1.Products);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }

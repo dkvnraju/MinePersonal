@@ -51,17 +51,6 @@
             this.labelFCustNm = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.labelCShoes = new System.Windows.Forms.Label();
-            this.labelSocus = new System.Windows.Forms.Label();
-            this.labelShoes = new System.Windows.Forms.Label();
-            this.labelBelt = new System.Windows.Forms.Label();
-            this.labelHDJacket = new System.Windows.Forms.Label();
-            this.labelSShrt = new System.Windows.Forms.Label();
-            this.labeltshirt = new System.Windows.Forms.Label();
-            this.lblShort = new System.Windows.Forms.Label();
-            this.labelSkrt = new System.Windows.Forms.Label();
-            this.labelShrt = new System.Windows.Forms.Label();
-            this.labelDungree = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -147,6 +136,13 @@
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
+            this.dataGridViewStock = new System.Windows.Forms.DataGridView();
+            this.productNmDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sizeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
+            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.HomePanel.SuspendLayout();
             this.parenttabcontrol.SuspendLayout();
             this.tabPagestdtl.SuspendLayout();
@@ -167,6 +163,8 @@
             this.fillDataToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sutraDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStock)).BeginInit();
+            this.fillByToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // HomePanel
@@ -227,7 +225,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1087, 18);
+            this.pictureBox3.Location = new System.Drawing.Point(1058, 45);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 28);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -246,7 +244,7 @@
             this.panelFind.Controls.Add(this.labelFNm);
             this.panelFind.Controls.Add(this.labelFCustNm);
             this.panelFind.Controls.Add(this.label7);
-            this.panelFind.Location = new System.Drawing.Point(689, 52);
+            this.panelFind.Location = new System.Drawing.Point(620, 45);
             this.panelFind.Name = "panelFind";
             this.panelFind.Size = new System.Drawing.Size(432, 261);
             this.panelFind.TabIndex = 19;
@@ -333,138 +331,18 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.labelCShoes);
-            this.panel1.Controls.Add(this.labelSocus);
-            this.panel1.Controls.Add(this.labelShoes);
-            this.panel1.Controls.Add(this.labelBelt);
-            this.panel1.Controls.Add(this.labelHDJacket);
-            this.panel1.Controls.Add(this.labelSShrt);
-            this.panel1.Controls.Add(this.labeltshirt);
-            this.panel1.Controls.Add(this.lblShort);
-            this.panel1.Controls.Add(this.labelSkrt);
-            this.panel1.Controls.Add(this.labelShrt);
-            this.panel1.Controls.Add(this.labelDungree);
+            this.panel1.Controls.Add(this.dataGridViewStock);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(1150, 6);
+            this.panel1.Location = new System.Drawing.Point(1098, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(358, 638);
+            this.panel1.Size = new System.Drawing.Size(433, 638);
             this.panel1.TabIndex = 18;
-            // 
-            // labelCShoes
-            // 
-            this.labelCShoes.AutoSize = true;
-            this.labelCShoes.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCShoes.Location = new System.Drawing.Point(30, 500);
-            this.labelCShoes.Name = "labelCShoes";
-            this.labelCShoes.Size = new System.Drawing.Size(106, 16);
-            this.labelCShoes.TabIndex = 11;
-            this.labelCShoes.Text = "Cycling Shoes :";
-            // 
-            // labelSocus
-            // 
-            this.labelSocus.AutoSize = true;
-            this.labelSocus.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSocus.Location = new System.Drawing.Point(48, 444);
-            this.labelSocus.Name = "labelSocus";
-            this.labelSocus.Size = new System.Drawing.Size(55, 16);
-            this.labelSocus.TabIndex = 10;
-            this.labelSocus.Text = "Socus :";
-            // 
-            // labelShoes
-            // 
-            this.labelShoes.AutoSize = true;
-            this.labelShoes.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelShoes.Location = new System.Drawing.Point(48, 396);
-            this.labelShoes.Name = "labelShoes";
-            this.labelShoes.Size = new System.Drawing.Size(56, 16);
-            this.labelShoes.TabIndex = 9;
-            this.labelShoes.Text = "Shoes :";
-            // 
-            // labelBelt
-            // 
-            this.labelBelt.AutoSize = true;
-            this.labelBelt.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBelt.Location = new System.Drawing.Point(48, 353);
-            this.labelBelt.Name = "labelBelt";
-            this.labelBelt.Size = new System.Drawing.Size(40, 16);
-            this.labelBelt.TabIndex = 8;
-            this.labelBelt.Text = "Belt :";
-            // 
-            // labelHDJacket
-            // 
-            this.labelHDJacket.AutoSize = true;
-            this.labelHDJacket.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHDJacket.Location = new System.Drawing.Point(27, 311);
-            this.labelHDJacket.Name = "labelHDJacket";
-            this.labelHDJacket.Size = new System.Drawing.Size(100, 16);
-            this.labelHDJacket.TabIndex = 7;
-            this.labelHDJacket.Text = "HodieeJacket :";
-            // 
-            // labelSShrt
-            // 
-            this.labelSShrt.AutoSize = true;
-            this.labelSShrt.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSShrt.Location = new System.Drawing.Point(30, 268);
-            this.labelSShrt.Name = "labelSShrt";
-            this.labelSShrt.Size = new System.Drawing.Size(95, 16);
-            this.labelSShrt.TabIndex = 6;
-            this.labelSShrt.Text = "Sports Short :";
-            // 
-            // labeltshirt
-            // 
-            this.labeltshirt.AutoSize = true;
-            this.labeltshirt.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeltshirt.Location = new System.Drawing.Point(39, 223);
-            this.labeltshirt.Name = "labeltshirt";
-            this.labeltshirt.Size = new System.Drawing.Size(50, 16);
-            this.labeltshirt.TabIndex = 5;
-            this.labeltshirt.Text = "T-Shirt";
-            // 
-            // lblShort
-            // 
-            this.lblShort.AutoSize = true;
-            this.lblShort.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShort.Location = new System.Drawing.Point(48, 185);
-            this.lblShort.Name = "lblShort";
-            this.lblShort.Size = new System.Drawing.Size(50, 16);
-            this.lblShort.TabIndex = 4;
-            this.lblShort.Text = "Short :";
-            // 
-            // labelSkrt
-            // 
-            this.labelSkrt.AutoSize = true;
-            this.labelSkrt.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSkrt.Location = new System.Drawing.Point(46, 134);
-            this.labelSkrt.Name = "labelSkrt";
-            this.labelSkrt.Size = new System.Drawing.Size(44, 16);
-            this.labelSkrt.TabIndex = 3;
-            this.labelSkrt.Text = "Skirt :";
-            // 
-            // labelShrt
-            // 
-            this.labelShrt.AutoSize = true;
-            this.labelShrt.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelShrt.Location = new System.Drawing.Point(48, 91);
-            this.labelShrt.Name = "labelShrt";
-            this.labelShrt.Size = new System.Drawing.Size(45, 16);
-            this.labelShrt.TabIndex = 2;
-            this.labelShrt.Text = "Shirt :";
-            // 
-            // labelDungree
-            // 
-            this.labelDungree.AutoSize = true;
-            this.labelDungree.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDungree.Location = new System.Drawing.Point(40, 52);
-            this.labelDungree.Name = "labelDungree";
-            this.labelDungree.Size = new System.Drawing.Size(71, 16);
-            this.labelDungree.TabIndex = 1;
-            this.labelDungree.Text = "Dungree :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(62, 16);
+            this.label6.Location = new System.Drawing.Point(194, 16);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 24);
             this.label6.TabIndex = 0;
@@ -546,7 +424,7 @@
             this.PnlPrdtGirl.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PnlPrdtGirl.Location = new System.Drawing.Point(7, 227);
             this.PnlPrdtGirl.Name = "PnlPrdtGirl";
-            this.PnlPrdtGirl.Size = new System.Drawing.Size(676, 441);
+            this.PnlPrdtGirl.Size = new System.Drawing.Size(578, 441);
             this.PnlPrdtGirl.TabIndex = 13;
             // 
             // textBox4
@@ -1328,11 +1206,77 @@
             this.label5.TabIndex = 51;
             this.label5.Text = "Fetch Data";
             // 
+            // dataGridViewStock
+            // 
+            this.dataGridViewStock.AllowUserToAddRows = false;
+            this.dataGridViewStock.AllowUserToDeleteRows = false;
+            this.dataGridViewStock.AutoGenerateColumns = false;
+            this.dataGridViewStock.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridViewStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.productNmDataGridViewTextBoxColumn1,
+            this.sizeDataGridViewTextBoxColumn1,
+            this.quantityDataGridViewTextBoxColumn1,
+            this.priceDataGridViewTextBoxColumn1});
+            this.dataGridViewStock.DataSource = this.productsBindingSource;
+            this.dataGridViewStock.Location = new System.Drawing.Point(6, 68);
+            this.dataGridViewStock.Name = "dataGridViewStock";
+            this.dataGridViewStock.ReadOnly = true;
+            this.dataGridViewStock.Size = new System.Drawing.Size(427, 567);
+            this.dataGridViewStock.TabIndex = 12;
+            // 
+            // productNmDataGridViewTextBoxColumn1
+            // 
+            this.productNmDataGridViewTextBoxColumn1.DataPropertyName = "ProductNm";
+            this.productNmDataGridViewTextBoxColumn1.HeaderText = "ProductNm";
+            this.productNmDataGridViewTextBoxColumn1.Name = "productNmDataGridViewTextBoxColumn1";
+            this.productNmDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // sizeDataGridViewTextBoxColumn1
+            // 
+            this.sizeDataGridViewTextBoxColumn1.DataPropertyName = "Size";
+            this.sizeDataGridViewTextBoxColumn1.HeaderText = "Size";
+            this.sizeDataGridViewTextBoxColumn1.Name = "sizeDataGridViewTextBoxColumn1";
+            this.sizeDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // quantityDataGridViewTextBoxColumn1
+            // 
+            this.quantityDataGridViewTextBoxColumn1.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn1.HeaderText = "Quantity";
+            this.quantityDataGridViewTextBoxColumn1.Name = "quantityDataGridViewTextBoxColumn1";
+            this.quantityDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn1
+            // 
+            this.priceDataGridViewTextBoxColumn1.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn1.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn1.Name = "priceDataGridViewTextBoxColumn1";
+            this.priceDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // fillByToolStrip
+            // 
+            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fillByToolStripButton});
+            this.fillByToolStrip.Location = new System.Drawing.Point(0, 24);
+            this.fillByToolStrip.Name = "fillByToolStrip";
+            this.fillByToolStrip.Size = new System.Drawing.Size(1604, 25);
+            this.fillByToolStrip.TabIndex = 2;
+            this.fillByToolStrip.Text = "fillByToolStrip";
+            // 
+            // fillByToolStripButton
+            // 
+            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillByToolStripButton.Name = "fillByToolStripButton";
+            this.fillByToolStripButton.Size = new System.Drawing.Size(39, 22);
+            this.fillByToolStripButton.Text = "FillBy";
+            this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
+            // 
             // Sutra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1604, 881);
+            this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.lblheading);
             this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.menuStrip1);
@@ -1369,6 +1313,9 @@
             this.fillDataToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sutraDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStock)).EndInit();
+            this.fillByToolStrip.ResumeLayout(false);
+            this.fillByToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1436,17 +1383,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label labelDungree;
-        private System.Windows.Forms.Label labelCShoes;
-        private System.Windows.Forms.Label labelSocus;
-        private System.Windows.Forms.Label labelShoes;
-        private System.Windows.Forms.Label labelBelt;
-        private System.Windows.Forms.Label labelHDJacket;
-        private System.Windows.Forms.Label labelSShrt;
-        private System.Windows.Forms.Label labeltshirt;
-        private System.Windows.Forms.Label lblShort;
-        private System.Windows.Forms.Label labelSkrt;
-        private System.Windows.Forms.Label labelShrt;
         private System.Windows.Forms.Panel panelFind;
         private System.Windows.Forms.Label labelFMbl;
         private System.Windows.Forms.Label labelFNm;
@@ -1487,6 +1423,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridViewStock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productNmDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sizeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.ToolStrip fillByToolStrip;
+        private System.Windows.Forms.ToolStripButton fillByToolStripButton;
     }
 }
 
