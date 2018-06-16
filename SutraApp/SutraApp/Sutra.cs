@@ -198,6 +198,8 @@ namespace SutraApp
 
         private void Sutra_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'sutraDataSet1.Products' table. You can move, or remove it, as needed.
+            this.productsTableAdapter.Fill(this.sutraDataSet1.Products);
             // TODO: This line of code loads data into the 'sutraDataSet.School' table. You can move, or remove it, as needed.
             this.schoolTableAdapter.Fill(this.sutraDataSet.School);
 
@@ -208,57 +210,37 @@ namespace SutraApp
             dataGridViewSchool.Visible = true;
         }
 
-        private void buttonSClear_Click(object sender, EventArgs e)
-        {
-            comboBoxSBeltSz.Text = "";
-            comboBoxSCShoeSz.Text = "";
-            comboBoxSDSz.Text = "";
-            comboBoxSHJSz.Text = "";
-            comboBoxSShoeSz.Text = "";
-            comboBoxSShortSz.Text = "";
-            comboBoxSShrtSz.Text = "";
-            comboBoxSSkrtSz.Text = "";
-            comboBoxSSocusSz.Text = "";
-            comboBoxSSShortSz.Text = "";
-            comboBoxSTShrtSz.Text = "";
-
-            textBoxSBeltP.Text = "";
-            textBoxSBeltQt.Text = "";
-            textBoxSCShoeP.Text = "";
-            textBoxSCShoeQt.Text = "";
-            textBoxSDP.Text = "";
-            textBoxSDQt.Text = "";
-            textBoxSHJQt.Text = "";
-            textBoxSHJP.Text = "";            
-            textBoxSTshrtP.Text = "";
-            textBoxSTShrtQt.Text = "";
-            textBoxSSShortQt.Text = "";
-            textBoxSSShortP.Text = "";
-            textBoxSSocusQt.Text = "";
-            textBoxSSocusP.Text = "";
-            textBoxSSkrtQt.Text = "";
-            textBoxSSkrtP.Text = "";
-            textBoxSShrtP.Text = "";
-            textBoxSShrtQt.Text = "";           
-            textBoxSShortP.Text = "";
-            textBoxSShortQt.Text = "";
-            textBoxSShoeQt.Text = "";
-            textBoxSShoeP.Text = "";
-
-
-        }
 
         private void buttonSSave_Click(object sender, EventArgs e)
         {
-            String query = "";
-            if(comboBoxSDSz.Text!="" && textBoxSDQt.Text!="" && textBoxSDP.Text!="")
+            this.productsTableAdapter.Update(this.sutraDataSet1.Products);
+            this.sutraDataSet1.Products.AcceptChanges();
+            MessageBox.Show("Data Inserted/Upated Successfully");
+        }
+
+       
+
+        private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
             {
-                query = query + "Insert into ";
+                this.productsTableAdapter.FillData(this.sutraDataSet1.Products, toolStripComboBox1.Text);
+                dataGridViewPrdt.DataSource = this.sutraDataSet1.Products;
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+        }
 
-
-            buttonSClear_Click(sender,e);
+        private void parenttabcontrol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            if (parenttabcontrol.TabPages["tabPagesSE"].Text== "Stock Entry")
+            {
+                dataGridViewPrdt.DataSource = null;
+            }
         }
     }
 }

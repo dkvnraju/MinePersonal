@@ -58,6 +58,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SutraDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SutraDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SutraDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Sutra.resx">
       <DependentUpon>Sutra.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +95,17 @@
     </None>
     <None Include="SutraDataSet.xss">
       <DependentUpon>SutraDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SutraDataSet1.xsc">
+      <DependentUpon>SutraDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SutraDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SutraDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SutraDataSet1.xss">
+      <DependentUpon>SutraDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
