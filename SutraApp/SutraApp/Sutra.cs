@@ -75,12 +75,17 @@ namespace SutraApp
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SutraApp.Properties.Settings.Connection"].ConnectionString))
             {
                 string Query = "Select SchoolID from School;";
+                string QueryP = "Select Distinct Size from products;";
 
                 try
                 {
                     SqlDataAdapter da = new SqlDataAdapter(Query, conn);
 
+                    SqlDataAdapter dap = new SqlDataAdapter(QueryP,conn);
+
                     DataSet schDs = new DataSet();
+
+                    dap.Fill(schDs,"Products");
                     da.Fill(schDs, "School");
 
 
@@ -88,6 +93,21 @@ namespace SutraApp
                     foreach (DataRow row in schDs.Tables["School"].Rows)
                     {
                         comboBoxSC.Items.Add(row["SchoolID"].ToString());
+
+                    }
+
+                    foreach(DataRow row in schDs.Tables["Products"].Rows)
+                    {
+                        comboBoxShirt.Items.Add(row["Size"].ToString());
+                        comboBoxShrtSkrt.Items.Add(row["Size"].ToString());
+                        comboBoxTShirt.Items.Add(row["Size"].ToString());
+                        comboBoxShort.Items.Add(row["Size"].ToString());
+                        comboBoxHodiee.Items.Add(row["Size"].ToString());
+                        comboBoxBelt.Items.Add(row["Size"].ToString());
+                        comboBoxShoes.Items.Add(row["Size"].ToString());
+                        comboBoxShoeSz.Items.Add(row["Size"].ToString());
+                        comboBoxCShoeSz.Items.Add(row["Size"].ToString());
+
 
                     }
 
@@ -99,6 +119,9 @@ namespace SutraApp
                 }
               
             }
+
+
+
             
 
         }
@@ -274,30 +297,30 @@ namespace SutraApp
                     cmd.Parameters.Add(new SqlParameter("@StdID", (TxtCustNbr.Text).Trim()));
                     cmd.Parameters.Add(new SqlParameter("@SchoolCd", (comboBoxSC.Text).Trim()));
                     cmd.Parameters.Add(new SqlParameter("@StdNm", (TxtStdNm.Text).Trim()));
-                    cmd.Parameters.Add(new SqlParameter("@mobile",Convert.ToInt32( (TxtConcatNum.Text))));
-                    cmd.Parameters.Add(new SqlParameter("@landline",Convert.ToInt32( (TxtLndLine.Text).Trim())));
+                    cmd.Parameters.Add(new SqlParameter("@mobile",Convert.ToInt64(TxtConcatNum.Text)));
+                    cmd.Parameters.Add(new SqlParameter("@Date",Convert.ToDateTime( (dateTimePickerDt.Text).Trim())));
                     cmd.Parameters.Add(new SqlParameter("@email", (textBox1.Text).Trim()));
                     cmd.Parameters.Add(new SqlParameter("@gender", (comboBoxGender.Text).Trim()));
                     cmd.Parameters.Add(new SqlParameter("@grade", (comboBoxGrade.Text).Trim()));
                     cmd.Parameters.Add(new SqlParameter("@ShirtSz", (comboBoxShirt.Text).Trim()));
-                    cmd.Parameters.Add(new SqlParameter("@ShirtQnt",Convert.ToInt16( (textBoxShirt.Text).Trim())));
+                    cmd.Parameters.Add(new SqlParameter("@ShirtQnt",Convert.ToInt32( (textBoxShirt.Text).Trim())));
                     cmd.Parameters.Add(new SqlParameter("@ShrtSkrtSz", (comboBoxShrtSkrt.Text).Trim()));
-                    cmd.Parameters.Add(new SqlParameter("@ShrtSkrtQnt", (Convert.ToInt16((textBoxShrtSkrt.Text).Trim()))));
+                    cmd.Parameters.Add(new SqlParameter("@ShrtSkrtQnt", (Convert.ToInt32((textBoxShrtSkrt.Text).Trim()))));
                     cmd.Parameters.Add(new SqlParameter("@TshirtSz", (comboBoxTShirt.Text).Trim()));
-                    cmd.Parameters.Add(new SqlParameter("@TshirtQnt", (Convert.ToInt16( (textBoxSTShrt.Text).Trim()))));
+                    cmd.Parameters.Add(new SqlParameter("@TshirtQnt", (Convert.ToInt32( (textBoxSTShrt.Text).Trim()))));
                     cmd.Parameters.Add(new SqlParameter("@ShortSz", (comboBoxShort.Text).Trim()));
-                    cmd.Parameters.Add(new SqlParameter("@ShortQnt", (Convert.ToInt16( (textBoxSShort.Text).Trim()))));
+                    cmd.Parameters.Add(new SqlParameter("@ShortQnt", (Convert.ToInt32( (textBoxSShort.Text).Trim()))));
                     cmd.Parameters.Add(new SqlParameter("@HDJacSz", (comboBoxHodiee.Text).Trim()));
-                    cmd.Parameters.Add(new SqlParameter("@HDJacQnt",Convert.ToInt16( (textBoxHdJac.Text).Trim())));
+                    cmd.Parameters.Add(new SqlParameter("@HDJacQnt",Convert.ToInt32( (textBoxHdJac.Text).Trim())));
                     cmd.Parameters.Add(new SqlParameter("@beltSz", (comboBoxBelt.Text).Trim()));
-                    cmd.Parameters.Add(new SqlParameter("@beltQnt", Convert.ToInt16((textBoxBlt.Text).Trim())));
+                    cmd.Parameters.Add(new SqlParameter("@beltQnt", Convert.ToInt32((textBoxBlt.Text).Trim())));
                     cmd.Parameters.Add(new SqlParameter("@shoeSz", (comboBoxShoes.Text).Trim()));
-                    cmd.Parameters.Add(new SqlParameter("@ShoeQnt", Convert.ToInt16((textBox2.Text).Trim())));
+                    cmd.Parameters.Add(new SqlParameter("@ShoeQnt", Convert.ToInt32((textBox2.Text).Trim())));
                     cmd.Parameters.Add(new SqlParameter("@SocusSz", (comboBoxShoeSz.Text).Trim()));
 
-                    cmd.Parameters.Add(new SqlParameter("@SocusQnt", Convert.ToInt16((textBoxskx.Text).Trim())));
+                    cmd.Parameters.Add(new SqlParameter("@SocusQnt", Convert.ToInt32((textBoxskx.Text).Trim())));
                     cmd.Parameters.Add(new SqlParameter("@CShoeSz", (comboBoxCShoeSz.Text).Trim()));
-                    cmd.Parameters.Add(new SqlParameter("@CShoeQnt", Convert.ToInt16((textBoxCSh.Text).Trim())));
+                    cmd.Parameters.Add(new SqlParameter("@CShoeQnt", Convert.ToInt32((textBoxCSh.Text).Trim())));
                     cmd.Parameters.Add(new SqlParameter("@Amount", Convert.ToDouble((textBox4.Text).Trim())));
                     cmd.Parameters.Add(new SqlParameter("@Pay_Optn", (comboBoxPOP.Text).Trim()));
                     cmd.Parameters.Add(new SqlParameter("@pay_Ref", (textBox3.Text).Trim()));
@@ -305,13 +328,13 @@ namespace SutraApp
                     cmd.Parameters.Add(new SqlParameter("@order_Status", (comboBox1OrderSts.Text).Trim()));
 
 
-                    int count = cmd.ExecuteNonQuery();
-                    if (count != 0)
-                    { MessageBox.Show("Data Inserted Successfully!"); }
-                    else { MessageBox.Show("Data Not Inserted"); }
+                    // SqlDataReader count = cmd.ExecuteReader();
+                   int count = cmd.ExecuteNonQuery();
+
+
                 }
-                catch(Exception ex)
-                { MessageBox.Show("Excepion occured"+ex.Message); }
+                catch (Exception ex)
+                { MessageBox.Show("Excepion occured-"+ex.Message); }
                 finally { conn.Close(); }
             }
         }
