@@ -219,7 +219,7 @@ namespace SutraApp
         {
             this.productsTableAdapter.Update(this.sutraDataSet1.Products);
             this.sutraDataSet1.Products.AcceptChanges();
-            MessageBox.Show("Data Inserted/Upated Successfully");
+            MessageBox.Show("Data Inserted Successfully");
         }
 
        
@@ -243,6 +243,7 @@ namespace SutraApp
             
             if (parenttabcontrol.TabPages["tabPagesSE"].Text== "Stock Entry")
             {
+                toolStripComboBox1.Text = "";
                 dataGridViewPrdt.DataSource = null;
             }
         }
@@ -345,6 +346,13 @@ namespace SutraApp
         {
             if(textBox1.Text=="")
             { MessageBox.Show("Email Cannot  be blank"); }
+        }
+
+        private void buttonStUpdt_Click(object sender, EventArgs e)
+        {
+            this.productsTableAdapter.Update(this.sutraDataSet1.Products);
+            dataGridViewPrdt.Refresh();
+            MessageBox.Show("Data Updated Successfully");
         }
     }
 }
