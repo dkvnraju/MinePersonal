@@ -140,6 +140,7 @@ namespace SutraApp
         {
             LblSchoolname.Text = "";
             comboBoxSC.Text = "";
+            TxtCustNbr.Text = "";
 
         }
 
@@ -257,6 +258,93 @@ namespace SutraApp
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SutraApp.Properties.Settings.Connection"].ConnectionString))
+            {
+
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("Student_insert", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@StdID", (TxtCustNbr.Text).Trim()));
+                    cmd.Parameters.Add(new SqlParameter("@SchoolCd", (comboBoxSC.Text).Trim()));
+                    cmd.Parameters.Add(new SqlParameter("@StdNm", (TxtStdNm.Text).Trim()));
+                    cmd.Parameters.Add(new SqlParameter("@mobile",Convert.ToInt32( (TxtConcatNum.Text))));
+                    cmd.Parameters.Add(new SqlParameter("@landline",Convert.ToInt32( (TxtLndLine.Text).Trim())));
+                    cmd.Parameters.Add(new SqlParameter("@email", (textBox1.Text).Trim()));
+                    cmd.Parameters.Add(new SqlParameter("@gender", (comboBoxGender.Text).Trim()));
+                    cmd.Parameters.Add(new SqlParameter("@grade", (comboBoxGrade.Text).Trim()));
+                    cmd.Parameters.Add(new SqlParameter("@ShirtSz", (comboBoxShirt.Text).Trim()));
+                    cmd.Parameters.Add(new SqlParameter("@ShirtQnt",Convert.ToInt16( (textBoxShirt.Text).Trim())));
+                    cmd.Parameters.Add(new SqlParameter("@ShrtSkrtSz", (comboBoxShrtSkrt.Text).Trim()));
+                    cmd.Parameters.Add(new SqlParameter("@ShrtSkrtQnt", (Convert.ToInt16((textBoxShrtSkrt.Text).Trim()))));
+                    cmd.Parameters.Add(new SqlParameter("@TshirtSz", (comboBoxTShirt.Text).Trim()));
+                    cmd.Parameters.Add(new SqlParameter("@TshirtQnt", (Convert.ToInt16( (textBoxSTShrt.Text).Trim()))));
+                    cmd.Parameters.Add(new SqlParameter("@ShortSz", (comboBoxShort.Text).Trim()));
+                    cmd.Parameters.Add(new SqlParameter("@ShortQnt", (Convert.ToInt16( (textBoxSShort.Text).Trim()))));
+                    cmd.Parameters.Add(new SqlParameter("@HDJacSz", (comboBoxHodiee.Text).Trim()));
+                    cmd.Parameters.Add(new SqlParameter("@HDJacQnt",Convert.ToInt16( (textBoxHdJac.Text).Trim())));
+                    cmd.Parameters.Add(new SqlParameter("@beltSz", (comboBoxBelt.Text).Trim()));
+                    cmd.Parameters.Add(new SqlParameter("@beltQnt", Convert.ToInt16((textBoxBlt.Text).Trim())));
+                    cmd.Parameters.Add(new SqlParameter("@shoeSz", (comboBoxShoes.Text).Trim()));
+                    cmd.Parameters.Add(new SqlParameter("@ShoeQnt", Convert.ToInt16((textBox2.Text).Trim())));
+                    cmd.Parameters.Add(new SqlParameter("@SocusSz", (comboBoxShoeSz.Text).Trim()));
+
+                    cmd.Parameters.Add(new SqlParameter("@SocusQnt", Convert.ToInt16((textBoxskx.Text).Trim())));
+                    cmd.Parameters.Add(new SqlParameter("@CShoeSz", (comboBoxCShoeSz.Text).Trim()));
+                    cmd.Parameters.Add(new SqlParameter("@CShoeQnt", Convert.ToInt16((textBoxCSh.Text).Trim())));
+                    cmd.Parameters.Add(new SqlParameter("@Amount", Convert.ToDouble((textBox4.Text).Trim())));
+                    cmd.Parameters.Add(new SqlParameter("@Pay_Optn", (comboBoxPOP.Text).Trim()));
+                    cmd.Parameters.Add(new SqlParameter("@pay_Ref", (textBox3.Text).Trim()));
+                    cmd.Parameters.Add(new SqlParameter("@pay_Status", (comboBoxPSts.Text).Trim()));
+                    cmd.Parameters.Add(new SqlParameter("@order_Status", (comboBox1OrderSts.Text).Trim()));
+
+
+                    int count = cmd.ExecuteNonQuery();
+                    if (count != 0)
+                    { MessageBox.Show("Data Inserted Successfully!"); }
+                    else { MessageBox.Show("Data Not Inserted"); }
+                }
+                catch(Exception ex)
+                { MessageBox.Show("Excepion occured"+ex.Message); }
+                finally { conn.Close(); }
+            }
+        }
+
+        private void TxtCustNbr_Leave(object sender, EventArgs e)
+        {
+            if(TxtCustNbr.Text=="")
+            {
+                MessageBox.Show("Student Number Cannot be Blank");
+            }
+            else
+            {
+                TxtCustNbr.Text = comboBoxSC.Text + TxtCustNbr.Text;
+                TxtCustNbr.Enabled = false;
+            }
+           
+        }
+
+        private void TxtStdNm_Leave(object sender, EventArgs e)
+        {
+            if (TxtStdNm.Text=="")
+            { MessageBox.Show("Student name cannot be left blank"); }
+        }
+
+        private void TxtConcatNum_Leave(object sender, EventArgs e)
+        {
+            if(TxtConcatNum.Text=="")
+            { MessageBox.Show("Mobile Number cannot be blank"); }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if(textBox1.Text=="")
+            { MessageBox.Show("Email Cannot  be blank"); }
         }
     }
 }
