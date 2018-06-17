@@ -145,7 +145,10 @@ namespace SutraApp
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            panelFind.Visible = true;
+            if (panelFind.Visible == true)
+            { panelFind.Visible = false; }
+            else { panelFind.Visible = true;  }
+            
         }
 
         private void buttonFclean_Click(object sender, EventArgs e)
