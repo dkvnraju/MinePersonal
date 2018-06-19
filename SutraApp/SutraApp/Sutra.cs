@@ -375,6 +375,7 @@ namespace SutraApp
         {
             this.productsTableAdapter.Update(this.sutraDataSet1.Products);
             dataGridViewPrdt.Refresh();
+            dataGridViewStock.Refresh();
             MessageBox.Show("Data Updated Successfully");
         }
     }
