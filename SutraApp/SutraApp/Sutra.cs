@@ -263,15 +263,24 @@ namespace SutraApp
 
         private void parenttabcontrol_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            toolStripComboBox1.Text = "";
+            dataGridViewPrdt.DataSource = null;
             this.productsTableAdapter.FillBy(this.sutraDataSet1.Products);
-                //.FillData(this.sutraDataSet1.Products, toolStripComboBox1.Text);
-            dataGridViewPrdt.DataSource = this.sutraDataSet1.Products;
+            //.FillData(this.sutraDataSet1.Products, toolStripComboBox1.Text);
+            dataGridViewStock.DataSource = this.sutraDataSet1.Products;
             dataGridViewStock.Refresh();
-            if (parenttabcontrol.TabPages["tabPagesSE"].Text== "Stock Entry")
+
+            if(dataGridViewSchool.Visible==true)
             {
-                toolStripComboBox1.Text = "";
-                dataGridViewPrdt.DataSource = null;
+               // dataGridViewSchool.DataSource = null;
+                dataGridViewSchool.Visible = false;
             }
+            //if (parenttabcontrol.TabPages["tabPagesSE"].Text== "Stock Entry")
+            //{
+               
+            //    dataGridViewPrdt.DataSource = null;
+            //}
         }
 
         private void fillByToolStripButton_Click(object sender, EventArgs e)
@@ -380,6 +389,11 @@ namespace SutraApp
             dataGridViewPrdt.Refresh();
             dataGridViewStock.Refresh();
             MessageBox.Show("Data Updated Successfully");
+        }
+
+        private void buttonStdUpdate_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

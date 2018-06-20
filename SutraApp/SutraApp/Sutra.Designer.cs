@@ -432,6 +432,7 @@
             this.buttonStdUpdate.TabIndex = 17;
             this.buttonStdUpdate.Text = "Update";
             this.buttonStdUpdate.UseVisualStyleBackColor = true;
+            this.buttonStdUpdate.Click += new System.EventHandler(this.buttonStdUpdate_Click);
             // 
             // buttonStdClear
             // 
