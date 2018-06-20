@@ -886,7 +886,8 @@ WHERE        (ProductID = @Original_ProductID) AND (ProductNm = @Original_Produc
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT Price, ProductID, ProductNm, Quantity, Size FROM Products";
+            this._commandCollection[1].CommandText = "SELECT        Price, ProductID, ProductNm, Quantity, Size\r\nFROM            Produc" +
+                "ts";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;

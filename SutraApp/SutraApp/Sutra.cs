@@ -263,7 +263,10 @@ namespace SutraApp
 
         private void parenttabcontrol_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            this.productsTableAdapter.FillBy(this.sutraDataSet1.Products);
+                //.FillData(this.sutraDataSet1.Products, toolStripComboBox1.Text);
+            dataGridViewPrdt.DataSource = this.sutraDataSet1.Products;
+            dataGridViewStock.Refresh();
             if (parenttabcontrol.TabPages["tabPagesSE"].Text== "Stock Entry")
             {
                 toolStripComboBox1.Text = "";
