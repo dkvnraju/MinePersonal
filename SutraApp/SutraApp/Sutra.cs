@@ -343,6 +343,9 @@ namespace SutraApp
                     // SqlDataReader count = cmd.ExecuteReader();
                    int count = cmd.ExecuteNonQuery();
 
+                    if (count > 0)
+                    { MessageBox.Show("Data Inserted Successfully!"); }
+
 
                 }
                 catch (Exception ex)
@@ -393,7 +396,31 @@ namespace SutraApp
 
         private void buttonStdUpdate_Click(object sender, EventArgs e)
         {
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SutraApp.Properties.Settings.Connection"].ConnectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("Student_Update", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@StdID", (TxtCustNbr.Text).Trim()));
+                    cmd.Parameters.Add(new SqlParameter("@pay_Status", (comboBoxPSts.Text).Trim()));
+                    cmd.Parameters.Add(new SqlParameter("@order_Status", (comboBox1OrderSts.Text).Trim()));
+                    int count = cmd.ExecuteNonQuery();
 
+                    if (count > 0)
+                    { MessageBox.Show("Data Updated Successfully!"); }
+
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Excelption occuered with the following "+ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
         }
     }
 }
