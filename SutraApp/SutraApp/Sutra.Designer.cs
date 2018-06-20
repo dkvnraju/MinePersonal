@@ -723,11 +723,11 @@
             // labelCSh
             // 
             this.labelCSh.AutoSize = true;
-            this.labelCSh.Location = new System.Drawing.Point(27, 249);
+            this.labelCSh.Location = new System.Drawing.Point(23, 249);
             this.labelCSh.Name = "labelCSh";
-            this.labelCSh.Size = new System.Drawing.Size(93, 15);
+            this.labelCSh.Size = new System.Drawing.Size(95, 15);
             this.labelCSh.TabIndex = 22;
-            this.labelCSh.Text = "Cycling Shoes :";
+            this.labelCSh.Text = "Cycling Shorts :";
             // 
             // textBoxskx
             // 
