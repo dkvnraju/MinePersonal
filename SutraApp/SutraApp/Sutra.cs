@@ -161,9 +161,39 @@ namespace SutraApp
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
             LblSchoolname.Text = "";
             comboBoxSC.Text = "";
             TxtCustNbr.Text = "";
+            TxtStdNm.Text = "";
+            TxtConcatNum.Text = "";
+            dateTimePickerDt.Text = "";
+            textBox1.Text = "";
+            comboBoxGender.Text = "";
+            comboBoxGrade.Text = "";
+            comboBoxShirt.Text = "";
+            textBoxShirt.Text = "";
+            comboBoxShrtSkrt.Text = "";
+            textBoxShrtSkrt.Text = "";
+            comboBoxTShirt.Text = "";
+            textBoxSTShrt.Text = "";
+            comboBoxShort.Text = "";
+            textBoxSShort.Text = "";
+            comboBoxHodiee.Text = "";
+            textBoxHdJac.Text = "";
+            comboBoxBelt.Text = "";
+            textBoxBlt.Text = "";
+            comboBoxShoes.Text = "";
+            textBox2.Text = "";
+            comboBoxShoeSz.Text = "";
+            textBoxskx.Text = "";
+            comboBoxCShoeSz.Text = "";
+            textBoxCSh.Text = "";
+            textBox4.Text = "";
+            comboBoxPOP.Text = "";
+            textBox3.Text = "";
+            comboBoxPSts.Text = "";
+            comboBox1OrderSts.Text = "";
 
         }
 
@@ -421,6 +451,85 @@ namespace SutraApp
                     conn.Close();
                 }
             }
+        }
+
+        private void buttonFind_Click(object sender, EventArgs e)
+        {
+
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SutraApp.Properties.Settings.Connection"].ConnectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("Get_Std_Details", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@StdID",String.IsNullOrWhiteSpace(textBoxFCNM.Text)? null:( textBoxFCNM.Text).Trim()));
+                    cmd.Parameters.Add(new SqlParameter("@StdNm",String.IsNullOrWhiteSpace(textBoxFnm.Text)?null:(textBoxFnm.Text).Trim()));
+                    cmd.Parameters.Add(new SqlParameter("@mobile",String.IsNullOrWhiteSpace(textBoxFM.Text)?null:(textBoxFM.Text).Trim()));
+                    SqlDataReader reader= cmd.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            TxtCustNbr.Text=reader["StdID"].ToString();
+                            TxtStdNm.Text = reader["StdNm"].ToString();
+                            comboBoxSC.Text = reader["SchoolID"].ToString();
+                            TxtConcatNum.Text= reader["Mobile"].ToString();
+                            dateTimePickerDt.Text= reader["Date"].ToString();
+                            comboBoxGender.Text= reader["Gender"].ToString();
+                            textBox1.Text= reader["Email"].ToString();
+                            textBox4.Text= reader["Amount"].ToString();
+                            textBoxBlt.Text= reader["BeltQnt"].ToString();
+                            comboBoxBelt.Text= reader["BeltSz"].ToString();
+                            textBoxCSh.Text= reader["CycShoesQnt"].ToString();
+                            comboBoxCShoeSz.Text= reader["CycShoesSz"].ToString();
+                            comboBoxGrade.Text= reader["Grade"].ToString();
+                            textBoxHdJac.Text= reader["HodJackQnt"].ToString();
+                            comboBoxHodiee.Text= reader["HodJackSz"].ToString();
+                            comboBox1OrderSts.Text= reader["Order_Status"].ToString();
+                            comboBoxPOP.Text= reader["Pay_Optn"].ToString();
+                            textBox3.Text= reader["Pay_Ref"].ToString();
+                            comboBoxPSts.Text= reader["Pay_Status"].ToString();
+                            textBoxShirt.Text= reader["ShirtQnt"].ToString();
+                            comboBoxShirt.Text= reader["ShirtSz"].ToString();
+                            textBoxSShort.Text= reader["ShortQnt"].ToString();
+                            comboBoxShort.Text= reader["ShortSz"].ToString();
+                            textBoxShrtSkrt.Text= reader["ShrtSkrtQnt"].ToString();
+                            comboBoxShrtSkrt.Text= reader["ShrtSkrtSz"].ToString();
+                            textBoxskx.Text= reader["SocusQnt"].ToString();
+                            comboBoxShoeSz.Text= reader["SocusSz"].ToString();
+                            textBoxSTShrt.Text= reader["TShirtQnt"].ToString();
+                            comboBoxTShirt.Text= reader["TShirtSz"].ToString();
+                            //reader["SchoolID"].ToString();
+                            //reader["SchoolID"].ToString();
+                            //reader["SchoolID"].ToString();
+                            //reader["SchoolID"].ToString();
+                            //reader["SchoolID"].ToString();
+                            //reader["SchoolID"].ToString();
+                            //reader["SchoolID"].ToString();
+                            //reader["SchoolID"].ToString();
+                            //reader["SchoolID"].ToString();
+                            //reader["SchoolID"].ToString();
+                            //reader["SchoolID"].ToString();
+                            //reader["SchoolID"].ToString();
+                        }
+                        
+                    }
+                    else
+                    { MessageBox.Show("No Data Found"); }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Excelption occuered with the following " + ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+
         }
     }
 }
