@@ -219,7 +219,8 @@ namespace SutraApp
             { 
                 using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SutraApp.Properties.Settings.Connection"].ConnectionString))
                 {
-                            try { 
+                            try
+                    { 
                             string Query = "Insert into  School (SchoolNm,SchoolID) Values (" + "'" + textBoxSchoolNm.Text.Trim() + "' , '"+ textBoxSchoolCd.Text.Trim() + "' ) ;";
 
                             SqlCommand cmd = new SqlCommand(Query,conn);
