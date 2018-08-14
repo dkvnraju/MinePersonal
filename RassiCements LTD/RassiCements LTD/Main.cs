@@ -1984,6 +1984,7 @@ namespace RassiCements_LTD
 
         private void btnLDAdd_Click(object sender, EventArgs e)
         {
+            bool inserted = false; 
             if(Convert.ToInt16(textBoxLDNoLdrs.Text)+Convert.ToInt16(textBoxLDNoPkrs.Text)==dataGridView1.Rows.Count)
             {
               
@@ -2006,17 +2007,23 @@ namespace RassiCements_LTD
                             OleDbCommand cmd = new OleDbCommand(connstring, conn);
                            int n= cmd.ExecuteNonQuery();
                             if(n>0)
-                            { }
+                            {
+                                inserted = true;
+                            }
                             else { throw new NotImplementedException("data not inserted properly please try again"); }
 
                         }
                     }
+                    if (inserted)
+                    {
+                        MessageBox.Show("Data Inserted Successfully");
+                        dataGridView1.Rows.Clear();
+                        btnClr_Click(sender, e);
+                    }
 
 
                     
-                    MessageBox.Show("Data Inserted Successfully");
-                    dataGridView1.Rows.Clear();
-                    btnClr_Click(sender,e);
+                   
                 }
                 catch (Exception ex)
                 {

@@ -107,16 +107,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Sel = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmpName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Batchno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TokenNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shift = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DayAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contractor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnLft = new System.Windows.Forms.Button();
             this.btnRi8 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -214,6 +204,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.rassiCementLTDDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rassiCementLTDDataSet = new RassiCements_LTD.RassiCementLTDDataSet();
+            this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Batchno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TokenNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Shift = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DayAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Contractor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1086,7 +1086,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Sel,
+            this.Select,
             this.Sno,
             this.EmpName,
             this.Batchno,
@@ -1100,6 +1100,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(1);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 20;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(513, 263);
@@ -1107,84 +1108,6 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.Sorted += new System.EventHandler(this.dataGridView1_Sorted);
             this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick_1);
-            // 
-            // Sel
-            // 
-            this.Sel.HeaderText = "Selected";
-            this.Sel.Name = "Sel";
-            this.Sel.ReadOnly = true;
-            this.Sel.Width = 30;
-            // 
-            // Sno
-            // 
-            this.Sno.HeaderText = "Sno";
-            this.Sno.Name = "Sno";
-            this.Sno.ReadOnly = true;
-            this.Sno.Width = 50;
-            // 
-            // EmpName
-            // 
-            this.EmpName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-            this.EmpName.HeaderText = "Name";
-            this.EmpName.Name = "EmpName";
-            this.EmpName.ReadOnly = true;
-            this.EmpName.Width = 5;
-            // 
-            // Batchno
-            // 
-            this.Batchno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Batchno.HeaderText = "BatchNo";
-            this.Batchno.Name = "Batchno";
-            this.Batchno.ReadOnly = true;
-            this.Batchno.Width = 74;
-            // 
-            // TypeID
-            // 
-            this.TypeID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.TypeID.HeaderText = "Type";
-            this.TypeID.Name = "TypeID";
-            this.TypeID.ReadOnly = true;
-            this.TypeID.Width = 56;
-            // 
-            // TokenNo
-            // 
-            this.TokenNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.TokenNo.HeaderText = "TokenNo";
-            this.TokenNo.Name = "TokenNo";
-            this.TokenNo.ReadOnly = true;
-            this.TokenNo.Width = 77;
-            // 
-            // Shift
-            // 
-            this.Shift.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Shift.HeaderText = "Shift";
-            this.Shift.Name = "Shift";
-            this.Shift.ReadOnly = true;
-            this.Shift.Width = 53;
-            // 
-            // Date
-            // 
-            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            this.Date.Width = 55;
-            // 
-            // DayAmount
-            // 
-            this.DayAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.DayAmount.HeaderText = "Day Amount";
-            this.DayAmount.Name = "DayAmount";
-            this.DayAmount.ReadOnly = true;
-            this.DayAmount.Width = 90;
-            // 
-            // Contractor
-            // 
-            this.Contractor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Contractor.HeaderText = "Contractor";
-            this.Contractor.Name = "Contractor";
-            this.Contractor.ReadOnly = true;
-            this.Contractor.Width = 81;
             // 
             // btnLft
             // 
@@ -1230,6 +1153,7 @@
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(1);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowTemplate.Height = 20;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(520, 268);
@@ -2184,6 +2108,84 @@
             this.rassiCementLTDDataSet.DataSetName = "RassiCementLTDDataSet";
             this.rassiCementLTDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // Select
+            // 
+            this.Select.HeaderText = "Sel";
+            this.Select.Name = "Select";
+            this.Select.ReadOnly = true;
+            this.Select.Width = 25;
+            // 
+            // Sno
+            // 
+            this.Sno.HeaderText = "Sno";
+            this.Sno.Name = "Sno";
+            this.Sno.ReadOnly = true;
+            this.Sno.Width = 30;
+            // 
+            // EmpName
+            // 
+            this.EmpName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+            this.EmpName.HeaderText = "Name";
+            this.EmpName.Name = "EmpName";
+            this.EmpName.ReadOnly = true;
+            this.EmpName.Width = 5;
+            // 
+            // Batchno
+            // 
+            this.Batchno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Batchno.HeaderText = "BatchNo";
+            this.Batchno.Name = "Batchno";
+            this.Batchno.ReadOnly = true;
+            this.Batchno.Width = 74;
+            // 
+            // TypeID
+            // 
+            this.TypeID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.TypeID.HeaderText = "Type";
+            this.TypeID.Name = "TypeID";
+            this.TypeID.ReadOnly = true;
+            this.TypeID.Width = 56;
+            // 
+            // TokenNo
+            // 
+            this.TokenNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.TokenNo.HeaderText = "TokenNo";
+            this.TokenNo.Name = "TokenNo";
+            this.TokenNo.ReadOnly = true;
+            this.TokenNo.Width = 77;
+            // 
+            // Shift
+            // 
+            this.Shift.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Shift.HeaderText = "Shift";
+            this.Shift.Name = "Shift";
+            this.Shift.ReadOnly = true;
+            this.Shift.Width = 53;
+            // 
+            // Date
+            // 
+            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            this.Date.Width = 55;
+            // 
+            // DayAmount
+            // 
+            this.DayAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.DayAmount.HeaderText = "Day Amount";
+            this.DayAmount.Name = "DayAmount";
+            this.DayAmount.ReadOnly = true;
+            this.DayAmount.Width = 90;
+            // 
+            // Contractor
+            // 
+            this.Contractor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Contractor.HeaderText = "Contractor";
+            this.Contractor.Name = "Contractor";
+            this.Contractor.ReadOnly = true;
+            this.Contractor.Width = 81;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2389,16 +2391,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Sel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmpName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Batchno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TypeID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TokenNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Shift;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DayAmount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Contractor;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Selected;
         private System.Windows.Forms.DataGridViewTextBoxColumn SRNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn EmpRName;
@@ -2420,6 +2412,16 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox comboBoxrep;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Batchno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TypeID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TokenNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Shift;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DayAmount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Contractor;
     }
 }
 
