@@ -579,9 +579,9 @@ namespace RassiCements_LTD
 
         private void btnWDSave_Click(object sender, EventArgs e)
         {
-            if (txtWDTypeID.Text != "" && COBXWDTypeNM.Text != "" && txtWDWgnAmt.Visible ==true ? txtWDRDAmt.Text !="" : false && txtWDRDAmt.Visible==true? txtWDRDAmt.Text !="":false && )
+            if (txtWDTypeID.Text != "" && COBXWDTypeNM.Text != "" && txtWDWgnAmt.Visible ==true ? txtWDRDAmt.Text !="" : false && txtWDRDAmt.Visible==true? txtWDRDAmt.Text !="":false && txtWDHLAmt.Text !="" && textBoxOWAMT.Text !="")
             {
-                MessageBox.Show("Batch Name or batch Number cannot be empty. Please chack and try deleting again");
+                MessageBox.Show(" Please check  the input feilds and try inserting again");
             }
             else
             {
