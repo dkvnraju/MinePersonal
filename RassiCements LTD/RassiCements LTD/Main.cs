@@ -2226,7 +2226,7 @@ namespace RassiCements_LTD
             {
                 PDFLocal pf = new PDFLocal();
                 conn.Open();
-                string sql = "select distint BATCHNO from temp_wages ;";
+                string sql = "select distinct BATCHNO from temp_wages ;";
                 OleDbCommand cmd = new OleDbCommand(sql, conn);
                 OleDbDataReader drB = cmd.ExecuteReader();
                 if (drB.HasRows)
