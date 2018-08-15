@@ -2201,42 +2201,19 @@ namespace RassiCements_LTD
         private void button1_Click(object sender, EventArgs e)
         {
 
-            string connstring = "SELECT * FROM  Wages where WageDate >=" + "#" + dateTimePicker1.Text + "#" + "and WageDate <=" + "#" + dateTimePicker2.Text + "#" + ";";
+            string connstring = "insert into  temp_wages   select  EMPNAME,BATCHNO,TYPEID,TOKENNO,SHIFT,WAGEDATE,DAYAMOUNT,CONTRACTOR  from wages where BATCHNO= '"+ comboBoxrep.Text + "' and WAGEDATE between #" + dateTimePicker1.Text +"# and #" + dateTimePicker2.Text +"# ;";
             OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
             OleDbCommand cmd = new OleDbCommand(connstring, conn);
+            OleDbCommand cmdd = new OleDbCommand("delete * from temp_wages", conn);
 
             try
             {
                 conn.Open();
-                OleDbDataReader dr = cmd.ExecuteReader();
-
-                if (dr.HasRows)
-                {
-                    while (dr.Read())
-                    {
-                        //emp.Columns.Add("Sel", typeof(bool));
-                        emp.Columns.Add("SNO", typeof(int));
-                        emp.Columns.Add("Name", typeof(string));
-                        emp.Columns.Add("BatchNo", typeof(string));
-                        emp.Columns.Add("Type", typeof(string));
-                        emp.Columns.Add("TokenNo", typeof(int));
-                        emp.Columns.Add("Shift", typeof(string));
-                        emp.Columns.Add("Date", typeof(string));
-                        emp.Columns.Add("DayAmount", typeof(double));
-                        emp.Columns.Add("Contractor", typeof(string));
-
-                          emp.Rows.Add(Convert.ToInt16( dr["sno"].ToString()),dr["empname"].ToString(),dr["batchNo"].ToString(),dr["typeid"].ToString(),
-                             Convert.ToInt16( dr["tokenno"].ToString()),dr["shift"].ToString(),dr["wageDate"].ToString(),Convert.ToDouble(dr["dayamount"].ToString()),
-                              dr["contractor"].ToString() );
-
-                        emp.AcceptChanges();
-
-                    }
-
-                }
-                else
-                { //MessageBox.Show("Token Number Does't Exist!");
-                }
+                cmdd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
+               
+                
+                
             }
 
             catch (Exception ex)
