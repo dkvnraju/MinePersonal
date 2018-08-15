@@ -736,7 +736,7 @@ namespace RassiCements_LTD
         {
             //ill the text box with the data
 
-            string connstring = "SELECT BatchNum,Name FROM  BatchDetails WHERE BatchNum = " + COBXBDBNO.Text;
+            string connstring = "SELECT BatchNum,Name FROM  BatchDetails WHERE BatchNum = '" + COBXBDBNO.Text +"'";
             OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
             OleDbCommand cmd = new OleDbCommand(connstring, conn);
 
