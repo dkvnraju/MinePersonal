@@ -554,16 +554,14 @@ namespace RassiCements_LTD
                 {
                     if (tabControl1.SelectedTab.Text == "Loading Details")
                     { comboBoxLDBtchNo.Items.Clear(); }
-                    if (tabControl1.SelectedTab.Text == "Reporting")
-                    { comboBoxrep.Items.Clear(); }
+                    
                         conn.Open();
                     OleDbDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
                         if(tabControl1.SelectedTab.Text == "Loading Details")
                         { comboBoxLDBtchNo.Items.Add(dr.GetValue(0)); }
-                        if(tabControl1.SelectedTab.Text == "Reporting")
-                        { comboBoxrep.Items.Add(dr.GetValue(0)); }
+                       
                         
                     }
                 }
@@ -2200,21 +2198,19 @@ namespace RassiCements_LTD
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            string connstring = "insert into  temp_wages   select  EMPNAME,BATCHNO,TYPEID,TOKENNO,SHIFT,WAGEDATE,DAYAMOUNT,CONTRACTOR  from wages where BATCHNO= '"+ comboBoxrep.Text + "' and WAGEDATE between #" + dateTimePicker1.Text +"# and #" + dateTimePicker2.Text +"# ;";
+            //insertion of data
+            string connstring = "insert into  temp_wages  select  EMPNAME,BATCHNO,TYPEID,TOKENNO,SHIFT,WAGEDATE,DAYAMOUNT,CONTRACTOR  from wages where  WAGEDATE between #" + dateTimePicker1.Text +"# and #" + dateTimePicker2.Text +"# ;";
             OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
-            OleDbCommand cmd = new OleDbCommand(connstring, conn);
-            OleDbCommand cmdd = new OleDbCommand("delete * from temp_wages", conn);
+            conn.Open();
 
             try
             {
-                conn.Open();
+                OleDbCommand cmd = new OleDbCommand(connstring, conn);
+                OleDbCommand cmdd = new OleDbCommand("delete * from temp_wages", conn);
                 cmdd.ExecuteNonQuery();
                 cmd.ExecuteNonQuery();
-               
-                
-                
             }
+           
 
             catch (Exception ex)
             {
@@ -2225,7 +2221,58 @@ namespace RassiCements_LTD
                 conn.Close();
 
             }
+            // retrival of data
+            try
+            {
+                PDFLocal pf = new PDFLocal();
+                conn.Open();
+                string sql = "select distint BATCHNO from temp_wages ;";
+                OleDbCommand cmd = new OleDbCommand(sql, conn);
+                OleDbDataReader drB = cmd.ExecuteReader();
+                if (drB.HasRows)
+                {
+                    while (drB.Read())
+                    {
 
+                        sql = "select distinct TOKENNO from temp_wages where BATCHNO = '" + drB["BATCHNO"].ToString() + "'; " ;
+                        cmd = new OleDbCommand(sql, conn);
+                        OleDbDataReader drt = cmd.ExecuteReader();
+                        //int rowcount = 0;
+                        if (drt.HasRows)
+                        {
+                            while (drt.Read())
+                            {
+                                
+                                var token = drt["TOKENNO"].ToString();
+                                sql = "select * from temp_wages where TOKENNO = " + Convert.ToInt64(token) + ";";
+                                cmd = new OleDbCommand(sql, conn);
+                                OleDbDataReader dr = cmd.ExecuteReader();
+                                if (dr.HasRows)
+                                {
+                                        pf.generatepdf( dr);
+                                 
+                                }
+                               // rowcount = rowcount + 1;
+                            }
+                        }
+                    }
+                }
+
+
+
+
+
+
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Exception occured." + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }
