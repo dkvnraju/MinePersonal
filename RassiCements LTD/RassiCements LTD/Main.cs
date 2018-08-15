@@ -1970,9 +1970,13 @@ namespace RassiCements_LTD
                 if ((bool)dataGridView1.SelectedRows[0].Cells[0].Value == false)
                 { dataGridView1.SelectedRows[0].Cells[0].Value = true; }
                 else { dataGridView1.SelectedRows[0].Cells[0].Value = false; }
+                if ((bool)dataGridView1.SelectedRows[0].Cells[0].Value == true)
+                { dataGridView1.SelectedRows[0].DefaultCellStyle.BackColor = Color.Blue; }
+                else
+                { dataGridView1.SelectedRows[0].DefaultCellStyle.BackColor = Color.White; }
             }
 
-            if(dataGridView1.SelectedRows[0].DefaultCellStyle.BackColor==Color.Red)
+            if (dataGridView1.SelectedRows[0].DefaultCellStyle.BackColor==Color.Red)
             { dataGridView1.SelectedRows[0].DefaultCellStyle.BackColor = Color.Red; }
             else if(dataGridView1.SelectedRows[0].DefaultCellStyle.BackColor == Color.LimeGreen)
             { dataGridView1.SelectedRows[0].DefaultCellStyle.BackColor = Color.LimeGreen; }
