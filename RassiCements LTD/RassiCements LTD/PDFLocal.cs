@@ -19,9 +19,11 @@ namespace RassiCements_LTD
             Document doc = new Document(PageSize.A4);
             PdfPTable pTable = new PdfPTable(5);
 
-            PdfWriter.GetInstance(doc, new FileStream(@"C:\Users\DKVNRAJU\Desktop\test.pdf", FileMode.Create));
+            pTable.DefaultCell.Border = Rectangle.NO_BORDER;
+
+            PdfWriter.GetInstance(doc, new FileStream(@"C:\Users\"+Environment.UserName +@"\Desktop\payslips\"+"payslip" +Convert.ToString(DateTime.Now)+ @".pdf", FileMode.Create));
             doc.Open();
-            doc.Add(new Paragraph ("hello world"));
+           
             int rownumber = 0;
             while (dr.Read())
             {
@@ -55,6 +57,39 @@ namespace RassiCements_LTD
                     pTable.AddCell("Shift");
                     pTable.AddCell("Amount");
                     pTable.AddCell("OB");
+
+
+                    //Data insert 
+
+                    pTable.AddCell(rownumber.ToString());
+                    pTable.AddCell(dr["Wagedate"].ToString());
+                    pTable.AddCell(dr["SHIFT"].ToString());
+                    pTable.AddCell(dr["DAYAMOUNT"].ToString());
+                    // need to find Other batch
+                    string sql = "select BatchNo from EmployeeDetails where TokenNumber = " + Convert.ToUInt32(dr["TOKENNO"].ToString());
+                    OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+                    conn.Open();
+                    OleDbCommand cmd = new OleDbCommand(sql, conn);
+                    OleDbDataReader drt = cmd.ExecuteReader();
+
+                    if (drt.HasRows)
+
+                    {
+                        if (drt["BatchNo"].ToString() == dr["Wagedate"].ToString())
+                        {
+                            pTable.AddCell("");
+                        }
+                        else
+                        {
+                            pTable.AddCell(drt["BatchNo"].ToString());
+                        }
+
+                    }
+
+
+
+
+
                 }
                 else
                 {
