@@ -552,7 +552,11 @@ namespace RassiCements_LTD
 
                 try
                 {
-                    conn.Open();
+                    if (tabControl1.SelectedTab.Text == "Loading Details")
+                    { comboBoxLDBtchNo.Items.Clear(); }
+                    if (tabControl1.SelectedTab.Text == "Reporting")
+                    { comboBoxrep.Items.Clear(); }
+                        conn.Open();
                     OleDbDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
