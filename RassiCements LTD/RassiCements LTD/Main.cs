@@ -1131,7 +1131,7 @@ namespace RassiCements_LTD
             }
             finally
             {
-                conn.Close();
+                conn1.Close();
 
             }
 
@@ -1331,7 +1331,7 @@ namespace RassiCements_LTD
             }
             finally
             {
-                conn.Close();
+                conn1.Close();
 
             }
 
@@ -1406,7 +1406,7 @@ namespace RassiCements_LTD
             }
             finally
             {
-                conn.Close();
+                conn1.Close();
 
             }
 
@@ -1476,7 +1476,7 @@ namespace RassiCements_LTD
             }
             finally
             {
-                conn.Close();
+                conn1.Close();
 
             }
 
