@@ -579,7 +579,7 @@ namespace RassiCements_LTD
 
         private void btnWDSave_Click(object sender, EventArgs e)
         {
-            if (txtWDTypeID.Text != "" && COBXWDTypeNM.Text != "" && txtWDWgnAmt.Visible ==true ? txtWDRDAmt.Text !="" : false && txtWDRDAmt.Visible==true? txtWDRDAmt.Text !="":false && )
+            if (txtWDTypeID.Text != "" && COBXWDTypeNM.Text != "" && txtWDWgnAmt.Visible ==true ? txtWDRDAmt.Text !="" : false && txtWDRDAmt.Visible==true? txtWDRDAmt.Text !="":false )
             {
                 MessageBox.Show("Batch Name or batch Number cannot be empty. Please chack and try deleting again");
             }
@@ -2185,9 +2185,10 @@ namespace RassiCements_LTD
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            string connstring = "SELECT * FROM  Wages where WageDate >=" + "#" + dateTimePicker1.Text + "#" + "and WageDate <=" + "#" + dateTimePicker2.Text + "#" + ";";
+            //string connstring = "SELECT * FROM  Wages;";
+            string connstring = "SELECT * FROM  Wages where WageDate >=" + "#" + dateTimePicker1.Text + "#" + " and WageDate <=" + "#" + dateTimePicker2.Text + "#" + " And BATCHNO = "+"'"+ comboBoxrep .Text +"'"+ ";";
             OleDbConnection conn = new OleDbConnection(ConfigurationManager.ConnectionStrings["RassiCements_LTD.Properties.Settings.RassiCementLTDConnectionString"].ConnectionString);
+               
             OleDbCommand cmd = new OleDbCommand(connstring, conn);
 
             try
@@ -2199,6 +2200,7 @@ namespace RassiCements_LTD
                 {
                     while (dr.Read())
                     {
+                        MessageBox.Show(dr["empname"].ToString());
                         //emp.Columns.Add("Sel", typeof(bool));
                         emp.Columns.Add("SNO", typeof(int));
                         emp.Columns.Add("Name", typeof(string));
