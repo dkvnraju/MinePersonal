@@ -1,0 +1,60 @@
+Option Explicit
+
+Sub SaveEmailsOlderThanTwoMonths()
+    Dim objNamespace As Outlook.NameSpace
+    Dim objSourceFolder As Outlook.MAPIFolder
+    Dim objItems As Outlook.Items
+    Dim objMail As Outlook.MailItem
+    Dim strDestinationFolder As String
+    Dim strSubject As String
+    Dim dtDate As Date
+    
+    ' Set the source folder (Inbox by default)
+    Set objNamespace = Application.GetNamespace("MAPI")
+    Set objSourceFolder = objNamespace.GetDefaultFolder(olFolderInbox)
+    Set objItems = objSourceFolder.Items
+    
+    ' Set the destination folder path
+    strDestinationFolder = "C:\SavedEmails\"
+    
+    ' Create the destination folder if it doesn't exist
+    If Dir(strDestinationFolder, vbDirectory) = "" Then
+        MkDir strDestinationFolder
+    End If
+    
+    ' Loop through all items in the source folder
+    For Each objMail In objItems
+        If TypeName(objMail) = "MailItem" Then
+            ' Check if the email is older than 2 months
+            dtDate = DateAdd("m", -2, Now)
+            If objMail.ReceivedTime < dtDate Then
+                ' Replace special characters in the subject line
+                strSubject = ReplaceInvalidCharacters(objMail.Subject)
+                
+                ' Save the email as a msg file in the destination folder
+                objMail.SaveAs strDestinationFolder & "\" & strSubject & ".msg", olMSG
+            End If
+        End If
+    Next objMail
+    
+    ' Clean up
+    Set objMail = Nothing
+    Set objItems = Nothing
+    Set objSourceFolder = Nothing
+    Set objNamespace = Nothing
+    
+    MsgBox "Emails older than 2 months have been saved to the destination folder."
+End Sub
+
+Function ReplaceInvalidCharacters(ByVal strInput As String) As String
+    Dim strInvalidChars As String
+    Dim intIndex As Integer
+
+    strInvalidChars = "/\:*?""<>|"
+
+    For intIndex = 1 To Len(strInvalidChars)
+        strInput = Replace(strInput, Mid(strInvalidChars, intIndex, 1), "_")
+    Next intIndex
+
+    ReplaceInvalidCharacters = strInput
+End Function
